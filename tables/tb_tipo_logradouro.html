@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_tipo_logradouro - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_tipo_logradouro</h1><p><span id="recordNumber">313</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar tipos de logradouros.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_tipo_logradouro">co_tipo_logradouro</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_aval_elegibilidade.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tipologradouro_cdsavaleleg"><a href='tb_cds_aval_elegibilidade.html'>tb_cds_aval_elegibilidade</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tipologradouro_cdsavaleleg</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tplogradouro_cdscaddom"><a href='tb_cds_cad_domiciliar.html'>tb_cds_cad_domiciliar</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tplogradouro_cdscaddom</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_domicilio.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tipologradouro_cdsdomicilio"><a href='tb_cds_domicilio.html'>tb_cds_domicilio</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tipologradouro_cdsdomicilio</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cidadao.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tipologradouro_cidadao"><a href='tb_cidadao.html'>tb_cidadao</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tipologradouro_cidadao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_logradouro.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tipologradouro_logradouro"><a href='tb_logradouro.html'>tb_logradouro</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tipologradouro_logradouro</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_prof.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tipologradouro_prof"><a href='tb_prof.html'>tb_prof</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tipologradouro_prof</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_unidade_saude.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tipologradouro_undiadesaude"><a href='tb_unidade_saude.html'>tb_unidade_saude</a><span class='relatedKey'>.tp_logradouro</span></td>
+                                                <td class="constraint detail">fk_tipologradouro_undiadesaude</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave primária da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_dne">nu_dne</span></td>
+                                    <td>varchar</td>
+                                    <td>3</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código correspondente do Diretório Nacional de Endereços (DNE).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_tipo_logradouro">no_tipo_logradouro</span></td>
+                                    <td>varchar</td>
+                                    <td>144</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa o tipo de logradouro.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="no_tipo_logradouro_filtro">no_tipo_logradouro_filtro</span></td>
+                                    <td>varchar</td>
+                                    <td>144</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Filtro do nome do tipo de logradouro.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_tp_logradouro_cadsus">co_tp_logradouro_cadsus</span></td>
+                                    <td>varchar</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_frequencia">nu_frequencia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_ativo">st_ativo</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_tipologradouro</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_tipo_logradouro</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_tipologradouro_notipolgrflt</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>no_tipo_logradouro_filtro</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_tipologradouro_stativo</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>st_ativo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_tplogradouro_nufreq</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_frequencia</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uk_tipologradouro_nudne</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_dne</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="410,5,696,833">
+<area shape="rect" id="node2" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="5,3272,355,3550">
+<area shape="rect" id="node3" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="414,851,692,1531">
+<area shape="rect" id="node4" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="402,1549,704,2641">
+<area shape="rect" id="node5" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="403,2659,703,3515">
+<area shape="rect" id="node6" href="tb_logradouro.html" target="_top" title="tb_logradouro" alt="" coords="408,3533,698,3833">
+<area shape="rect" id="node7" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="399,3851,707,4267">
+<area shape="rect" id="node8" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="426,4285,680,4614">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_tipo_logradouro.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_cds_aval_eleg_ad_tipo_inelg.html" target="_top" title="rl_cds_aval_eleg_ad_tipo_inelg" alt="" coords="2142,2145,2456,2239">
+<area shape="rect" id="node2" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="1787,2145,2074,2972">
+<area shape="rect" id="node9" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="412,3187,587,3281">
+<area shape="rect" id="node23" href="tb_ad_modalidade.html" target="_top" title="tb_ad_modalidade" alt="" coords="1453,1134,1666,1228">
+<area shape="rect" id="node24" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="1471,1470,1648,1564">
+<area shape="rect" id="node25" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="1478,3051,1642,3145">
+<area shape="rect" id="node26" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="1472,2395,1647,2489">
+<area shape="rect" id="node27" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1472,1358,1647,1452">
+<area shape="rect" id="node28" href="tb_etnia.html" target="_top" title="tb_etnia" alt="" coords="1492,3550,1627,3644">
+<area shape="rect" id="node29" href="tb_nacionalidade.html" target="_top" title="tb_nacionalidade" alt="" coords="1458,3214,1662,3308">
+<area shape="rect" id="node30" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,1685,139,1779">
+<area shape="rect" id="node31" href="tb_raca_cor.html" target="_top" title="tb_raca_cor" alt="" coords="1478,3326,1642,3420">
+<area shape="rect" id="node32" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="1493,2905,1626,2999">
+<area shape="rect" id="node33" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="183,4149,329,4243">
+<area shape="rect" id="node34" href="tb_ad_tipo_elegivel.html" target="_top" title="tb_ad_tipo_elegivel" alt="" coords="1449,1246,1670,1340">
+<area shape="rect" id="node35" href="tb_cds_tipo_cuidador.html" target="_top" title="tb_cds_tipo_cuidador" alt="" coords="1440,3438,1679,3532">
+<area shape="rect" id="node36" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="669,3410,1019,3688">
+<area shape="rect" id="node3" href="rl_cds_aval_eleg_cds_situc_prs.html" target="_top" title="rl_cds_aval_eleg_cds_situc_prs" alt="" coords="2140,2257,2458,2351">
+<area shape="rect" id="node4" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="2502,2275,2828,2369">
+<area shape="rect" id="node5" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="1081,1937,1336,2265">
+<area shape="rect" id="node6" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="2211,2481,2387,2575">
+<area shape="rect" id="node86" href="tb_subtipo_unidade_saude.html" target="_top" title="tb_subtipo_unidade_saude" alt="" coords="704,2155,984,2249">
+<area shape="rect" id="node87" href="tb_tipo_unidade_saude.html" target="_top" title="tb_tipo_unidade_saude" alt="" coords="373,2138,625,2232">
+<area shape="rect" id="node56" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1781,3137,2081,3993">
+<area shape="rect" id="node7" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1826,1266,2035,1360">
+<area shape="rect" id="node8" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="1406,263,1714,680">
+<area shape="rect" id="node75" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="1131,941,1286,1035">
+<area shape="rect" id="node83" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1095,1053,1321,1147">
+<area shape="rect" id="node10" href="rl_unidade_saude_complexidade.html" target="_top" title="rl_unidade_saude_complexidade" alt="" coords="1398,1801,1722,1895">
+<area shape="rect" id="node11" href="rl_unidade_saude_horus.html" target="_top" title="rl_unidade_saude_horus" alt="" coords="1428,1913,1691,2007">
+<area shape="rect" id="node12" href="rl_unidade_saude_tipo_servico.html" target="_top" title="rl_unidade_saude_tipo_servico" alt="" coords="1404,2025,1716,2119">
+<area shape="rect" id="node13" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1480,4243,1639,4337">
+<area shape="rect" id="node14" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1120,4243,1296,4337">
+<area shape="rect" id="node38" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="779,4243,909,4337">
+<area shape="rect" id="node15" href="tb_animais_domicilio.html" target="_top" title="tb_animais_domicilio" alt="" coords="2181,4726,2417,4820">
+<area shape="rect" id="node16" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1779,4779,2082,5871">
+<area shape="rect" id="node39" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1456,4390,1663,4484">
+<area shape="rect" id="node40" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="1448,4789,1671,4883">
+<area shape="rect" id="node43" href="tb_tipo_abastecimento_agua.html" target="_top" title="tb_tipo_abastecimento_agua" alt="" coords="1413,4901,1706,4995">
+<area shape="rect" id="node44" href="tb_tipo_acesso_domicilio.html" target="_top" title="tb_tipo_acesso_domicilio" alt="" coords="1426,5013,1694,5107">
+<area shape="rect" id="node45" href="tb_tipo_destino_lixo.html" target="_top" title="tb_tipo_destino_lixo" alt="" coords="1446,5125,1674,5219">
+<area shape="rect" id="node46" href="tb_tipo_domicilio.html" target="_top" title="tb_tipo_domicilio" alt="" coords="1457,5237,1662,5331">
+<area shape="rect" id="node47" href="tb_tipo_escoamento_sanitar.html" target="_top" title="tb_tipo_escoamento_sanitar" alt="" coords="1415,5349,1704,5443">
+<area shape="rect" id="node48" href="tb_tipo_localizacao.html" target="_top" title="tb_tipo_localizacao" alt="" coords="1450,5461,1670,5555">
+<area shape="rect" id="node49" href="tb_tipo_material_parede.html" target="_top" title="tb_tipo_material_parede" alt="" coords="1431,5573,1688,5667">
+<area shape="rect" id="node50" href="tb_tipo_origem_energia_eletric.html" target="_top" title="tb_tipo_origem_energia_eletric" alt="" coords="1404,6021,1715,6115">
+<area shape="rect" id="node51" href="tb_tipo_posse_terra.html" target="_top" title="tb_tipo_posse_terra" alt="" coords="1447,5685,1672,5779">
+<area shape="rect" id="node52" href="tb_tipo_situacao_moradia.html" target="_top" title="tb_tipo_situacao_moradia" alt="" coords="1424,5797,1695,5891">
+<area shape="rect" id="node53" href="tb_tipo_tratamento_agua.html" target="_top" title="tb_tipo_tratamento_agua" alt="" coords="1428,5909,1692,6003">
+<area shape="rect" id="node17" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="2595,710,2736,804">
+<area shape="rect" id="node18" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="1486,951,1634,1045">
+<area shape="rect" id="node19" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1842,131,2020,225">
+<area shape="rect" id="node20" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1816,278,2045,372">
+<area shape="rect" id="node21" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1766,390,2096,484">
+<area shape="rect" id="node22" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="761,3966,927,4060">
+<area shape="rect" id="node37" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1791,4046,2070,4727">
+<area shape="rect" id="node41" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1808,3025,2053,3119">
+<area shape="rect" id="node42" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="1484,805,1636,899">
+<area shape="rect" id="node54" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="2168,4161,2430,4255">
+<area shape="rect" id="node55" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="2160,4049,2438,4143">
+<area shape="rect" id="node57" href="tb_escolaridade.html" target="_top" title="tb_escolaridade" alt="" coords="1462,3733,1657,3827">
+<area shape="rect" id="node58" href="tb_estado_civil.html" target="_top" title="tb_estado_civil" alt="" coords="1466,3845,1654,3939">
+<area shape="rect" id="node59" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="2186,3937,2412,4031">
+<area shape="rect" id="node60" href="tb_cidadao_grupo.html" target="_top" title="tb_cidadao_grupo" alt="" coords="2193,3083,2405,3177">
+<area shape="rect" id="node61" href="tb_cidadao_nucleo_familiar.html" target="_top" title="tb_cidadao_nucleo_familiar" alt="" coords="2157,3419,2441,3513">
+<area shape="rect" id="node62" href="tb_cidadao_unificacao_base.html" target="_top" title="tb_cidadao_unificacao_base" alt="" coords="2154,2971,2444,3065">
+<area shape="rect" id="node63" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="2144,2369,2454,2463">
+<area shape="rect" id="node64" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="2526,995,2804,1089">
+<area shape="rect" id="node65" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1854,865,2008,959">
+<area shape="rect" id="node66" href="tb_cuidado_compartilhado_evol.html" target="_top" title="tb_cuidado_compartilhado_evol" alt="" coords="2140,995,2458,1089">
+<area shape="rect" id="node67" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="2222,685,2376,779">
+<area shape="rect" id="node68" href="tb_familia.html" target="_top" title="tb_familia" alt="" coords="2225,4838,2373,4932">
+<area shape="rect" id="node69" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="2539,1223,2792,1317">
+<area shape="rect" id="node70" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1784,1527,2078,1621">
+<area shape="rect" id="node71" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1816,1767,2045,1861">
+<area shape="rect" id="node72" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="1433,2137,1686,2231">
+<area shape="rect" id="node73" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="1444,2249,1675,2343">
+<area shape="rect" id="node74" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="2148,883,2450,977">
+<area shape="rect" id="node76" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="2583,1109,2748,1203">
+<area shape="rect" id="node77" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="2570,1337,2760,1431">
+<area shape="rect" id="node78" href="tb_logradouro.html" target="_top" title="tb_logradouro" alt="" coords="1063,3783,1354,4083">
+<area shape="rect" id="node79" href="tb_titulo_patente.html" target="_top" title="tb_titulo_patente" alt="" coords="743,3742,945,3836">
+<area shape="rect" id="node80" href="tb_tipo_paridade.html" target="_top" title="tb_tipo_paridade" alt="" coords="743,3854,945,3948">
+<area shape="rect" id="node81" href="tb_periodo_ausencia.html" target="_top" title="tb_periodo_ausencia" alt="" coords="2182,3195,2416,3289">
+<area shape="rect" id="node82" href="tb_pessoa_fisica_imagem.html" target="_top" title="tb_pessoa_fisica_imagem" alt="" coords="2164,3307,2434,3401">
+<area shape="rect" id="node84" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1810,502,2052,596">
+<area shape="rect" id="node85" href="tb_prontuario_unidade_saude.html" target="_top" title="tb_prontuario_unidade_saude" alt="" coords="1408,1689,1711,1783">
+<area shape="rect" id="node88" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1438,2542,1682,2636">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_tipo_logradouro.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="410,5,696,833">
+<area shape="rect" id="node2" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="5,3272,355,3550">
+<area shape="rect" id="node3" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="414,851,692,1531">
+<area shape="rect" id="node4" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="402,1549,704,2641">
+<area shape="rect" id="node5" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="403,2659,703,3515">
+<area shape="rect" id="node6" href="tb_logradouro.html" target="_top" title="tb_logradouro" alt="" coords="408,3533,698,3833">
+<area shape="rect" id="node7" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="399,3851,707,4267">
+<area shape="rect" id="node8" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="426,4285,680,4614">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_tipo_logradouro.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_cds_aval_eleg_ad_tipo_inelg.html" target="_top" title="rl_cds_aval_eleg_ad_tipo_inelg" alt="" coords="2142,2785,2456,2879">
+<area shape="rect" id="node2" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="1787,2783,2074,3611">
+<area shape="rect" id="node9" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="412,2954,587,3048">
+<area shape="rect" id="node30" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="183,2579,329,2673">
+<area shape="rect" id="node35" href="tb_etnia.html" target="_top" title="tb_etnia" alt="" coords="1492,4042,1627,4136">
+<area shape="rect" id="node36" href="tb_nacionalidade.html" target="_top" title="tb_nacionalidade" alt="" coords="1458,3619,1662,3713">
+<area shape="rect" id="node37" href="tb_raca_cor.html" target="_top" title="tb_raca_cor" alt="" coords="1478,3930,1642,4024">
+<area shape="rect" id="node49" href="tb_ad_modalidade.html" target="_top" title="tb_ad_modalidade" alt="" coords="1453,2587,1666,2681">
+<area shape="rect" id="node50" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="1471,3102,1648,3196">
+<area shape="rect" id="node51" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="1478,3361,1642,3455">
+<area shape="rect" id="node52" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="1472,3214,1647,3308">
+<area shape="rect" id="node53" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1472,2811,1647,2905">
+<area shape="rect" id="node54" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,4519,139,4613">
+<area shape="rect" id="node55" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="1493,3473,1626,3567">
+<area shape="rect" id="node56" href="tb_ad_tipo_elegivel.html" target="_top" title="tb_ad_tipo_elegivel" alt="" coords="1449,2699,1670,2793">
+<area shape="rect" id="node57" href="tb_cds_tipo_cuidador.html" target="_top" title="tb_cds_tipo_cuidador" alt="" coords="1440,3818,1679,3912">
+<area shape="rect" id="node58" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="669,3067,1019,3346">
+<area shape="rect" id="node3" href="rl_cds_aval_eleg_cds_situc_prs.html" target="_top" title="rl_cds_aval_eleg_cds_situc_prs" alt="" coords="2140,2897,2458,2991">
+<area shape="rect" id="node4" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="2502,1593,2828,1687">
+<area shape="rect" id="node5" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="1081,877,1336,1205">
+<area shape="rect" id="node6" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="2211,3713,2387,3807">
+<area shape="rect" id="node90" href="tb_subtipo_unidade_saude.html" target="_top" title="tb_subtipo_unidade_saude" alt="" coords="704,1081,984,1175">
+<area shape="rect" id="node91" href="tb_tipo_unidade_saude.html" target="_top" title="tb_tipo_unidade_saude" alt="" coords="373,915,625,1009">
+<area shape="rect" id="node38" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1781,3990,2081,4847">
+<area shape="rect" id="node7" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1826,1679,2035,1773">
+<area shape="rect" id="node8" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="1406,1650,1714,2067">
+<area shape="rect" id="node40" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1095,2009,1321,2103">
+<area shape="rect" id="node80" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="1131,1897,1286,1991">
+<area shape="rect" id="node10" href="rl_unidade_saude_complexidade.html" target="_top" title="rl_unidade_saude_complexidade" alt="" coords="1398,1021,1722,1115">
+<area shape="rect" id="node11" href="rl_unidade_saude_horus.html" target="_top" title="rl_unidade_saude_horus" alt="" coords="1428,1133,1691,1227">
+<area shape="rect" id="node12" href="rl_unidade_saude_tipo_servico.html" target="_top" title="rl_unidade_saude_tipo_servico" alt="" coords="1404,1245,1716,1339">
+<area shape="rect" id="node13" href="ta_cds_domicilio.html" target="_top" title="ta_cds_domicilio" alt="" coords="2198,6291,2400,6385">
+<area shape="rect" id="node14" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1480,4923,1639,5017">
+<area shape="rect" id="node15" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="779,4739,909,4833">
+<area shape="rect" id="node16" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1120,4811,1296,4905">
+<area shape="rect" id="node17" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1779,5223,2082,6315">
+<area shape="rect" id="node18" href="tb_tipo_abastecimento_agua.html" target="_top" title="tb_tipo_abastecimento_agua" alt="" coords="1413,5178,1706,5272">
+<area shape="rect" id="node19" href="tb_tipo_acesso_domicilio.html" target="_top" title="tb_tipo_acesso_domicilio" alt="" coords="1426,5290,1694,5384">
+<area shape="rect" id="node20" href="tb_tipo_destino_lixo.html" target="_top" title="tb_tipo_destino_lixo" alt="" coords="1446,5402,1674,5496">
+<area shape="rect" id="node21" href="tb_tipo_domicilio.html" target="_top" title="tb_tipo_domicilio" alt="" coords="1457,5610,1662,5704">
+<area shape="rect" id="node22" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1456,4811,1663,4905">
+<area shape="rect" id="node23" href="tb_tipo_escoamento_sanitar.html" target="_top" title="tb_tipo_escoamento_sanitar" alt="" coords="1415,5722,1704,5816">
+<area shape="rect" id="node24" href="tb_tipo_localizacao.html" target="_top" title="tb_tipo_localizacao" alt="" coords="1450,5869,1670,5963">
+<area shape="rect" id="node25" href="tb_tipo_material_parede.html" target="_top" title="tb_tipo_material_parede" alt="" coords="1431,5981,1688,6075">
+<area shape="rect" id="node26" href="tb_tipo_origem_energia_eletric.html" target="_top" title="tb_tipo_origem_energia_eletric" alt="" coords="1404,6506,1715,6600">
+<area shape="rect" id="node27" href="tb_tipo_posse_terra.html" target="_top" title="tb_tipo_posse_terra" alt="" coords="1447,6093,1672,6187">
+<area shape="rect" id="node28" href="tb_tipo_situacao_moradia.html" target="_top" title="tb_tipo_situacao_moradia" alt="" coords="1424,6239,1695,6333">
+<area shape="rect" id="node29" href="tb_tipo_tratamento_agua.html" target="_top" title="tb_tipo_tratamento_agua" alt="" coords="1428,6389,1692,6483">
+<area shape="rect" id="node60" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="1448,4485,1671,4579">
+<area shape="rect" id="node31" href="ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="2221,3566,2377,3660">
+<area shape="rect" id="node32" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="1483,466,1636,560">
+<area shape="rect" id="node33" href="tb_escolaridade.html" target="_top" title="tb_escolaridade" alt="" coords="1462,4154,1657,4248">
+<area shape="rect" id="node34" href="tb_estado_civil.html" target="_top" title="tb_estado_civil" alt="" coords="1466,4373,1654,4467">
+<area shape="rect" id="node39" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="1867,1567,1994,1661">
+<area shape="rect" id="node41" href="ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="1454,1503,1666,1597">
+<area shape="rect" id="node42" href="tb_animais_domicilio.html" target="_top" title="tb_animais_domicilio" alt="" coords="2181,5282,2417,5376">
+<area shape="rect" id="node43" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="2595,834,2736,928">
+<area shape="rect" id="node44" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="1486,213,1634,307">
+<area shape="rect" id="node45" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1842,1014,2020,1108">
+<area shape="rect" id="node46" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1816,1161,2045,1255">
+<area shape="rect" id="node47" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1766,1273,2096,1367">
+<area shape="rect" id="node48" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="761,4046,927,4140">
+<area shape="rect" id="node59" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1791,2050,2070,2731">
+<area shape="rect" id="node61" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1808,3735,2053,3829">
+<area shape="rect" id="node62" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="2168,1997,2430,2091">
+<area shape="rect" id="node63" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="2160,2109,2438,2203">
+<area shape="rect" id="node64" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="2186,4859,2412,4953">
+<area shape="rect" id="node65" href="tb_cidadao_grupo.html" target="_top" title="tb_cidadao_grupo" alt="" coords="2193,4161,2405,4255">
+<area shape="rect" id="node66" href="tb_cidadao_nucleo_familiar.html" target="_top" title="tb_cidadao_nucleo_familiar" alt="" coords="2157,4273,2441,4367">
+<area shape="rect" id="node67" href="tb_cidadao_unificacao_base.html" target="_top" title="tb_cidadao_unificacao_base" alt="" coords="2154,3825,2444,3919">
+<area shape="rect" id="node68" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="2144,3454,2454,3548">
+<area shape="rect" id="node69" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="2526,347,2804,441">
+<area shape="rect" id="node70" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1854,331,2008,425">
+<area shape="rect" id="node71" href="tb_cuidado_compartilhado_evol.html" target="_top" title="tb_cuidado_compartilhado_evol" alt="" coords="2140,347,2458,441">
+<area shape="rect" id="node72" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="2222,583,2376,677">
+<area shape="rect" id="node73" href="tb_familia.html" target="_top" title="tb_familia" alt="" coords="2225,5170,2373,5264">
+<area shape="rect" id="node74" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="2539,3631,2792,3725">
+<area shape="rect" id="node75" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1784,1791,2078,1885">
+<area shape="rect" id="node76" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1816,1903,2045,1997">
+<area shape="rect" id="node77" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="1433,685,1686,779">
+<area shape="rect" id="node78" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="1444,797,1675,891">
+<area shape="rect" id="node79" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="2148,851,2450,945">
+<area shape="rect" id="node81" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="2583,2990,2748,3084">
+<area shape="rect" id="node82" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="2570,465,2760,559">
+<area shape="rect" id="node83" href="tb_logradouro.html" target="_top" title="tb_logradouro" alt="" coords="1063,3818,1354,4117">
+<area shape="rect" id="node84" href="tb_titulo_patente.html" target="_top" title="tb_titulo_patente" alt="" coords="743,3822,945,3916">
+<area shape="rect" id="node85" href="tb_tipo_paridade.html" target="_top" title="tb_tipo_paridade" alt="" coords="743,3934,945,4028">
+<area shape="rect" id="node86" href="tb_periodo_ausencia.html" target="_top" title="tb_periodo_ausencia" alt="" coords="2182,3937,2416,4031">
+<area shape="rect" id="node87" href="tb_pessoa_fisica_imagem.html" target="_top" title="tb_pessoa_fisica_imagem" alt="" coords="2164,4049,2434,4143">
+<area shape="rect" id="node88" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1810,1385,2052,1479">
+<area shape="rect" id="node89" href="tb_prontuario_unidade_saude.html" target="_top" title="tb_prontuario_unidade_saude" alt="" coords="1408,909,1711,1003">
+<area shape="rect" id="node92" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1438,1391,1682,1485">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_tipo_logradouro.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

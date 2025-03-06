@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_fat_atd_ind_problemas - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_fat_atd_ind_problemas</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_fat_atend_ind_problemas">co_seq_fat_atend_ind_problemas</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_fat_atd_ind">co_fat_atd_ind</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_ficha">co_dim_tipo_ficha</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_tipo_ficha references tb_dim_tipo_ficha.co_seq_dim_tipo_ficha via fk_dimtipoficha_fatatdindpr"><a href='tb_dim_tipo_ficha.html'>tb_dim_tipo_ficha</a><span class='relatedKey'>.co_seq_dim_tipo_ficha</span></td>
+                                                <td class="constraint detail">fk_dimtipoficha_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_municipio">co_dim_municipio</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_municipio references tb_dim_municipio.co_seq_dim_municipio via fk_dimmunicipio_fatatdindpr1"><a href='tb_dim_municipio.html'>tb_dim_municipio</a><span class='relatedKey'>.co_seq_dim_municipio</span></td>
+                                                <td class="constraint detail">fk_dimmunicipio_fatatdindpr1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_profissional_1">co_dim_profissional_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_profissional_1 references tb_dim_profissional.co_seq_dim_profissional via fk_dimprofissionl_fatatdindpr1"><a href='tb_dim_profissional.html'>tb_dim_profissional</a><span class='relatedKey'>.co_seq_dim_profissional</span></td>
+                                                <td class="constraint detail">fk_dimprofissionl_fatatdindpr1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_profissional_2">co_dim_profissional_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_profissional_2 references tb_dim_profissional.co_seq_dim_profissional via fk_dimprofissionl_fatatdindpr2"><a href='tb_dim_profissional.html'>tb_dim_profissional</a><span class='relatedKey'>.co_seq_dim_profissional</span></td>
+                                                <td class="constraint detail">fk_dimprofissionl_fatatdindpr2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cbo_1">co_dim_cbo_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_cbo_1 references tb_dim_cbo.co_seq_dim_cbo via fk_dimcbo_fatatdindpr1"><a href='tb_dim_cbo.html'>tb_dim_cbo</a><span class='relatedKey'>.co_seq_dim_cbo</span></td>
+                                                <td class="constraint detail">fk_dimcbo_fatatdindpr1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cbo_2">co_dim_cbo_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_cbo_2 references tb_dim_cbo.co_seq_dim_cbo via fk_dimcbo_fatatdindpr2"><a href='tb_dim_cbo.html'>tb_dim_cbo</a><span class='relatedKey'>.co_seq_dim_cbo</span></td>
+                                                <td class="constraint detail">fk_dimcbo_fatatdindpr2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_unidade_saude_1">co_dim_unidade_saude_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_unidade_saude_1 references tb_dim_unidade_saude.co_seq_dim_unidade_saude via fk_dimunidadesade_fatatdindpr1"><a href='tb_dim_unidade_saude.html'>tb_dim_unidade_saude</a><span class='relatedKey'>.co_seq_dim_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_dimunidadesade_fatatdindpr1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_unidade_saude_2">co_dim_unidade_saude_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_unidade_saude_2 references tb_dim_unidade_saude.co_seq_dim_unidade_saude via fk_dimunidadesade_fatatdindpr2"><a href='tb_dim_unidade_saude.html'>tb_dim_unidade_saude</a><span class='relatedKey'>.co_seq_dim_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_dimunidadesade_fatatdindpr2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_equipe_1">co_dim_equipe_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_equipe_1 references tb_dim_equipe.co_seq_dim_equipe via fk_dimequipe_fatatdindpr1"><a href='tb_dim_equipe.html'>tb_dim_equipe</a><span class='relatedKey'>.co_seq_dim_equipe</span></td>
+                                                <td class="constraint detail">fk_dimequipe_fatatdindpr1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_equipe_2">co_dim_equipe_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_equipe_2 references tb_dim_equipe.co_seq_dim_equipe via fk_dimequipe_fatatdindpr2"><a href='tb_dim_equipe.html'>tb_dim_equipe</a><span class='relatedKey'>.co_seq_dim_equipe</span></td>
+                                                <td class="constraint detail">fk_dimequipe_fatatdindpr2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo">co_dim_tempo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_tempo references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatatdindpr"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_uuid_ficha">nu_uuid_ficha</span></td>
+                                    <td>varchar</td>
+                                    <td>92</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_atendimento">nu_atendimento</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cns">nu_cns</span></td>
+                                    <td>bpchar</td>
+                                    <td>15</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cid">co_dim_cid</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_cid references tb_dim_cid.co_seq_dim_cid via fk_dimcid_fatatdindpr"><a href='tb_dim_cid.html'>tb_dim_cid</a><span class='relatedKey'>.co_seq_dim_cid</span></td>
+                                                <td class="constraint detail">fk_dimcid_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_ciap">co_dim_ciap</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_ciap references tb_dim_ciap.co_seq_dim_ciap via fk_dimciap_fatatdindpr"><a href='tb_dim_ciap.html'>tb_dim_ciap</a><span class='relatedKey'>.co_seq_dim_ciap</span></td>
+                                                <td class="constraint detail">fk_dimciap_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_uuid_dado_transp">nu_uuid_dado_transp</span></td>
+                                    <td>varchar</td>
+                                    <td>92</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_origem_dado_transp">co_dim_tipo_origem_dado_transp</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_tipo_origem_dado_transp references tb_dim_tipo_origem_dado_transp.co_seq_dim_tp_orgm_dado_transp via fk_dmtporgddt_fatatdindpr"><a href='tb_dim_tipo_origem_dado_transp.html'>tb_dim_tipo_origem_dado_transp</a><span class='relatedKey'>.co_seq_dim_tp_orgm_dado_transp</span></td>
+                                                <td class="constraint detail">fk_dmtporgddt_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cds_tipo_origem">co_dim_cds_tipo_origem</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_cds_tipo_origem references tb_dim_tipo_origem.co_seq_dim_tipo_origem via fk_dimtporigem_fatatdindpr"><a href='tb_dim_tipo_origem.html'>tb_dim_tipo_origem</a><span class='relatedKey'>.co_seq_dim_tipo_origem</span></td>
+                                                <td class="constraint detail">fk_dimtporigem_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_fat_cidadao_pec">co_fat_cidadao_pec</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindpr"><a href='tb_fat_cidadao_pec.html'>tb_fat_cidadao_pec</a><span class='relatedKey'>.co_seq_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cpf_cidadao">nu_cpf_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_uuid_problema">nu_uuid_problema</span></td>
+                                    <td>varchar</td>
+                                    <td>44</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>UUID do problema.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_unico_evolucao">co_unico_evolucao</span></td>
+                                    <td>varchar</td>
+                                    <td>44</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>UUID da evolução do problema.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_sequencial_evolucao">co_sequencial_evolucao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial que representa em qual ordem a evolução foi criada dentre as n evoluções vinculadas a um único problema.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_situacao_problema">co_dim_situacao_problema</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_situacao_problema references tb_dim_situacao_problema.co_seq_dim_situacao via fk_dimsituacao_fatatdindprob"><a href='tb_dim_situacao_problema.html'>tb_dim_situacao_problema</a><span class='relatedKey'>.co_seq_dim_situacao</span></td>
+                                                <td class="constraint detail">fk_dimsituacao_fatatdindprob</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código da situação do problema. Chave estrangeira com origem na tabela TB_DIM_SITUACAO_PROBLEMA.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_data_inicio_problema">co_dim_data_inicio_problema</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_data_inicio_problema references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatatdindprobinici"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatatdindprobinici</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Data de início do problema. Chave estrangeira com origem na tabela TB_DIM_TEMPO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_data_fim_problema">co_dim_data_fim_problema</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_dim_data_fim_problema references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatatdindprobfim"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatatdindprobfim</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Data de fim do problema. Chave estrangeira com origem na tabela TB_DIM_TEMPO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_avaliado">st_avaliado</span></td>
+                                    <td>numeric</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Se o problema foi avaliado. (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_fatatdindpr</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_fat_atend_ind_problemas</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindpr_atdciapcip</td>
+                                    <td>Performance</td>
+                                    <td><span title='Descending'>Desc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_fat_atd_ind + co_dim_ciap + co_dim_cid</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindpr_cddciapcidtempo</td>
+                                    <td>Performance</td>
+                                    <td><span title='Descending'>Desc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Descending'>Desc</span></td>
+                                    <td>co_fat_cidadao_pec + co_dim_ciap + co_dim_cid + co_dim_tempo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindpr_ficha</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_dim_tempo + nu_uuid_ficha + nu_atendimento</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindpr_header</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_dim_tempo + co_dim_municipio + co_dim_unidade_saude_1 + co_dim_equipe_1 + co_dim_profissional_1 + co_dim_cbo_1</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindprob_hist_cpf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha + nu_cpf_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindprob_historico</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha + nu_cns</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="691,362,1128,1316">
+<area shape="rect" id="node2" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="388,488,575,611">
+<area shape="rect" id="node3" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="361,1255,602,1378">
+<area shape="rect" id="node4" href="tb_dim_ciap.html" target="_top" title="tb_dim_ciap" alt="" coords="388,943,575,1095">
+<area shape="rect" id="node5" href="tb_dim_cid.html" target="_top" title="tb_dim_cid" alt="" coords="388,772,575,925">
+<area shape="rect" id="node6" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="382,1913,581,2037">
+<area shape="rect" id="node7" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="38,775,239,927">
+<area shape="rect" id="node8" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="369,147,594,299">
+<area shape="rect" id="node9" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="361,317,602,470">
+<area shape="rect" id="node10" href="tb_dim_situacao_problema.html" target="_top" title="tb_dim_situacao_problema" alt="" coords="341,1772,622,1895">
+<area shape="rect" id="node11" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="369,5,594,129">
+<area shape="rect" id="node12" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="316,1113,647,1237">
+<area shape="rect" id="node13" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="5,604,272,757">
+<area shape="rect" id="node14" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="346,1396,617,1754">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_fat_atd_ind_problemas.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="774,298,1065,392">
+<area shape="rect" id="node2" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="392,1931,590,2055">
+<area shape="rect" id="node3" href="tb_dim_cidadao_pec_grupo.html" target="_top" title="tb_dim_cidadao_pec_grupo" alt="" coords="777,6525,1062,6619">
+<area shape="rect" id="node4" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="380,4958,603,5052">
+<area shape="rect" id="node10" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="51,2927,236,3021">
+<area shape="rect" id="node16" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="18,3278,269,3372">
+<area shape="rect" id="node32" href="tb_dim_sexo.html" target="_top" title="tb_dim_sexo" alt="" coords="58,5137,229,5231">
+<area shape="rect" id="node44" href="tb_dim_identidade_genero.html" target="_top" title="tb_dim_identidade_genero" alt="" coords="5,4621,282,4715">
+<area shape="rect" id="node5" href="tb_dim_grupo_cbo.html" target="_top" title="tb_dim_grupo_cbo" alt="" coords="811,3130,1028,3224">
+<area shape="rect" id="node6" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="398,3011,584,3135">
+<area shape="rect" id="node7" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="378,2527,604,2680">
+<area shape="rect" id="node8" href="tb_dim_uf.html" target="_top" title="tb_dim_uf" alt="" coords="69,2558,218,2652">
+<area shape="rect" id="node9" href="tb_dim_vinculacao_equipes.html" target="_top" title="tb_dim_vinculacao_equipes" alt="" coords="348,1453,635,1547">
+<area shape="rect" id="node11" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="753,4026,1086,4120">
+<area shape="rect" id="node12" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="370,3501,612,3624">
+<area shape="rect" id="node13" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="370,2841,612,2993">
+<area shape="rect" id="node14" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="378,3642,604,3765">
+<area shape="rect" id="node15" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="326,3359,657,3483">
+<area shape="rect" id="node17" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="795,4138,1044,4232">
+<area shape="rect" id="node18" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="768,2458,1071,2552">
+<area shape="rect" id="node19" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="701,556,1138,1510">
+<area shape="rect" id="node20" href="tb_dim_ciap.html" target="_top" title="tb_dim_ciap" alt="" coords="398,782,584,935">
+<area shape="rect" id="node21" href="tb_dim_cid.html" target="_top" title="tb_dim_cid" alt="" coords="398,1071,584,1224">
+<area shape="rect" id="node22" href="tb_dim_situacao_problema.html" target="_top" title="tb_dim_situacao_problema" alt="" coords="351,641,631,764">
+<area shape="rect" id="node23" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="767,4250,1072,4344">
+<area shape="rect" id="node24" href="tb_fat_atend_dom_prob_cond.html" target="_top" title="tb_fat_atend_dom_prob_cond" alt="" coords="768,445,1071,539">
+<area shape="rect" id="node25" href="tb_fat_atend_dom_proced.html" target="_top" title="tb_fat_atend_dom_proced" alt="" coords="783,2010,1056,2104">
+<area shape="rect" id="node26" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="751,3802,1088,3896">
+<area shape="rect" id="node27" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="770,3242,1069,3336">
+<area shape="rect" id="node28" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="753,3354,1086,3448">
+<area shape="rect" id="node29" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="759,1527,1080,1621">
+<area shape="rect" id="node30" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="773,3914,1066,4008">
+<area shape="rect" id="node31" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="767,4362,1072,4456">
+<area shape="rect" id="node33" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="767,2346,1072,2440">
+<area shape="rect" id="node34" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="778,4474,1061,4568">
+<area shape="rect" id="node35" href="tb_fat_atividade_coletiva.html" target="_top" title="tb_fat_atividade_coletiva" alt="" coords="788,3466,1051,3560">
+<area shape="rect" id="node36" href="tb_fat_atvdd_coletiva_ext.html" target="_top" title="tb_fat_atvdd_coletiva_ext" alt="" coords="785,2794,1054,2888">
+<area shape="rect" id="node37" href="tb_fat_atvdd_coletiva_int.html" target="_top" title="tb_fat_atvdd_coletiva_int" alt="" coords="787,2682,1052,2776">
+<area shape="rect" id="node38" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="781,4586,1058,4680">
+<area shape="rect" id="node39" href="tb_fat_atvdd_coletiva_propart.html" target="_top" title="tb_fat_atvdd_coletiva_propart" alt="" coords="769,2906,1070,3000">
+<area shape="rect" id="node40" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="768,1751,1071,1845">
+<area shape="rect" id="node41" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="792,2234,1047,2328">
+<area shape="rect" id="node42" href="tb_fat_cad_domiciliar.html" target="_top" title="tb_fat_cad_domiciliar" alt="" coords="801,1898,1038,1992">
+<area shape="rect" id="node43" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="801,3690,1038,3784">
+<area shape="rect" id="node45" href="tb_fat_cidadao.html" target="_top" title="tb_fat_cidadao" alt="" coords="827,186,1012,280">
+<area shape="rect" id="node46" href="tb_fat_cidadao_territorio.html" target="_top" title="tb_fat_cidadao_territorio" alt="" coords="789,6637,1050,6731">
+<area shape="rect" id="node47" href="tb_fat_cnslddo_ciddo_fai_cid.html" target="_top" title="tb_fat_cnslddo_ciddo_fai_cid" alt="" coords="771,5370,1068,5464">
+<area shape="rect" id="node48" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="802,4698,1037,4792">
+<area shape="rect" id="node49" href="tb_fat_consolidado_cidadao_fai.html" target="_top" title="tb_fat_consolidado_cidadao_fai" alt="" coords="761,5482,1078,5576">
+<area shape="rect" id="node50" href="tb_fat_consolidado_cidadao_fao.html" target="_top" title="tb_fat_consolidado_cidadao_fao" alt="" coords="759,5594,1080,5688">
+<area shape="rect" id="node51" href="tb_fat_consolidado_cidadao_fci.html" target="_top" title="tb_fat_consolidado_cidadao_fci" alt="" coords="761,5706,1078,5800">
+<area shape="rect" id="node52" href="tb_fat_consolidado_cidadao_fp.html" target="_top" title="tb_fat_consolidado_cidadao_fp" alt="" coords="763,5818,1076,5912">
+<area shape="rect" id="node53" href="tb_fat_consolidado_cidadao_fvd.html" target="_top" title="tb_fat_consolidado_cidadao_fvd" alt="" coords="759,5930,1080,6024">
+<area shape="rect" id="node54" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="767,1639,1072,1733">
+<area shape="rect" id="node55" href="tb_fat_familia.html" target="_top" title="tb_fat_familia" alt="" coords="831,74,1008,168">
+<area shape="rect" id="node56" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="1182,4023,1434,4117">
+<area shape="rect" id="node57" href="tb_fat_fichas.html" target="_top" title="tb_fat_fichas" alt="" coords="833,3578,1006,3672">
+<area shape="rect" id="node58" href="tb_fat_ivcf.html" target="_top" title="tb_fat_ivcf" alt="" coords="843,3018,996,3112">
+<area shape="rect" id="node59" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="765,4810,1074,4904">
+<area shape="rect" id="node60" href="tb_fat_op_acompanhamento_idosa.html" target="_top" title="tb_fat_op_acompanhamento_idosa" alt="" coords="749,6042,1090,6136">
+<area shape="rect" id="node61" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="804,5034,1035,5128">
+<area shape="rect" id="node62" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="773,5258,1066,5352">
+<area shape="rect" id="node63" href="tb_fat_procedimento.html" target="_top" title="tb_fat_procedimento" alt="" coords="804,2570,1035,2664">
+<area shape="rect" id="node64" href="tb_fat_rel_op_crianca.html" target="_top" title="tb_fat_rel_op_crianca" alt="" coords="800,6154,1039,6248">
+<area shape="rect" id="node65" href="tb_fat_rel_op_gestante.html" target="_top" title="tb_fat_rel_op_gestante" alt="" coords="795,6301,1044,6395">
+<area shape="rect" id="node66" href="tb_fat_rel_op_risco_cardio.html" target="_top" title="tb_fat_rel_op_risco_cardio" alt="" coords="781,6413,1058,6507">
+<area shape="rect" id="node67" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="818,4922,1021,5016">
+<area shape="rect" id="node68" href="tb_fat_vacinacao_vacina.html" target="_top" title="tb_fat_vacinacao_vacina" alt="" coords="789,2122,1050,2216">
+<area shape="rect" id="node69" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="794,5146,1045,5240">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_fat_atd_ind_problemas.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

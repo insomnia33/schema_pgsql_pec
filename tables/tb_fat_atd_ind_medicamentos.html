@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_fat_atd_ind_medicamentos - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_fat_atd_ind_medicamentos</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Armazena os fatos relacionados às receitas de um atendimento</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_fat_atd_ind_medicam">co_seq_fat_atd_ind_medicam</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sequence da tabela TB_FAT_ATD_IND_MEDICAMENTOS</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_fat_atd_ind">co_fat_atd_ind</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_ficha">co_dim_tipo_ficha</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_tipo_ficha references tb_dim_tipo_ficha.co_seq_dim_tipo_ficha via fk_dimtipoficha_fatatdindmd"><a href='tb_dim_tipo_ficha.html'>tb_dim_tipo_ficha</a><span class='relatedKey'>.co_seq_dim_tipo_ficha</span></td>
+                                                <td class="constraint detail">fk_dimtipoficha_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_municipio">co_dim_municipio</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_municipio references tb_dim_municipio.co_seq_dim_municipio via fk_dimmunicipio_fatatdindmd1"><a href='tb_dim_municipio.html'>tb_dim_municipio</a><span class='relatedKey'>.co_seq_dim_municipio</span></td>
+                                                <td class="constraint detail">fk_dimmunicipio_fatatdindmd1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_profissional_1">co_dim_profissional_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_profissional_1 references tb_dim_profissional.co_seq_dim_profissional via fk_dimprofissionl_fatatdindmd1"><a href='tb_dim_profissional.html'>tb_dim_profissional</a><span class='relatedKey'>.co_seq_dim_profissional</span></td>
+                                                <td class="constraint detail">fk_dimprofissionl_fatatdindmd1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_profissional_2">co_dim_profissional_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_profissional_2 references tb_dim_profissional.co_seq_dim_profissional via fk_dimprofissionl_fatatdindmd2"><a href='tb_dim_profissional.html'>tb_dim_profissional</a><span class='relatedKey'>.co_seq_dim_profissional</span></td>
+                                                <td class="constraint detail">fk_dimprofissionl_fatatdindmd2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cbo_1">co_dim_cbo_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_cbo_1 references tb_dim_cbo.co_seq_dim_cbo via fk_dimcbo_fatatdindmd1"><a href='tb_dim_cbo.html'>tb_dim_cbo</a><span class='relatedKey'>.co_seq_dim_cbo</span></td>
+                                                <td class="constraint detail">fk_dimcbo_fatatdindmd1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cbo_2">co_dim_cbo_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_cbo_2 references tb_dim_cbo.co_seq_dim_cbo via fk_dimcbo_fatatdindmd2"><a href='tb_dim_cbo.html'>tb_dim_cbo</a><span class='relatedKey'>.co_seq_dim_cbo</span></td>
+                                                <td class="constraint detail">fk_dimcbo_fatatdindmd2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_unidade_saude_1">co_dim_unidade_saude_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_unidade_saude_1 references tb_dim_unidade_saude.co_seq_dim_unidade_saude via fk_dimunidadesade_fatatdindmd1"><a href='tb_dim_unidade_saude.html'>tb_dim_unidade_saude</a><span class='relatedKey'>.co_seq_dim_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_dimunidadesade_fatatdindmd1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_unidade_saude_2">co_dim_unidade_saude_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_unidade_saude_2 references tb_dim_unidade_saude.co_seq_dim_unidade_saude via fk_dimunidadesade_fatatdindmd2"><a href='tb_dim_unidade_saude.html'>tb_dim_unidade_saude</a><span class='relatedKey'>.co_seq_dim_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_dimunidadesade_fatatdindmd2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_equipe_1">co_dim_equipe_1</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_equipe_1 references tb_dim_equipe.co_seq_dim_equipe via fk_dimequipe_fatatdindmd1"><a href='tb_dim_equipe.html'>tb_dim_equipe</a><span class='relatedKey'>.co_seq_dim_equipe</span></td>
+                                                <td class="constraint detail">fk_dimequipe_fatatdindmd1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_equipe_2">co_dim_equipe_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_equipe_2 references tb_dim_equipe.co_seq_dim_equipe via fk_dimequipe_fatatdindmd2"><a href='tb_dim_equipe.html'>tb_dim_equipe</a><span class='relatedKey'>.co_seq_dim_equipe</span></td>
+                                                <td class="constraint detail">fk_dimequipe_fatatdindmd2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo">co_dim_tempo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_tempo references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatatdindmd"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_uuid_ficha">nu_uuid_ficha</span></td>
+                                    <td>varchar</td>
+                                    <td>92</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_atendimento">nu_atendimento</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cns_cidadao">nu_cns_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>15</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_uuid_dado_transp">nu_uuid_dado_transp</span></td>
+                                    <td>varchar</td>
+                                    <td>92</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_origem_dado_transp">co_dim_tipo_origem_dado_transp</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_tipo_origem_dado_transp references tb_dim_tipo_origem_dado_transp.co_seq_dim_tp_orgm_dado_transp via fk_dmtporgddt_fatatdindmd"><a href='tb_dim_tipo_origem_dado_transp.html'>tb_dim_tipo_origem_dado_transp</a><span class='relatedKey'>.co_seq_dim_tp_orgm_dado_transp</span></td>
+                                                <td class="constraint detail">fk_dmtporgddt_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cds_tipo_origem">co_dim_cds_tipo_origem</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_cds_tipo_origem references tb_dim_tipo_origem.co_seq_dim_tipo_origem via fk_dimtporigem_fatatdindmd"><a href='tb_dim_tipo_origem.html'>tb_dim_tipo_origem</a><span class='relatedKey'>.co_seq_dim_tipo_origem</span></td>
+                                                <td class="constraint detail">fk_dimtporigem_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_fat_cidadao_pec">co_fat_cidadao_pec</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindmd"><a href='tb_fat_cidadao_pec.html'>tb_fat_cidadao_pec</a><span class='relatedKey'>.co_seq_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cpf_cidadao">nu_cpf_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_catmat">co_dim_catmat</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_catmat references tb_dim_catmat.co_seq_dim_catmat via fk_dimcatmat_fatatdindmd"><a href='tb_dim_catmat.html'>tb_dim_catmat</a><span class='relatedKey'>.co_seq_dim_catmat</span></td>
+                                                <td class="constraint detail">fk_dimcatmat_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_dose_frequencia_medida">co_dim_dose_frequencia_medida</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_dose_frequencia_medida references tb_dim_dose_frequencia_medida.co_seq_dim_dose_frequencia_med via fk_dimdsfrmd_fatatdindmd"><a href='tb_dim_dose_frequencia_medida.html'>tb_dim_dose_frequencia_medida</a><span class='relatedKey'>.co_seq_dim_dose_frequencia_med</span></td>
+                                                <td class="constraint detail">fk_dimdsfrmd_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Unidade de medida da quantidade da dose</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_duracao_tratamento_med">co_dim_duracao_tratamento_med</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_duracao_tratamento_med references tb_dim_duracao_tratamento_med.co_seq_dim_duracao_trat_med via fk_dimdrtrmd_fatatdindmd"><a href='tb_dim_duracao_tratamento_med.html'>tb_dim_duracao_tratamento_med</a><span class='relatedKey'>.co_seq_dim_duracao_trat_med</span></td>
+                                                <td class="constraint detail">fk_dimdrtrmd_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Unidade de medida da duração do tratamento</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_dose_frequencia">co_dim_dose_frequencia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_dose_frequencia references tb_dim_dose_frequencia.co_seq_dim_dose_frequencia via fk_dimdosfrq_fatatdindmd"><a href='tb_dim_dose_frequencia.html'>tb_dim_dose_frequencia</a><span class='relatedKey'>.co_seq_dim_dose_frequencia</span></td>
+                                                <td class="constraint detail">fk_dimdosfrq_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Tipo da frequência usada na dose</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_via_administracao">co_dim_via_administracao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_dim_via_administracao references tb_dim_via_administracao.co_seq_dim_via_administracao via fk_dimviaadm_fatatdindmd"><a href='tb_dim_via_administracao.html'>tb_dim_via_administracao</a><span class='relatedKey'>.co_seq_dim_via_administracao</span></td>
+                                                <td class="constraint detail">fk_dimviaadm_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Tipo da via de administração do medicamento</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_dose">ds_dose</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descrição da dose</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_dose_unica">st_dose_unica</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indicação se a dose é unica ou não</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_uso_continuo">st_uso_continuo</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indicação se o medicamento é de uso contínuo ou não</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_dose_frequencia">ds_dose_frequencia</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descrição da frequência da dose</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_dose_frequencia">qt_dose_frequencia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Quantidade da frequencia da dose</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_duracao_tratamento">qt_duracao_tratamento</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Quantidade do tratamento</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_receitada">qt_receitada</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Quantidade receitada</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_inicio_tratamento">dt_inicio_tratamento</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data de início do tratamento</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_dose_manha">qt_dose_manha</span></td>
+                                    <td>varchar</td>
+                                    <td>25</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a quantidade da dose prescrita para o turno da manhã.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_dose_tarde">qt_dose_tarde</span></td>
+                                    <td>varchar</td>
+                                    <td>25</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a quantidade da dose prescrita para o turno da tarde.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_dose_noite">qt_dose_noite</span></td>
+                                    <td>varchar</td>
+                                    <td>25</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a quantidade da dose prescrita para o turno da noite.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> TB_FAT_ATD_IND_MEDICAMENTOS_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_fat_atd_ind_medicam</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindmed_fatatdind</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_fat_atd_ind</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindmed_ftciddaopec</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindmedic_uuidficha</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindmedicamentos_cns</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha + nu_cns_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindmedicamentos_cpf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha + nu_cpf_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatatdindmedicamentos_ficha</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_dim_tempo + nu_uuid_ficha + nu_atendimento</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="691,369,1148,1528">
+<area shape="rect" id="node2" href="tb_dim_catmat.html" target="_top" title="tb_dim_catmat" alt="" coords="349,1572,614,1725">
+<area shape="rect" id="node3" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="388,488,575,611">
+<area shape="rect" id="node4" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="361,1055,602,1178">
+<area shape="rect" id="node5" href="tb_dim_dose_frequencia.html" target="_top" title="tb_dim_dose_frequencia" alt="" coords="343,2025,620,2149">
+<area shape="rect" id="node6" href="tb_dim_dose_frequencia_medida.html" target="_top" title="tb_dim_dose_frequencia_medida" alt="" coords="318,1743,645,1866">
+<area shape="rect" id="node7" href="tb_dim_duracao_tratamento_med.html" target="_top" title="tb_dim_duracao_tratamento_med" alt="" coords="317,1884,646,2007">
+<area shape="rect" id="node8" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="38,775,239,927">
+<area shape="rect" id="node9" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="369,147,594,299">
+<area shape="rect" id="node10" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="361,317,602,470">
+<area shape="rect" id="node11" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="382,772,581,895">
+<area shape="rect" id="node12" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="369,5,594,129">
+<area shape="rect" id="node13" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="316,913,647,1037">
+<area shape="rect" id="node14" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="5,604,272,757">
+<area shape="rect" id="node15" href="tb_dim_via_administracao.html" target="_top" title="tb_dim_via_administracao" alt="" coords="337,2167,626,2290">
+<area shape="rect" id="node16" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="346,1196,617,1554">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_fat_atd_ind_medicamentos.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="794,296,1085,390">
+<area shape="rect" id="node2" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="402,2340,601,2464">
+<area shape="rect" id="node3" href="tb_dim_catmat.html" target="_top" title="tb_dim_catmat" alt="" coords="369,754,634,906">
+<area shape="rect" id="node4" href="tb_dim_forma_farmaceutica.html" target="_top" title="tb_dim_forma_farmaceutica" alt="" coords="5,784,292,878">
+<area shape="rect" id="node5" href="tb_dim_cidadao_pec_grupo.html" target="_top" title="tb_dim_cidadao_pec_grupo" alt="" coords="797,6282,1083,6376">
+<area shape="rect" id="node6" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="390,5506,613,5600">
+<area shape="rect" id="node12" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="56,3638,242,3732">
+<area shape="rect" id="node18" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="23,2839,274,2933">
+<area shape="rect" id="node35" href="tb_dim_sexo.html" target="_top" title="tb_dim_sexo" alt="" coords="63,5503,234,5597">
+<area shape="rect" id="node47" href="tb_dim_identidade_genero.html" target="_top" title="tb_dim_identidade_genero" alt="" coords="11,5320,287,5414">
+<area shape="rect" id="node7" href="tb_dim_grupo_cbo.html" target="_top" title="tb_dim_grupo_cbo" alt="" coords="831,1956,1049,2050">
+<area shape="rect" id="node8" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="408,2956,595,3080">
+<area shape="rect" id="node9" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="389,4062,614,4214">
+<area shape="rect" id="node10" href="tb_dim_uf.html" target="_top" title="tb_dim_uf" alt="" coords="74,4092,224,4186">
+<area shape="rect" id="node11" href="tb_dim_vinculacao_equipes.html" target="_top" title="tb_dim_vinculacao_equipes" alt="" coords="358,5179,645,5273">
+<area shape="rect" id="node13" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="774,2852,1106,2946">
+<area shape="rect" id="node14" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="381,3746,622,3869">
+<area shape="rect" id="node15" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="381,3098,622,3250">
+<area shape="rect" id="node16" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="389,3463,614,3586">
+<area shape="rect" id="node17" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="336,3604,667,3728">
+<area shape="rect" id="node19" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="815,3300,1065,3394">
+<area shape="rect" id="node20" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="711,444,1168,1603">
+<area shape="rect" id="node21" href="tb_dim_dose_frequencia.html" target="_top" title="tb_dim_dose_frequencia" alt="" coords="363,1207,640,1330">
+<area shape="rect" id="node22" href="tb_dim_dose_frequencia_medida.html" target="_top" title="tb_dim_dose_frequencia_medida" alt="" coords="338,924,665,1048">
+<area shape="rect" id="node23" href="tb_dim_duracao_tratamento_med.html" target="_top" title="tb_dim_duracao_tratamento_med" alt="" coords="337,1066,667,1189">
+<area shape="rect" id="node24" href="tb_dim_via_administracao.html" target="_top" title="tb_dim_via_administracao" alt="" coords="357,1348,646,1472">
+<area shape="rect" id="node25" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="804,2292,1076,2386">
+<area shape="rect" id="node26" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="787,3748,1093,3842">
+<area shape="rect" id="node27" href="tb_fat_atend_dom_prob_cond.html" target="_top" title="tb_fat_atend_dom_prob_cond" alt="" coords="788,1844,1091,1938">
+<area shape="rect" id="node28" href="tb_fat_atend_dom_proced.html" target="_top" title="tb_fat_atend_dom_proced" alt="" coords="803,2740,1077,2834">
+<area shape="rect" id="node29" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="771,2404,1109,2498">
+<area shape="rect" id="node30" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="790,3860,1089,3954">
+<area shape="rect" id="node31" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="773,1620,1107,1714">
+<area shape="rect" id="node32" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="779,2180,1101,2274">
+<area shape="rect" id="node33" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="793,3972,1087,4066">
+<area shape="rect" id="node34" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="787,4308,1093,4402">
+<area shape="rect" id="node36" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="788,1732,1092,1826">
+<area shape="rect" id="node37" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="798,4420,1081,4514">
+<area shape="rect" id="node38" href="tb_fat_atividade_coletiva.html" target="_top" title="tb_fat_atividade_coletiva" alt="" coords="808,2068,1071,2162">
+<area shape="rect" id="node39" href="tb_fat_atvdd_coletiva_ext.html" target="_top" title="tb_fat_atvdd_coletiva_ext" alt="" coords="806,3412,1074,3506">
+<area shape="rect" id="node40" href="tb_fat_atvdd_coletiva_int.html" target="_top" title="tb_fat_atvdd_coletiva_int" alt="" coords="807,3524,1073,3618">
+<area shape="rect" id="node41" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="802,4868,1078,4962">
+<area shape="rect" id="node42" href="tb_fat_atvdd_coletiva_propart.html" target="_top" title="tb_fat_atvdd_coletiva_propart" alt="" coords="789,3076,1091,3170">
+<area shape="rect" id="node43" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="788,5428,1091,5522">
+<area shape="rect" id="node44" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="812,2628,1067,2722">
+<area shape="rect" id="node45" href="tb_fat_cad_domiciliar.html" target="_top" title="tb_fat_cad_domiciliar" alt="" coords="821,3636,1059,3730">
+<area shape="rect" id="node46" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="822,4196,1058,4290">
+<area shape="rect" id="node48" href="tb_fat_cidadao.html" target="_top" title="tb_fat_cidadao" alt="" coords="847,184,1033,278">
+<area shape="rect" id="node49" href="tb_fat_cidadao_territorio.html" target="_top" title="tb_fat_cidadao_territorio" alt="" coords="809,6842,1071,6936">
+<area shape="rect" id="node50" href="tb_fat_cnslddo_ciddo_fai_cid.html" target="_top" title="tb_fat_cnslddo_ciddo_fai_cid" alt="" coords="791,6394,1089,6488">
+<area shape="rect" id="node51" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="822,4756,1057,4850">
+<area shape="rect" id="node52" href="tb_fat_consolidado_cidadao_fai.html" target="_top" title="tb_fat_consolidado_cidadao_fai" alt="" coords="782,6506,1098,6600">
+<area shape="rect" id="node53" href="tb_fat_consolidado_cidadao_fao.html" target="_top" title="tb_fat_consolidado_cidadao_fao" alt="" coords="779,6618,1101,6712">
+<area shape="rect" id="node54" href="tb_fat_consolidado_cidadao_fci.html" target="_top" title="tb_fat_consolidado_cidadao_fci" alt="" coords="782,6730,1098,6824">
+<area shape="rect" id="node55" href="tb_fat_consolidado_cidadao_fp.html" target="_top" title="tb_fat_consolidado_cidadao_fp" alt="" coords="783,5575,1097,5669">
+<area shape="rect" id="node56" href="tb_fat_consolidado_cidadao_fvd.html" target="_top" title="tb_fat_consolidado_cidadao_fvd" alt="" coords="779,5687,1101,5781">
+<area shape="rect" id="node57" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="787,4532,1093,4626">
+<area shape="rect" id="node58" href="tb_fat_familia.html" target="_top" title="tb_fat_familia" alt="" coords="852,72,1028,166">
+<area shape="rect" id="node59" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="1212,5852,1464,5946">
+<area shape="rect" id="node60" href="tb_fat_fichas.html" target="_top" title="tb_fat_fichas" alt="" coords="854,4084,1026,4178">
+<area shape="rect" id="node61" href="tb_fat_ivcf.html" target="_top" title="tb_fat_ivcf" alt="" coords="863,2964,1017,3058">
+<area shape="rect" id="node62" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="786,5204,1094,5298">
+<area shape="rect" id="node63" href="tb_fat_op_acompanhamento_idosa.html" target="_top" title="tb_fat_op_acompanhamento_idosa" alt="" coords="769,5799,1111,5893">
+<area shape="rect" id="node64" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="824,4980,1055,5074">
+<area shape="rect" id="node65" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="794,5092,1086,5186">
+<area shape="rect" id="node66" href="tb_fat_procedimento.html" target="_top" title="tb_fat_procedimento" alt="" coords="824,3188,1055,3282">
+<area shape="rect" id="node67" href="tb_fat_rel_op_crianca.html" target="_top" title="tb_fat_rel_op_crianca" alt="" coords="820,5911,1059,6005">
+<area shape="rect" id="node68" href="tb_fat_rel_op_gestante.html" target="_top" title="tb_fat_rel_op_gestante" alt="" coords="816,6023,1064,6117">
+<area shape="rect" id="node69" href="tb_fat_rel_op_risco_cardio.html" target="_top" title="tb_fat_rel_op_risco_cardio" alt="" coords="801,6135,1079,6229">
+<area shape="rect" id="node70" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="838,5316,1041,5410">
+<area shape="rect" id="node71" href="tb_fat_vacinacao_vacina.html" target="_top" title="tb_fat_vacinacao_vacina" alt="" coords="809,2516,1071,2610">
+<area shape="rect" id="node72" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="814,4644,1065,4738">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_fat_atd_ind_medicamentos.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

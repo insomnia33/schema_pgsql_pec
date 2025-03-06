@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_equipe - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_equipe</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar equipes de atendimento e suas respectivas informações.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_equipe">co_seq_equipe</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_equipe.co_seq_equipe&#39;s name implies that it&#39;s a child of tb_equipe.co_seq_equipe, but it doesn&#39;t reference that column."><a href='ta_equipe.html'>ta_equipe</a><span class='relatedKey'>.co_seq_equipe</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_ad_cidadao.co_equipe references tb_equipe.co_seq_equipe via fk_equipe_adcidadao"><a href='tb_ad_cidadao.html'>tb_ad_cidadao</a><span class='relatedKey'>.co_equipe</span></td>
+                                                <td class="constraint detail">fk_equipe_adcidadao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_atend.co_equipe references tb_equipe.co_seq_equipe via fk_atend_equipe"><a href='tb_atend.html'>tb_atend</a><span class='relatedKey'>.co_equipe</span></td>
+                                                <td class="constraint detail">fk_atend_equipe</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_config_atend_domiciliar.co_equipe_filho references tb_equipe.co_seq_equipe via fk_equipe_configatenddom_filho"><a href='tb_config_atend_domiciliar.html'>tb_config_atend_domiciliar</a><span class='relatedKey'>.co_equipe_filho</span></td>
+                                                <td class="constraint detail">fk_equipe_configatenddom_filho</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_config_atend_domiciliar.co_equipe_pai references tb_equipe.co_seq_equipe via fk_equipe_configatenddom_pai"><a href='tb_config_atend_domiciliar.html'>tb_config_atend_domiciliar</a><span class='relatedKey'>.co_equipe_pai</span></td>
+                                                <td class="constraint detail">fk_equipe_configatenddom_pai</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cuidado_compartilhado.co_equipe_executante_atual references tb_equipe.co_seq_equipe via fk_equipeexecatual_cddcmprtlhd"><a href='tb_cuidado_compartilhado.html'>tb_cuidado_compartilhado</a><span class='relatedKey'>.co_equipe_executante_atual</span></td>
+                                                <td class="constraint detail">fk_equipeexecatual_cddcmprtlhd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cuidado_compartilhado.co_equipe_solicitante references tb_equipe.co_seq_equipe via fk_equipesolictnt_cddcmprtlhd"><a href='tb_cuidado_compartilhado.html'>tb_cuidado_compartilhado</a><span class='relatedKey'>.co_equipe_solicitante</span></td>
+                                                <td class="constraint detail">fk_equipesolictnt_cddcmprtlhd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_estagio.co_equipe references tb_equipe.co_seq_equipe via fk_equipe_estagio"><a href='tb_estagio.html'>tb_estagio</a><span class='relatedKey'>.co_equipe</span></td>
+                                                <td class="constraint detail">fk_equipe_estagio</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_lista_espera.co_equipe references tb_equipe.co_seq_equipe via fk_equipe_listesp"><a href='tb_lista_espera.html'>tb_lista_espera</a><span class='relatedKey'>.co_equipe</span></td>
+                                                <td class="constraint detail">fk_equipe_listesp</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_lotacao.co_equipe references tb_equipe.co_seq_equipe via fk_equipe_lotacao"><a href='tb_lotacao.html'>tb_lotacao</a><span class='relatedKey'>.co_equipe</span></td>
+                                                <td class="constraint detail">fk_equipe_lotacao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_vinculacao_equipes.co_equipe_principal references tb_equipe.co_seq_equipe via fk_vincequipes_equip_principal"><a href='tb_vinculacao_equipes.html'>tb_vinculacao_equipes</a><span class='relatedKey'>.co_equipe_principal</span></td>
+                                                <td class="constraint detail">fk_vincequipes_equip_principal</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_vinculacao_equipes.co_equipe_vinculada references tb_equipe.co_seq_equipe via fk_vincequipes_equip_vinculada"><a href='tb_vinculacao_equipes.html'>tb_vinculacao_equipes</a><span class='relatedKey'>.co_equipe_vinculada</span></td>
+                                                <td class="constraint detail">fk_vincequipes_equip_vinculada</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_ine">nu_ine</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Número relativo ao Identificador Nacional de Equipes (INE).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_ativo">st_ativo</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa se a equipe está disponível no sistema (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_unidade_saude">co_unidade_saude</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_equipe.co_unidade_saude references tb_unidade_saude.co_seq_unidade_saude via fk_unidadesaude_equipe"><a href='tb_unidade_saude.html'>tb_unidade_saude</a><span class='relatedKey'>.co_seq_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_unidadesaude_equipe</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da unidade de saúde. Chave estrangeira com origem na tabela TB_UNIDADE_SAUDE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_referencia">qt_referencia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa quantas referências existem no sistema para uma dada equipe.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tp_equipe">tp_equipe</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_equipe.tp_equipe references tb_tipo_equipe.co_seq_tipo_equipe via fk_tipoequipe_equipe"><a href='tb_tipo_equipe.html'>tb_tipo_equipe</a><span class='relatedKey'>.co_seq_tipo_equipe</span></td>
+                                                <td class="constraint detail">fk_tipoequipe_equipe</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do tipo de equipe. Chave estrangeira com origem na tabela TB_TIPO_EQUIPE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_area">ds_area</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Área de atuação da equipe.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_equipe">no_equipe</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa o nome da equipe.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="no_equipe_filtro">no_equipe_filtro</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Filtro do nome da equipe. Utilizado no filtro de busca do sistema.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_unico_equipe">co_unico_equipe</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_equipe</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_equipe</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> in_equipe_codigo_unico</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_unico_equipe</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_equipe_counidadesaude</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_unidade_saude</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_equipe_noequipefiltro</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>no_equipe_filtro</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_equipe_nuine</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_ine</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_equipe_tpequipe</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>tp_equipe</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="651,1309,915,1667">
+<area shape="rect" id="node2" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="304,1488,591,1854">
+<area shape="rect" id="node4" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="5,873,260,1202">
+<area shape="rect" id="node8" href="tb_tipo_equipe.html" target="_top" title="tb_tipo_equipe" alt="" coords="27,1636,239,1789">
+<area shape="rect" id="node3" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="647,464,920,939">
+<area shape="rect" id="node5" href="tb_config_atend_domiciliar.html" target="_top" title="tb_config_atend_domiciliar" alt="" coords="635,1720,932,1931">
+<area shape="rect" id="node6" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="976,1495,1284,2087">
+<area shape="rect" id="node7" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="652,992,915,1291">
+<area shape="rect" id="node9" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1014,827,1246,1097">
+<area shape="rect" id="node10" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="635,88,932,446">
+<area shape="rect" id="node11" href="tb_vinculacao_equipes.html" target="_top" title="tb_vinculacao_equipes" alt="" coords="651,1985,916,2141">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_equipe.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_atend_obs_responsavel.html" target="_top" title="rl_atend_obs_responsavel" alt="" coords="1704,808,1979,902">
+<area shape="rect" id="node2" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1409,811,1563,905">
+<area shape="rect" id="node7" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="669,1695,882,1789">
+<area shape="rect" id="node17" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="988,1196,1274,1563">
+<area shape="rect" id="node29" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="1062,308,1200,402">
+<area shape="rect" id="node31" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="699,544,852,638">
+<area shape="rect" id="node3" href="rl_atend_tipo_servico.html" target="_top" title="rl_atend_tipo_servico" alt="" coords="2453,2095,2692,2189">
+<area shape="rect" id="node4" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="2138,1731,2278,1825">
+<area shape="rect" id="node5" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="2112,2258,2303,2352">
+<area shape="rect" id="node8" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="1398,1756,1574,1850">
+<area shape="rect" id="node19" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="1755,1403,1928,1497">
+<area shape="rect" id="node20" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1397,1006,1575,1100">
+<area shape="rect" id="node21" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="1393,1644,1579,1738">
+<area shape="rect" id="node22" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="2849,724,3029,818">
+<area shape="rect" id="node23" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="1719,1622,1964,1716">
+<area shape="rect" id="node24" href="tb_status_atend.html" target="_top" title="tb_status_atend" alt="" coords="1743,1804,1940,1898">
+<area shape="rect" id="node25" href="tb_status_revisao_atend.html" target="_top" title="tb_status_revisao_atend" alt="" coords="1711,2134,1972,2228">
+<area shape="rect" id="node32" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="354,934,529,1028">
+<area shape="rect" id="node6" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="1679,1987,2004,2081">
+<area shape="rect" id="node28" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="58,540,205,634">
+<area shape="rect" id="node35" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="332,700,551,794">
+<area shape="rect" id="node55" href="tb_subtipo_unidade_saude.html" target="_top" title="tb_subtipo_unidade_saude" alt="" coords="302,1730,582,1824">
+<area shape="rect" id="node56" href="tb_tipo_unidade_saude.html" target="_top" title="tb_tipo_unidade_saude" alt="" coords="5,1691,258,1785">
+<area shape="rect" id="node34" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1052,815,1210,909">
+<area shape="rect" id="node9" href="rl_unidade_saude_complexidade.html" target="_top" title="rl_unidade_saude_complexidade" alt="" coords="969,1987,1293,2081">
+<area shape="rect" id="node10" href="rl_unidade_saude_horus.html" target="_top" title="rl_unidade_saude_horus" alt="" coords="1000,2170,1263,2264">
+<area shape="rect" id="node11" href="rl_unidade_saude_tipo_servico.html" target="_top" title="rl_unidade_saude_tipo_servico" alt="" coords="2416,2276,2728,2370">
+<area shape="rect" id="node12" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="1710,2440,1974,2798">
+<area shape="rect" id="node13" href="tb_ad_destino.html" target="_top" title="tb_ad_destino" alt="" coords="1395,2755,1577,2849">
+<area shape="rect" id="node14" href="tb_ad_modalidade.html" target="_top" title="tb_ad_modalidade" alt="" coords="1379,2419,1593,2513">
+<area shape="rect" id="node15" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="1397,2531,1575,2625">
+<area shape="rect" id="node16" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1399,2643,1573,2737">
+<area shape="rect" id="node44" href="tb_tipo_equipe.html" target="_top" title="tb_tipo_equipe" alt="" coords="670,1344,882,1497">
+<area shape="rect" id="node18" href="tb_ad_questao.html" target="_top" title="tb_ad_questao" alt="" coords="2115,2443,2301,2537">
+<area shape="rect" id="node26" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="2411,1056,2733,1150">
+<area shape="rect" id="node27" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1765,303,1918,397">
+<area shape="rect" id="node30" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1009,2316,1253,2410">
+<area shape="rect" id="node33" href="tb_cfg_agenda_online_detalhe.html" target="_top" title="tb_cfg_agenda_online_detalhe" alt="" coords="1688,920,1995,1014">
+<area shape="rect" id="node36" href="tb_config_agenda_fechamento.html" target="_top" title="tb_config_agenda_fechamento" alt="" coords="1687,534,1996,628">
+<area shape="rect" id="node37" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="626,899,925,993">
+<area shape="rect" id="node38" href="tb_config_atend_domiciliar.html" target="_top" title="tb_config_atend_domiciliar" alt="" coords="1337,1170,1635,1381">
+<area shape="rect" id="node39" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="3145,616,3423,710">
+<area shape="rect" id="node40" href="tb_ciap.html" target="_top" title="tb_ciap" alt="" coords="2868,2851,3010,2945">
+<area shape="rect" id="node41" href="tb_classificacao_prioridade_cc.html" target="_top" title="tb_classificacao_prioridade_cc" alt="" coords="1686,120,1997,214">
+<area shape="rect" id="node42" href="tb_cuidado_compartilhado_evol.html" target="_top" title="tb_cuidado_compartilhado_evol" alt="" coords="2048,466,2367,560">
+<area shape="rect" id="node43" href="tb_status_cuidado_compartilhad.html" target="_top" title="tb_status_cuidado_compartilhad" alt="" coords="2777,2963,3101,3057">
+<area shape="rect" id="node45" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="1004,1580,1258,1674">
+<area shape="rect" id="node46" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="1016,1692,1247,1786">
+<area shape="rect" id="node47" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="1691,1067,1992,1161">
+<area shape="rect" id="node48" href="tb_lembrete_evolucao.html" target="_top" title="tb_lembrete_evolucao" alt="" coords="1721,646,1962,740">
+<area shape="rect" id="node49" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="2477,1476,2667,1570">
+<area shape="rect" id="node50" href="tb_lista_espera_tipo_atend.html" target="_top" title="tb_lista_espera_tipo_atend" alt="" coords="2068,1291,2347,1385">
+<area shape="rect" id="node51" href="tb_lista_espera_motivo_saida.html" target="_top" title="tb_lista_espera_motivo_saida" alt="" coords="2058,1403,2358,1497">
+<area shape="rect" id="node52" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="1725,1179,1958,1273">
+<area shape="rect" id="node53" href="tb_prontuario_unidade_saude.html" target="_top" title="tb_prontuario_unidade_saude" alt="" coords="980,1804,1283,1898">
+<area shape="rect" id="node54" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="1727,1291,1956,1385">
+<area shape="rect" id="node57" href="tb_vinculacao_equipes.html" target="_top" title="tb_vinculacao_equipes" alt="" coords="1353,1435,1619,1591">
+<area shape="rect" id="node58" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1009,962,1253,1056">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_equipe.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_equipe.html" target="_top" title="ta_equipe" alt="" coords="687,323,880,505">
+<area shape="rect" id="node2" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="304,1190,591,1557">
+<area shape="rect" id="node5" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="5,1679,260,2007">
+<area shape="rect" id="node9" href="tb_tipo_equipe.html" target="_top" title="tb_tipo_equipe" alt="" coords="27,1339,239,1491">
+<area shape="rect" id="node3" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="651,523,915,881">
+<area shape="rect" id="node4" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="647,1409,920,1885">
+<area shape="rect" id="node6" href="tb_config_atend_domiciliar.html" target="_top" title="tb_config_atend_domiciliar" alt="" coords="635,899,932,1110">
+<area shape="rect" id="node7" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="976,785,1284,1378">
+<area shape="rect" id="node8" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="652,5,915,305">
+<area shape="rect" id="node10" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1014,1396,1246,1666">
+<area shape="rect" id="node11" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="635,1903,932,2261">
+<area shape="rect" id="node12" href="tb_vinculacao_equipes.html" target="_top" title="tb_vinculacao_equipes" alt="" coords="651,1164,916,1320">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_equipe.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_atend_obs_responsavel.html" target="_top" title="rl_atend_obs_responsavel" alt="" coords="1704,1310,1979,1404">
+<area shape="rect" id="node2" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1409,1126,1563,1220">
+<area shape="rect" id="node7" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="669,2539,882,2633">
+<area shape="rect" id="node24" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="988,1822,1274,2188">
+<area shape="rect" id="node43" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="1062,1161,1200,1255">
+<area shape="rect" id="node45" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="699,1441,852,1535">
+<area shape="rect" id="node3" href="rl_atend_tipo_servico.html" target="_top" title="rl_atend_tipo_servico" alt="" coords="2453,2379,2692,2473">
+<area shape="rect" id="node4" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="2138,1706,2278,1800">
+<area shape="rect" id="node5" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="2112,3013,2303,3107">
+<area shape="rect" id="node8" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="1398,555,1574,649">
+<area shape="rect" id="node16" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="1719,2010,1964,2104">
+<area shape="rect" id="node35" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="1755,1534,1928,1628">
+<area shape="rect" id="node36" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1397,1578,1575,1672">
+<area shape="rect" id="node37" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="1393,1690,1579,1784">
+<area shape="rect" id="node38" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="2849,1215,3029,1309">
+<area shape="rect" id="node39" href="tb_status_atend.html" target="_top" title="tb_status_atend" alt="" coords="1743,1681,1940,1775">
+<area shape="rect" id="node40" href="tb_status_revisao_atend.html" target="_top" title="tb_status_revisao_atend" alt="" coords="1711,1863,1972,1957">
+<area shape="rect" id="node46" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="354,1519,529,1613">
+<area shape="rect" id="node6" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="1679,2189,2004,2283">
+<area shape="rect" id="node29" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="58,1241,205,1335">
+<area shape="rect" id="node49" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="332,1317,551,1411">
+<area shape="rect" id="node64" href="tb_subtipo_unidade_saude.html" target="_top" title="tb_subtipo_unidade_saude" alt="" coords="302,3198,582,3292">
+<area shape="rect" id="node65" href="tb_tipo_unidade_saude.html" target="_top" title="tb_tipo_unidade_saude" alt="" coords="5,3159,258,3253">
+<area shape="rect" id="node48" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1052,1313,1210,1407">
+<area shape="rect" id="node9" href="rl_unidade_saude_complexidade.html" target="_top" title="rl_unidade_saude_complexidade" alt="" coords="969,2537,1293,2631">
+<area shape="rect" id="node10" href="rl_unidade_saude_horus.html" target="_top" title="rl_unidade_saude_horus" alt="" coords="1000,2683,1263,2777">
+<area shape="rect" id="node11" href="rl_unidade_saude_tipo_servico.html" target="_top" title="rl_unidade_saude_tipo_servico" alt="" coords="2416,3161,2728,3255">
+<area shape="rect" id="node12" href="ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="3513,57,3697,151">
+<area shape="rect" id="node13" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="2850,57,3028,151">
+<area shape="rect" id="node14" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="3152,138,3416,496">
+<area shape="rect" id="node21" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="2852,427,3026,521">
+<area shape="rect" id="node32" href="tb_ad_destino.html" target="_top" title="tb_ad_destino" alt="" coords="2848,281,3030,375">
+<area shape="rect" id="node33" href="tb_ad_modalidade.html" target="_top" title="tb_ad_modalidade" alt="" coords="2832,169,3046,263">
+<area shape="rect" id="node15" href="ta_atend.html" target="_top" title="ta_atend" alt="" coords="2503,1987,2642,2081">
+<area shape="rect" id="node17" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="1016,2907,1247,3001">
+<area shape="rect" id="node18" href="ta_config_atend_domiciliar.html" target="_top" title="ta_config_atend_domiciliar" alt="" coords="1701,2413,1982,2507">
+<area shape="rect" id="node19" href="tb_config_atend_domiciliar.html" target="_top" title="tb_config_atend_domiciliar" alt="" coords="1337,2102,1635,2313">
+<area shape="rect" id="node51" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="626,2171,925,2265">
+<area shape="rect" id="node20" href="ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="3467,1001,3743,1095">
+<area shape="rect" id="node22" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="3145,1218,3423,1312">
+<area shape="rect" id="node52" href="tb_ciap.html" target="_top" title="tb_ciap" alt="" coords="2868,2170,3010,2264">
+<area shape="rect" id="node53" href="tb_classificacao_prioridade_cc.html" target="_top" title="tb_classificacao_prioridade_cc" alt="" coords="1686,2631,1997,2725">
+<area shape="rect" id="node54" href="tb_cuidado_compartilhado_evol.html" target="_top" title="tb_cuidado_compartilhado_evol" alt="" coords="2048,2502,2367,2596">
+<area shape="rect" id="node55" href="tb_status_cuidado_compartilhad.html" target="_top" title="tb_status_cuidado_compartilhad" alt="" coords="2777,2794,3101,2888">
+<area shape="rect" id="node23" href="ta_equipe.html" target="_top" title="ta_equipe" alt="" coords="1389,2683,1583,2865">
+<area shape="rect" id="node56" href="tb_tipo_equipe.html" target="_top" title="tb_tipo_equipe" alt="" coords="670,1970,882,2123">
+<area shape="rect" id="node25" href="ta_lista_espera.html" target="_top" title="ta_lista_espera" alt="" coords="2845,3085,3033,3179">
+<area shape="rect" id="node26" href="tb_lista_espera_tipo_atend.html" target="_top" title="tb_lista_espera_tipo_atend" alt="" coords="2068,3125,2347,3219">
+<area shape="rect" id="node27" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="2477,2903,2667,2997">
+<area shape="rect" id="node60" href="tb_lista_espera_motivo_saida.html" target="_top" title="tb_lista_espera_motivo_saida" alt="" coords="2058,2866,2358,2960">
+<area shape="rect" id="node28" href="ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="1025,3343,1237,3437">
+<area shape="rect" id="node30" href="ta_vinculacao_equipes.html" target="_top" title="ta_vinculacao_equipes" alt="" coords="1717,2301,1966,2395">
+<area shape="rect" id="node31" href="tb_vinculacao_equipes.html" target="_top" title="tb_vinculacao_equipes" alt="" coords="1353,1910,1619,2066">
+<area shape="rect" id="node34" href="tb_ad_questao.html" target="_top" title="tb_ad_questao" alt="" coords="3512,169,3698,263">
+<area shape="rect" id="node41" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="2411,1295,2733,1389">
+<area shape="rect" id="node42" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1765,1422,1918,1516">
+<area shape="rect" id="node44" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1009,1495,1253,1589">
+<area shape="rect" id="node47" href="tb_cfg_agenda_online_detalhe.html" target="_top" title="tb_cfg_agenda_online_detalhe" alt="" coords="1688,1086,1995,1180">
+<area shape="rect" id="node50" href="tb_config_agenda_fechamento.html" target="_top" title="tb_config_agenda_fechamento" alt="" coords="1687,1198,1996,1292">
+<area shape="rect" id="node57" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="1004,2795,1258,2889">
+<area shape="rect" id="node58" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="1691,723,1992,817">
+<area shape="rect" id="node59" href="tb_lembrete_evolucao.html" target="_top" title="tb_lembrete_evolucao" alt="" coords="1721,974,1962,1068">
+<area shape="rect" id="node61" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="1725,611,1958,705">
+<area shape="rect" id="node62" href="tb_prontuario_unidade_saude.html" target="_top" title="tb_prontuario_unidade_saude" alt="" coords="980,2390,1283,2484">
+<area shape="rect" id="node63" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="1727,499,1956,593">
+<area shape="rect" id="node66" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1009,2278,1253,2372">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_equipe.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

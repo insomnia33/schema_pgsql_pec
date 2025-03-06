@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_fat_cad_individual - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_fat_cad_individual</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_fat_cad_individual">co_seq_fat_cad_individual</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_uuid_ficha">nu_uuid_ficha</span></td>
+                                    <td>varchar</td>
+                                    <td>92</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_uuid_ficha_origem">nu_uuid_ficha_origem</span></td>
+                                    <td>varchar</td>
+                                    <td>96</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_recusa_cadastro">st_recusa_cadastro</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cns">nu_cns</span></td>
+                                    <td>bpchar</td>
+                                    <td>15</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_nascimento">dt_nascimento</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_desconhece_mae">st_desconhece_mae</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_profissional">co_dim_profissional</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_profissional references tb_dim_profissional.co_seq_dim_profissional via fk_dimprofissional_fatcadindvd"><a href='tb_dim_profissional.html'>tb_dim_profissional</a><span class='relatedKey'>.co_seq_dim_profissional</span></td>
+                                                <td class="constraint detail">fk_dimprofissional_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_ficha">co_dim_tipo_ficha</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_ficha references tb_dim_tipo_ficha.co_seq_dim_tipo_ficha via fk_dimtipoficha_fatcadindvd"><a href='tb_dim_tipo_ficha.html'>tb_dim_tipo_ficha</a><span class='relatedKey'>.co_seq_dim_tipo_ficha</span></td>
+                                                <td class="constraint detail">fk_dimtipoficha_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_municipio">co_dim_municipio</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_municipio references tb_dim_municipio.co_seq_dim_municipio via fk_dimmunicipio_fatcadindividl"><a href='tb_dim_municipio.html'>tb_dim_municipio</a><span class='relatedKey'>.co_seq_dim_municipio</span></td>
+                                                <td class="constraint detail">fk_dimmunicipio_fatcadindividl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_unidade_saude">co_dim_unidade_saude</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_unidade_saude references tb_dim_unidade_saude.co_seq_dim_unidade_saude via fk_dimunidadesaude_fatcadindvd"><a href='tb_dim_unidade_saude.html'>tb_dim_unidade_saude</a><span class='relatedKey'>.co_seq_dim_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_dimunidadesaude_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_equipe">co_dim_equipe</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_equipe references tb_dim_equipe.co_seq_dim_equipe via fk_dimequipe_fatcadindividual"><a href='tb_dim_equipe.html'>tb_dim_equipe</a><span class='relatedKey'>.co_seq_dim_equipe</span></td>
+                                                <td class="constraint detail">fk_dimequipe_fatcadindividual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo">co_dim_tempo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tempo references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatcadindividual"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatcadindividual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo_validade">co_dim_tempo_validade</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tempo_validade references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatcadindvalidade"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatcadindvalidade</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo_validade_recusa">co_dim_tempo_validade_recusa</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tempo_validade_recusa references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_fatcadindvalddrcsa"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_fatcadindvalddrcsa</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_sexo">co_dim_sexo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_sexo references tb_dim_sexo.co_seq_dim_sexo via fk_dimsexo_fatcadindividual"><a href='tb_dim_sexo.html'>tb_dim_sexo</a><span class='relatedKey'>.co_seq_dim_sexo</span></td>
+                                                <td class="constraint detail">fk_dimsexo_fatcadindividual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_raca_cor">co_dim_raca_cor</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_raca_cor references tb_dim_raca_cor.co_seq_dim_raca_cor via fk_dimracacor_fatcadindividual"><a href='tb_dim_raca_cor.html'>tb_dim_raca_cor</a><span class='relatedKey'>.co_seq_dim_raca_cor</span></td>
+                                                <td class="constraint detail">fk_dimracacor_fatcadindividual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_nacionalidade">co_dim_nacionalidade</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_nacionalidade references tb_dim_nacionalidade.co_seq_dim_nacionalidade via fk_dimnacionalidade_fatcadindv"><a href='tb_dim_nacionalidade.html'>tb_dim_nacionalidade</a><span class='relatedKey'>.co_seq_dim_nacionalidade</span></td>
+                                                <td class="constraint detail">fk_dimnacionalidade_fatcadindv</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_pais_nascimento">co_dim_pais_nascimento</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_pais_nascimento references tb_dim_pais.co_seq_dim_pais via fk_dimpaisnascimento_fatcadind"><a href='tb_dim_pais.html'>tb_dim_pais</a><span class='relatedKey'>.co_seq_dim_pais</span></td>
+                                                <td class="constraint detail">fk_dimpaisnascimento_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_municipio_cidadao">co_dim_municipio_cidadao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_municipio_cidadao references tb_dim_municipio.co_seq_dim_municipio via fk_dimmunicip_fatcadindivcidad"><a href='tb_dim_municipio.html'>tb_dim_municipio</a><span class='relatedKey'>.co_seq_dim_municipio</span></td>
+                                                <td class="constraint detail">fk_dimmunicip_fatcadindivcidad</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cns_responsavel">nu_cns_responsavel</span></td>
+                                    <td>bpchar</td>
+                                    <td>15</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_responsavel_familiar">st_responsavel_familiar</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_frequenta_creche">st_frequenta_creche</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_frequenta_cuidador">st_frequenta_cuidador</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_participa_grupo_comunitario">st_participa_grupo_comunitario</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_plano_saude_privado">st_plano_saude_privado</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_comunidade_tradicional">st_comunidade_tradicional</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_deficiencia">st_deficiencia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_defi_auditiva">st_defi_auditiva</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_defi_intelectual_cognitiva">st_defi_intelectual_cognitiva</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_defi_outra">st_defi_outra</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_defi_visual">st_defi_visual</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_defi_fisica">st_defi_fisica</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_gestante">st_gestante</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_respiratoria">st_doenca_respiratoria</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_respira_asma">st_doenca_respira_asma</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_respira_dpoc_enfisem">st_doenca_respira_dpoc_enfisem</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_respira_outra">st_doenca_respira_outra</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_respira_n_sabe">st_doenca_respira_n_sabe</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_fumante">st_fumante</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_alcool">st_alcool</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_outra_droga">st_outra_droga</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_hipertensao_arterial">st_hipertensao_arterial</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_diabete">st_diabete</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_avc">st_avc</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_infarto">st_infarto</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_hanseniase">st_hanseniase</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_tuberculose">st_tuberculose</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_cancer">st_cancer</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_internacao_12">st_internacao_12</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_tratamento_psiquiatra">st_tratamento_psiquiatra</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_acamado">st_acamado</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_domiciliado">st_domiciliado</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_usa_planta_medicinal">st_usa_planta_medicinal</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_cardiaca">st_doenca_cardiaca</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_card_insuficiencia">st_doenca_card_insuficiencia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_card_outro">st_doenca_card_outro</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_doenca_card_n_sabe">st_doenca_card_n_sabe</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_problema_rins">st_problema_rins</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_problema_rins_insuficiencia">st_problema_rins_insuficiencia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_problema_rins_outro">st_problema_rins_outro</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_problema_rins_nao_sabe">st_problema_rins_nao_sabe</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_pic">st_pic</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_morador_rua">st_morador_rua</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_recebe_beneficio">st_recebe_beneficio</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_referencia_familiar">st_referencia_familiar</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_frequencia_alimentacao">co_dim_frequencia_alimentacao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_frequencia_alimentacao references tb_dim_frequencia_alimentacao.co_seq_dim_frequencia_aliment via fk_dimfrequenciaalmn_fatcadind"><a href='tb_dim_frequencia_alimentacao.html'>tb_dim_frequencia_alimentacao</a><span class='relatedKey'>.co_seq_dim_frequencia_aliment</span></td>
+                                                <td class="constraint detail">fk_dimfrequenciaalmn_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_orig_alimen_restaurante_pop">st_orig_alimen_restaurante_pop</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_orig_alimen_doacao_reli">st_orig_alimen_doacao_reli</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_orig_alimen_doacao_rest">st_orig_alimen_doacao_rest</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_orig_alimen_doacao_popular">st_orig_alimen_doacao_popular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_orig_alimen_outros">st_orig_alimen_outros</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_acompanhado_instituicao">st_acompanhado_instituicao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_visita_familiar_frequente">st_visita_familiar_frequente</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_higiene_pessoal_acesso">st_higiene_pessoal_acesso</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_hig_pess_banho">st_hig_pess_banho</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_hig_pess_sanitario">st_hig_pess_sanitario</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_hig_pess_higiene_bucal">st_hig_pess_higiene_bucal</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_hig_pess_outros">st_hig_pess_outros</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_parentesco">co_dim_tipo_parentesco</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_parentesco references tb_dim_tipo_parentesco.co_seq_dim_tipo_parentesco via fk_dimtipoparentesco_fatcadind"><a href='tb_dim_tipo_parentesco.html'>tb_dim_tipo_parentesco</a><span class='relatedKey'>.co_seq_dim_tipo_parentesco</span></td>
+                                                <td class="constraint detail">fk_dimtipoparentesco_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cbo">co_dim_cbo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_cbo references tb_dim_cbo.co_seq_dim_cbo via fk_dimcbo_fatcadindividual"><a href='tb_dim_cbo.html'>tb_dim_cbo</a><span class='relatedKey'>.co_seq_dim_cbo</span></td>
+                                                <td class="constraint detail">fk_dimcbo_fatcadindividual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_escolaridade">co_dim_tipo_escolaridade</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_escolaridade references tb_dim_tipo_escolaridade.co_seq_dim_tipo_escolaridade via fk_dimtipoescolaridd_fatcadind"><a href='tb_dim_tipo_escolaridade.html'>tb_dim_tipo_escolaridade</a><span class='relatedKey'>.co_seq_dim_tipo_escolaridade</span></td>
+                                                <td class="constraint detail">fk_dimtipoescolaridd_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_situacao_trabalho">co_dim_situacao_trabalho</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_situacao_trabalho references tb_dim_situacao_trabalho.co_seq_dim_situacao_trabalho via fk_dimsituacaotrablh_fatcadind"><a href='tb_dim_situacao_trabalho.html'>tb_dim_situacao_trabalho</a><span class='relatedKey'>.co_seq_dim_situacao_trabalho</span></td>
+                                                <td class="constraint detail">fk_dimsituacaotrablh_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_orientacao_sexual">co_dim_tipo_orientacao_sexual</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_orientacao_sexual references tb_dim_tipo_orientacao_sexual.co_seq_dim_tipo_orientacao_sxl via fk_dimtipoorientcsxl_fatcadind"><a href='tb_dim_tipo_orientacao_sexual.html'>tb_dim_tipo_orientacao_sexual</a><span class='relatedKey'>.co_seq_dim_tipo_orientacao_sxl</span></td>
+                                                <td class="constraint detail">fk_dimtipoorientcsxl_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_saida_cadastro">co_dim_tipo_saida_cadastro</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_saida_cadastro references tb_dim_tipo_saida_cadastro.co_seq_dim_tipo_saida_cadastro via fk_dimtiposaidacadst_fatcadind"><a href='tb_dim_tipo_saida_cadastro.html'>tb_dim_tipo_saida_cadastro</a><span class='relatedKey'>.co_seq_dim_tipo_saida_cadastro</span></td>
+                                                <td class="constraint detail">fk_dimtiposaidacadst_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_condicao_peso">co_dim_tipo_condicao_peso</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_condicao_peso references tb_dim_tipo_condicao_peso.co_seq_dim_tipo_condicao_peso via fk_dimtipocondicapes_fatcadind"><a href='tb_dim_tipo_condicao_peso.html'>tb_dim_tipo_condicao_peso</a><span class='relatedKey'>.co_seq_dim_tipo_condicao_peso</span></td>
+                                                <td class="constraint detail">fk_dimtipocondicapes_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo_morador_rua">co_dim_tempo_morador_rua</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tempo_morador_rua references tb_dim_tempo_morador_rua.co_seq_dim_tempo_morador_rua via fk_dimtempomoradrrua_fatcadind"><a href='tb_dim_tempo_morador_rua.html'>tb_dim_tempo_morador_rua</a><span class='relatedKey'>.co_seq_dim_tempo_morador_rua</span></td>
+                                                <td class="constraint detail">fk_dimtempomoradrrua_fatcadind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_etnia">co_dim_etnia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_etnia references tb_dim_etnia.co_seq_dim_etnia via fk_dimetnia_fatcadindvd"><a href='tb_dim_etnia.html'>tb_dim_etnia</a><span class='relatedKey'>.co_seq_dim_etnia</span></td>
+                                                <td class="constraint detail">fk_dimetnia_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cbo_cidadao">co_dim_cbo_cidadao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_cbo_cidadao references tb_dim_cbo.co_seq_dim_cbo via fk_dimcbo_fatcadindvdciddo"><a href='tb_dim_cbo.html'>tb_dim_cbo</a><span class='relatedKey'>.co_seq_dim_cbo</span></td>
+                                                <td class="constraint detail">fk_dimcbo_fatcadindvdciddo</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_identidade_genero">co_dim_identidade_genero</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_identidade_genero references tb_dim_identidade_genero.co_seq_dim_identidade_genero via fk_dmidntddgnro_fatcadindividu"><a href='tb_dim_identidade_genero.html'>tb_dim_identidade_genero</a><span class='relatedKey'>.co_seq_dim_identidade_genero</span></td>
+                                                <td class="constraint detail">fk_dmidntddgnro_fatcadindividu</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_faixa_etaria">co_dim_faixa_etaria</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_faixa_etaria references tb_dim_faixa_etaria.co_seq_dim_faixa_etaria via fk_dimfaixaetaria_fatcadindvd"><a href='tb_dim_faixa_etaria.html'>tb_dim_faixa_etaria</a><span class='relatedKey'>.co_seq_dim_faixa_etaria</span></td>
+                                                <td class="constraint detail">fk_dimfaixaetaria_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_desconhece_pai">st_desconhece_pai</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_informar_orientacao_sexual">st_informar_orientacao_sexual</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_informar_identidade_genero">st_informar_identidade_genero</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_naturalizacao">dt_naturalizacao</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_entrada_brasil">dt_entrada_brasil</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_obito">dt_obito</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_respons_crianca_adulto_resp">st_respons_crianca_adulto_resp</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_respons_crianca_outra_crian">st_respons_crianca_outra_crian</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_respons_crianca_adolescente">st_respons_crianca_adolescente</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_respons_crianca_sozinha">st_respons_crianca_sozinha</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_respons_crianca_creche">st_respons_crianca_creche</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_respons_crianca_outro">st_respons_crianca_outro</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_micro_area">nu_micro_area</span></td>
+                                    <td>varchar</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_processo_linha_tempo">st_processo_linha_tempo</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_processo_cidadao">st_processo_cidadao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_nome">no_nome</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_nome_social">no_nome_social</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_nome_mae">no_nome_mae</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_nome_pai">no_nome_pai</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_nis">nu_nis</span></td>
+                                    <td>varchar</td>
+                                    <td>32</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_portaria_naturalizacao">nu_portaria_naturalizacao</span></td>
+                                    <td>varchar</td>
+                                    <td>65</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_celular">nu_celular</span></td>
+                                    <td>varchar</td>
+                                    <td>33</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_email">no_email</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_obito_do">nu_obito_do</span></td>
+                                    <td>varchar</td>
+                                    <td>32</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_maternidade_referencia">no_maternidade_referencia</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_causa_internacao12">no_causa_internacao12</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_plantas_medicinais">no_plantas_medicinais</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_outra_condicao1">no_outra_condicao1</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_outra_condicao2">no_outra_condicao2</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_outra_condicao3">no_outra_condicao3</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_acompanhado_instituicao">no_acompanhado_instituicao</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_visita_familiar_parentesco">no_visita_familiar_parentesco</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_uuid_dado_transp">nu_uuid_dado_transp</span></td>
+                                    <td>varchar</td>
+                                    <td>92</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tipo_origem_dado_transp">co_dim_tipo_origem_dado_transp</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_tipo_origem_dado_transp references tb_dim_tipo_origem_dado_transp.co_seq_dim_tp_orgm_dado_transp via fk_dmtporgddt_fatcadindividl"><a href='tb_dim_tipo_origem_dado_transp.html'>tb_dim_tipo_origem_dado_transp</a><span class='relatedKey'>.co_seq_dim_tp_orgm_dado_transp</span></td>
+                                                <td class="constraint detail">fk_dmtporgddt_fatcadindividl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_cds_tipo_origem">co_dim_cds_tipo_origem</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_cds_tipo_origem references tb_dim_tipo_origem.co_seq_dim_tipo_origem via fk_dimtporigem_fatcadindividl"><a href='tb_dim_tipo_origem.html'>tb_dim_tipo_origem</a><span class='relatedKey'>.co_seq_dim_tipo_origem</span></td>
+                                                <td class="constraint detail">fk_dimtporigem_fatcadindividl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_gerado_automaticamente">st_gerado_automaticamente</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_ficha_inativa">st_ficha_inativa</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_fat_cidadao_pec">co_fat_cidadao_pec</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatcadindvd"><a href='tb_fat_cidadao_pec.html'>tb_fat_cidadao_pec</a><span class='relatedKey'>.co_seq_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_fat_cidadao_pec_responsvl">co_fat_cidadao_pec_responsvl</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_fat_cidadao_pec_responsvl references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddpec_ftcdindvdrsponsvl"><a href='tb_fat_cidadao_pec.html'>tb_fat_cidadao_pec</a><span class='relatedKey'>.co_seq_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddpec_ftcdindvdrsponsvl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_proc_operacionais">st_proc_operacionais</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cpf_cidadao">nu_cpf_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cpf_responsavel">nu_cpf_responsavel</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_povo_comunidad_trad">co_dim_povo_comunidad_trad</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_dim_povo_comunidad_trad references tb_dim_povo_comunidad_trad.co_seq_dim_povo_comunidad_trad via fk_dimpct_fatcadindividual"><a href='tb_dim_povo_comunidad_trad.html'>tb_dim_povo_comunidad_trad</a><span class='relatedKey'>.co_seq_dim_povo_comunidad_trad</span></td>
+                                                <td class="constraint detail">fk_dimpct_fatcadindividual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código de dimensão do povo ou comunidade tradicional</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_comeu_que_tinha_dnheir_acab">st_comeu_que_tinha_dnheir_acab</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nos últimos três meses, você comeu apenas alguns alimentos que ainda tinha, porque o dinheiro acabou?</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_alimentos_acab_sem_dinheiro">st_alimentos_acab_sem_dinheiro</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nos últimos três meses, os alimentos acabaram antes que você tivesse dinheiro para comprar mais comida?</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_fatcadindividual</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_fat_cad_individual</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_fatcadindivdual_cidaddgrpo</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_fat_cidadao_pec + co_dim_tempo_validade + st_ficha_inativa + st_gerado_automaticamente</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_ftcdindvdl_cidaddgrpoesp</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_fat_cidadao_pec_responsvl</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcadindividual_header</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_dim_municipio + co_dim_unidade_saude + co_dim_equipe</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcadindividual_nuuuidfich</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha + co_dim_tempo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcadindividual_periodo</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_dim_tempo_validade + co_dim_tempo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcadindvdl_nuuuidfichorgm</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_uuid_ficha_origem + co_dim_tempo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcadindvdl_stprcprcns</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>st_proc_operacionais + nu_uuid_ficha_origem</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="716,114,1140,4177">
+<area shape="rect" id="node2" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="414,2896,600,3019">
+<area shape="rect" id="node3" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="386,3497,628,3621">
+<area shape="rect" id="node4" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="51,3576,252,3729">
+<area shape="rect" id="node5" href="tb_dim_etnia.html" target="_top" title="tb_dim_etnia" alt="" coords="413,3037,601,3161">
+<area shape="rect" id="node6" href="tb_dim_faixa_etaria.html" target="_top" title="tb_dim_faixa_etaria" alt="" coords="388,3213,626,3337">
+<area shape="rect" id="node7" href="tb_dim_frequencia_alimentacao.html" target="_top" title="tb_dim_frequencia_alimentacao" alt="" coords="349,1765,665,1889">
+<area shape="rect" id="node8" href="tb_dim_identidade_genero.html" target="_top" title="tb_dim_identidade_genero" alt="" coords="5,3285,297,3409">
+<area shape="rect" id="node9" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="394,352,620,505">
+<area shape="rect" id="node10" href="tb_dim_nacionalidade.html" target="_top" title="tb_dim_nacionalidade" alt="" coords="378,875,636,998">
+<area shape="rect" id="node11" href="tb_dim_pais.html" target="_top" title="tb_dim_pais" alt="" coords="414,1016,600,1139">
+<area shape="rect" id="node12" href="tb_dim_povo_comunidad_trad.html" target="_top" title="tb_dim_povo_comunidad_trad" alt="" coords="346,4017,668,4141">
+<area shape="rect" id="node13" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="386,5,628,158">
+<area shape="rect" id="node14" href="tb_dim_raca_cor.html" target="_top" title="tb_dim_raca_cor" alt="" coords="398,733,616,857">
+<area shape="rect" id="node15" href="tb_dim_sexo.html" target="_top" title="tb_dim_sexo" alt="" coords="58,1917,245,2041">
+<area shape="rect" id="node16" href="tb_dim_situacao_trabalho.html" target="_top" title="tb_dim_situacao_trabalho" alt="" coords="364,2189,650,2313">
+<area shape="rect" id="node17" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="408,557,606,681">
+<area shape="rect" id="node18" href="tb_dim_tempo_morador_rua.html" target="_top" title="tb_dim_tempo_morador_rua" alt="" coords="354,2755,660,2878">
+<area shape="rect" id="node19" href="tb_dim_tipo_condicao_peso.html" target="_top" title="tb_dim_tipo_condicao_peso" alt="" coords="354,2613,660,2737">
+<area shape="rect" id="node20" href="tb_dim_tipo_escolaridade.html" target="_top" title="tb_dim_tipo_escolaridade" alt="" coords="364,2048,650,2171">
+<area shape="rect" id="node21" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="394,176,620,299">
+<area shape="rect" id="node22" href="tb_dim_tipo_orientacao_sexual.html" target="_top" title="tb_dim_tipo_orientacao_sexual" alt="" coords="351,2331,663,2454">
+<area shape="rect" id="node23" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="341,3356,672,3479">
+<area shape="rect" id="node24" href="tb_dim_tipo_parentesco.html" target="_top" title="tb_dim_tipo_parentesco" alt="" coords="370,1907,644,2030">
+<area shape="rect" id="node25" href="tb_dim_tipo_saida_cadastro.html" target="_top" title="tb_dim_tipo_saida_cadastro" alt="" coords="354,2472,660,2595">
+<area shape="rect" id="node26" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="18,1028,285,1181">
+<area shape="rect" id="node27" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="372,3639,642,3997">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_fat_cad_individual.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="998,310,1289,404">
+<area shape="rect" id="node2" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="622,1310,821,1433">
+<area shape="rect" id="node3" href="tb_dim_cidadao_pec_grupo.html" target="_top" title="tb_dim_cidadao_pec_grupo" alt="" coords="1000,5230,1286,5324">
+<area shape="rect" id="node4" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="610,4611,833,4705">
+<area shape="rect" id="node11" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="281,2851,467,2945">
+<area shape="rect" id="node17" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="249,1885,500,1979">
+<area shape="rect" id="node31" href="tb_dim_sexo.html" target="_top" title="tb_dim_sexo" alt="" coords="289,4362,460,4456">
+<area shape="rect" id="node47" href="tb_dim_identidade_genero.html" target="_top" title="tb_dim_identidade_genero" alt="" coords="236,7809,512,7903">
+<area shape="rect" id="node5" href="tb_dim_grupo_cbo.html" target="_top" title="tb_dim_grupo_cbo" alt="" coords="1034,2137,1252,2231">
+<area shape="rect" id="node6" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="628,2137,815,2260">
+<area shape="rect" id="node7" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="609,2959,834,3112">
+<area shape="rect" id="node8" href="tb_dim_uf.html" target="_top" title="tb_dim_uf" alt="" coords="299,3619,449,3713">
+<area shape="rect" id="node9" href="tb_dim_pais.html" target="_top" title="tb_dim_pais" alt="" coords="5,5251,192,5375">
+<area shape="rect" id="node10" href="tb_dim_vinculacao_equipes.html" target="_top" title="tb_dim_vinculacao_equipes" alt="" coords="578,3565,865,3659">
+<area shape="rect" id="node12" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="977,2697,1309,2791">
+<area shape="rect" id="node13" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="601,2611,842,2735">
+<area shape="rect" id="node14" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="601,1966,842,2119">
+<area shape="rect" id="node15" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="609,2278,834,2401">
+<area shape="rect" id="node16" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="556,2470,887,2593">
+<area shape="rect" id="node18" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="1018,905,1268,999">
+<area shape="rect" id="node19" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="992,2473,1295,2567">
+<area shape="rect" id="node20" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="1007,681,1279,775">
+<area shape="rect" id="node21" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="990,1465,1296,1559">
+<area shape="rect" id="node22" href="tb_fat_atend_dom_prob_cond.html" target="_top" title="tb_fat_atend_dom_prob_cond" alt="" coords="992,457,1295,551">
+<area shape="rect" id="node23" href="tb_fat_atend_dom_proced.html" target="_top" title="tb_fat_atend_dom_proced" alt="" coords="1006,569,1280,663">
+<area shape="rect" id="node24" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="974,2809,1312,2903">
+<area shape="rect" id="node25" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="994,2585,1293,2679">
+<area shape="rect" id="node26" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="976,2025,1310,2119">
+<area shape="rect" id="node27" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="982,1129,1304,1223">
+<area shape="rect" id="node28" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="996,793,1290,887">
+<area shape="rect" id="node29" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="990,3369,1296,3463">
+<area shape="rect" id="node30" href="tb_dim_faixa_etaria.html" target="_top" title="tb_dim_faixa_etaria" alt="" coords="602,4435,841,4559">
+<area shape="rect" id="node32" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="991,2921,1295,3015">
+<area shape="rect" id="node33" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="1002,3593,1285,3687">
+<area shape="rect" id="node34" href="tb_fat_atividade_coletiva.html" target="_top" title="tb_fat_atividade_coletiva" alt="" coords="1012,1017,1275,1111">
+<area shape="rect" id="node35" href="tb_fat_atvdd_coletiva_ext.html" target="_top" title="tb_fat_atvdd_coletiva_ext" alt="" coords="1009,1913,1277,2007">
+<area shape="rect" id="node36" href="tb_fat_atvdd_coletiva_int.html" target="_top" title="tb_fat_atvdd_coletiva_int" alt="" coords="1010,2249,1276,2343">
+<area shape="rect" id="node37" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="1005,3145,1281,3239">
+<area shape="rect" id="node38" href="tb_fat_atvdd_coletiva_propart.html" target="_top" title="tb_fat_atvdd_coletiva_propart" alt="" coords="992,1577,1294,1671">
+<area shape="rect" id="node39" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="992,4299,1295,4393">
+<area shape="rect" id="node40" href="tb_dim_etnia.html" target="_top" title="tb_dim_etnia" alt="" coords="628,8229,816,8352">
+<area shape="rect" id="node41" href="tb_dim_nacionalidade.html" target="_top" title="tb_dim_nacionalidade" alt="" coords="593,5719,850,5843">
+<area shape="rect" id="node42" href="tb_dim_raca_cor.html" target="_top" title="tb_dim_raca_cor" alt="" coords="613,5413,830,5536">
+<area shape="rect" id="node43" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="1016,1689,1271,1783">
+<area shape="rect" id="node44" href="tb_fat_cad_domiciliar.html" target="_top" title="tb_fat_cad_domiciliar" alt="" coords="1024,2361,1262,2455">
+<area shape="rect" id="node45" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="931,5790,1355,9852">
+<area shape="rect" id="node46" href="tb_dim_frequencia_alimentacao.html" target="_top" title="tb_dim_frequencia_alimentacao" alt="" coords="564,7522,880,7645">
+<area shape="rect" id="node48" href="tb_dim_povo_comunidad_trad.html" target="_top" title="tb_dim_povo_comunidad_trad" alt="" coords="561,9693,882,9816">
+<area shape="rect" id="node49" href="tb_dim_situacao_trabalho.html" target="_top" title="tb_dim_situacao_trabalho" alt="" coords="578,7946,865,8069">
+<area shape="rect" id="node50" href="tb_dim_tempo_morador_rua.html" target="_top" title="tb_dim_tempo_morador_rua" alt="" coords="569,8653,874,8776">
+<area shape="rect" id="node51" href="tb_dim_tipo_condicao_peso.html" target="_top" title="tb_dim_tipo_condicao_peso" alt="" coords="569,8511,874,8635">
+<area shape="rect" id="node52" href="tb_dim_tipo_escolaridade.html" target="_top" title="tb_dim_tipo_escolaridade" alt="" coords="578,7805,865,7928">
+<area shape="rect" id="node53" href="tb_dim_tipo_orientacao_sexual.html" target="_top" title="tb_dim_tipo_orientacao_sexual" alt="" coords="566,8087,878,8211">
+<area shape="rect" id="node54" href="tb_dim_tipo_parentesco.html" target="_top" title="tb_dim_tipo_parentesco" alt="" coords="585,7663,858,7787">
+<area shape="rect" id="node55" href="tb_dim_tipo_saida_cadastro.html" target="_top" title="tb_dim_tipo_saida_cadastro" alt="" coords="569,8370,874,8493">
+<area shape="rect" id="node56" href="tb_fat_cidadao.html" target="_top" title="tb_fat_cidadao" alt="" coords="1050,198,1236,292">
+<area shape="rect" id="node57" href="tb_fat_cidadao_territorio.html" target="_top" title="tb_fat_cidadao_territorio" alt="" coords="1012,5678,1274,5772">
+<area shape="rect" id="node58" href="tb_fat_cnslddo_ciddo_fai_cid.html" target="_top" title="tb_fat_cnslddo_ciddo_fai_cid" alt="" coords="994,5342,1292,5436">
+<area shape="rect" id="node59" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="1026,3481,1261,3575">
+<area shape="rect" id="node60" href="tb_fat_consolidado_cidadao_fai.html" target="_top" title="tb_fat_consolidado_cidadao_fai" alt="" coords="985,5454,1301,5548">
+<area shape="rect" id="node61" href="tb_fat_consolidado_cidadao_fao.html" target="_top" title="tb_fat_consolidado_cidadao_fao" alt="" coords="982,5566,1304,5660">
+<area shape="rect" id="node62" href="tb_fat_consolidado_cidadao_fci.html" target="_top" title="tb_fat_consolidado_cidadao_fci" alt="" coords="985,4411,1301,4505">
+<area shape="rect" id="node63" href="tb_fat_consolidado_cidadao_fp.html" target="_top" title="tb_fat_consolidado_cidadao_fp" alt="" coords="986,4523,1300,4617">
+<area shape="rect" id="node64" href="tb_fat_consolidado_cidadao_fvd.html" target="_top" title="tb_fat_consolidado_cidadao_fvd" alt="" coords="982,4635,1304,4729">
+<area shape="rect" id="node65" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="990,3705,1296,3799">
+<area shape="rect" id="node66" href="tb_fat_familia.html" target="_top" title="tb_fat_familia" alt="" coords="1055,86,1231,180">
+<area shape="rect" id="node67" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="1399,4633,1651,4727">
+<area shape="rect" id="node68" href="tb_fat_fichas.html" target="_top" title="tb_fat_fichas" alt="" coords="1057,3033,1229,3127">
+<area shape="rect" id="node69" href="tb_fat_ivcf.html" target="_top" title="tb_fat_ivcf" alt="" coords="1066,1353,1220,1447">
+<area shape="rect" id="node70" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="989,3817,1297,3911">
+<area shape="rect" id="node71" href="tb_fat_op_acompanhamento_idosa.html" target="_top" title="tb_fat_op_acompanhamento_idosa" alt="" coords="972,4747,1314,4841">
+<area shape="rect" id="node72" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="1028,4041,1259,4135">
+<area shape="rect" id="node73" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="997,3257,1289,3351">
+<area shape="rect" id="node74" href="tb_fat_procedimento.html" target="_top" title="tb_fat_procedimento" alt="" coords="1028,1801,1259,1895">
+<area shape="rect" id="node75" href="tb_fat_rel_op_crianca.html" target="_top" title="tb_fat_rel_op_crianca" alt="" coords="1024,4859,1263,4953">
+<area shape="rect" id="node76" href="tb_fat_rel_op_gestante.html" target="_top" title="tb_fat_rel_op_gestante" alt="" coords="1019,4971,1267,5065">
+<area shape="rect" id="node77" href="tb_fat_rel_op_risco_cardio.html" target="_top" title="tb_fat_rel_op_risco_cardio" alt="" coords="1004,5118,1282,5212">
+<area shape="rect" id="node78" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="1042,4153,1245,4247">
+<area shape="rect" id="node79" href="tb_fat_vacinacao_vacina.html" target="_top" title="tb_fat_vacinacao_vacina" alt="" coords="1012,1241,1274,1335">
+<area shape="rect" id="node80" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="1018,3929,1269,4023">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_fat_cad_individual.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

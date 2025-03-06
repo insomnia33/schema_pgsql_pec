@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>Utility Tables</h1>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 class="box-title">Orphan Tables</h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="grid" data-columns>
+                                <div class="item">
+<img id="orphans" src="diagrams/orphans/orphans.png" usemap="#orphans" style="max-width:100%;" border="0" align="top">
+<map id="orphans" name="orphans">
+<area shape="rect" id="node1" href="tables/rl_recurso_acao.html" target="_top" title="rl_recurso_acao" alt="" coords="128,167453,381,167615">
+<area shape="rect" id="node2" href="tables/rl_via_adm_local_apl_vacina.html" target="_top" title="rl_via_adm_local_apl_vacina" alt="" coords="56,167304,453,167436">
+<area shape="rect" id="node3" href="tables/ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="60,166509,450,167287">
+<area shape="rect" id="node4" href="tables/ta_ad_cidadao_historico.html" target="_top" title="ta_ad_cidadao_historico" alt="" coords="46,166155,463,166492">
+<area shape="rect" id="node5" href="tables/ta_adm_geral.html" target="_top" title="ta_adm_geral" alt="" coords="79,165917,430,166137">
+<area shape="rect" id="node6" href="tables/ta_adm_municipal.html" target="_top" title="ta_adm_municipal" alt="" coords="79,165563,431,165900">
+<area shape="rect" id="node7" href="tables/ta_agend_compartilhado.html" target="_top" title="ta_agend_compartilhado" alt="" coords="42,165149,467,165545">
+<area shape="rect" id="node8" href="tables/ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="41,164355,468,165132">
+<area shape="rect" id="node9" href="tables/ta_aldeia_localidade.html" target="_top" title="ta_aldeia_localidade" alt="" coords="67,164088,442,164337">
+<area shape="rect" id="node10" href="tables/ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="53,163704,456,164071">
+<area shape="rect" id="node11" href="tables/ta_alergia_evolucao.html" target="_top" title="ta_alergia_evolucao" alt="" coords="69,163203,440,163687">
+<area shape="rect" id="node12" href="tables/ta_animais_domicilio.html" target="_top" title="ta_animais_domicilio" alt="" coords="62,162672,447,163185">
+<area shape="rect" id="node13" href="tables/ta_antecedente.html" target="_top" title="ta_antecedente" alt="" coords="38,161584,471,162655">
+<area shape="rect" id="node14" href="tables/ta_antecedente_ciap.html" target="_top" title="ta_antecedente_ciap" alt="" coords="66,161317,443,161567">
+<area shape="rect" id="node15" href="tables/ta_antecedente_historico.html" target="_top" title="ta_antecedente_historico" alt="" coords="39,161080,470,161300">
+<area shape="rect" id="node16" href="tables/ta_antecedente_item.html" target="_top" title="ta_antecedente_item" alt="" coords="65,160755,444,161063">
+<area shape="rect" id="node17" href="tables/ta_arquivo.html" target="_top" title="ta_arquivo" alt="" coords="104,160429,405,160737">
+<area shape="rect" id="node18" href="tables/ta_atend.html" target="_top" title="ta_atend" alt="" coords="55,159605,454,160412">
+<area shape="rect" id="node19" href="tables/ta_atend_obs.html" target="_top" title="ta_atend_obs" alt="" coords="73,159309,436,159588">
+<area shape="rect" id="node20" href="tables/ta_atend_obs_plano_cuidado.html" target="_top" title="ta_atend_obs_plano_cuidado" alt="" coords="16,159013,494,159292">
+<area shape="rect" id="node21" href="tables/ta_atend_obs_responsavel.html" target="_top" title="ta_atend_obs_responsavel" alt="" coords="33,158717,477,158996">
+<area shape="rect" id="node22" href="tables/ta_atend_proced.html" target="_top" title="ta_atend_proced" alt="" coords="86,158363,424,158700">
+<area shape="rect" id="node23" href="tables/ta_atend_prof.html" target="_top" title="ta_atend_prof" alt="" coords="43,157392,466,158345">
+<area shape="rect" id="node24" href="tables/ta_atend_prof_conduta.html" target="_top" title="ta_atend_prof_conduta" alt="" coords="56,157155,453,157375">
+<area shape="rect" id="node25" href="tables/ta_atend_prof_obs.html" target="_top" title="ta_atend_prof_obs" alt="" coords="81,156917,428,157137">
+<area shape="rect" id="node26" href="tables/ta_atend_prof_odonto.html" target="_top" title="ta_atend_prof_odonto" alt="" coords="62,156651,447,156900">
+<area shape="rect" id="node27" href="tables/ta_atend_prof_odonto_tipo_encm.html" target="_top" title="ta_atend_prof_odonto_tipo_encm" alt="" coords="13,156413,496,156633">
+<area shape="rect" id="node28" href="tables/ta_atend_prof_odonto_tipo_frnc.html" target="_top" title="ta_atend_prof_odonto_tipo_frnc" alt="" coords="20,156176,489,156396">
+<area shape="rect" id="node29" href="tables/ta_atend_prof_pre_natal.html" target="_top" title="ta_atend_prof_pre_natal" alt="" coords="54,155851,456,156159">
+<area shape="rect" id="node30" href="tables/ta_atend_prof_puericultura.html" target="_top" title="ta_atend_prof_puericultura" alt="" coords="33,155613,476,155833">
+<area shape="rect" id="node31" href="tables/ta_atend_prof_tipo_encam_intrn.html" target="_top" title="ta_atend_prof_tipo_encam_intrn" alt="" coords="18,155259,491,155596">
+<area shape="rect" id="node32" href="tables/ta_atend_tipo_servico.html" target="_top" title="ta_atend_tipo_servico" alt="" coords="62,155021,447,155241">
+<area shape="rect" id="node33" href="tables/ta_atestado.html" target="_top" title="ta_atestado" alt="" coords="70,154520,439,155004">
+<area shape="rect" id="node34" href="tables/ta_atestado_modelo.html" target="_top" title="ta_atestado_modelo" alt="" coords="66,154224,444,154503">
+<area shape="rect" id="node35" href="tables/ta_ativacao_agendamento_online.html" target="_top" title="ta_ativacao_agendamento_online" alt="" coords="5,153928,504,154207">
+<area shape="rect" id="node36" href="tables/ta_ator_papel.html" target="_top" title="ta_ator_papel" alt="" coords="98,153603,412,153911">
+<area shape="rect" id="node37" href="tables/ta_ator_papel_perfil.html" target="_top" title="ta_ator_papel_perfil" alt="" coords="76,153365,433,153585">
+<area shape="rect" id="node38" href="tables/ta_beneficio_cidadao_aldeado.html" target="_top" title="ta_beneficio_cidadao_aldeado" alt="" coords="23,153099,486,153348">
+<area shape="rect" id="node39" href="tables/ta_cbo_atend.html" target="_top" title="ta_cbo_atend" alt="" coords="89,152773,420,153081">
+<area shape="rect" id="node40" href="tables/ta_cds_domicilio.html" target="_top" title="ta_cds_domicilio" alt="" coords="40,150835,469,152756">
+<area shape="rect" id="node41" href="tables/ta_cfg_agenda.html" target="_top" title="ta_cfg_agenda" alt="" coords="76,150568,434,150817">
+<area shape="rect" id="node42" href="tables/ta_cfg_agenda_detalhe.html" target="_top" title="ta_cfg_agenda_detalhe" alt="" coords="46,150213,463,150551">
+<area shape="rect" id="node43" href="tables/ta_cfg_agenda_municipal.html" target="_top" title="ta_cfg_agenda_municipal" alt="" coords="30,149947,479,150196">
+<area shape="rect" id="node44" href="tables/ta_cfg_agenda_online_detalhe.html" target="_top" title="ta_cfg_agenda_online_detalhe" alt="" coords="23,149563,487,149929">
+<area shape="rect" id="node45" href="tables/ta_cfg_certificado.html" target="_top" title="ta_cfg_certificado" alt="" coords="67,149061,442,149545">
+<area shape="rect" id="node46" href="tables/ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="42,146477,468,149044">
+<area shape="rect" id="node47" href="tables/ta_cidadao_aldeado.html" target="_top" title="ta_cidadao_aldeado" alt="" coords="69,145800,440,146460">
+<area shape="rect" id="node48" href="tables/ta_cidadao_grupo.html" target="_top" title="ta_cidadao_grupo" alt="" coords="75,145357,434,145783">
+<area shape="rect" id="node49" href="tables/ta_cidadao_unificacao_base.html" target="_top" title="ta_cidadao_unificacao_base" alt="" coords="24,145003,485,145340">
+<area shape="rect" id="node50" href="tables/ta_cidadao_vinculacao_equipe.html" target="_top" title="ta_cidadao_vinculacao_equipe" alt="" coords="16,144384,493,144985">
+<area shape="rect" id="node51" href="tables/ta_cirurgias_internacoes.html" target="_top" title="ta_cirurgias_internacoes" alt="" coords="42,144029,467,144367">
+<area shape="rect" id="node52" href="tables/ta_compartilhamento_prontuario.html" target="_top" title="ta_compartilhamento_prontuario" alt="" coords="15,143704,495,144012">
+<area shape="rect" id="node53" href="tables/ta_config_agenda_fechamento.html" target="_top" title="ta_config_agenda_fechamento" alt="" coords="15,143261,494,143687">
+<area shape="rect" id="node54" href="tables/ta_config_atencao_domiciliar.html" target="_top" title="ta_config_atencao_domiciliar" alt="" coords="25,142995,485,143244">
+<area shape="rect" id="node55" href="tables/ta_config_atend_domiciliar.html" target="_top" title="ta_config_atend_domiciliar" alt="" coords="31,142669,478,142977">
+<area shape="rect" id="node56" href="tables/ta_config_sistema.html" target="_top" title="ta_config_sistema" alt="" coords="69,142315,440,142652">
+<area shape="rect" id="node57" href="tables/ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="24,141520,485,142297">
+<area shape="rect" id="node58" href="tables/ta_cuidado_compartilhado_evol.html" target="_top" title="ta_cuidado_compartilhado_evol" alt="" coords="13,140755,496,141503">
+<area shape="rect" id="node59" href="tables/ta_encaminhamento.html" target="_top" title="ta_encaminhamento" alt="" coords="49,140283,460,140737">
+<area shape="rect" id="node60" href="tables/ta_envio_rnds.html" target="_top" title="ta_envio_rnds" alt="" coords="81,139723,428,140265">
+<area shape="rect" id="node61" href="tables/ta_equipe.html" target="_top" title="ta_equipe" alt="" coords="100,139251,409,139705">
+<area shape="rect" id="node62" href="tables/ta_equipe_unificacao_base.html" target="_top" title="ta_equipe_unificacao_base" alt="" coords="31,138925,479,139233">
+<area shape="rect" id="node63" href="tables/ta_estagio.html" target="_top" title="ta_estagio" alt="" coords="81,138453,428,138908">
+<area shape="rect" id="node64" href="tables/ta_evol_aval_tp_vig_saude_bucl.html" target="_top" title="ta_evol_aval_tp_vig_saude_bucl" alt="" coords="21,138216,489,138436">
+<area shape="rect" id="node65" href="tables/ta_evolucao_avaliacao.html" target="_top" title="ta_evolucao_avaliacao" alt="" coords="52,137949,458,138199">
+<area shape="rect" id="node66" href="tables/ta_evolucao_avaliacao_ciap_cid.html" target="_top" title="ta_evolucao_avaliacao_ciap_cid" alt="" coords="17,137595,492,137932">
+<area shape="rect" id="node67" href="tables/ta_evolucao_dente.html" target="_top" title="ta_evolucao_dente" alt="" coords="76,137181,433,137577">
+<area shape="rect" id="node68" href="tables/ta_evolucao_objetivo.html" target="_top" title="ta_evolucao_objetivo" alt="" coords="60,136915,450,137164">
+<area shape="rect" id="node69" href="tables/ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="65,136501,444,136897">
+<area shape="rect" id="node70" href="tables/ta_evolucao_odonto_parte_bucal.html" target="_top" title="ta_evolucao_odonto_parte_bucal" alt="" coords="16,136264,493,136484">
+<area shape="rect" id="node71" href="tables/ta_evolucao_odonto_proced.html" target="_top" title="ta_evolucao_odonto_proced" alt="" coords="25,136027,484,136247">
+<area shape="rect" id="node72" href="tables/ta_evolucao_plano.html" target="_top" title="ta_evolucao_plano" alt="" coords="73,135789,436,136009">
+<area shape="rect" id="node73" href="tables/ta_evolucao_plano_ciap.html" target="_top" title="ta_evolucao_plano_ciap" alt="" coords="48,135464,461,135772">
+<area shape="rect" id="node74" href="tables/ta_evolucao_subjetivo.html" target="_top" title="ta_evolucao_subjetivo" alt="" coords="37,135197,472,135447">
+<area shape="rect" id="node75" href="tables/ta_evolucao_subjetivo_ciap.html" target="_top" title="ta_evolucao_subjetivo_ciap" alt="" coords="27,134901,482,135180">
+<area shape="rect" id="node76" href="tables/ta_exame_clearance_creatina.html" target="_top" title="ta_exame_clearance_creatina" alt="" coords="24,134635,486,134884">
+<area shape="rect" id="node77" href="tables/ta_exame_colesterol_hdl.html" target="_top" title="ta_exame_colesterol_hdl" alt="" coords="44,134368,465,134617">
+<area shape="rect" id="node78" href="tables/ta_exame_colesterol_ldl.html" target="_top" title="ta_exame_colesterol_ldl" alt="" coords="48,134101,461,134351">
+<area shape="rect" id="node79" href="tables/ta_exame_colesterol_total.html" target="_top" title="ta_exame_colesterol_total" alt="" coords="37,133835,473,134084">
+<area shape="rect" id="node80" href="tables/ta_exame_creatina_serica.html" target="_top" title="ta_exame_creatina_serica" alt="" coords="36,133568,473,133817">
+<area shape="rect" id="node81" href="tables/ta_exame_hemoglobina_glicada.html" target="_top" title="ta_exame_hemoglobina_glicada" alt="" coords="11,133301,498,133551">
+<area shape="rect" id="node82" href="tables/ta_exame_prenatal.html" target="_top" title="ta_exame_prenatal" alt="" coords="63,132976,447,133284">
+<area shape="rect" id="node83" href="tables/ta_exame_puericultura.html" target="_top" title="ta_exame_puericultura" alt="" coords="53,132709,456,132959">
+<area shape="rect" id="node84" href="tables/ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="49,132149,460,132692">
+<area shape="rect" id="node85" href="tables/ta_exame_triglicerideos.html" target="_top" title="ta_exame_triglicerideos" alt="" coords="47,131883,462,132132">
+<area shape="rect" id="node86" href="tables/ta_gestor_estadual.html" target="_top" title="ta_gestor_estadual" alt="" coords="74,131645,435,131865">
+<area shape="rect" id="node87" href="tables/ta_gestor_municipal.html" target="_top" title="ta_gestor_municipal" alt="" coords="67,131408,442,131628">
+<area shape="rect" id="node88" href="tables/ta_grupo_exame.html" target="_top" title="ta_grupo_exame" alt="" coords="86,131053,424,131391">
+<area shape="rect" id="node89" href="tables/ta_guia_encaminhamento.html" target="_top" title="ta_guia_encaminhamento" alt="" coords="34,130640,475,131036">
+<area shape="rect" id="node90" href="tables/ta_imunobiologico_lote.html" target="_top" title="ta_imunobiologico_lote" alt="" coords="46,130197,463,130623">
+<area shape="rect" id="node91" href="tables/ta_integracao_horus.html" target="_top" title="ta_integracao_horus" alt="" coords="62,129872,447,130180">
+<area shape="rect" id="node92" href="tables/ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="52,129165,457,129855">
+<area shape="rect" id="node93" href="tables/ta_ivcf_aplicacao.html" target="_top" title="ta_ivcf_aplicacao" alt="" coords="83,128869,426,129148">
+<area shape="rect" id="node94" href="tables/ta_justificativa_agenda.html" target="_top" title="ta_justificativa_agenda" alt="" coords="37,128456,472,128852">
+<area shape="rect" id="node95" href="tables/ta_justificativa_status_ciddao.html" target="_top" title="ta_justificativa_status_ciddao" alt="" coords="30,128072,479,128439">
+<area shape="rect" id="node96" href="tables/ta_lembrete.html" target="_top" title="ta_lembrete" alt="" coords="58,127747,452,128055">
+<area shape="rect" id="node97" href="tables/ta_lembrete_evolucao.html" target="_top" title="ta_lembrete_evolucao" alt="" coords="56,127363,454,127729">
+<area shape="rect" id="node98" href="tables/ta_lista_espera.html" target="_top" title="ta_lista_espera" alt="" coords="48,126773,461,127345">
+<area shape="rect" id="node99" href="tables/ta_lotacao.html" target="_top" title="ta_lotacao" alt="" coords="60,126184,449,126756">
+<area shape="rect" id="node100" href="tables/ta_manifest_alergiaevolucao.html" target="_top" title="ta_manifest_alergiaevolucao" alt="" coords="29,125947,480,126167">
+<area shape="rect" id="node101" href="tables/ta_marcador_consumo_alimentar.html" target="_top" title="ta_marcador_consumo_alimentar" alt="" coords="7,125709,502,125929">
+<area shape="rect" id="node102" href="tables/ta_medicamento.html" target="_top" title="ta_medicamento" alt="" coords="73,125355,436,125692">
+<area shape="rect" id="node103" href="tables/ta_medicamento_catmat.html" target="_top" title="ta_medicamento_catmat" alt="" coords="44,124883,465,125337">
+<area shape="rect" id="node104" href="tables/ta_medicamento_uso_continuo.html" target="_top" title="ta_medicamento_uso_continuo" alt="" coords="11,124587,498,124865">
+<area shape="rect" id="node105" href="tables/ta_medicao.html" target="_top" title="ta_medicao" alt="" coords="39,123587,470,124569">
+<area shape="rect" id="node106" href="tables/ta_modelo_personalizado.html" target="_top" title="ta_modelo_personalizado" alt="" coords="33,123232,476,123569">
+<area shape="rect" id="node107" href="tables/ta_neuro_alter_fenot.html" target="_top" title="ta_neuro_alter_fenot" alt="" coords="45,122907,464,123215">
+<area shape="rect" id="node108" href="tables/ta_neuro_alter_fenot_evolucao.html" target="_top" title="ta_neuro_alter_fenot_evolucao" alt="" coords="25,122581,484,122889">
+<area shape="rect" id="node109" href="tables/ta_neuro_fator_risco.html" target="_top" title="ta_neuro_fator_risco" alt="" coords="44,122256,465,122564">
+<area shape="rect" id="node110" href="tables/ta_neuro_fator_risco_evolucao.html" target="_top" title="ta_neuro_fator_risco_evolucao" alt="" coords="24,121931,485,122239">
+<area shape="rect" id="node111" href="tables/ta_neuro_marco.html" target="_top" title="ta_neuro_marco" alt="" coords="67,121605,442,121913">
+<area shape="rect" id="node112" href="tables/ta_neuro_marco_evolucao.html" target="_top" title="ta_neuro_marco_evolucao" alt="" coords="35,121221,475,121588">
+<area shape="rect" id="node113" href="tables/ta_nodo.html" target="_top" title="ta_nodo" alt="" coords="106,120867,404,121204">
+<area shape="rect" id="node114" href="tables/ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="74,120483,435,120849">
+<area shape="rect" id="node115" href="tables/ta_orientacao.html" target="_top" title="ta_orientacao" alt="" coords="88,120187,421,120465">
+<area shape="rect" id="node116" href="tables/ta_pedido_envio_base.html" target="_top" title="ta_pedido_envio_base" alt="" coords="60,119744,449,120169">
+<area shape="rect" id="node117" href="tables/ta_perfil.html" target="_top" title="ta_perfil" alt="" coords="106,119331,404,119727">
+<area shape="rect" id="node118" href="tables/ta_perfil_recurso.html" target="_top" title="ta_perfil_recurso" alt="" coords="84,119064,425,119313">
+<area shape="rect" id="node119" href="tables/ta_periodo_ausencia.html" target="_top" title="ta_periodo_ausencia" alt="" coords="64,118768,445,119047">
+<area shape="rect" id="node120" href="tables/ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="41,117915,468,118751">
+<area shape="rect" id="node121" href="tables/ta_periograma_simplificado.html" target="_top" title="ta_periograma_simplificado" alt="" coords="27,117443,482,117897">
+<area shape="rect" id="node122" href="tables/ta_pre_natal.html" target="_top" title="ta_pre_natal" alt="" coords="78,117000,432,117425">
+<area shape="rect" id="node123" href="tables/ta_problema.html" target="_top" title="ta_problema" alt="" coords="55,116587,454,116983">
+<area shape="rect" id="node124" href="tables/ta_problema_evolucao.html" target="_top" title="ta_problema_evolucao" alt="" coords="54,116085,455,116569">
+<area shape="rect" id="node125" href="tables/ta_proced_grupo_exame.html" target="_top" title="ta_proced_grupo_exame" alt="" coords="49,115819,461,116068">
+<area shape="rect" id="node126" href="tables/ta_prof.html" target="_top" title="ta_prof" alt="" coords="43,114877,466,115801">
+<area shape="rect" id="node127" href="tables/ta_prof_historico_cns.html" target="_top" title="ta_prof_historico_cns" alt="" coords="61,114611,448,114860">
+<area shape="rect" id="node128" href="tables/ta_prof_municipio.html" target="_top" title="ta_prof_municipio" alt="" coords="80,114373,429,114593">
+<area shape="rect" id="node129" href="tables/ta_prontuario.html" target="_top" title="ta_prontuario" alt="" coords="82,114048,428,114356">
+<area shape="rect" id="node130" href="tables/ta_prontuario_grupo_historico.html" target="_top" title="ta_prontuario_grupo_historico" alt="" coords="22,113752,487,114031">
+<area shape="rect" id="node131" href="tables/ta_prontuario_unidade_saude.html" target="_top" title="ta_prontuario_unidade_saude" alt="" coords="20,113456,490,113735">
+<area shape="rect" id="node132" href="tables/ta_rascunho_atend_prof.html" target="_top" title="ta_rascunho_atend_prof" alt="" coords="44,113189,465,113439">
+<area shape="rect" id="node133" href="tables/ta_receita_medicamento.html" target="_top" title="ta_receita_medicamento" alt="" coords="30,112131,480,113172">
+<area shape="rect" id="node134" href="tables/ta_registro_vacinacao.html" target="_top" title="ta_registro_vacinacao" alt="" coords="50,111483,459,112113">
+<area shape="rect" id="node135" href="tables/ta_requisicao_exame.html" target="_top" title="ta_requisicao_exame" alt="" coords="52,111069,458,111465">
+<area shape="rect" id="node136" href="tables/ta_resposta_mca.html" target="_top" title="ta_resposta_mca" alt="" coords="42,110803,467,111052">
+<area shape="rect" id="node137" href="tables/ta_respostamca_opcaomca.html" target="_top" title="ta_respostamca_opcaomca" alt="" coords="26,110536,483,110785">
+<area shape="rect" id="node138" href="tables/ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="62,110152,448,110519">
+<area shape="rect" id="node139" href="tables/ta_servidor_smtp.html" target="_top" title="ta_servidor_smtp" alt="" coords="78,109709,432,110135">
+<area shape="rect" id="node140" href="tables/ta_sinan_notificacao_evolucao.html" target="_top" title="ta_sinan_notificacao_evolucao" alt="" coords="25,109413,484,109692">
+<area shape="rect" id="node141" href="tables/ta_situacaoface_evolucaodente.html" target="_top" title="ta_situacaoface_evolucaodente" alt="" coords="21,109147,488,109396">
+<area shape="rect" id="node142" href="tables/ta_situacaoraiz_evolucaodente.html" target="_top" title="ta_situacaoraiz_evolucaodente" alt="" coords="25,108880,484,109129">
+<area shape="rect" id="node143" href="tables/ta_substancia_espec_alergia.html" target="_top" title="ta_substancia_espec_alergia" alt="" coords="27,108555,483,108863">
+<area shape="rect" id="node144" href="tables/ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="77,108171,432,108537">
+<area shape="rect" id="node145" href="tables/ta_tecido_mole_lesao.html" target="_top" title="ta_tecido_mole_lesao" alt="" coords="52,107904,457,108153">
+<area shape="rect" id="node146" href="tables/ta_tipo_servico.html" target="_top" title="ta_tipo_servico" alt="" coords="89,107579,420,107887">
+<area shape="rect" id="node147" href="tables/ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="69,106667,440,107561">
+<area shape="rect" id="node148" href="tables/ta_unidade_saude_complexidade.html" target="_top" title="ta_unidade_saude_complexidade" alt="" coords="8,106429,501,106649">
+<area shape="rect" id="node149" href="tables/ta_unidade_saude_horus.html" target="_top" title="ta_unidade_saude_horus" alt="" coords="42,106163,467,106412">
+<area shape="rect" id="node150" href="tables/ta_unidade_saude_tipo_servico.html" target="_top" title="ta_unidade_saude_tipo_servico" alt="" coords="18,105925,491,106145">
+<area shape="rect" id="node151" href="tables/ta_unidade_saude_unif_base.html" target="_top" title="ta_unidade_saude_unif_base" alt="" coords="19,105629,490,105908">
+<area shape="rect" id="node152" href="tables/ta_unificacao_base.html" target="_top" title="ta_unificacao_base" alt="" coords="50,105187,459,105612">
+<area shape="rect" id="node153" href="tables/ta_usuario.html" target="_top" title="ta_usuario" alt="" coords="46,104480,464,105169">
+<area shape="rect" id="node154" href="tables/ta_vacinacao.html" target="_top" title="ta_vacinacao" alt="" coords="64,104096,446,104463">
+<area shape="rect" id="node155" href="tables/ta_videochamada.html" target="_top" title="ta_videochamada" alt="" coords="78,103800,432,104079">
+<area shape="rect" id="node156" href="tables/ta_vinculacao_equipes.html" target="_top" title="ta_vinculacao_equipes" alt="" coords="52,103533,457,103783">
+<area shape="rect" id="node157" href="tables/ta_vinculacao_servico.html" target="_top" title="ta_vinculacao_servico" alt="" coords="45,103237,464,103516">
+<area shape="rect" id="node158" href="tables/tb_acomp_cidadaos_vinc_prcs.html" target="_top" title="tb_acomp_cidadaos_vinc_prcs" alt="" coords="23,103000,487,103220">
+<area shape="rect" id="node159" href="tables/tb_acomp_cidadaos_vinculados.html" target="_top" title="tb_acomp_cidadaos_vinculados" alt="" coords="28,101501,481,102983">
+<area shape="rect" id="node160" href="tables/tb_ad_sync_entity.html" target="_top" title="tb_ad_sync_entity" alt="" coords="88,101264,421,101484">
+<area shape="rect" id="node161" href="tables/tb_ad_transmissao_sessao.html" target="_top" title="tb_ad_transmissao_sessao" alt="" coords="32,101056,478,101247">
+<area shape="rect" id="node162" href="tables/tb_alim_bebida.html" target="_top" title="tb_alim_bebida" alt="" coords="123,100907,386,101039">
+<area shape="rect" id="node163" href="tables/tb_arquivo.html" target="_top" title="tb_arquivo" alt="" coords="112,100669,398,100889">
+<area shape="rect" id="node164" href="tables/tb_auditoria_evento.html" target="_top" title="tb_auditoria_evento" alt="" coords="71,100344,438,100652">
+<area shape="rect" id="node165" href="tables/tb_config_sistema.html" target="_top" title="tb_config_sistema" alt="" coords="76,100077,433,100327">
+<area shape="rect" id="node166" href="tables/tb_cronicidade.html" target="_top" title="tb_cronicidade" alt="" coords="127,99928,382,100060">
+<area shape="rect" id="node167" href="tables/tb_dim_agrupador_filtro.html" target="_top" title="tb_dim_agrupador_filtro" alt="" coords="58,99632,451,99911">
+<area shape="rect" id="node168" href="tables/tb_dim_grau_vulnerabilidade.html" target="_top" title="tb_dim_grau_vulnerabilidade" alt="" coords="32,99453,477,99615">
+<area shape="rect" id="node169" href="tables/tb_dim_pic.html" target="_top" title="tb_dim_pic" alt="" coords="121,99245,388,99436">
+<area shape="rect" id="node170" href="tables/tb_dim_zika_tipo_exame.html" target="_top" title="tb_dim_zika_tipo_exame" alt="" coords="51,99037,458,99228">
+<area shape="rect" id="node171" href="tables/tb_envio_log.html" target="_top" title="tb_envio_log" alt="" coords="98,98800,412,99020">
+<area shape="rect" id="node172" href="tables/tb_envio_rnds.html" target="_top" title="tb_envio_rnds" alt="" coords="81,98328,428,98783">
+<area shape="rect" id="node173" href="tables/tb_etl_auxiliar_number.html" target="_top" title="tb_etl_auxiliar_number" alt="" coords="70,98179,440,98311">
+<area shape="rect" id="node174" href="tables/tb_fat_consolidado_cidadao_fad.html" target="_top" title="tb_fat_consolidado_cidadao_fad" alt="" coords="34,97971,475,98161">
+<area shape="rect" id="node175" href="tables/tb_gravidade.html" target="_top" title="tb_gravidade" alt="" coords="135,97821,374,97953">
+<area shape="rect" id="node176" href="tables/tb_grupo_atendimento.html" target="_top" title="tb_grupo_atendimento" alt="" coords="62,97584,447,97804">
+<area shape="rect" id="node177" href="tables/tb_historico_dados_exames.html" target="_top" title="tb_historico_dados_exames" alt="" coords="53,97376,456,97567">
+<area shape="rect" id="node178" href="tables/tb_historico_dados_fad.html" target="_top" title="tb_historico_dados_fad" alt="" coords="27,96464,482,97359">
+<area shape="rect" id="node179" href="tables/tb_historico_dados_fae.html" target="_top" title="tb_historico_dados_fae" alt="" coords="35,95552,474,96447">
+<area shape="rect" id="node180" href="tables/tb_historico_dados_fai.html" target="_top" title="tb_historico_dados_fai" alt="" coords="48,95168,462,95535">
+<area shape="rect" id="node181" href="tables/tb_historico_dados_fao.html" target="_top" title="tb_historico_dados_fao" alt="" coords="70,94960,440,95151">
+<area shape="rect" id="node182" href="tables/tb_historico_dados_fcc.html" target="_top" title="tb_historico_dados_fcc" alt="" coords="53,94224,456,94943">
+<area shape="rect" id="node183" href="tables/tb_historico_dados_proced.html" target="_top" title="tb_historico_dados_proced" alt="" coords="48,94045,462,94207">
+<area shape="rect" id="node184" href="tables/tb_historico_dados_tags.html" target="_top" title="tb_historico_dados_tags" alt="" coords="50,93544,459,94028">
+<area shape="rect" id="node185" href="tables/tb_historico_dados_vacina.html" target="_top" title="tb_historico_dados_vacina" alt="" coords="44,93248,465,93527">
+<area shape="rect" id="node186" href="tables/tb_imunobiologico_fabricante.html" target="_top" title="tb_imunobiologico_fabricante" alt="" coords="35,93040,475,93231">
+<area shape="rect" id="node187" href="tables/tb_migracao.html" target="_top" title="tb_migracao" alt="" coords="116,92539,393,93023">
+<area shape="rect" id="node188" href="tables/tb_migracao_estrutura.html" target="_top" title="tb_migracao_estrutura" alt="" coords="68,92125,441,92521">
+<area shape="rect" id="node189" href="tables/tb_migracao_trava.html" target="_top" title="tb_migracao_trava" alt="" coords="101,91917,409,92108">
+<area shape="rect" id="node190" href="tables/tb_pedido_envio_base.html" target="_top" title="tb_pedido_envio_base" alt="" coords="73,91563,436,91900">
+<area shape="rect" id="node191" href="tables/tb_povo_comunidade_tradicional.html" target="_top" title="tb_povo_comunidade_tradicional" alt="" coords="21,91355,488,91545">
+<area shape="rect" id="node192" href="tables/tb_processamento_historico.html" target="_top" title="tb_processamento_historico" alt="" coords="36,91205,473,91337">
+<area shape="rect" id="node193" href="tables/tb_recebimento_validacao_erros.html" target="_top" title="tb_recebimento_validacao_erros" alt="" coords="17,90939,492,91188">
+<area shape="rect" id="node194" href="tables/tb_recurso.html" target="_top" title="tb_recurso" alt="" coords="118,90760,391,90921">
+<area shape="rect" id="node195" href="tables/tb_refresh_token.html" target="_top" title="tb_refresh_token" alt="" coords="104,90523,405,90743">
+<area shape="rect" id="node196" href="tables/tb_rel_fichas_config.html" target="_top" title="tb_rel_fichas_config" alt="" coords="104,90315,405,90505">
+<area shape="rect" id="node197" href="tables/tb_report_etl_configs.html" target="_top" title="tb_report_etl_configs" alt="" coords="92,90165,417,90297">
+<area shape="rect" id="node198" href="tables/tb_revisao.html" target="_top" title="tb_revisao" alt="" coords="48,89781,462,90148">
+<area shape="rect" id="node199" href="tables/tb_servidor_smtp.html" target="_top" title="tb_servidor_smtp" alt="" coords="80,89427,429,89764">
+<area shape="rect" id="node200" href="tables/tb_tipo_agendamento.html" target="_top" title="tb_tipo_agendamento" alt="" coords="88,89248,422,89409">
+<area shape="rect" id="node201" href="tables/tb_tipo_cfg_agenda.html" target="_top" title="tb_tipo_cfg_agenda" alt="" coords="99,89099,410,89231">
+<area shape="rect" id="node202" href="tables/tb_tipo_config_atend_domicilir.html" target="_top" title="tb_tipo_config_atend_domicilir" alt="" coords="36,88920,473,89081">
+<area shape="rect" id="node203" href="tables/tb_tipo_parto.html" target="_top" title="tb_tipo_parto" alt="" coords="125,88741,384,88903">
+<area shape="rect" id="node204" href="tables/tb_visita_domiciliar_acs.html" target="_top" title="tb_visita_domiciliar_acs" alt="" coords="52,88504,457,88724">
+<area shape="rect" id="node205" href="tables/tl_acesso.html" target="_top" title="tl_acesso" alt="" coords="139,88208,370,88487">
+<area shape="rect" id="node206" href="tables/tl_ad_cidadao.html" target="_top" title="tl_ad_cidadao" alt="" coords="60,87413,450,88191">
+<area shape="rect" id="node207" href="tables/tl_ad_cidadao_historico.html" target="_top" title="tl_ad_cidadao_historico" alt="" coords="47,87088,462,87396">
+<area shape="rect" id="node208" href="tables/tl_ad_questao.html" target="_top" title="tl_ad_questao" alt="" coords="99,86733,410,87071">
+<area shape="rect" id="node209" href="tables/tl_ad_resposta.html" target="_top" title="tl_ad_resposta" alt="" coords="108,86467,401,86716">
+<area shape="rect" id="node210" href="tables/tl_ad_tipo_elegivel.html" target="_top" title="tl_ad_tipo_elegivel" alt="" coords="101,86229,409,86449">
+<area shape="rect" id="node211" href="tables/tl_ad_tipo_inelegivel.html" target="_top" title="tl_ad_tipo_inelegivel" alt="" coords="90,85992,420,86212">
+<area shape="rect" id="node212" href="tables/tl_adm_geral.html" target="_top" title="tl_adm_geral" alt="" coords="102,85755,407,85975">
+<area shape="rect" id="node213" href="tables/tl_adm_municipal.html" target="_top" title="tl_adm_municipal" alt="" coords="85,85459,424,85737">
+<area shape="rect" id="node214" href="tables/tl_adm_municipal_centralizador.html" target="_top" title="tl_adm_municipal_centralizador" alt="" coords="38,85251,471,85441">
+<area shape="rect" id="node215" href="tables/tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="41,84515,468,85233">
+<area shape="rect" id="node216" href="tables/tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="64,84160,445,84497">
+<area shape="rect" id="node217" href="tables/tl_alergia_evolucao.html" target="_top" title="tl_alergia_evolucao" alt="" coords="79,83776,431,84143">
+<area shape="rect" id="node218" href="tables/tl_antecedente.html" target="_top" title="tl_antecedente" alt="" coords="38,82629,471,83759">
+<area shape="rect" id="node219" href="tables/tl_antecedente_ciap.html" target="_top" title="tl_antecedente_ciap" alt="" coords="106,82421,403,82612">
+<area shape="rect" id="node220" href="tables/tl_antecedente_historico.html" target="_top" title="tl_antecedente_historico" alt="" coords="57,82213,452,82404">
+<area shape="rect" id="node221" href="tables/tl_antecedente_item.html" target="_top" title="tl_antecedente_item" alt="" coords="75,81917,435,82196">
+<area shape="rect" id="node222" href="tables/tl_antecedente_tipo_item.html" target="_top" title="tl_antecedente_tipo_item" alt="" coords="64,81680,446,81900">
+<area shape="rect" id="node223" href="tables/tl_aplicacao_medicamento.html" target="_top" title="tl_aplicacao_medicamento" alt="" coords="55,81413,454,81663">
+<area shape="rect" id="node224" href="tables/tl_arcada.html" target="_top" title="tl_arcada" alt="" coords="139,81235,370,81396">
+<area shape="rect" id="node225" href="tables/tl_atend.html" target="_top" title="tl_atend" alt="" coords="55,80440,454,81217">
+<area shape="rect" id="node226" href="tables/tl_atend_proced.html" target="_top" title="tl_atend_proced" alt="" coords="106,80115,404,80423">
+<area shape="rect" id="node227" href="tables/tl_atend_prof.html" target="_top" title="tl_atend_prof" alt="" coords="43,79320,466,80097">
+<area shape="rect" id="node228" href="tables/tl_atend_prof_ad.html" target="_top" title="tl_atend_prof_ad" alt="" coords="82,78672,428,79303">
+<area shape="rect" id="node229" href="tables/tl_atend_prof_ad_qst.html" target="_top" title="tl_atend_prof_ad_qst" alt="" coords="69,78347,441,78655">
+<area shape="rect" id="node230" href="tables/tl_atend_prof_ad_tipo_inelegvl.html" target="_top" title="tl_atend_prof_ad_tipo_inelegvl" alt="" coords="44,78139,465,78329">
+<area shape="rect" id="node231" href="tables/tl_atend_prof_conduta.html" target="_top" title="tl_atend_prof_conduta" alt="" coords="92,77931,418,78121">
+<area shape="rect" id="node232" href="tables/tl_atend_prof_odonto.html" target="_top" title="tl_atend_prof_odonto" alt="" coords="85,77693,425,77913">
+<area shape="rect" id="node233" href="tables/tl_atend_prof_odonto_tipo_encm.html" target="_top" title="tl_atend_prof_odonto_tipo_encm" alt="" coords="30,77485,479,77676">
+<area shape="rect" id="node234" href="tables/tl_atend_prof_odonto_tipo_frnc.html" target="_top" title="tl_atend_prof_odonto_tipo_frnc" alt="" coords="40,77277,470,77468">
+<area shape="rect" id="node235" href="tables/tl_atend_prof_pic.html" target="_top" title="tl_atend_prof_pic" alt="" coords="120,77069,389,77260">
+<area shape="rect" id="node236" href="tables/tl_atend_prof_pre_natal.html" target="_top" title="tl_atend_prof_pre_natal" alt="" coords="80,76773,429,77052">
+<area shape="rect" id="node237" href="tables/tl_atend_prof_puericultura.html" target="_top" title="tl_atend_prof_puericultura" alt="" coords="64,76565,445,76756">
+<area shape="rect" id="node238" href="tables/tl_atend_prof_tipo_encam_intrn.html" target="_top" title="tl_atend_prof_tipo_encam_intrn" alt="" coords="35,76240,474,76548">
+<area shape="rect" id="node239" href="tables/tl_atend_tipo_servico.html" target="_top" title="tl_atend_tipo_servico" alt="" coords="98,76032,412,76223">
+<area shape="rect" id="node240" href="tables/tl_atestado.html" target="_top" title="tl_atestado" alt="" coords="103,75707,406,76015">
+<area shape="rect" id="node241" href="tables/tl_ativ_col_grupo.html" target="_top" title="tl_ativ_col_grupo" alt="" coords="78,75411,431,75689">
+<area shape="rect" id="node242" href="tables/tl_ator.html" target="_top" title="tl_ator" alt="" coords="139,75232,370,75393">
+<area shape="rect" id="node243" href="tables/tl_ator_papel.html" target="_top" title="tl_ator_papel" alt="" coords="110,74936,399,75215">
+<area shape="rect" id="node244" href="tables/tl_ator_papel_perfil.html" target="_top" title="tl_ator_papel_perfil" alt="" coords="110,74728,399,74919">
+<area shape="rect" id="node245" href="tables/tl_atributo_complem.html" target="_top" title="tl_atributo_complem" alt="" coords="90,74461,420,74711">
+<area shape="rect" id="node246" href="tables/tl_bairro.html" target="_top" title="tl_bairro" alt="" coords="123,74165,387,74444">
+<area shape="rect" id="node247" href="tables/tl_cbo_atend.html" target="_top" title="tl_cbo_atend" alt="" coords="112,73869,397,74148">
+<area shape="rect" id="node248" href="tables/tl_cds_aleitamento_materno.html" target="_top" title="tl_cds_aleitamento_materno" alt="" coords="46,73661,464,73852">
+<area shape="rect" id="node249" href="tables/tl_cds_atend_dom_proced.html" target="_top" title="tl_cds_atend_dom_proced" alt="" coords="68,73453,441,73644">
+<area shape="rect" id="node250" href="tables/tl_cds_atend_dom_situacao_pres.html" target="_top" title="tl_cds_atend_dom_situacao_pres" alt="" coords="28,73245,481,73436">
+<area shape="rect" id="node251" href="tables/tl_cds_atend_domiciliar.html" target="_top" title="tl_cds_atend_domiciliar" alt="" coords="29,72627,480,73228">
+<area shape="rect" id="node252" href="tables/tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="43,71656,466,72609">
+<area shape="rect" id="node253" href="tables/tl_cds_atend_individual_ciap.html" target="_top" title="tl_cds_atend_individual_ciap" alt="" coords="54,71448,455,71639">
+<area shape="rect" id="node254" href="tables/tl_cds_atend_individual_condut.html" target="_top" title="tl_cds_atend_individual_condut" alt="" coords="38,71240,471,71431">
+<area shape="rect" id="node255" href="tables/tl_cds_atend_individual_nasf.html" target="_top" title="tl_cds_atend_individual_nasf" alt="" coords="54,71032,456,71223">
+<area shape="rect" id="node256" href="tables/tl_cds_atend_odont_tip_vig_buc.html" target="_top" title="tl_cds_atend_odont_tip_vig_buc" alt="" coords="34,70824,475,71015">
+<area shape="rect" id="node257" href="tables/tl_cds_atend_odonto.html" target="_top" title="tl_cds_atend_odonto" alt="" coords="59,70293,451,70807">
+<area shape="rect" id="node258" href="tables/tl_cds_atend_odonto_tipo_cnslt.html" target="_top" title="tl_cds_atend_odonto_tipo_cnslt" alt="" coords="36,70085,473,70276">
+<area shape="rect" id="node259" href="tables/tl_cds_atend_odonto_tipo_encam.html" target="_top" title="tl_cds_atend_odonto_tipo_encam" alt="" coords="26,69877,483,70068">
+<area shape="rect" id="node260" href="tables/tl_cds_atend_odonto_tipo_fornc.html" target="_top" title="tl_cds_atend_odonto_tipo_fornc" alt="" coords="34,69669,475,69860">
+<area shape="rect" id="node261" href="tables/tl_cds_ativ_col_participante.html" target="_top" title="tl_cds_ativ_col_participante" alt="" coords="33,69197,477,69652">
+<area shape="rect" id="node262" href="tables/tl_cds_ativ_col_pratica.html" target="_top" title="tl_cds_ativ_col_pratica" alt="" coords="76,68960,434,69180">
+<area shape="rect" id="node263" href="tables/tl_cds_ativ_col_publico_alvo.html" target="_top" title="tl_cds_ativ_col_publico_alvo" alt="" coords="42,68723,468,68943">
+<area shape="rect" id="node264" href="tables/tl_cds_ativ_col_tema.html" target="_top" title="tl_cds_ativ_col_tema" alt="" coords="87,68485,422,68705">
+<area shape="rect" id="node265" href="tables/tl_cds_aval_eleg_ad_tipo_inelg.html" target="_top" title="tl_cds_aval_eleg_ad_tipo_inelg" alt="" coords="42,68277,468,68468">
+<area shape="rect" id="node266" href="tables/tl_cds_aval_eleg_cds_situc_prs.html" target="_top" title="tl_cds_aval_eleg_cds_situc_prs" alt="" coords="38,68069,471,68260">
+<area shape="rect" id="node267" href="tables/tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="37,66365,472,68052">
+<area shape="rect" id="node268" href="tables/tl_cds_cad_domiciliar.html" target="_top" title="tl_cds_cad_domiciliar" alt="" coords="50,64837,459,66348">
+<area shape="rect" id="node269" href="tables/tl_cds_cad_individual.html" target="_top" title="tl_cds_cad_individual" alt="" coords="55,63251,455,64820">
+<area shape="rect" id="node270" href="tables/tl_cds_cidadao_resposta.html" target="_top" title="tl_cds_cidadao_resposta" alt="" coords="47,62925,463,63233">
+<area shape="rect" id="node271" href="tables/tl_cds_domicilio.html" target="_top" title="tl_cds_domicilio" alt="" coords="40,61896,469,62908">
+<area shape="rect" id="node272" href="tables/tl_cds_domicilio_familia.html" target="_top" title="tl_cds_domicilio_familia" alt="" coords="46,61453,463,61879">
+<area shape="rect" id="node273" href="tables/tl_cds_domicilio_resposta.html" target="_top" title="tl_cds_domicilio_resposta" alt="" coords="40,61128,470,61436">
+<area shape="rect" id="node274" href="tables/tl_cds_ficha_atend_domiciliar.html" target="_top" title="tl_cds_ficha_atend_domiciliar" alt="" coords="31,60715,478,61111">
+<area shape="rect" id="node275" href="tables/tl_cds_ficha_atend_indivdl_prf.html" target="_top" title="tl_cds_ficha_atend_indivdl_prf" alt="" coords="44,60507,466,60697">
+<area shape="rect" id="node276" href="tables/tl_cds_ficha_atend_individual.html" target="_top" title="tl_cds_ficha_atend_individual" alt="" coords="25,60123,484,60489">
+<area shape="rect" id="node277" href="tables/tl_cds_ficha_atend_odonto.html" target="_top" title="tl_cds_ficha_atend_odonto" alt="" coords="29,59739,480,60105">
+<area shape="rect" id="node278" href="tables/tl_cds_ficha_atend_odonto_prof.html" target="_top" title="tl_cds_ficha_atend_odonto_prof" alt="" coords="36,59531,474,59721">
+<area shape="rect" id="node279" href="tables/tl_cds_ficha_ativ_col.html" target="_top" title="tl_cds_ficha_ativ_col" alt="" coords="59,58765,451,59513">
+<area shape="rect" id="node280" href="tables/tl_cds_ficha_ativ_col_pratica.html" target="_top" title="tl_cds_ficha_ativ_col_pratica" alt="" coords="54,58557,455,58748">
+<area shape="rect" id="node281" href="tables/tl_cds_ficha_ativ_col_prof.html" target="_top" title="tl_cds_ficha_ativ_col_prof" alt="" coords="70,58349,439,58540">
+<area shape="rect" id="node282" href="tables/tl_cds_ficha_ativ_col_pub_alvo.html" target="_top" title="tl_cds_ficha_ativ_col_pub_alvo" alt="" coords="40,58141,469,58332">
+<area shape="rect" id="node283" href="tables/tl_cds_ficha_ativ_col_tema.html" target="_top" title="tl_cds_ficha_ativ_col_tema" alt="" coords="66,57933,444,58124">
+<area shape="rect" id="node284" href="tables/tl_cds_ficha_consumo_alimentar.html" target="_top" title="tl_cds_ficha_consumo_alimentar" alt="" coords="12,57344,498,57916">
+<area shape="rect" id="node285" href="tables/tl_cds_ficha_proced.html" target="_top" title="tl_cds_ficha_proced" alt="" coords="59,56755,450,57327">
+<area shape="rect" id="node286" href="tables/tl_cds_ficha_vacinacao.html" target="_top" title="tl_cds_ficha_vacinacao" alt="" coords="47,56283,462,56737">
+<area shape="rect" id="node287" href="tables/tl_cds_ficha_visita_domiciliar.html" target="_top" title="tl_cds_ficha_visita_domiciliar" alt="" coords="35,55899,474,56265">
+<area shape="rect" id="node288" href="tables/tl_cds_ficha_zika_microcefalia.html" target="_top" title="tl_cds_ficha_zika_microcefalia" alt="" coords="20,54987,489,55881">
+<area shape="rect" id="node289" href="tables/tl_cds_pic.html" target="_top" title="tl_cds_pic" alt="" coords="117,54749,392,54969">
+<area shape="rect" id="node290" href="tables/tl_cds_proced.html" target="_top" title="tl_cds_proced" alt="" coords="91,54307,418,54732">
+<area shape="rect" id="node291" href="tables/tl_cds_prof.html" target="_top" title="tl_cds_prof" alt="" coords="110,53981,399,54289">
+<area shape="rect" id="node292" href="tables/tl_cds_tipo_atend_nasf.html" target="_top" title="tl_cds_tipo_atend_nasf" alt="" coords="75,53744,435,53964">
+<area shape="rect" id="node293" href="tables/tl_cds_tipo_ativ_col.html" target="_top" title="tl_cds_tipo_ativ_col" alt="" coords="93,53507,416,53727">
+<area shape="rect" id="node294" href="tables/tl_cds_tipo_conduta.html" target="_top" title="tl_cds_tipo_conduta" alt="" coords="91,53269,418,53489">
+<area shape="rect" id="node295" href="tables/tl_cds_tipo_cuidador.html" target="_top" title="tl_cds_tipo_cuidador" alt="" coords="87,53032,422,53252">
+<area shape="rect" id="node296" href="tables/tl_cds_tipo_imovel.html" target="_top" title="tl_cds_tipo_imovel" alt="" coords="100,52795,410,53015">
+<area shape="rect" id="node297" href="tables/tl_cds_tipo_situacao_presente.html" target="_top" title="tl_cds_tipo_situacao_presente" alt="" coords="33,52557,477,52777">
+<area shape="rect" id="node298" href="tables/tl_cds_tipo_vig_saude_bucal.html" target="_top" title="tl_cds_tipo_vig_saude_bucal" alt="" coords="41,52320,468,52540">
+<area shape="rect" id="node299" href="tables/tl_cds_vacina.html" target="_top" title="tl_cds_vacina" alt="" coords="87,51877,422,52303">
+<area shape="rect" id="node300" href="tables/tl_cds_vacinacao.html" target="_top" title="tl_cds_vacinacao" alt="" coords="58,51347,451,51860">
+<area shape="rect" id="node301" href="tables/tl_cds_visita_dom_desfecho.html" target="_top" title="tl_cds_visita_dom_desfecho" alt="" coords="45,51109,465,51329">
+<area shape="rect" id="node302" href="tables/tl_cds_visita_dom_motivo.html" target="_top" title="tl_cds_visita_dom_motivo" alt="" coords="58,50872,452,51092">
+<area shape="rect" id="node303" href="tables/tl_cds_visita_domiciliar.html" target="_top" title="tl_cds_visita_domiciliar" alt="" coords="44,50077,465,50855">
+<area shape="rect" id="node304" href="tables/tl_cfg_agenda_online_detalhe.html" target="_top" title="tl_cfg_agenda_online_detalhe" alt="" coords="34,49723,475,50060">
+<area shape="rect" id="node305" href="tables/tl_ciap_cid10.html" target="_top" title="tl_ciap_cid10" alt="" coords="135,49515,374,49705">
+<area shape="rect" id="node306" href="tables/tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="42,46960,468,49497">
+<area shape="rect" id="node307" href="tables/tl_cidadao_grupo.html" target="_top" title="tl_cidadao_grupo" alt="" coords="78,46547,432,46943">
+<area shape="rect" id="node308" href="tables/tl_cidadao_grupo_ativ_col.html" target="_top" title="tl_cidadao_grupo_ativ_col" alt="" coords="61,46192,448,46529">
+<area shape="rect" id="node309" href="tables/tl_cidadao_nucleo_familiar.html" target="_top" title="tl_cidadao_nucleo_familiar" alt="" coords="36,45808,474,46175">
+<area shape="rect" id="node310" href="tables/tl_cidadao_vinculacao_equipe.html" target="_top" title="tl_cidadao_vinculacao_equipe" alt="" coords="20,45219,490,45791">
+<area shape="rect" id="node311" href="tables/tl_cns.html" target="_top" title="tl_cns" alt="" coords="127,44952,383,45201">
+<area shape="rect" id="node312" href="tables/tl_compartilhamento_prontuario.html" target="_top" title="tl_compartilhamento_prontuario" alt="" coords="20,44656,489,44935">
+<area shape="rect" id="node313" href="tables/tl_complexidade.html" target="_top" title="tl_complexidade" alt="" coords="114,44419,396,44639">
+<area shape="rect" id="node314" href="tables/tl_config_agenda_detalhe.html" target="_top" title="tl_config_agenda_detalhe" alt="" coords="47,44093,463,44401">
+<area shape="rect" id="node315" href="tables/tl_config_agenda_fechamento.html" target="_top" title="tl_config_agenda_fechamento" alt="" coords="17,43680,493,44076">
+<area shape="rect" id="node316" href="tables/tl_config_atencao_domiciliar.html" target="_top" title="tl_config_atencao_domiciliar" alt="" coords="40,43443,470,43663">
+<area shape="rect" id="node317" href="tables/tl_config_atend_domiciliar.html" target="_top" title="tl_config_atend_domiciliar" alt="" coords="46,43147,464,43425">
+<area shape="rect" id="node318" href="tables/tl_configperiodo_diasemana.html" target="_top" title="tl_configperiodo_diasemana" alt="" coords="58,42939,451,43129">
+<area shape="rect" id="node319" href="tables/tl_configuracao_horario.html" target="_top" title="tl_configuracao_horario" alt="" coords="53,42408,457,42921">
+<area shape="rect" id="node320" href="tables/tl_contexto_pergunta.html" target="_top" title="tl_contexto_pergunta" alt="" coords="86,42200,423,42391">
+<area shape="rect" id="node321" href="tables/tl_dente.html" target="_top" title="tl_dente" alt="" coords="139,41963,370,42183">
+<area shape="rect" id="node322" href="tables/tl_encaminhamento.html" target="_top" title="tl_encaminhamento" alt="" coords="50,41520,459,41945">
+<area shape="rect" id="node323" href="tables/tl_equipe.html" target="_top" title="tl_equipe" alt="" coords="111,41107,398,41503">
+<area shape="rect" id="node324" href="tables/tl_evol_aval_tp_vig_saude_bucl.html" target="_top" title="tl_evol_aval_tp_vig_saude_bucl" alt="" coords="38,40899,471,41089">
+<area shape="rect" id="node325" href="tables/tl_evolucao_avaliacao.html" target="_top" title="tl_evolucao_avaliacao" alt="" coords="56,40661,454,40881">
+<area shape="rect" id="node326" href="tables/tl_evolucao_avaliacao_ciap_cid.html" target="_top" title="tl_evolucao_avaliacao_ciap_cid" alt="" coords="29,40336,480,40644">
+<area shape="rect" id="node327" href="tables/tl_evolucao_dente.html" target="_top" title="tl_evolucao_dente" alt="" coords="94,39893,416,40319">
+<area shape="rect" id="node328" href="tables/tl_evolucao_objetivo.html" target="_top" title="tl_evolucao_objetivo" alt="" coords="70,39656,440,39876">
+<area shape="rect" id="node329" href="tables/tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="69,39301,440,39639">
+<area shape="rect" id="node330" href="tables/tl_evolucao_odonto_parte_bucal.html" target="_top" title="tl_evolucao_odonto_parte_bucal" alt="" coords="34,39093,476,39284">
+<area shape="rect" id="node331" href="tables/tl_evolucao_odonto_proced.html" target="_top" title="tl_evolucao_odonto_proced" alt="" coords="60,38885,449,39076">
+<area shape="rect" id="node332" href="tables/tl_evolucao_plano.html" target="_top" title="tl_evolucao_plano" alt="" coords="98,38677,411,38868">
+<area shape="rect" id="node333" href="tables/tl_evolucao_plano_ciap.html" target="_top" title="tl_evolucao_plano_ciap" alt="" coords="55,38381,455,38660">
+<area shape="rect" id="node334" href="tables/tl_evolucao_subjetivo.html" target="_top" title="tl_evolucao_subjetivo" alt="" coords="38,38144,471,38364">
+<area shape="rect" id="node335" href="tables/tl_evolucao_subjetivo_ciap.html" target="_top" title="tl_evolucao_subjetivo_ciap" alt="" coords="34,37877,476,38127">
+<area shape="rect" id="node336" href="tables/tl_exame_clearance_creatina.html" target="_top" title="tl_exame_clearance_creatina" alt="" coords="30,37640,479,37860">
+<area shape="rect" id="node337" href="tables/tl_exame_colesterol_hdl.html" target="_top" title="tl_exame_colesterol_hdl" alt="" coords="51,37403,458,37623">
+<area shape="rect" id="node338" href="tables/tl_exame_colesterol_ldl.html" target="_top" title="tl_exame_colesterol_ldl" alt="" coords="55,37165,454,37385">
+<area shape="rect" id="node339" href="tables/tl_exame_colesterol_total.html" target="_top" title="tl_exame_colesterol_total" alt="" coords="44,36928,466,37148">
+<area shape="rect" id="node340" href="tables/tl_exame_creatina_serica.html" target="_top" title="tl_exame_creatina_serica" alt="" coords="43,36691,466,36911">
+<area shape="rect" id="node341" href="tables/tl_exame_detalhe.html" target="_top" title="tl_exame_detalhe" alt="" coords="90,36307,420,36673">
+<area shape="rect" id="node342" href="tables/tl_exame_detalhe_resultado.html" target="_top" title="tl_exame_detalhe_resultado" alt="" coords="30,35981,480,36289">
+<area shape="rect" id="node343" href="tables/tl_exame_hemoglobina_glicada.html" target="_top" title="tl_exame_hemoglobina_glicada" alt="" coords="18,35744,491,35964">
+<area shape="rect" id="node344" href="tables/tl_exame_prenatal.html" target="_top" title="tl_exame_prenatal" alt="" coords="77,35448,433,35727">
+<area shape="rect" id="node345" href="tables/tl_exame_puericultura.html" target="_top" title="tl_exame_puericultura" alt="" coords="92,35211,417,35431">
+<area shape="rect" id="node346" href="tables/tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="50,34680,459,35193">
+<area shape="rect" id="node347" href="tables/tl_exame_triglicerideos.html" target="_top" title="tl_exame_triglicerideos" alt="" coords="57,34443,452,34663">
+<area shape="rect" id="node348" href="tables/tl_familia.html" target="_top" title="tl_familia" alt="" coords="56,33736,454,34425">
+<area shape="rect" id="node349" href="tables/tl_ficha_zika_tipo_exame.html" target="_top" title="tl_ficha_zika_tipo_exame" alt="" coords="64,33499,446,33719">
+<area shape="rect" id="node350" href="tables/tl_forma_farmaceutica.html" target="_top" title="tl_forma_farmaceutica" alt="" coords="58,33232,452,33481">
+<area shape="rect" id="node351" href="tables/tl_gestor_estadual.html" target="_top" title="tl_gestor_estadual" alt="" coords="114,33024,395,33215">
+<area shape="rect" id="node352" href="tables/tl_gestor_municipal.html" target="_top" title="tl_gestor_municipal" alt="" coords="108,32816,402,33007">
+<area shape="rect" id="node353" href="tables/tl_grupo_ativ_col.html" target="_top" title="tl_grupo_ativ_col" alt="" coords="78,32403,431,32799">
+<area shape="rect" id="node354" href="tables/tl_grupo_ativ_col_cidadao.html" target="_top" title="tl_grupo_ativ_col_cidadao" alt="" coords="51,32136,459,32385">
+<area shape="rect" id="node355" href="tables/tl_grupo_ativ_col_prof.html" target="_top" title="tl_grupo_ativ_col_prof" alt="" coords="73,31869,437,32119">
+<area shape="rect" id="node356" href="tables/tl_grupo_especialidade.html" target="_top" title="tl_grupo_especialidade" alt="" coords="75,31632,435,31852">
+<area shape="rect" id="node357" href="tables/tl_imunobiologico_lote.html" target="_top" title="tl_imunobiologico_lote" alt="" coords="53,31219,457,31615">
+<area shape="rect" id="node358" href="tables/tl_integracao_horus.html" target="_top" title="tl_integracao_horus" alt="" coords="63,30923,446,31201">
+<area shape="rect" id="node359" href="tables/tl_justificativa_agenda.html" target="_top" title="tl_justificativa_agenda" alt="" coords="39,30568,471,30905">
+<area shape="rect" id="node360" href="tables/tl_justificativa_prontuario.html" target="_top" title="tl_justificativa_prontuario" alt="" coords="42,30243,467,30551">
+<area shape="rect" id="node361" href="tables/tl_justificativa_status_ciddao.html" target="_top" title="tl_justificativa_status_ciddao" alt="" coords="31,29888,478,30225">
+<area shape="rect" id="node362" href="tables/tl_lembrete.html" target="_top" title="tl_lembrete" alt="" coords="53,29533,456,29871">
+<area shape="rect" id="node363" href="tables/tl_lembrete_evolucao.html" target="_top" title="tl_lembrete_evolucao" alt="" coords="60,29179,450,29516">
+<area shape="rect" id="node364" href="tables/tl_lista_medicamento.html" target="_top" title="tl_lista_medicamento" alt="" coords="86,28912,424,29161">
+<area shape="rect" id="node365" href="tables/tl_logradouro.html" target="_top" title="tl_logradouro" alt="" coords="63,28264,447,28895">
+<area shape="rect" id="node366" href="tables/tl_lotacao.html" target="_top" title="tl_lotacao" alt="" coords="60,27704,449,28247">
+<area shape="rect" id="node367" href="tables/tl_medicamento.html" target="_top" title="tl_medicamento" alt="" coords="83,27408,427,27687">
+<area shape="rect" id="node368" href="tables/tl_medicamento_catmat.html" target="_top" title="tl_medicamento_catmat" alt="" coords="68,26965,442,27391">
+<area shape="rect" id="node369" href="tables/tl_medicamento_uso_continuo.html" target="_top" title="tl_medicamento_uso_continuo" alt="" coords="26,26699,483,26948">
+<area shape="rect" id="node370" href="tables/tl_medicao.html" target="_top" title="tl_medicao" alt="" coords="39,25933,470,26681">
+<area shape="rect" id="node371" href="tables/tl_motivo_reserva.html" target="_top" title="tl_motivo_reserva" alt="" coords="107,25725,402,25916">
+<area shape="rect" id="node372" href="tables/tl_neuro_alter_fenot.html" target="_top" title="tl_neuro_alter_fenot" alt="" coords="60,25429,449,25708">
+<area shape="rect" id="node373" href="tables/tl_neuro_alter_fenot_evolucao.html" target="_top" title="tl_neuro_alter_fenot_evolucao" alt="" coords="36,25133,473,25412">
+<area shape="rect" id="node374" href="tables/tl_neuro_fator_risco.html" target="_top" title="tl_neuro_fator_risco" alt="" coords="59,24837,450,25116">
+<area shape="rect" id="node375" href="tables/tl_neuro_fator_risco_evolucao.html" target="_top" title="tl_neuro_fator_risco_evolucao" alt="" coords="36,24541,473,24820">
+<area shape="rect" id="node376" href="tables/tl_neuro_marco.html" target="_top" title="tl_neuro_marco" alt="" coords="85,24245,424,24524">
+<area shape="rect" id="node377" href="tables/tl_neuro_marco_evolucao.html" target="_top" title="tl_neuro_marco_evolucao" alt="" coords="44,23891,466,24228">
+<area shape="rect" id="node378" href="tables/tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="92,23595,417,23873">
+<area shape="rect" id="node379" href="tables/tl_opcao_rapida_exame.html" target="_top" title="tl_opcao_rapida_exame" alt="" coords="54,23269,456,23577">
+<area shape="rect" id="node380" href="tables/tl_orientacao.html" target="_top" title="tl_orientacao" alt="" coords="75,22973,434,23252">
+<area shape="rect" id="node381" href="tables/tl_papel.html" target="_top" title="tl_papel" alt="" coords="105,22589,405,22956">
+<area shape="rect" id="node382" href="tables/tl_parte_bucal.html" target="_top" title="tl_parte_bucal" alt="" coords="123,22352,387,22572">
+<area shape="rect" id="node383" href="tables/tl_parte_bucal_proced.html" target="_top" title="tl_parte_bucal_proced" alt="" coords="88,22085,421,22335">
+<area shape="rect" id="node384" href="tables/tl_perfil.html" target="_top" title="tl_perfil" alt="" coords="119,21701,391,22068">
+<area shape="rect" id="node385" href="tables/tl_pergunta.html" target="_top" title="tl_pergunta" alt="" coords="98,21376,411,21684">
+<area shape="rect" id="node386" href="tables/tl_pergunta_detalhe.html" target="_top" title="tl_pergunta_detalhe" alt="" coords="94,21080,415,21359">
+<area shape="rect" id="node387" href="tables/tl_pessoa_fisica_imagem.html" target="_top" title="tl_pessoa_fisica_imagem" alt="" coords="35,20755,474,21063">
+<area shape="rect" id="node388" href="tables/tl_povo_comunidade_tradicional.html" target="_top" title="tl_povo_comunidade_tradicional" alt="" coords="21,20517,489,20737">
+<area shape="rect" id="node389" href="tables/tl_pre_natal.html" target="_top" title="tl_pre_natal" alt="" coords="78,20104,432,20500">
+<area shape="rect" id="node390" href="tables/tl_principio_ativo.html" target="_top" title="tl_principio_ativo" alt="" coords="86,19808,423,20087">
+<area shape="rect" id="node391" href="tables/tl_problema.html" target="_top" title="tl_problema" alt="" coords="55,19395,454,19791">
+<area shape="rect" id="node392" href="tables/tl_problema_evolucao.html" target="_top" title="tl_problema_evolucao" alt="" coords="64,18805,446,19377">
+<area shape="rect" id="node393" href="tables/tl_proced_atributo_complem.html" target="_top" title="tl_proced_atributo_complem" alt="" coords="50,18539,459,18788">
+<area shape="rect" id="node394" href="tables/tl_proced_automatico.html" target="_top" title="tl_proced_automatico" alt="" coords="74,18243,436,18521">
+<area shape="rect" id="node395" href="tables/tl_proced_cbo.html" target="_top" title="tl_proced_cbo" alt="" coords="128,17976,381,18225">
+<area shape="rect" id="node396" href="tables/tl_proced_cds_proced.html" target="_top" title="tl_proced_cds_proced" alt="" coords="92,17768,417,17959">
+<area shape="rect" id="node397" href="tables/tl_proced_cid10.html" target="_top" title="tl_proced_cid10" alt="" coords="125,17472,384,17751">
+<area shape="rect" id="node398" href="tables/tl_proced_exame_detalhe.html" target="_top" title="tl_proced_exame_detalhe" alt="" coords="52,17235,458,17455">
+<area shape="rect" id="node399" href="tables/tl_proced_exame_especifico.html" target="_top" title="tl_proced_exame_especifico" alt="" coords="47,16997,463,17217">
+<area shape="rect" id="node400" href="tables/tl_proced_nome_popular.html" target="_top" title="tl_proced_nome_popular" alt="" coords="47,16731,463,16980">
+<area shape="rect" id="node401" href="tables/tl_proced_opcao_rapida_exame.html" target="_top" title="tl_proced_opcao_rapida_exame" alt="" coords="24,16493,485,16713">
+<area shape="rect" id="node402" href="tables/tl_proced_solicitado.html" target="_top" title="tl_proced_solicitado" alt="" coords="68,16080,441,16476">
+<area shape="rect" id="node403" href="tables/tl_proced_tipo_registro.html" target="_top" title="tl_proced_tipo_registro" alt="" coords="82,15813,427,16063">
+<area shape="rect" id="node404" href="tables/tl_prof.html" target="_top" title="tl_prof" alt="" coords="54,14989,455,15796">
+<area shape="rect" id="node405" href="tables/tl_prof_grupo_ativ_col.html" target="_top" title="tl_prof_grupo_ativ_col" alt="" coords="83,14605,426,14972">
+<area shape="rect" id="node406" href="tables/tl_prof_municipio.html" target="_top" title="tl_prof_municipio" alt="" coords="120,14397,389,14588">
+<area shape="rect" id="node407" href="tables/tl_prontuario.html" target="_top" title="tl_prontuario" alt="" coords="73,14043,436,14380">
+<area shape="rect" id="node408" href="tables/tl_prontuario_grupo_historico.html" target="_top" title="tl_prontuario_grupo_historico" alt="" coords="24,13776,485,14025">
+<area shape="rect" id="node409" href="tables/tl_prontuario_unidade_saude.html" target="_top" title="tl_prontuario_unidade_saude" alt="" coords="28,13509,481,13759">
+<area shape="rect" id="node410" href="tables/tl_qst_associacao_opcao_pergnt.html" target="_top" title="tl_qst_associacao_opcao_pergnt" alt="" coords="32,13301,478,13492">
+<area shape="rect" id="node411" href="tables/tl_qst_associacao_pergunta.html" target="_top" title="tl_qst_associacao_pergunta" alt="" coords="39,13035,470,13284">
+<area shape="rect" id="node412" href="tables/tl_qst_opcao_pergunta.html" target="_top" title="tl_qst_opcao_pergunta" alt="" coords="65,12768,444,13017">
+<area shape="rect" id="node413" href="tables/tl_qst_opcao_tipo_pergunta.html" target="_top" title="tl_qst_opcao_tipo_pergunta" alt="" coords="47,12531,462,12751">
+<area shape="rect" id="node414" href="tables/tl_qst_orientacao_prof.html" target="_top" title="tl_qst_orientacao_prof" alt="" coords="77,12323,433,12513">
+<area shape="rect" id="node415" href="tables/tl_qst_pergunta.html" target="_top" title="tl_qst_pergunta" alt="" coords="108,12085,401,12305">
+<area shape="rect" id="node416" href="tables/tl_qst_questionario.html" target="_top" title="tl_qst_questionario" alt="" coords="50,11760,460,12068">
+<area shape="rect" id="node417" href="tables/tl_qst_questionario_pergunta.html" target="_top" title="tl_qst_questionario_pergunta" alt="" coords="42,11464,468,11743">
+<area shape="rect" id="node418" href="tables/tl_qst_questionario_respondido.html" target="_top" title="tl_qst_questionario_respondido" alt="" coords="22,11197,487,11447">
+<area shape="rect" id="node419" href="tables/tl_qst_resposta.html" target="_top" title="tl_qst_resposta" alt="" coords="57,10843,452,11180">
+<area shape="rect" id="node420" href="tables/tl_qst_resposta_opcao_pergunta.html" target="_top" title="tl_qst_resposta_opcao_pergunta" alt="" coords="32,10635,477,10825">
+<area shape="rect" id="node421" href="tables/tl_receita.html" target="_top" title="tl_receita" alt="" coords="139,10397,370,10617">
+<area shape="rect" id="node422" href="tables/tl_receita_medicamento.html" target="_top" title="tl_receita_medicamento" alt="" coords="31,9661,478,10380">
+<area shape="rect" id="node423" href="tables/tl_receita_tipo_frequencia.html" target="_top" title="tl_receita_tipo_frequencia" alt="" coords="60,9424,450,9644">
+<area shape="rect" id="node424" href="tables/tl_recurso.html" target="_top" title="tl_recurso" alt="" coords="118,9187,391,9407">
+<area shape="rect" id="node425" href="tables/tl_registro_vacinacao.html" target="_top" title="tl_registro_vacinacao" alt="" coords="58,8597,452,9169">
+<area shape="rect" id="node426" href="tables/tl_renda_familiar.html" target="_top" title="tl_renda_familiar" alt="" coords="112,8360,398,8580">
+<area shape="rect" id="node427" href="tables/tl_requisicao_exame.html" target="_top" title="tl_requisicao_exame" alt="" coords="53,7976,457,8343">
+<area shape="rect" id="node428" href="tables/tl_rl_cds_visita_dom_motivo.html" target="_top" title="tl_rl_cds_visita_dom_motivo" alt="" coords="56,7768,453,7959">
+<area shape="rect" id="node429" href="tables/tl_sextante.html" target="_top" title="tl_sextante" alt="" coords="139,7560,370,7751">
+<area shape="rect" id="node430" href="tables/tl_sinan_notificacao_evolucao.html" target="_top" title="tl_sinan_notificacao_evolucao" alt="" coords="42,7293,467,7543">
+<area shape="rect" id="node431" href="tables/tl_situacao_coroa.html" target="_top" title="tl_situacao_coroa" alt="" coords="108,7056,402,7276">
+<area shape="rect" id="node432" href="tables/tl_situacao_face.html" target="_top" title="tl_situacao_face" alt="" coords="117,6819,393,7039">
+<area shape="rect" id="node433" href="tables/tl_situacao_raiz.html" target="_top" title="tl_situacao_raiz" alt="" coords="120,6581,390,6801">
+<area shape="rect" id="node434" href="tables/tl_tipo_atend_proced_automatic.html" target="_top" title="tl_tipo_atend_proced_automatic" alt="" coords="36,6373,473,6564">
+<area shape="rect" id="node435" href="tables/tl_tipo_consulta_odnt_prc_auto.html" target="_top" title="tl_tipo_consulta_odnt_prc_auto" alt="" coords="38,6165,471,6356">
+<area shape="rect" id="node436" href="tables/tl_tipo_consulta_odonto.html" target="_top" title="tl_tipo_consulta_odonto" alt="" coords="69,5928,441,6148">
+<area shape="rect" id="node437" href="tables/tl_tipo_edema.html" target="_top" title="tl_tipo_edema" alt="" coords="121,5691,388,5911">
+<area shape="rect" id="node438" href="tables/tl_tipo_encam_odonto.html" target="_top" title="tl_tipo_encam_odonto" alt="" coords="80,5453,430,5673">
+<area shape="rect" id="node439" href="tables/tl_tipo_encam_odonto_procd_aut.html" target="_top" title="tl_tipo_encam_odonto_procd_aut" alt="" coords="28,5245,481,5436">
+<area shape="rect" id="node440" href="tables/tl_tipo_exame.html" target="_top" title="tl_tipo_exame" alt="" coords="125,4979,384,5228">
+<area shape="rect" id="node441" href="tables/tl_tipo_fornec_odonto.html" target="_top" title="tl_tipo_fornec_odonto" alt="" coords="82,4741,428,4961">
+<area shape="rect" id="node442" href="tables/tl_tipo_gravidez.html" target="_top" title="tl_tipo_gravidez" alt="" coords="117,4504,393,4724">
+<area shape="rect" id="node443" href="tables/tl_tipo_localidade.html" target="_top" title="tl_tipo_localidade" alt="" coords="107,4237,403,4487">
+<area shape="rect" id="node444" href="tables/tl_tipo_parte_bucal.html" target="_top" title="tl_tipo_parte_bucal" alt="" coords="98,4000,412,4220">
+<area shape="rect" id="node445" href="tables/tl_tipo_perfil.html" target="_top" title="tl_tipo_perfil" alt="" coords="123,3792,387,3983">
+<area shape="rect" id="node446" href="tables/tl_tipo_pergunta.html" target="_top" title="tl_tipo_pergunta" alt="" coords="114,3584,395,3775">
+<area shape="rect" id="node447" href="tables/tl_tipo_registro.html" target="_top" title="tl_tipo_registro" alt="" coords="123,3317,387,3567">
+<area shape="rect" id="node448" href="tables/tl_tipo_servico.html" target="_top" title="tl_tipo_servico" alt="" coords="100,3021,409,3300">
+<area shape="rect" id="node449" href="tables/tl_titulo_patente.html" target="_top" title="tl_titulo_patente" alt="" coords="117,2784,392,3004">
+<area shape="rect" id="node450" href="tables/tl_unidade_medida.html" target="_top" title="tl_unidade_medida" alt="" coords="73,2488,436,2767">
+<area shape="rect" id="node451" href="tables/tl_unidade_medida_tempo.html" target="_top" title="tl_unidade_medida_tempo" alt="" coords="57,2251,453,2471">
+<area shape="rect" id="node452" href="tables/tl_unidade_saude.html" target="_top" title="tl_unidade_saude" alt="" coords="76,1427,433,2233">
+<area shape="rect" id="node453" href="tables/tl_unidade_saude_complexidade.html" target="_top" title="tl_unidade_saude_complexidade" alt="" coords="32,1219,477,1409">
+<area shape="rect" id="node454" href="tables/tl_unidade_saude_horus.html" target="_top" title="tl_unidade_saude_horus" alt="" coords="57,981,452,1201">
+<area shape="rect" id="node455" href="tables/tl_unidade_saude_tipo_servico.html" target="_top" title="tl_unidade_saude_tipo_servico" alt="" coords="42,773,467,964">
+<area shape="rect" id="node456" href="tables/tl_usuario.html" target="_top" title="tl_usuario" alt="" coords="73,360,437,756">
+<area shape="rect" id="node457" href="tables/tl_vacinacao.html" target="_top" title="tl_vacinacao" alt="" coords="88,5,422,343">
+</map>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src=""></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>

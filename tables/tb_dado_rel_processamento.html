@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_dado_rel_processamento - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_dado_rel_processamento</h1><p><span id="recordNumber">18</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_dado_rel_processamento">co_seq_dado_rel_processamento</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_marca_reprocessamento">dt_marca_reprocessamento</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_ator_papel">co_ator_papel</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_dado_rel_processamento.co_ator_papel references tb_ator_papel.co_seq_ator_papel via fk_atorpapel_dadorelproc"><a href='tb_ator_papel.html'>tb_ator_papel</a><span class='relatedKey'>.co_seq_ator_papel</span></td>
+                                                <td class="constraint detail">fk_atorpapel_dadorelproc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_processamento_inicio">dt_processamento_inicio</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_processamento_producao">dt_processamento_producao</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_processamento_consolidados">dt_processamento_consolidados</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_processamento_operacionais">dt_processamento_operacionais</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_processamento_conclusao">dt_processamento_conclusao</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_att_cidadao_pec_etl">dt_att_cidadao_pec_etl</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo_inicio">co_dim_tempo_inicio</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_dado_rel_processamento.co_dim_tempo_inicio references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_dadrelprocessinici"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_dadrelprocessinici</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_tempo_final">co_dim_tempo_final</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_dado_rel_processamento.co_dim_tempo_final references tb_dim_tempo.co_seq_dim_tempo via fk_dimtempo_dadrelprocessfina"><a href='tb_dim_tempo.html'>tb_dim_tempo</a><span class='relatedKey'>.co_seq_dim_tempo</span></td>
+                                                <td class="constraint detail">fk_dimtempo_dadrelprocessfina</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_etapa_interrompida">no_etapa_interrompida</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nome da etapa onde houve a interrupcao do processamento</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_dadorelprocessamento</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_dado_rel_processamento</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_dadorelprocessa_coatorpapel</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_ator_papel</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="248,5,711,431">
+<area shape="rect" id="node2" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="7,67,203,220">
+<area shape="rect" id="node3" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="5,286,204,409">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_dado_rel_processamento.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_ator_papel_perfil.html" target="_top" title="rl_ator_papel_perfil" alt="" coords="551,117,773,211">
+<area shape="rect" id="node2" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="189,597,385,750">
+<area shape="rect" id="node8" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="5,447,144,541">
+<area shape="rect" id="node3" href="tb_adm_geral.html" target="_top" title="tb_adm_geral" alt="" coords="573,229,751,323">
+<area shape="rect" id="node4" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="555,341,769,435">
+<area shape="rect" id="node5" href="tb_agenda_fixada_ator_papel.html" target="_top" title="tb_agenda_fixada_ator_papel" alt="" coords="513,453,811,547">
+<area shape="rect" id="node6" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="576,600,748,694">
+<area shape="rect" id="node7" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="992,533,1133,627">
+<area shape="rect" id="node9" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="507,747,817,841">
+<area shape="rect" id="node10" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="430,1306,894,1732">
+<area shape="rect" id="node11" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="188,4099,386,4222">
+<area shape="rect" id="node12" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="585,5,739,99">
+<area shape="rect" id="node13" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="496,1749,828,1843">
+<area shape="rect" id="node14" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="537,1861,787,1955">
+<area shape="rect" id="node15" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="510,1973,814,2067">
+<area shape="rect" id="node16" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="526,2085,798,2179">
+<area shape="rect" id="node17" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="509,2197,815,2291">
+<area shape="rect" id="node18" href="tb_fat_atend_dom_prob_cond.html" target="_top" title="tb_fat_atend_dom_prob_cond" alt="" coords="510,2309,814,2403">
+<area shape="rect" id="node19" href="tb_fat_atend_dom_proced.html" target="_top" title="tb_fat_atend_dom_proced" alt="" coords="525,2421,799,2515">
+<area shape="rect" id="node20" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="493,2533,831,2627">
+<area shape="rect" id="node21" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="512,2645,812,2739">
+<area shape="rect" id="node22" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="495,2757,829,2851">
+<area shape="rect" id="node23" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="501,2869,823,2963">
+<area shape="rect" id="node24" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="515,2981,809,3075">
+<area shape="rect" id="node25" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="509,3093,815,3187">
+<area shape="rect" id="node26" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="510,3205,814,3299">
+<area shape="rect" id="node27" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="520,3317,804,3411">
+<area shape="rect" id="node28" href="tb_fat_atividade_coletiva.html" target="_top" title="tb_fat_atividade_coletiva" alt="" coords="530,3429,794,3523">
+<area shape="rect" id="node29" href="tb_fat_atvdd_coletiva_ext.html" target="_top" title="tb_fat_atvdd_coletiva_ext" alt="" coords="528,3541,796,3635">
+<area shape="rect" id="node30" href="tb_fat_atvdd_coletiva_int.html" target="_top" title="tb_fat_atvdd_coletiva_int" alt="" coords="529,3653,795,3747">
+<area shape="rect" id="node31" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="524,3765,800,3859">
+<area shape="rect" id="node32" href="tb_fat_atvdd_coletiva_propart.html" target="_top" title="tb_fat_atvdd_coletiva_propart" alt="" coords="511,3877,813,3971">
+<area shape="rect" id="node33" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="510,3989,814,4083">
+<area shape="rect" id="node34" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="534,4101,790,4195">
+<area shape="rect" id="node35" href="tb_fat_cad_domiciliar.html" target="_top" title="tb_fat_cad_domiciliar" alt="" coords="543,4213,781,4307">
+<area shape="rect" id="node36" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="544,4325,780,4419">
+<area shape="rect" id="node37" href="tb_fat_cidadao.html" target="_top" title="tb_fat_cidadao" alt="" coords="569,4437,755,4531">
+<area shape="rect" id="node38" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="544,4549,780,4643">
+<area shape="rect" id="node39" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="509,4661,815,4755">
+<area shape="rect" id="node40" href="tb_fat_familia.html" target="_top" title="tb_fat_familia" alt="" coords="574,4773,750,4867">
+<area shape="rect" id="node41" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="536,4885,788,4979">
+<area shape="rect" id="node42" href="tb_fat_fichas.html" target="_top" title="tb_fat_fichas" alt="" coords="576,4997,748,5091">
+<area shape="rect" id="node43" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="508,5109,816,5203">
+<area shape="rect" id="node44" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="546,5221,778,5315">
+<area shape="rect" id="node45" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="516,5333,808,5427">
+<area shape="rect" id="node46" href="tb_fat_procedimento.html" target="_top" title="tb_fat_procedimento" alt="" coords="546,5445,778,5539">
+<area shape="rect" id="node47" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="560,5557,764,5651">
+<area shape="rect" id="node48" href="tb_fat_vacinacao_vacina.html" target="_top" title="tb_fat_vacinacao_vacina" alt="" coords="531,5669,793,5763">
+<area shape="rect" id="node49" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="536,5781,788,5875">
+<area shape="rect" id="node50" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="552,859,772,953">
+<area shape="rect" id="node51" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="547,971,777,1065">
+<area shape="rect" id="node52" href="tb_justificativa_agenda.html" target="_top" title="tb_justificativa_agenda" alt="" coords="938,653,1187,747">
+<area shape="rect" id="node53" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="525,1083,799,1177">
+<area shape="rect" id="node54" href="tb_modelo_personalizado.html" target="_top" title="tb_modelo_personalizado" alt="" coords="526,1195,798,1289">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_dado_rel_processamento.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="248,5,711,431">
+<area shape="rect" id="node2" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="7,67,203,220">
+<area shape="rect" id="node3" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="5,286,204,409">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_dado_rel_processamento.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_ator_papel_perfil.html" target="_top" title="rl_ator_papel_perfil" alt="" coords="551,117,773,211">
+<area shape="rect" id="node2" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="189,672,385,825">
+<area shape="rect" id="node9" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="5,493,144,587">
+<area shape="rect" id="node3" href="ta_ator_papel.html" target="_top" title="ta_ator_papel" alt="" coords="573,229,751,323">
+<area shape="rect" id="node4" href="tb_adm_geral.html" target="_top" title="tb_adm_geral" alt="" coords="573,341,751,435">
+<area shape="rect" id="node5" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="555,453,769,547">
+<area shape="rect" id="node6" href="tb_agenda_fixada_ator_papel.html" target="_top" title="tb_agenda_fixada_ator_papel" alt="" coords="513,565,811,659">
+<area shape="rect" id="node7" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="576,712,748,806">
+<area shape="rect" id="node8" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="992,645,1133,739">
+<area shape="rect" id="node10" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="507,859,817,953">
+<area shape="rect" id="node11" href="tb_dado_rel_processamento.html" target="_top" title="tb_dado_rel_processamento" alt="" coords="430,1418,894,1844">
+<area shape="rect" id="node12" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="188,4211,386,4334">
+<area shape="rect" id="node13" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="585,5,739,99">
+<area shape="rect" id="node14" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="496,1861,828,1955">
+<area shape="rect" id="node15" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="537,1973,787,2067">
+<area shape="rect" id="node16" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="510,2085,814,2179">
+<area shape="rect" id="node17" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="526,2197,798,2291">
+<area shape="rect" id="node18" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="509,2309,815,2403">
+<area shape="rect" id="node19" href="tb_fat_atend_dom_prob_cond.html" target="_top" title="tb_fat_atend_dom_prob_cond" alt="" coords="510,2421,814,2515">
+<area shape="rect" id="node20" href="tb_fat_atend_dom_proced.html" target="_top" title="tb_fat_atend_dom_proced" alt="" coords="525,2533,799,2627">
+<area shape="rect" id="node21" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="493,2645,831,2739">
+<area shape="rect" id="node22" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="512,2757,812,2851">
+<area shape="rect" id="node23" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="495,2869,829,2963">
+<area shape="rect" id="node24" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="501,2981,823,3075">
+<area shape="rect" id="node25" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="515,3093,809,3187">
+<area shape="rect" id="node26" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="509,3205,815,3299">
+<area shape="rect" id="node27" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="510,3317,814,3411">
+<area shape="rect" id="node28" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="520,3429,804,3523">
+<area shape="rect" id="node29" href="tb_fat_atividade_coletiva.html" target="_top" title="tb_fat_atividade_coletiva" alt="" coords="530,3541,794,3635">
+<area shape="rect" id="node30" href="tb_fat_atvdd_coletiva_ext.html" target="_top" title="tb_fat_atvdd_coletiva_ext" alt="" coords="528,3653,796,3747">
+<area shape="rect" id="node31" href="tb_fat_atvdd_coletiva_int.html" target="_top" title="tb_fat_atvdd_coletiva_int" alt="" coords="529,3765,795,3859">
+<area shape="rect" id="node32" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="524,3877,800,3971">
+<area shape="rect" id="node33" href="tb_fat_atvdd_coletiva_propart.html" target="_top" title="tb_fat_atvdd_coletiva_propart" alt="" coords="511,3989,813,4083">
+<area shape="rect" id="node34" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="510,4101,814,4195">
+<area shape="rect" id="node35" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="534,4213,790,4307">
+<area shape="rect" id="node36" href="tb_fat_cad_domiciliar.html" target="_top" title="tb_fat_cad_domiciliar" alt="" coords="543,4325,781,4419">
+<area shape="rect" id="node37" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="544,4437,780,4531">
+<area shape="rect" id="node38" href="tb_fat_cidadao.html" target="_top" title="tb_fat_cidadao" alt="" coords="569,4549,755,4643">
+<area shape="rect" id="node39" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="544,4661,780,4755">
+<area shape="rect" id="node40" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="509,4773,815,4867">
+<area shape="rect" id="node41" href="tb_fat_familia.html" target="_top" title="tb_fat_familia" alt="" coords="574,4885,750,4979">
+<area shape="rect" id="node42" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="536,4997,788,5091">
+<area shape="rect" id="node43" href="tb_fat_fichas.html" target="_top" title="tb_fat_fichas" alt="" coords="576,5109,748,5203">
+<area shape="rect" id="node44" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="508,5221,816,5315">
+<area shape="rect" id="node45" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="546,5333,778,5427">
+<area shape="rect" id="node46" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="516,5445,808,5539">
+<area shape="rect" id="node47" href="tb_fat_procedimento.html" target="_top" title="tb_fat_procedimento" alt="" coords="546,5557,778,5651">
+<area shape="rect" id="node48" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="560,5669,764,5763">
+<area shape="rect" id="node49" href="tb_fat_vacinacao_vacina.html" target="_top" title="tb_fat_vacinacao_vacina" alt="" coords="531,5781,793,5875">
+<area shape="rect" id="node50" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="536,5893,788,5987">
+<area shape="rect" id="node51" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="552,971,772,1065">
+<area shape="rect" id="node52" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="547,1083,777,1177">
+<area shape="rect" id="node53" href="tb_justificativa_agenda.html" target="_top" title="tb_justificativa_agenda" alt="" coords="938,765,1187,859">
+<area shape="rect" id="node54" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="525,1195,799,1289">
+<area shape="rect" id="node55" href="tb_modelo_personalizado.html" target="_top" title="tb_modelo_personalizado" alt="" coords="526,1307,798,1401">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_dado_rel_processamento.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

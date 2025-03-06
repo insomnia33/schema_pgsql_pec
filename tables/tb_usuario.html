@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_usuario - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_usuario</h1><p><span id="recordNumber">6</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar informações sobre usuários cadastrados no sistema.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_usuario">co_seq_usuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_usuario.co_seq_usuario&#39;s name implies that it&#39;s a child of tb_usuario.co_seq_usuario, but it doesn&#39;t reference that column."><a href='ta_usuario.html'>ta_usuario</a><span class='relatedKey'>.co_seq_usuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_arquivo_temporario.co_usuario references tb_usuario.co_seq_usuario via fk_arquivo_usuario"><a href='tb_arquivo_temporario.html'>tb_arquivo_temporario</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_arquivo_usuario</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_auditoria_processo.co_usuario references tb_usuario.co_seq_usuario via fk_auditoriaprocesso_usuario"><a href='tb_auditoria_processo.html'>tb_auditoria_processo</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_auditoriaprocesso_usuario</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_historico_acesso.co_usuario references tb_usuario.co_seq_usuario via fk_historico_acesso_usuario"><a href='tb_historico_acesso.html'>tb_historico_acesso</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_historico_acesso_usuario</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_justificativa_agenda.co_usuario references tb_usuario.co_seq_usuario via fk_usuario_justificativa_agnd"><a href='tb_justificativa_agenda.html'>tb_justificativa_agenda</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_usuario_justificativa_agnd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_justificativa_prontuario.co_usuario references tb_usuario.co_seq_usuario via fk_usuario_justificativa_pront"><a href='tb_justificativa_prontuario.html'>tb_justificativa_prontuario</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_usuario_justificativa_pront</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_justificativa_status_ciddao.co_usuario references tb_usuario.co_seq_usuario via fk_usuario_justificativa_inatv"><a href='tb_justificativa_status_ciddao.html'>tb_justificativa_status_ciddao</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_usuario_justificativa_inatv</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_prof.co_usuario references tb_usuario.co_seq_usuario via fk_usuario_prof"><a href='tb_prof.html'>tb_prof</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_usuario_prof</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_sessao_sincronizacao.co_usuario references tb_usuario.co_seq_usuario via fk_usuario_sessaosincronizacao"><a href='tb_sessao_sincronizacao.html'>tb_sessao_sincronizacao</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_usuario_sessaosincronizacao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_token_redefinicao_senha.co_usuario references tb_usuario.co_seq_usuario via fk_usuario_tokenredsenha"><a href='tb_token_redefinicao_senha.html'>tb_token_redefinicao_senha</a><span class='relatedKey'>.co_usuario</span></td>
+                                                <td class="constraint detail">fk_usuario_tokenredsenha</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_bloqueado">st_bloqueado</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Situação de bloqueio de bloqueio (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_senha">ds_senha</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Senha do usuário.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_ator">co_ator</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_usuario.co_ator references tb_ator.co_seq_ator via fk_ator_usuario"><a href='tb_ator.html'>tb_ator</a><span class='relatedKey'>.co_seq_ator</span></td>
+                                                <td class="constraint detail">fk_ator_usuario</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do usuário. Chave estrangeira com origem na tabela TB_ATOR.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ultima_atualizacao_senha">dt_ultima_atualizacao_senha</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_termo_uso">st_termo_uso</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_forcar_troca_senha">st_forcar_troca_senha</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nr_tentativas_acesso">nr_tentativas_acesso</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="ds_login">ds_login</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Login do usuário para acesso ao sistema</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_envio_email_recuperar_senha">dt_envio_email_recuperar_senha</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Timestamp em que foi enviado e-mail de recuperação de senha</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_visualizou_novidades">st_visualizou_novidades</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verifica se usuário visualizou ou não as novidades do sistema na versão atual</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_pesquisa_respondida">st_pesquisa_respondida</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Flag para armazenar se pesquisa de satisfação do usuário foi respondida ou dispensada</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_primeiro_login_versao">dt_primeiro_login_versao</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data do primeiro login do usuário na versão atual do sistema</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_pesquisa_respondida">dt_pesquisa_respondida</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data de quando o usuário respondeu/fechou a pesquisa</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_bloqueado_unificando_bases">st_bloqueado_unificando_bases</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o login dos usuários está bloqueado devido ao início do processo de Unificacação de Bases.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_notificacao_novidades">st_notificacao_novidades</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o sistema deve sinalizar que há novidades a conferir na pagina de novidades da versão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_termo_teleinterconsulta">st_termo_teleinterconsulta</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o usuário aceitou o &ldquo;Termo de Responsabilidade&rdquo; para realização de Teleinterconsultas.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_usuario</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_usuario</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_usuario_coator</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_ator</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> in_usuario_login</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>ds_login</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_arquivo_temporario.html" target="_top" title="tb_arquivo_temporario" alt="" coords="677,5,939,158">
+<area shape="rect" id="node2" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="192,861,610,1433">
+<area shape="rect" id="node11" href="tb_ator.html" target="_top" title="tb_ator" alt="" coords="5,952,148,1049">
+<area shape="rect" id="node3" href="tb_auditoria_processo.html" target="_top" title="tb_auditoria_processo" alt="" coords="678,176,938,329">
+<area shape="rect" id="node4" href="tb_historico_acesso.html" target="_top" title="tb_historico_acesso" alt="" coords="694,347,922,499">
+<area shape="rect" id="node5" href="tb_justificativa_agenda.html" target="_top" title="tb_justificativa_agenda" alt="" coords="661,517,955,758">
+<area shape="rect" id="node6" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="670,776,946,987">
+<area shape="rect" id="node7" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="657,1005,959,1217">
+<area shape="rect" id="node8" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="654,1235,962,1651">
+<area shape="rect" id="node9" href="tb_sessao_sincronizacao.html" target="_top" title="tb_sessao_sincronizacao" alt="" coords="674,1669,942,1851">
+<area shape="rect" id="node10" href="tb_token_redefinicao_senha.html" target="_top" title="tb_token_redefinicao_senha" alt="" coords="655,1869,961,2025">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_usuario.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1070,818,1279,912">
+<area shape="rect" id="node2" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="658,445,966,861">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="317,838,492,932">
+<area shape="rect" id="node10" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="196,1411,614,1983">
+<area shape="rect" id="node15" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,773,152,867">
+<area shape="rect" id="node16" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="295,950,514,1044">
+<area shape="rect" id="node27" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="292,553,518,647">
+<area shape="rect" id="node4" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="1448,759,1620,853">
+<area shape="rect" id="node5" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1086,447,1263,541">
+<area shape="rect" id="node6" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1098,335,1251,429">
+<area shape="rect" id="node7" href="tb_origem.html" target="_top" title="tb_origem" alt="" coords="1099,1301,1250,1395">
+<area shape="rect" id="node8" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="1086,1154,1263,1248">
+<area shape="rect" id="node14" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="733,986,890,1080">
+<area shape="rect" id="node9" href="tb_arquivo_temporario.html" target="_top" title="tb_arquivo_temporario" alt="" coords="680,1721,943,1873">
+<area shape="rect" id="node32" href="tb_ator.html" target="_top" title="tb_ator" alt="" coords="7,1502,150,1599">
+<area shape="rect" id="node11" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1060,111,1289,205">
+<area shape="rect" id="node12" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1010,223,1339,317">
+<area shape="rect" id="node13" href="tb_auditoria_processo.html" target="_top" title="tb_auditoria_processo" alt="" coords="682,1098,942,1251">
+<area shape="rect" id="node17" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1395,335,1673,429">
+<area shape="rect" id="node18" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1457,223,1611,317">
+<area shape="rect" id="node19" href="tb_historico_acesso.html" target="_top" title="tb_historico_acesso" alt="" coords="698,1269,926,1421">
+<area shape="rect" id="node20" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="1048,559,1301,653">
+<area shape="rect" id="node21" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1028,1042,1321,1136">
+<area shape="rect" id="node22" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1060,930,1289,1024">
+<area shape="rect" id="node23" href="tb_justificativa_agenda.html" target="_top" title="tb_justificativa_agenda" alt="" coords="1729,943,2024,1184">
+<area shape="rect" id="node24" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="1396,1018,1672,1229">
+<area shape="rect" id="node25" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="1383,1282,1685,1493">
+<area shape="rect" id="node26" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1452,906,1616,1000">
+<area shape="rect" id="node28" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1054,671,1295,765">
+<area shape="rect" id="node29" href="tb_sessao_sincronizacao.html" target="_top" title="tb_sessao_sincronizacao" alt="" coords="678,1917,945,2099">
+<area shape="rect" id="node30" href="tb_cds_tipo_origem.html" target="_top" title="tb_cds_tipo_origem" alt="" coords="292,2001,518,2095">
+<area shape="rect" id="node31" href="tb_token_redefinicao_senha.html" target="_top" title="tb_token_redefinicao_senha" alt="" coords="659,1547,964,1703">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_usuario.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_usuario.html" target="_top" title="ta_usuario" alt="" coords="657,5,959,158">
+<area shape="rect" id="node2" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="192,917,610,1489">
+<area shape="rect" id="node12" href="tb_ator.html" target="_top" title="tb_ator" alt="" coords="5,1008,148,1105">
+<area shape="rect" id="node3" href="tb_arquivo_temporario.html" target="_top" title="tb_arquivo_temporario" alt="" coords="677,176,939,329">
+<area shape="rect" id="node4" href="tb_auditoria_processo.html" target="_top" title="tb_auditoria_processo" alt="" coords="678,347,938,499">
+<area shape="rect" id="node5" href="tb_historico_acesso.html" target="_top" title="tb_historico_acesso" alt="" coords="694,517,922,670">
+<area shape="rect" id="node6" href="tb_justificativa_agenda.html" target="_top" title="tb_justificativa_agenda" alt="" coords="661,688,955,929">
+<area shape="rect" id="node7" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="670,947,946,1158">
+<area shape="rect" id="node8" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="657,1176,959,1387">
+<area shape="rect" id="node9" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="654,1405,962,1822">
+<area shape="rect" id="node10" href="tb_sessao_sincronizacao.html" target="_top" title="tb_sessao_sincronizacao" alt="" coords="674,1840,942,2022">
+<area shape="rect" id="node11" href="tb_token_redefinicao_senha.html" target="_top" title="tb_token_redefinicao_senha" alt="" coords="655,2040,961,2196">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_usuario.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1070,1165,1279,1259">
+<area shape="rect" id="node2" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="658,707,966,1124">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="317,1137,492,1231">
+<area shape="rect" id="node9" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="292,793,518,887">
+<area shape="rect" id="node10" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,914,152,1008">
+<area shape="rect" id="node12" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="196,1918,614,2490">
+<area shape="rect" id="node23" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="295,1007,514,1101">
+<area shape="rect" id="node4" href="ta_justificativa_agenda.html" target="_top" title="ta_justificativa_agenda" alt="" coords="2073,199,2323,293">
+<area shape="rect" id="node5" href="tb_justificativa_agenda.html" target="_top" title="tb_justificativa_agenda" alt="" coords="1732,197,2026,437">
+<area shape="rect" id="node13" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="1448,222,1620,316">
+<area shape="rect" id="node14" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1086,71,1263,165">
+<area shape="rect" id="node16" href="tb_origem.html" target="_top" title="tb_origem" alt="" coords="1099,183,1250,277">
+<area shape="rect" id="node6" href="ta_justificativa_status_ciddao.html" target="_top" title="ta_justificativa_status_ciddao" alt="" coords="1729,1530,2029,1624">
+<area shape="rect" id="node7" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="1383,1527,1685,1739">
+<area shape="rect" id="node15" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1098,407,1251,501">
+<area shape="rect" id="node22" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="733,1249,890,1343">
+<area shape="rect" id="node8" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="1111,295,1238,389">
+<area shape="rect" id="node11" href="ta_usuario.html" target="_top" title="ta_usuario" alt="" coords="660,1535,963,1688">
+<area shape="rect" id="node36" href="tb_ator.html" target="_top" title="tb_ator" alt="" coords="7,2008,150,2106">
+<area shape="rect" id="node17" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="1086,1389,1263,1483">
+<area shape="rect" id="node18" href="tb_arquivo_temporario.html" target="_top" title="tb_arquivo_temporario" alt="" coords="680,1706,943,1859">
+<area shape="rect" id="node19" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1060,570,1289,664">
+<area shape="rect" id="node20" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1010,682,1339,776">
+<area shape="rect" id="node21" href="tb_auditoria_processo.html" target="_top" title="tb_auditoria_processo" alt="" coords="682,1877,942,2029">
+<area shape="rect" id="node24" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1395,486,1673,580">
+<area shape="rect" id="node25" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1457,110,1611,204">
+<area shape="rect" id="node26" href="tb_historico_acesso.html" target="_top" title="tb_historico_acesso" alt="" coords="698,2047,926,2200">
+<area shape="rect" id="node27" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="1048,794,1301,888">
+<area shape="rect" id="node28" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1028,1053,1321,1147">
+<area shape="rect" id="node29" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1060,1277,1289,1371">
+<area shape="rect" id="node30" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="1396,1298,1672,1509">
+<area shape="rect" id="node31" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1452,1097,1616,1191">
+<area shape="rect" id="node32" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1054,906,1295,1000">
+<area shape="rect" id="node33" href="tb_sessao_sincronizacao.html" target="_top" title="tb_sessao_sincronizacao" alt="" coords="678,2463,945,2645">
+<area shape="rect" id="node34" href="tb_cds_tipo_origem.html" target="_top" title="tb_cds_tipo_origem" alt="" coords="292,2523,518,2617">
+<area shape="rect" id="node35" href="tb_token_redefinicao_senha.html" target="_top" title="tb_token_redefinicao_senha" alt="" coords="659,2218,964,2374">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_usuario.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

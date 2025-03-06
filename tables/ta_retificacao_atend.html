@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ta_retificacao_atend - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>ta_retificacao_atend</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_taretificacaoatend">co_seq_taretificacaoatend</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_tipo_auditoria">co_tipo_auditoria</span></td>
+                                    <td>bpchar</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_auditoria">dt_auditoria</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_retificacao_atend">co_seq_retificacao_atend</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_retificacao_atend.co_seq_retificacao_atend&#39;s name implies that it&#39;s a child of tb_retificacao_atend.co_seq_retificacao_atend, but it doesn&#39;t reference that column."><a href='tb_retificacao_atend.html'>tb_retificacao_atend</a><span class='relatedKey'>.co_seq_retificacao_atend</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="bl_conteudo_atendimento">bl_conteudo_atendimento</span></td>
+                                    <td>bytea</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Json com o conteúdo do atendimento retificado</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_unico_atend_prof">co_unico_atend_prof</span></td>
+                                    <td>varchar</td>
+                                    <td>96</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica o código unico do atendimento profissional que foi retificado</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_lotacao">co_lotacao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Lotação que efetuou a retificação</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_retificacao_atend.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tb_antecedente.html'>tb_antecedente</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Prontuario do cidadão que foi retificado o atendimento</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_exclusao">dt_exclusao</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data que foi retificado o atendimento</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_justificativa">ds_justificativa</span></td>
+                                    <td>varchar</td>
+                                    <td>200</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Justificativa da retificação do atendimento</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_taretificacaoatend</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_taretificacaoatend</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="5,5,391,372">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/ta_retificacao_atend.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="356,5,742,372">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="5,268,312,392">
+<area shape="rect" id="node3" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="35,39,283,250">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/ta_retificacao_atend.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="656,390,883,484">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="226,3187,532,3310">
+<area shape="rect" id="node34" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="5,1728,182,1822">
+<area shape="rect" id="node3" href="ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="677,502,861,596">
+<area shape="rect" id="node4" href="ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="683,614,855,708">
+<area shape="rect" id="node5" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="695,726,843,820">
+<area shape="rect" id="node6" href="ta_antecedente.html" target="_top" title="ta_antecedente" alt="" coords="674,838,864,932">
+<area shape="rect" id="node7" href="ta_antecedente_ciap.html" target="_top" title="ta_antecedente_ciap" alt="" coords="654,950,885,1044">
+<area shape="rect" id="node8" href="ta_atend.html" target="_top" title="ta_atend" alt="" coords="700,1062,839,1156">
+<area shape="rect" id="node9" href="ta_atestado.html" target="_top" title="ta_atestado" alt="" coords="688,1174,850,1268">
+<area shape="rect" id="node10" href="ta_cirurgias_internacoes.html" target="_top" title="ta_cirurgias_internacoes" alt="" coords="638,1286,901,1380">
+<area shape="rect" id="node11" href="ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="631,1398,907,1492">
+<area shape="rect" id="node12" href="ta_encaminhamento.html" target="_top" title="ta_encaminhamento" alt="" coords="655,1510,883,1604">
+<area shape="rect" id="node13" href="ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="655,1622,883,1716">
+<area shape="rect" id="node14" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="648,1734,890,1828">
+<area shape="rect" id="node15" href="ta_guia_encaminhamento.html" target="_top" title="ta_guia_encaminhamento" alt="" coords="634,1846,904,1940">
+<area shape="rect" id="node16" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="707,1958,831,2052">
+<area shape="rect" id="node17" href="ta_lembrete.html" target="_top" title="ta_lembrete" alt="" coords="688,2070,851,2164">
+<area shape="rect" id="node18" href="ta_medicamento_uso_continuo.html" target="_top" title="ta_medicamento_uso_continuo" alt="" coords="612,2182,926,2276">
+<area shape="rect" id="node19" href="ta_neuro_alter_fenot.html" target="_top" title="ta_neuro_alter_fenot" alt="" coords="654,2294,885,2388">
+<area shape="rect" id="node20" href="ta_neuro_fator_risco.html" target="_top" title="ta_neuro_fator_risco" alt="" coords="653,2406,885,2500">
+<area shape="rect" id="node21" href="ta_neuro_marco.html" target="_top" title="ta_neuro_marco" alt="" coords="670,2518,868,2612">
+<area shape="rect" id="node22" href="ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="670,2630,869,2724">
+<area shape="rect" id="node23" href="ta_orientacao.html" target="_top" title="ta_orientacao" alt="" coords="680,2742,858,2836">
+<area shape="rect" id="node24" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="638,2854,901,2948">
+<area shape="rect" id="node25" href="ta_periograma_simplificado.html" target="_top" title="ta_periograma_simplificado" alt="" coords="626,2966,912,3060">
+<area shape="rect" id="node26" href="ta_pre_natal.html" target="_top" title="ta_pre_natal" alt="" coords="686,3078,853,3172">
+<area shape="rect" id="node27" href="ta_problema.html" target="_top" title="ta_problema" alt="" coords="685,3190,853,3284">
+<area shape="rect" id="node28" href="ta_prontuario_grupo_historico.html" target="_top" title="ta_prontuario_grupo_historico" alt="" coords="616,3302,923,3396">
+<area shape="rect" id="node29" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="576,5,962,372">
+<area shape="rect" id="node30" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="255,1527,503,1738">
+<area shape="rect" id="node35" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="17,1587,170,1681">
+<area shape="rect" id="node31" href="ta_sinan_notificacao_evolucao.html" target="_top" title="ta_sinan_notificacao_evolucao" alt="" coords="614,3414,924,3508">
+<area shape="rect" id="node32" href="ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="674,3526,864,3620">
+<area shape="rect" id="node33" href="ta_vacinacao.html" target="_top" title="ta_vacinacao" alt="" coords="682,3638,856,3732">
+<area shape="rect" id="node36" href="tl_ad_cidadao.html" target="_top" title="tl_ad_cidadao" alt="" coords="679,3750,859,3844">
+<area shape="rect" id="node37" href="tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="686,3862,853,3956">
+<area shape="rect" id="node38" href="tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="698,3974,841,4068">
+<area shape="rect" id="node39" href="tl_atend.html" target="_top" title="tl_atend" alt="" coords="702,4086,837,4180">
+<area shape="rect" id="node40" href="tl_atestado.html" target="_top" title="tl_atestado" alt="" coords="690,4198,848,4292">
+<area shape="rect" id="node41" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="642,4310,897,4404">
+<area shape="rect" id="node42" href="tl_encaminhamento.html" target="_top" title="tl_encaminhamento" alt="" coords="658,4422,881,4516">
+<area shape="rect" id="node43" href="tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="657,4534,881,4628">
+<area shape="rect" id="node44" href="tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="651,4646,887,4740">
+<area shape="rect" id="node45" href="tl_justificativa_prontuario.html" target="_top" title="tl_justificativa_prontuario" alt="" coords="635,4758,903,4852">
+<area shape="rect" id="node46" href="tl_lembrete.html" target="_top" title="tl_lembrete" alt="" coords="690,4870,849,4964">
+<area shape="rect" id="node47" href="tl_medicamento_uso_continuo.html" target="_top" title="tl_medicamento_uso_continuo" alt="" coords="615,4982,923,5076">
+<area shape="rect" id="node48" href="tl_neuro_alter_fenot.html" target="_top" title="tl_neuro_alter_fenot" alt="" coords="656,5094,883,5188">
+<area shape="rect" id="node49" href="tl_neuro_fator_risco.html" target="_top" title="tl_neuro_fator_risco" alt="" coords="655,5206,883,5300">
+<area shape="rect" id="node50" href="tl_neuro_marco.html" target="_top" title="tl_neuro_marco" alt="" coords="672,5318,866,5412">
+<area shape="rect" id="node51" href="tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="672,5430,866,5524">
+<area shape="rect" id="node52" href="tl_orientacao.html" target="_top" title="tl_orientacao" alt="" coords="683,5542,855,5636">
+<area shape="rect" id="node53" href="tl_pre_natal.html" target="_top" title="tl_pre_natal" alt="" coords="688,5654,851,5748">
+<area shape="rect" id="node54" href="tl_problema.html" target="_top" title="tl_problema" alt="" coords="687,5766,851,5860">
+<area shape="rect" id="node55" href="tl_proced_solicitado.html" target="_top" title="tl_proced_solicitado" alt="" coords="655,5878,883,5972">
+<area shape="rect" id="node56" href="tl_prontuario_grupo_historico.html" target="_top" title="tl_prontuario_grupo_historico" alt="" coords="618,5990,921,6084">
+<area shape="rect" id="node57" href="tl_sinan_notificacao_evolucao.html" target="_top" title="tl_sinan_notificacao_evolucao" alt="" coords="616,6102,922,6196">
+<area shape="rect" id="node58" href="tl_vacinacao.html" target="_top" title="tl_vacinacao" alt="" coords="684,6214,854,6308">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/ta_retificacao_atend.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

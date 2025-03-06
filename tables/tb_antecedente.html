@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_antecedente - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_antecedente</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar informações de antecedentes de cidadãos.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="rl_antecedente_ciap.co_prontuario references tb_antecedente.co_prontuario via fk_antecedente_antecedenteciap"><a href='rl_antecedente_ciap.html'>rl_antecedente_ciap</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">fk_antecedente_antecedenteciap</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_ad_cidadao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_ad_cidadao.html'>ta_ad_cidadao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_agendado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_agendado.html'>ta_agendado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_alergia.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_alergia.html'>ta_alergia</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_antecedente.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_antecedente.html'>ta_antecedente</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_antecedente_ciap.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_antecedente_ciap.html'>ta_antecedente_ciap</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_atend.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_atend.html'>ta_atend</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_atestado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_atestado.html'>ta_atestado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_cirurgias_internacoes.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_cirurgias_internacoes.html'>ta_cirurgias_internacoes</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_cuidado_compartilhado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_cuidado_compartilhado.html'>ta_cuidado_compartilhado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_encaminhamento.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_encaminhamento.html'>ta_encaminhamento</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_evolucao_odonto.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_evolucao_odonto.html'>ta_evolucao_odonto</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_exame_requisitado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_exame_requisitado.html'>ta_exame_requisitado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_guia_encaminhamento.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_guia_encaminhamento.html'>ta_guia_encaminhamento</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_ivcf.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_ivcf.html'>ta_ivcf</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_lembrete.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_lembrete.html'>ta_lembrete</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_medicamento_uso_continuo.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_medicamento_uso_continuo.html'>ta_medicamento_uso_continuo</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_neuro_alter_fenot.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_neuro_alter_fenot.html'>ta_neuro_alter_fenot</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_neuro_fator_risco.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_neuro_fator_risco.html'>ta_neuro_fator_risco</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_neuro_marco.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_neuro_marco.html'>ta_neuro_marco</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_odontograma.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_odontograma.html'>ta_odontograma</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_orientacao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_orientacao.html'>ta_orientacao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_periograma_completo.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_periograma_completo.html'>ta_periograma_completo</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_periograma_simplificado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_periograma_simplificado.html'>ta_periograma_simplificado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_pre_natal.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_pre_natal.html'>ta_pre_natal</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_problema.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_problema.html'>ta_problema</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_prontuario_grupo_historico.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_prontuario_grupo_historico.html'>ta_prontuario_grupo_historico</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_retificacao_atend.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_retificacao_atend.html'>ta_retificacao_atend</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_sinan_notificacao_evolucao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_sinan_notificacao_evolucao.html'>ta_sinan_notificacao_evolucao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_tecido_mole.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_tecido_mole.html'>ta_tecido_mole</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_vacinacao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='ta_vacinacao.html'>ta_vacinacao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_ad_cidadao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_ad_cidadao.html'>tl_ad_cidadao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_agendado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_agendado.html'>tl_agendado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_alergia.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_alergia.html'>tl_alergia</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_atend.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_atend.html'>tl_atend</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_atestado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_atestado.html'>tl_atestado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_cds_atend_individual.html'>tl_cds_atend_individual</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_encaminhamento.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_encaminhamento.html'>tl_encaminhamento</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_evolucao_odonto.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_evolucao_odonto.html'>tl_evolucao_odonto</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_exame_requisitado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_exame_requisitado.html'>tl_exame_requisitado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_justificativa_prontuario.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_justificativa_prontuario.html'>tl_justificativa_prontuario</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_lembrete.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_lembrete.html'>tl_lembrete</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_medicamento_uso_continuo.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_medicamento_uso_continuo.html'>tl_medicamento_uso_continuo</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_neuro_alter_fenot.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_neuro_alter_fenot.html'>tl_neuro_alter_fenot</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_neuro_fator_risco.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_neuro_fator_risco.html'>tl_neuro_fator_risco</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_neuro_marco.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_neuro_marco.html'>tl_neuro_marco</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_odontograma.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_odontograma.html'>tl_odontograma</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_orientacao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_orientacao.html'>tl_orientacao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_pre_natal.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_pre_natal.html'>tl_pre_natal</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_problema.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_problema.html'>tl_problema</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_proced_solicitado.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_proced_solicitado.html'>tl_proced_solicitado</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_prontuario_grupo_historico.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_prontuario_grupo_historico.html'>tl_prontuario_grupo_historico</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_sinan_notificacao_evolucao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_sinan_notificacao_evolucao.html'>tl_sinan_notificacao_evolucao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_vacinacao.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tl_vacinacao.html'>tl_vacinacao</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_antecedente.co_prontuario references tb_prontuario.co_seq_prontuario via fk_prontuario_antecedente"><a href='tb_prontuario.html'>tb_prontuario</a><span class='relatedKey'>.co_seq_prontuario</span></td>
+                                                <td class="constraint detail">fk_prontuario_antecedente</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do prontuário do cidadão. Chave estrangeira com origem na tabela TB_PRONTUARIO</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_observacao">ds_observacao</span></td>
+                                    <td>varchar</td>
+                                    <td>4000</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Observações adicionais dos antecedentes pessoais.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_aborto">ds_aborto</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes de aborto.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_parto">ds_parto</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes de partos.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_aborto">qt_aborto</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Quantidade de abortos realizados.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_natimorto">ds_natimorto</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes gestacionais - Informações de natimortos.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_recem_nascido">ds_recem_nascido</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes gestacionais - Recém nascidos com menos de 2500g.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_cesaria">ds_cesaria</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes de cesárias realizadas.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_parto_domiciliar">ds_parto_domiciliar</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes de partos domiciliares.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_filho_vivo">ds_filho_vivo</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa se o cidadão possui filhos vivos.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_obito_antes_primeira_semana">ds_obito_antes_primeira_semana</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes gestacionais - Óbito antes da primeira semana de gravidez.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_gestacao">ds_gestacao</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes de gestações.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_parto_vaginal">ds_parto_vaginal</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes de partos normais.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_obito_apos_primeira_semana">ds_obito_apos_primeira_semana</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descritivo de antecedentes gestacionais - Óbito após a primeira semana de gravidez.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ultimo_parto">dt_ultimo_parto</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data em que houve o último parto.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_recem_nascido_acima">qt_recem_nascido_acima</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_nascidos_vivos">qt_nascidos_vivos</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_parto_menos_de_um_ano">st_parto_menos_de_um_ano</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ultima_atualizacao_pessoal">dt_ultima_atualizacao_pessoal</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ultima_atualizacao_gestacnl">dt_ultima_atualizacao_gestacnl</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_peso">nu_peso</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_altura">nu_altura</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_perimetro_cefalico">nu_perimetro_cefalico</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_apgar_um">nu_apgar_um</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_apgar_cinco">nu_apgar_cinco</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_apgar_dez">nu_apgar_dez</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="tp_gravidez">tp_gravidez</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="tp_parto">tp_parto</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_ig_semanas">nu_ig_semanas</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_ig_dias">nu_ig_dias</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ultima_atualizacao_puericu">dt_ultima_atualizacao_puericu</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_antecedente</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_prontuario</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="757,8,984,161">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="280,5,713,988">
+<area shape="rect" id="node3" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="5,8,236,190">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_antecedente.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="959,293,1186,446">
+<area shape="rect" id="node2" href="tb_ciap.html" target="_top" title="tb_ciap" alt="" coords="252,209,393,303">
+<area shape="rect" id="node3" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="482,545,915,1528">
+<area shape="rect" id="node5" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="207,2697,438,2879">
+<area shape="rect" id="node4" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="535,3148,861,3242">
+<area shape="rect" id="node33" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="5,2757,163,2851">
+<area shape="rect" id="node6" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="605,3260,791,3354">
+<area shape="rect" id="node7" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="612,3519,784,3613">
+<area shape="rect" id="node8" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="624,3407,772,3501">
+<area shape="rect" id="node9" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1002,3721,1142,3815">
+<area shape="rect" id="node10" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="617,3631,780,3725">
+<area shape="rect" id="node11" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="568,3743,828,3837">
+<area shape="rect" id="node12" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="567,3855,830,3949">
+<area shape="rect" id="node13" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="559,97,837,191">
+<area shape="rect" id="node14" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="584,321,812,415">
+<area shape="rect" id="node15" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="583,2924,813,3018">
+<area shape="rect" id="node16" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="577,4001,819,4095">
+<area shape="rect" id="node17" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="563,433,834,527">
+<area shape="rect" id="node18" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="572,4113,824,4207">
+<area shape="rect" id="node19" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="633,4225,763,4319">
+<area shape="rect" id="node20" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="561,4337,835,4431">
+<area shape="rect" id="node21" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="616,4449,780,4543">
+<area shape="rect" id="node22" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="541,1545,855,1639">
+<area shape="rect" id="node23" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="582,1657,814,1751">
+<area shape="rect" id="node24" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="581,1769,815,1863">
+<area shape="rect" id="node25" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="599,1881,798,1975">
+<area shape="rect" id="node26" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="599,1993,798,2087">
+<area shape="rect" id="node27" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="609,2105,787,2199">
+<area shape="rect" id="node28" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="566,2217,830,2311">
+<area shape="rect" id="node29" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="555,2329,842,2423">
+<area shape="rect" id="node30" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="988,1432,1156,1526">
+<area shape="rect" id="node31" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="613,209,783,303">
+<area shape="rect" id="node32" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="581,2476,815,2570">
+<area shape="rect" id="node34" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="544,2588,852,2682">
+<area shape="rect" id="node35" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="584,2700,812,2794">
+<area shape="rect" id="node36" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="543,2812,854,2906">
+<area shape="rect" id="node37" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="977,3128,1168,3222">
+<area shape="rect" id="node38" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="611,3036,786,3130">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_antecedente.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="804,5,1030,158">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="280,5830,713,6813">
+<area shape="rect" id="node33" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="5,5833,236,6015">
+<area shape="rect" id="node3" href="ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="785,176,1049,387">
+<area shape="rect" id="node4" href="ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="766,405,1068,675">
+<area shape="rect" id="node5" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="773,693,1061,905">
+<area shape="rect" id="node6" href="ta_antecedente.html" target="_top" title="ta_antecedente" alt="" coords="764,923,1070,1075">
+<area shape="rect" id="node7" href="ta_antecedente_ciap.html" target="_top" title="ta_antecedente_ciap" alt="" coords="791,1093,1043,1246">
+<area shape="rect" id="node8" href="ta_atend.html" target="_top" title="ta_atend" alt="" coords="780,1264,1054,1505">
+<area shape="rect" id="node9" href="ta_atestado.html" target="_top" title="ta_atestado" alt="" coords="795,1523,1039,1734">
+<area shape="rect" id="node10" href="ta_cirurgias_internacoes.html" target="_top" title="ta_cirurgias_internacoes" alt="" coords="775,1752,1059,1934">
+<area shape="rect" id="node11" href="ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="763,1952,1071,2163">
+<area shape="rect" id="node12" href="ta_encaminhamento.html" target="_top" title="ta_encaminhamento" alt="" coords="776,2181,1058,2422">
+<area shape="rect" id="node13" href="ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="792,2440,1042,2651">
+<area shape="rect" id="node14" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="779,2669,1055,2910">
+<area shape="rect" id="node15" href="ta_guia_encaminhamento.html" target="_top" title="ta_guia_encaminhamento" alt="" coords="771,2928,1063,3169">
+<area shape="rect" id="node16" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="772,3187,1062,3369">
+<area shape="rect" id="node17" href="ta_lembrete.html" target="_top" title="ta_lembrete" alt="" coords="778,3387,1056,3569">
+<area shape="rect" id="node18" href="ta_medicamento_uso_continuo.html" target="_top" title="ta_medicamento_uso_continuo" alt="" coords="757,3587,1077,3769">
+<area shape="rect" id="node19" href="ta_neuro_alter_fenot.html" target="_top" title="ta_neuro_alter_fenot" alt="" coords="770,3787,1064,3969">
+<area shape="rect" id="node20" href="ta_neuro_fator_risco.html" target="_top" title="ta_neuro_fator_risco" alt="" coords="770,3987,1064,4169">
+<area shape="rect" id="node21" href="ta_neuro_marco.html" target="_top" title="ta_neuro_marco" alt="" coords="787,4187,1047,4369">
+<area shape="rect" id="node22" href="ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="794,4387,1040,4598">
+<area shape="rect" id="node23" href="ta_orientacao.html" target="_top" title="ta_orientacao" alt="" coords="813,4616,1021,4798">
+<area shape="rect" id="node24" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="774,4816,1060,5027">
+<area shape="rect" id="node25" href="ta_periograma_simplificado.html" target="_top" title="ta_periograma_simplificado" alt="" coords="766,5045,1068,5227">
+<area shape="rect" id="node26" href="ta_pre_natal.html" target="_top" title="ta_pre_natal" alt="" coords="803,5245,1031,5427">
+<area shape="rect" id="node27" href="ta_problema.html" target="_top" title="ta_problema" alt="" coords="775,5445,1059,5657">
+<area shape="rect" id="node28" href="ta_prontuario_grupo_historico.html" target="_top" title="ta_prontuario_grupo_historico" alt="" coords="764,5675,1070,5857">
+<area shape="rect" id="node29" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="792,5875,1042,6057">
+<area shape="rect" id="node30" href="ta_sinan_notificacao_evolucao.html" target="_top" title="ta_sinan_notificacao_evolucao" alt="" coords="762,6075,1072,6286">
+<area shape="rect" id="node31" href="ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="797,6304,1037,6545">
+<area shape="rect" id="node32" href="ta_vacinacao.html" target="_top" title="ta_vacinacao" alt="" coords="784,6563,1050,6745">
+<area shape="rect" id="node34" href="tl_ad_cidadao.html" target="_top" title="tl_ad_cidadao" alt="" coords="785,6763,1049,6974">
+<area shape="rect" id="node35" href="tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="766,6992,1068,7262">
+<area shape="rect" id="node36" href="tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="773,7280,1061,7491">
+<area shape="rect" id="node37" href="tl_atend.html" target="_top" title="tl_atend" alt="" coords="780,7509,1054,7750">
+<area shape="rect" id="node38" href="tl_atestado.html" target="_top" title="tl_atestado" alt="" coords="828,7768,1006,7950">
+<area shape="rect" id="node39" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="774,7968,1060,8355">
+<area shape="rect" id="node40" href="tl_encaminhamento.html" target="_top" title="tl_encaminhamento" alt="" coords="776,8373,1058,8643">
+<area shape="rect" id="node41" href="tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="794,8661,1040,8873">
+<area shape="rect" id="node42" href="tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="779,8891,1055,9131">
+<area shape="rect" id="node43" href="tl_justificativa_prontuario.html" target="_top" title="tl_justificativa_prontuario" alt="" coords="779,9149,1055,9331">
+<area shape="rect" id="node44" href="tl_lembrete.html" target="_top" title="tl_lembrete" alt="" coords="778,9349,1056,9531">
+<area shape="rect" id="node45" href="tl_medicamento_uso_continuo.html" target="_top" title="tl_medicamento_uso_continuo" alt="" coords="757,9549,1077,9731">
+<area shape="rect" id="node46" href="tl_neuro_alter_fenot.html" target="_top" title="tl_neuro_alter_fenot" alt="" coords="770,9749,1064,9931">
+<area shape="rect" id="node47" href="tl_neuro_fator_risco.html" target="_top" title="tl_neuro_fator_risco" alt="" coords="770,9949,1064,10131">
+<area shape="rect" id="node48" href="tl_neuro_marco.html" target="_top" title="tl_neuro_marco" alt="" coords="787,10149,1047,10331">
+<area shape="rect" id="node49" href="tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="794,10349,1040,10561">
+<area shape="rect" id="node50" href="tl_orientacao.html" target="_top" title="tl_orientacao" alt="" coords="800,10579,1034,10761">
+<area shape="rect" id="node51" href="tl_pre_natal.html" target="_top" title="tl_pre_natal" alt="" coords="803,10779,1031,10961">
+<area shape="rect" id="node52" href="tl_problema.html" target="_top" title="tl_problema" alt="" coords="775,10979,1059,11190">
+<area shape="rect" id="node53" href="tl_proced_solicitado.html" target="_top" title="tl_proced_solicitado" alt="" coords="792,11208,1042,11419">
+<area shape="rect" id="node54" href="tl_prontuario_grupo_historico.html" target="_top" title="tl_prontuario_grupo_historico" alt="" coords="766,11437,1068,11619">
+<area shape="rect" id="node55" href="tl_sinan_notificacao_evolucao.html" target="_top" title="tl_sinan_notificacao_evolucao" alt="" coords="764,11637,1070,11849">
+<area shape="rect" id="node56" href="tl_vacinacao.html" target="_top" title="tl_vacinacao" alt="" coords="784,11867,1050,12049">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_antecedente.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="1283,117,1510,270">
+<area shape="rect" id="node2" href="tb_ciap.html" target="_top" title="tb_ciap" alt="" coords="489,3252,630,3346">
+<area shape="rect" id="node3" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="759,4790,1192,5773">
+<area shape="rect" id="node5" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="444,5880,675,6062">
+<area shape="rect" id="node4" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="813,6421,1139,6515">
+<area shape="rect" id="node85" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="203,5940,360,6034">
+<area shape="rect" id="node6" href="ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="1264,6493,1528,6705">
+<area shape="rect" id="node7" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="471,6640,649,6734">
+<area shape="rect" id="node8" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="883,6788,1069,6882">
+<area shape="rect" id="node24" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="473,6859,647,6953">
+<area shape="rect" id="node9" href="ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="1246,10861,1547,11131">
+<area shape="rect" id="node10" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="467,11043,653,11137">
+<area shape="rect" id="node11" href="tb_motivo_reserva.html" target="_top" title="tb_motivo_reserva" alt="" coords="452,10801,667,10895">
+<area shape="rect" id="node12" href="tb_origem.html" target="_top" title="tb_origem" alt="" coords="484,10913,635,11007">
+<area shape="rect" id="node13" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="890,10887,1062,10981">
+<area shape="rect" id="node14" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="1252,7611,1540,7822">
+<area shape="rect" id="node15" href="tb_categoria_agente_causador.html" target="_top" title="tb_categoria_agente_causador" alt="" coords="406,7491,714,7585">
+<area shape="rect" id="node16" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="902,7420,1050,7514">
+<area shape="rect" id="node17" href="ta_antecedente.html" target="_top" title="ta_antecedente" alt="" coords="1243,3123,1550,3275">
+<area shape="rect" id="node18" href="ta_antecedente_ciap.html" target="_top" title="ta_antecedente_ciap" alt="" coords="1270,3293,1522,3446">
+<area shape="rect" id="node19" href="ta_atend.html" target="_top" title="ta_atend" alt="" coords="1618,11137,1892,11378">
+<area shape="rect" id="node20" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="854,11220,1098,11314">
+<area shape="rect" id="node21" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1326,11149,1466,11243">
+<area shape="rect" id="node22" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="860,11339,1091,11433">
+<area shape="rect" id="node23" href="ta_atestado.html" target="_top" title="ta_atestado" alt="" coords="1274,7152,1518,7363">
+<area shape="rect" id="node25" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="894,6676,1057,6770">
+<area shape="rect" id="node26" href="ta_cirurgias_internacoes.html" target="_top" title="ta_cirurgias_internacoes" alt="" coords="1254,2323,1538,2505">
+<area shape="rect" id="node27" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="844,4343,1107,4437">
+<area shape="rect" id="node28" href="ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="1242,288,1550,499">
+<area shape="rect" id="node29" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="837,3195,1115,3289">
+<area shape="rect" id="node41" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="5,5940,159,6034">
+<area shape="rect" id="node42" href="tb_classificacao_prioridade_cc.html" target="_top" title="tb_classificacao_prioridade_cc" alt="" coords="404,3364,715,3458">
+<area shape="rect" id="node30" href="ta_encaminhamento.html" target="_top" title="ta_encaminhamento" alt="" coords="1255,9211,1538,9451">
+<area shape="rect" id="node31" href="tb_classificacao_risco_encam.html" target="_top" title="tb_classificacao_risco_encam" alt="" coords="824,9329,1127,9423">
+<area shape="rect" id="node32" href="tb_especialidade_sisreg.html" target="_top" title="tb_especialidade_sisreg" alt="" coords="847,9157,1105,9251">
+<area shape="rect" id="node33" href="ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="1271,8411,1522,8622">
+<area shape="rect" id="node34" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="438,8287,681,8381">
+<area shape="rect" id="node35" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="861,8069,1091,8163">
+<area shape="rect" id="node36" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="1258,10056,1534,10297">
+<area shape="rect" id="node37" href="tb_proced_filtro.html" target="_top" title="tb_proced_filtro" alt="" coords="878,10117,1073,10211">
+<area shape="rect" id="node38" href="tb_proced_exame_especifico.html" target="_top" title="tb_proced_exame_especifico" alt="" coords="412,10188,708,10282">
+<area shape="rect" id="node39" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="855,10005,1097,10099">
+<area shape="rect" id="node40" href="ta_guia_encaminhamento.html" target="_top" title="ta_guia_encaminhamento" alt="" coords="1250,6235,1542,6475">
+<area shape="rect" id="node43" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="1252,2523,1541,2705">
+<area shape="rect" id="node44" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="911,4455,1041,4549">
+<area shape="rect" id="node45" href="ta_lembrete.html" target="_top" title="ta_lembrete" alt="" coords="1257,2723,1536,2905">
+<area shape="rect" id="node46" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="894,4567,1058,4661">
+<area shape="rect" id="node47" href="ta_medicamento_uso_continuo.html" target="_top" title="ta_medicamento_uso_continuo" alt="" coords="1236,5605,1556,5787">
+<area shape="rect" id="node48" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="819,5791,1133,5885">
+<area shape="rect" id="node49" href="ta_neuro_alter_fenot.html" target="_top" title="ta_neuro_alter_fenot" alt="" coords="1250,5805,1543,5987">
+<area shape="rect" id="node50" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="860,5973,1092,6067">
+<area shape="rect" id="node51" href="ta_neuro_fator_risco.html" target="_top" title="ta_neuro_fator_risco" alt="" coords="1249,859,1544,1041">
+<area shape="rect" id="node52" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="859,3488,1093,3582">
+<area shape="rect" id="node53" href="ta_neuro_marco.html" target="_top" title="ta_neuro_marco" alt="" coords="1266,1059,1526,1241">
+<area shape="rect" id="node54" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="876,3600,1075,3694">
+<area shape="rect" id="node55" href="ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="1274,8869,1519,9081">
+<area shape="rect" id="node56" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="876,8363,1075,8457">
+<area shape="rect" id="node57" href="ta_orientacao.html" target="_top" title="ta_orientacao" alt="" coords="1292,1259,1500,1441">
+<area shape="rect" id="node58" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="887,3712,1065,3806">
+<area shape="rect" id="node59" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="1254,8640,1539,8851">
+<area shape="rect" id="node60" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="844,8216,1108,8310">
+<area shape="rect" id="node61" href="ta_periograma_simplificado.html" target="_top" title="ta_periograma_simplificado" alt="" coords="1245,6723,1548,6905">
+<area shape="rect" id="node62" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="832,6935,1119,7029">
+<area shape="rect" id="node63" href="ta_pre_natal.html" target="_top" title="ta_pre_natal" alt="" coords="1641,565,1869,747">
+<area shape="rect" id="node64" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="1312,5,1480,99">
+<area shape="rect" id="node66" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="891,3341,1061,3435">
+<area shape="rect" id="node65" href="ta_problema.html" target="_top" title="ta_problema" alt="" coords="1254,629,1538,841">
+<area shape="rect" id="node67" href="ta_prontuario.html" target="_top" title="ta_prontuario" alt="" coords="888,4679,1064,4773">
+<area shape="rect" id="node68" href="ta_prontuario_grupo_historico.html" target="_top" title="ta_prontuario_grupo_historico" alt="" coords="1243,1493,1550,1675">
+<area shape="rect" id="node69" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="822,3824,1130,3918">
+<area shape="rect" id="node70" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="1272,1923,1521,2105">
+<area shape="rect" id="node71" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="862,4119,1090,4213">
+<area shape="rect" id="node72" href="ta_sinan_notificacao_evolucao.html" target="_top" title="ta_sinan_notificacao_evolucao" alt="" coords="1600,1357,1910,1569">
+<area shape="rect" id="node73" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="1241,517,1552,611">
+<area shape="rect" id="node74" href="tb_sinan_notificacao.html" target="_top" title="tb_sinan_notificacao" alt="" coords="860,4007,1092,4101">
+<area shape="rect" id="node75" href="ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="1635,8847,1875,9087">
+<area shape="rect" id="node76" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="1301,8069,1492,8163">
+<area shape="rect" id="node77" href="ta_vacinacao.html" target="_top" title="ta_vacinacao" alt="" coords="1263,2123,1530,2305">
+<area shape="rect" id="node78" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="888,4231,1063,4325">
+<area shape="rect" id="node79" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="1266,11589,1526,11683">
+<area shape="rect" id="node80" href="tb_cds_aleitamento_materno.html" target="_top" title="tb_cds_aleitamento_materno" alt="" coords="828,11573,1123,11667">
+<area shape="rect" id="node81" href="tb_cds_pic.html" target="_top" title="tb_cds_pic" alt="" coords="898,11685,1054,11779">
+<area shape="rect" id="node82" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="888,11980,1063,12074">
+<area shape="rect" id="node83" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="848,12092,1103,12186">
+<area shape="rect" id="node84" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="909,11868,1043,11962">
+<area shape="rect" id="node86" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="1282,9099,1510,9193">
+<area shape="rect" id="node87" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="840,3083,1111,3177">
+<area shape="rect" id="node88" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="850,6085,1102,6179">
+<area shape="rect" id="node89" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="839,6197,1113,6291">
+<area shape="rect" id="node90" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="859,6309,1093,6403">
+<area shape="rect" id="node91" href="tl_ad_cidadao.html" target="_top" title="tl_ad_cidadao" alt="" coords="1264,6005,1528,6217">
+<area shape="rect" id="node92" href="tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="1246,10573,1547,10843">
+<area shape="rect" id="node93" href="tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="1252,7381,1540,7593">
+<area shape="rect" id="node94" href="tl_atend.html" target="_top" title="tl_atend" alt="" coords="1260,11296,1533,11537">
+<area shape="rect" id="node95" href="tl_atestado.html" target="_top" title="tl_atestado" alt="" coords="1307,3464,1486,3646">
+<area shape="rect" id="node96" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="1254,11701,1539,12089">
+<area shape="rect" id="node97" href="tl_encaminhamento.html" target="_top" title="tl_encaminhamento" alt="" coords="1255,9469,1538,9739">
+<area shape="rect" id="node98" href="tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="1274,7840,1519,8051">
+<area shape="rect" id="node99" href="tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="1258,10315,1534,10555">
+<area shape="rect" id="node100" href="tl_justificativa_prontuario.html" target="_top" title="tl_justificativa_prontuario" alt="" coords="1258,3664,1534,3846">
+<area shape="rect" id="node101" href="tl_lembrete.html" target="_top" title="tl_lembrete" alt="" coords="1257,3935,1536,4117">
+<area shape="rect" id="node102" href="tl_medicamento_uso_continuo.html" target="_top" title="tl_medicamento_uso_continuo" alt="" coords="1236,4135,1556,4317">
+<area shape="rect" id="node103" href="tl_neuro_alter_fenot.html" target="_top" title="tl_neuro_alter_fenot" alt="" coords="1250,4335,1543,4517">
+<area shape="rect" id="node104" href="tl_neuro_fator_risco.html" target="_top" title="tl_neuro_fator_risco" alt="" coords="1249,4535,1544,4717">
+<area shape="rect" id="node105" href="tl_neuro_marco.html" target="_top" title="tl_neuro_marco" alt="" coords="1266,4735,1526,4917">
+<area shape="rect" id="node106" href="tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="1274,8181,1519,8393">
+<area shape="rect" id="node107" href="tl_orientacao.html" target="_top" title="tl_orientacao" alt="" coords="1279,4935,1514,5117">
+<area shape="rect" id="node108" href="tl_pre_natal.html" target="_top" title="tl_pre_natal" alt="" coords="1282,5135,1510,5317">
+<area shape="rect" id="node109" href="tl_problema.html" target="_top" title="tl_problema" alt="" coords="1254,6923,1538,7134">
+<area shape="rect" id="node110" href="tl_proced_solicitado.html" target="_top" title="tl_proced_solicitado" alt="" coords="1272,9792,1521,10003">
+<area shape="rect" id="node111" href="tl_prontuario_grupo_historico.html" target="_top" title="tl_prontuario_grupo_historico" alt="" coords="1245,5335,1548,5517">
+<area shape="rect" id="node112" href="tl_sinan_notificacao_evolucao.html" target="_top" title="tl_sinan_notificacao_evolucao" alt="" coords="1244,1693,1549,1905">
+<area shape="rect" id="node113" href="tl_vacinacao.html" target="_top" title="tl_vacinacao" alt="" coords="1263,2923,1530,3105">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_antecedente.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

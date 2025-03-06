@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ta_ivcf - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>ta_ivcf</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar os resultados do instrumento Índice de Vulnerabilidade Clínico-Funcional (IVCF-20)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_taivcf">co_seq_taivcf</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_tipo_auditoria">co_tipo_auditoria</span></td>
+                                    <td>bpchar</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_auditoria">dt_auditoria</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_ivcf">co_seq_ivcf</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_ivcf.co_seq_ivcf&#39;s name implies that it&#39;s a child of tb_ivcf.co_seq_ivcf, but it doesn&#39;t reference that column."><a href='tb_ivcf.html'>tb_ivcf</a><span class='relatedKey'>.co_seq_ivcf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_ivcf.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tb_antecedente.html'>tb_antecedente</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave estrangeira com origem na tabela TB_PRONTUARIO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_atend_prof">co_atend_prof</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave estrangeira com origem na tabela TB_ATEND_PROF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_resultado">nu_resultado</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Valor do resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_idade">st_sg_idade</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Idade&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_percepcao_saude">st_sg_percepcao_saude</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Percepção de saude&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_avd_instrumental">st_sg_avd_instrumental</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;AVD Instrumental&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_avd_basica">st_sg_avd_basica</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;AVD Básica&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_cognicao">st_sg_cognicao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Cognição&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_humor">st_sg_humor</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Humor&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_alcance_preensao_pinca">st_sg_alcance_preensao_pinca</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Alcance, preensão e pinça&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_cap_aerobica_muscular">st_sg_cap_aerobica_muscular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Capacidade aeróbica e/ou muscular&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_marcha">st_sg_marcha</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Marcha&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_continencia">st_sg_continencia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Continência esfincteriana&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_visao">st_sg_visao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Visão&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_audicao">st_sg_audicao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Audição&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_comorbidade">st_sg_comorbidade</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Comorbidade múltipla&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_resultado">dt_resultado</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data e horário da resultado do IVCF-20.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_taivcf</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_taivcf</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="5,5,410,695">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/ta_ivcf.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="356,5,761,695">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="5,211,312,334">
+<area shape="rect" id="node3" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="14,11,303,193">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/ta_ivcf.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="669,677,896,771">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="230,3027,536,3150">
+<area shape="rect" id="node34" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="7,4505,184,4599">
+<area shape="rect" id="node3" href="ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="690,789,875,883">
+<area shape="rect" id="node4" href="ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="696,901,869,995">
+<area shape="rect" id="node5" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="708,1013,857,1107">
+<area shape="rect" id="node6" href="ta_antecedente.html" target="_top" title="ta_antecedente" alt="" coords="688,1125,878,1219">
+<area shape="rect" id="node7" href="ta_antecedente_ciap.html" target="_top" title="ta_antecedente_ciap" alt="" coords="667,1237,898,1331">
+<area shape="rect" id="node8" href="ta_atend.html" target="_top" title="ta_atend" alt="" coords="713,1349,852,1443">
+<area shape="rect" id="node9" href="ta_atestado.html" target="_top" title="ta_atestado" alt="" coords="702,1461,864,1555">
+<area shape="rect" id="node10" href="ta_cirurgias_internacoes.html" target="_top" title="ta_cirurgias_internacoes" alt="" coords="651,1573,914,1667">
+<area shape="rect" id="node11" href="ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="644,1685,921,1779">
+<area shape="rect" id="node12" href="ta_encaminhamento.html" target="_top" title="ta_encaminhamento" alt="" coords="668,1797,897,1891">
+<area shape="rect" id="node13" href="ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="668,1909,897,2003">
+<area shape="rect" id="node14" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="662,2021,904,2115">
+<area shape="rect" id="node15" href="ta_guia_encaminhamento.html" target="_top" title="ta_guia_encaminhamento" alt="" coords="648,2133,918,2227">
+<area shape="rect" id="node16" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="580,5941,985,6630">
+<area shape="rect" id="node17" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="238,6032,528,6214">
+<area shape="rect" id="node35" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="5,6092,186,6186">
+<area shape="rect" id="node18" href="ta_lembrete.html" target="_top" title="ta_lembrete" alt="" coords="701,2245,864,2339">
+<area shape="rect" id="node19" href="ta_medicamento_uso_continuo.html" target="_top" title="ta_medicamento_uso_continuo" alt="" coords="626,2357,940,2451">
+<area shape="rect" id="node20" href="ta_neuro_alter_fenot.html" target="_top" title="ta_neuro_alter_fenot" alt="" coords="667,2469,898,2563">
+<area shape="rect" id="node21" href="ta_neuro_fator_risco.html" target="_top" title="ta_neuro_fator_risco" alt="" coords="666,2581,899,2675">
+<area shape="rect" id="node22" href="ta_neuro_marco.html" target="_top" title="ta_neuro_marco" alt="" coords="684,2693,882,2787">
+<area shape="rect" id="node23" href="ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="683,2805,882,2899">
+<area shape="rect" id="node24" href="ta_orientacao.html" target="_top" title="ta_orientacao" alt="" coords="694,2917,872,3011">
+<area shape="rect" id="node25" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="651,3029,914,3123">
+<area shape="rect" id="node26" href="ta_periograma_simplificado.html" target="_top" title="ta_periograma_simplificado" alt="" coords="640,3141,926,3235">
+<area shape="rect" id="node27" href="ta_pre_natal.html" target="_top" title="ta_pre_natal" alt="" coords="699,3253,866,3347">
+<area shape="rect" id="node28" href="ta_problema.html" target="_top" title="ta_problema" alt="" coords="698,3365,867,3459">
+<area shape="rect" id="node29" href="ta_prontuario_grupo_historico.html" target="_top" title="ta_prontuario_grupo_historico" alt="" coords="629,3477,936,3571">
+<area shape="rect" id="node30" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="668,3589,897,3683">
+<area shape="rect" id="node31" href="ta_sinan_notificacao_evolucao.html" target="_top" title="ta_sinan_notificacao_evolucao" alt="" coords="628,3701,938,3795">
+<area shape="rect" id="node32" href="ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="688,3813,878,3907">
+<area shape="rect" id="node33" href="ta_vacinacao.html" target="_top" title="ta_vacinacao" alt="" coords="696,3925,870,4019">
+<area shape="rect" id="node36" href="tb_ivcf_aplicacao.html" target="_top" title="tb_ivcf_aplicacao" alt="" coords="679,6648,886,6742">
+<area shape="rect" id="node37" href="tl_ad_cidadao.html" target="_top" title="tl_ad_cidadao" alt="" coords="692,4037,873,4131">
+<area shape="rect" id="node38" href="tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="699,4149,866,4243">
+<area shape="rect" id="node39" href="tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="711,4261,854,4355">
+<area shape="rect" id="node40" href="tl_atend.html" target="_top" title="tl_atend" alt="" coords="715,4373,850,4467">
+<area shape="rect" id="node41" href="tl_atestado.html" target="_top" title="tl_atestado" alt="" coords="704,4485,862,4579">
+<area shape="rect" id="node42" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="655,4597,910,4691">
+<area shape="rect" id="node43" href="tl_encaminhamento.html" target="_top" title="tl_encaminhamento" alt="" coords="671,4709,894,4803">
+<area shape="rect" id="node44" href="tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="670,4821,895,4915">
+<area shape="rect" id="node45" href="tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="664,4933,901,5027">
+<area shape="rect" id="node46" href="tl_justificativa_prontuario.html" target="_top" title="tl_justificativa_prontuario" alt="" coords="648,5045,917,5139">
+<area shape="rect" id="node47" href="tl_lembrete.html" target="_top" title="tl_lembrete" alt="" coords="703,5157,862,5251">
+<area shape="rect" id="node48" href="tl_medicamento_uso_continuo.html" target="_top" title="tl_medicamento_uso_continuo" alt="" coords="628,5269,937,5363">
+<area shape="rect" id="node49" href="tl_neuro_alter_fenot.html" target="_top" title="tl_neuro_alter_fenot" alt="" coords="669,5381,896,5475">
+<area shape="rect" id="node50" href="tl_neuro_fator_risco.html" target="_top" title="tl_neuro_fator_risco" alt="" coords="668,5493,897,5587">
+<area shape="rect" id="node51" href="tl_neuro_marco.html" target="_top" title="tl_neuro_marco" alt="" coords="686,5605,880,5699">
+<area shape="rect" id="node52" href="tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="686,5717,880,5811">
+<area shape="rect" id="node53" href="tl_orientacao.html" target="_top" title="tl_orientacao" alt="" coords="696,5829,869,5923">
+<area shape="rect" id="node54" href="tl_pre_natal.html" target="_top" title="tl_pre_natal" alt="" coords="701,5,864,99">
+<area shape="rect" id="node55" href="tl_problema.html" target="_top" title="tl_problema" alt="" coords="700,117,865,211">
+<area shape="rect" id="node56" href="tl_proced_solicitado.html" target="_top" title="tl_proced_solicitado" alt="" coords="668,229,897,323">
+<area shape="rect" id="node57" href="tl_prontuario_grupo_historico.html" target="_top" title="tl_prontuario_grupo_historico" alt="" coords="631,341,934,435">
+<area shape="rect" id="node58" href="tl_sinan_notificacao_evolucao.html" target="_top" title="tl_sinan_notificacao_evolucao" alt="" coords="630,453,936,547">
+<area shape="rect" id="node59" href="tl_vacinacao.html" target="_top" title="tl_vacinacao" alt="" coords="698,565,868,659">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/ta_ivcf.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_importacao_bolsa_familia - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_importacao_bolsa_familia</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Tabela contendo as importações dos beneficiários do Bolsa Família.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_importaca_bolsa_familia">co_seq_importaca_bolsa_familia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cidadao_bolsa_familia.co_importacao_bolsa_familia references tb_importacao_bolsa_familia.co_seq_importaca_bolsa_familia via fk_importbolsafam_cidbolsafam"><a href='tb_cidadao_bolsa_familia.html'>tb_cidadao_bolsa_familia</a><span class='relatedKey'>.co_importacao_bolsa_familia</span></td>
+                                                <td class="constraint detail">fk_importbolsafam_cidbolsafam</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prof">co_prof</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_importacao_bolsa_familia.co_prof references tb_prof.co_seq_prof via fk_prof_importacaobolsafamilia"><a href='tb_prof.html'>tb_prof</a><span class='relatedKey'>.co_seq_prof</span></td>
+                                                <td class="constraint detail">fk_prof_importacaobolsafamilia</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do profissional que realizou a importação dos beneficiários do Bolsa Família. Chave estrangeira com origem na tabela TB_PROF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_localidade">co_localidade</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_importacao_bolsa_familia.co_localidade references tb_localidade.co_localidade via fk_localidade_importbolsafamil"><a href='tb_localidade.html'>tb_localidade</a><span class='relatedKey'>.co_localidade</span></td>
+                                                <td class="constraint detail">fk_localidade_importbolsafamil</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da localidade a qual se referia o arquivo utilizado na importação dos beneficiários do Bolsa Família. Chave estrangeira com origem na tabela TB_LOCALIDADE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_vigencia">ds_vigencia</span></td>
+                                    <td>varchar</td>
+                                    <td>6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Vigência do arquivo utilizado na importação dos beneficiários do Bolsa Família. Formato YYYYSS (ano e semestre, por exemplo 202401 - primeiro semestre de 2024).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_importacao_inicio">dt_importacao_inicio</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data e horário de inicío da importação dos beneficiários do Bolsa Família.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_importacao_fim">dt_importacao_fim</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data e horário de fim da importação dos beneficiários do Bolsa Família.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_importacao">st_importacao</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Situação da importação dos beneficiários do Bolsa Família.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_hash_arquivo">ds_hash_arquivo</span></td>
+                                    <td>varchar</td>
+                                    <td>64</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hash em hexadecimal do arquivo utilizado na importação dos beneficiários do Bolsa Família.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_complementar">st_complementar</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se a importação dos beneficiários do Bolsa Família é proveniente de um arquivo de listagem complementar.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_vig_mais_recente_localidade">st_vig_mais_recente_localidade</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se é uma importação finalizada com vigência mais recente da localidade associada.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_importacaoBolsaFamilia</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_importaca_bolsa_familia</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_importacaobolsafamilia_prof</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_prof</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_importbolsafamil_localidade</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_localidade</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_cidadao_bolsa_familia.html" target="_top" title="tb_cidadao_bolsa_familia" alt="" coords="1130,71,1414,311">
+<area shape="rect" id="node2" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="629,156,1086,522">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="5,317,233,646">
+<area shape="rect" id="node4" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="277,5,585,422">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_importacao_bolsa_familia.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="621,790,847,884">
+<area shape="rect" id="node2" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="324,1770,499,1864">
+<area shape="rect" id="node12" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="57,3037,203,3131">
+<area shape="rect" id="node45" href="tb_situacao_localidade.html" target="_top" title="tb_situacao_localidade" alt="" coords="5,1712,255,1806">
+<area shape="rect" id="node46" href="tb_tipo_localidade.html" target="_top" title="tb_tipo_localidade" alt="" coords="23,1824,237,1918">
+<area shape="rect" id="node3" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1068,2180,1276,2274">
+<area shape="rect" id="node4" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="665,3229,803,3323">
+<area shape="rect" id="node13" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="302,2924,521,3018">
+<area shape="rect" id="node48" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="299,3148,525,3242">
+<area shape="rect" id="node49" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="334,3036,489,3130">
+<area shape="rect" id="node5" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="1479,2861,1693,2955">
+<area shape="rect" id="node6" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1083,3614,1261,3708">
+<area shape="rect" id="node7" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1058,3340,1286,3434">
+<area shape="rect" id="node8" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1007,3452,1337,3546">
+<area shape="rect" id="node9" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="651,953,817,1047">
+<area shape="rect" id="node10" href="tb_cbo_atend.html" target="_top" title="tb_cbo_atend" alt="" coords="645,1065,823,1159">
+<area shape="rect" id="node11" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="599,2853,870,2947">
+<area shape="rect" id="node14" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1463,2490,1709,2584">
+<area shape="rect" id="node15" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="669,644,799,738">
+<area shape="rect" id="node16" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1084,720,1260,814">
+<area shape="rect" id="node17" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1050,2404,1294,2498">
+<area shape="rect" id="node18" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="627,3849,841,3943">
+<area shape="rect" id="node19" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1484,77,1688,171">
+<area shape="rect" id="node20" href="tb_cds_ficha_atend_domiciliar.html" target="_top" title="tb_cds_ficha_atend_domiciliar" alt="" coords="581,1320,888,1414">
+<area shape="rect" id="node21" href="tb_cds_ficha_atend_individual.html" target="_top" title="tb_cds_ficha_atend_individual" alt="" coords="581,1432,887,1526">
+<area shape="rect" id="node22" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="591,1544,877,1638">
+<area shape="rect" id="node23" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="615,1656,854,1750">
+<area shape="rect" id="node24" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="569,1768,900,1862">
+<area shape="rect" id="node25" href="tb_cds_ficha_proced.html" target="_top" title="tb_cds_ficha_proced" alt="" coords="617,1880,851,1974">
+<area shape="rect" id="node26" href="tb_cds_ficha_vacinacao.html" target="_top" title="tb_cds_ficha_vacinacao" alt="" coords="605,1992,863,2086">
+<area shape="rect" id="node27" href="tb_cds_ficha_visita_domiciliar.html" target="_top" title="tb_cds_ficha_visita_domiciliar" alt="" coords="581,2104,887,2198">
+<area shape="rect" id="node28" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="578,2216,890,2310">
+<area shape="rect" id="node29" href="tb_cfg_agenda_municipal.html" target="_top" title="tb_cfg_agenda_municipal" alt="" coords="599,2328,869,2422">
+<area shape="rect" id="node30" href="tb_cfg_certificado.html" target="_top" title="tb_cfg_certificado" alt="" coords="1772,2000,1983,2094">
+<area shape="rect" id="node31" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1507,794,1665,888">
+<area shape="rect" id="node32" href="tb_cidadao_bolsa_familia.html" target="_top" title="tb_cidadao_bolsa_familia" alt="" coords="1444,2602,1728,2843">
+<area shape="rect" id="node33" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="944,2619,1400,2986">
+<area shape="rect" id="node34" href="tb_cnes.html" target="_top" title="tb_cnes" alt="" coords="667,2490,801,2584">
+<area shape="rect" id="node35" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="585,2602,884,2696">
+<area shape="rect" id="node36" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1447,3996,1725,4090">
+<area shape="rect" id="node37" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1095,3996,1249,4090">
+<area shape="rect" id="node38" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1509,3844,1663,3938">
+<area shape="rect" id="node39" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="1471,3653,1701,3747">
+<area shape="rect" id="node40" href="tb_grupo_exame.html" target="_top" title="tb_grupo_exame" alt="" coords="633,161,835,255">
+<area shape="rect" id="node41" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="1046,3004,1298,3098">
+<area shape="rect" id="node42" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1058,2292,1286,2386">
+<area shape="rect" id="node43" href="tb_inep.html" target="_top" title="tb_inep" alt="" coords="654,273,815,367">
+<area shape="rect" id="node44" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1090,3116,1254,3210">
+<area shape="rect" id="node47" href="tb_perfil.html" target="_top" title="tb_perfil" alt="" coords="661,385,807,479">
+<area shape="rect" id="node50" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1051,3228,1293,3322">
+<area shape="rect" id="node51" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="639,497,830,591">
+<area shape="rect" id="node52" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1050,3849,1294,3943">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_importacao_bolsa_familia.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tb_cidadao_bolsa_familia.html" target="_top" title="tb_cidadao_bolsa_familia" alt="" coords="1130,71,1414,311">
+<area shape="rect" id="node2" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="629,156,1086,522">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="5,317,233,646">
+<area shape="rect" id="node4" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="277,5,585,422">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_importacao_bolsa_familia.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="621,2133,847,2227">
+<area shape="rect" id="node2" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="324,2839,499,2933">
+<area shape="rect" id="node15" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="57,5208,203,5302">
+<area shape="rect" id="node66" href="tb_situacao_localidade.html" target="_top" title="tb_situacao_localidade" alt="" coords="5,2780,255,2874">
+<area shape="rect" id="node67" href="tb_tipo_localidade.html" target="_top" title="tb_tipo_localidade" alt="" coords="23,2892,237,2986">
+<area shape="rect" id="node3" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1068,4908,1276,5002">
+<area shape="rect" id="node4" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="665,5869,803,5963">
+<area shape="rect" id="node27" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="299,6108,525,6202">
+<area shape="rect" id="node39" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="302,5409,521,5503">
+<area shape="rect" id="node68" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="334,5893,489,5987">
+<area shape="rect" id="node5" href="ta_adm_municipal.html" target="_top" title="ta_adm_municipal" alt="" coords="628,2280,840,2374">
+<area shape="rect" id="node6" href="ta_aldeia_localidade.html" target="_top" title="ta_aldeia_localidade" alt="" coords="1058,2241,1286,2335">
+<area shape="rect" id="node7" href="ta_cbo_atend.html" target="_top" title="ta_cbo_atend" alt="" coords="1084,2433,1260,2527">
+<area shape="rect" id="node8" href="tb_cbo_atend.html" target="_top" title="tb_cbo_atend" alt="" coords="645,2463,823,2557">
+<area shape="rect" id="node9" href="ta_cfg_agenda_municipal.html" target="_top" title="ta_cfg_agenda_municipal" alt="" coords="1038,2563,1306,2657">
+<area shape="rect" id="node10" href="tb_cfg_agenda_municipal.html" target="_top" title="tb_cfg_agenda_municipal" alt="" coords="599,2609,869,2703">
+<area shape="rect" id="node11" href="ta_cfg_certificado.html" target="_top" title="ta_cfg_certificado" alt="" coords="2027,2595,2237,2689">
+<area shape="rect" id="node12" href="tb_cfg_certificado.html" target="_top" title="tb_cfg_certificado" alt="" coords="1772,4597,1983,4691">
+<area shape="rect" id="node33" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="1479,5255,1693,5349">
+<area shape="rect" id="node13" href="ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="1800,4363,1956,4457">
+<area shape="rect" id="node14" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1507,853,1665,947">
+<area shape="rect" id="node41" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="669,667,799,761">
+<area shape="rect" id="node42" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1084,739,1260,833">
+<area shape="rect" id="node16" href="ta_compartilhamento_prontuario.html" target="_top" title="ta_compartilhamento_prontuario" alt="" coords="572,2920,896,3014">
+<area shape="rect" id="node17" href="ta_config_atencao_domiciliar.html" target="_top" title="ta_config_atencao_domiciliar" alt="" coords="1023,2739,1321,2833">
+<area shape="rect" id="node18" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="585,2721,884,2815">
+<area shape="rect" id="node19" href="ta_envio_rnds.html" target="_top" title="ta_envio_rnds" alt="" coords="1081,3068,1263,3162">
+<area shape="rect" id="node20" href="tb_envio_rnds.html" target="_top" title="tb_envio_rnds" alt="" coords="643,3032,826,3126">
+<area shape="rect" id="node21" href="ta_gestor_municipal.html" target="_top" title="ta_gestor_municipal" alt="" coords="620,3215,848,3309">
+<area shape="rect" id="node22" href="ta_grupo_exame.html" target="_top" title="ta_grupo_exame" alt="" coords="1072,3371,1272,3465">
+<area shape="rect" id="node23" href="tb_grupo_exame.html" target="_top" title="tb_grupo_exame" alt="" coords="633,3327,835,3421">
+<area shape="rect" id="node24" href="ta_perfil.html" target="_top" title="ta_perfil" alt="" coords="1104,3500,1239,3594">
+<area shape="rect" id="node25" href="tb_perfil.html" target="_top" title="tb_perfil" alt="" coords="661,3473,807,3567">
+<area shape="rect" id="node26" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="1108,6488,1235,6582">
+<area shape="rect" id="node28" href="ta_prof_municipio.html" target="_top" title="ta_prof_municipio" alt="" coords="628,3620,840,3714">
+<area shape="rect" id="node29" href="ta_tipo_servico.html" target="_top" title="ta_tipo_servico" alt="" coords="1076,3733,1267,3827">
+<area shape="rect" id="node30" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="639,3732,830,3826">
+<area shape="rect" id="node31" href="ta_vinculacao_servico.html" target="_top" title="ta_vinculacao_servico" alt="" coords="1464,1844,1708,1938">
+<area shape="rect" id="node32" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1050,4527,1294,4621">
+<area shape="rect" id="node44" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="627,5511,841,5605">
+<area shape="rect" id="node34" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1083,5512,1261,5606">
+<area shape="rect" id="node35" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1058,6065,1286,6159">
+<area shape="rect" id="node36" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1007,6177,1337,6271">
+<area shape="rect" id="node37" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="651,3931,817,4025">
+<area shape="rect" id="node38" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="599,4817,870,4911">
+<area shape="rect" id="node40" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1463,703,1709,797">
+<area shape="rect" id="node43" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1050,3847,1294,3941">
+<area shape="rect" id="node45" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1484,2836,1688,2930">
+<area shape="rect" id="node46" href="tb_cds_ficha_atend_domiciliar.html" target="_top" title="tb_cds_ficha_atend_domiciliar" alt="" coords="581,4043,888,4137">
+<area shape="rect" id="node47" href="tb_cds_ficha_atend_individual.html" target="_top" title="tb_cds_ficha_atend_individual" alt="" coords="581,4155,887,4249">
+<area shape="rect" id="node48" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="591,4267,877,4361">
+<area shape="rect" id="node49" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="615,4379,854,4473">
+<area shape="rect" id="node50" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="569,4491,900,4585">
+<area shape="rect" id="node51" href="tb_cds_ficha_proced.html" target="_top" title="tb_cds_ficha_proced" alt="" coords="617,5,851,99">
+<area shape="rect" id="node52" href="tb_cds_ficha_vacinacao.html" target="_top" title="tb_cds_ficha_vacinacao" alt="" coords="605,117,863,211">
+<area shape="rect" id="node53" href="tb_cds_ficha_visita_domiciliar.html" target="_top" title="tb_cds_ficha_visita_domiciliar" alt="" coords="581,229,887,323">
+<area shape="rect" id="node54" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="578,341,890,435">
+<area shape="rect" id="node55" href="tb_cidadao_bolsa_familia.html" target="_top" title="tb_cidadao_bolsa_familia" alt="" coords="1444,4996,1728,5237">
+<area shape="rect" id="node56" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="944,5128,1400,5494">
+<area shape="rect" id="node57" href="tb_cnes.html" target="_top" title="tb_cnes" alt="" coords="667,520,801,614">
+<area shape="rect" id="node58" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1447,5695,1725,5789">
+<area shape="rect" id="node59" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1095,5659,1249,5753">
+<area shape="rect" id="node60" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1509,5583,1663,5677">
+<area shape="rect" id="node61" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="1471,4837,1701,4931">
+<area shape="rect" id="node62" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="1046,6289,1298,6383">
+<area shape="rect" id="node63" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1058,4673,1286,4767">
+<area shape="rect" id="node64" href="tb_inep.html" target="_top" title="tb_inep" alt="" coords="654,901,815,995">
+<area shape="rect" id="node65" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1090,5841,1254,5935">
+<area shape="rect" id="node69" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1051,5953,1293,6047">
+<area shape="rect" id="node70" href="tl_adm_municipal.html" target="_top" title="tl_adm_municipal" alt="" coords="630,1013,838,1107">
+<area shape="rect" id="node71" href="tl_adm_municipal_centralizador.html" target="_top" title="tl_adm_municipal_centralizador" alt="" coords="576,1125,892,1219">
+<area shape="rect" id="node72" href="tl_bairro.html" target="_top" title="tl_bairro" alt="" coords="665,1237,803,1331">
+<area shape="rect" id="node73" href="tl_cbo_atend.html" target="_top" title="tl_cbo_atend" alt="" coords="648,1349,820,1443">
+<area shape="rect" id="node74" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="658,5041,810,5135">
+<area shape="rect" id="node75" href="tl_compartilhamento_prontuario.html" target="_top" title="tl_compartilhamento_prontuario" alt="" coords="575,1461,894,1555">
+<area shape="rect" id="node76" href="tl_config_atencao_domiciliar.html" target="_top" title="tl_config_atencao_domiciliar" alt="" coords="587,1573,881,1667">
+<area shape="rect" id="node77" href="tl_configuracao_horario.html" target="_top" title="tl_configuracao_horario" alt="" coords="606,1685,862,1779">
+<area shape="rect" id="node78" href="tl_gestor_municipal.html" target="_top" title="tl_gestor_municipal" alt="" coords="622,1797,846,1891">
+<area shape="rect" id="node79" href="tl_opcao_rapida_exame.html" target="_top" title="tl_opcao_rapida_exame" alt="" coords="607,1909,862,2003">
+<area shape="rect" id="node80" href="tl_papel.html" target="_top" title="tl_papel" alt="" coords="667,5292,801,5386">
+<area shape="rect" id="node81" href="tl_perfil.html" target="_top" title="tl_perfil" alt="" coords="669,2021,800,2115">
+<area shape="rect" id="node82" href="tl_unidade_saude.html" target="_top" title="tl_unidade_saude" alt="" coords="630,4929,838,5023">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_importacao_bolsa_familia.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

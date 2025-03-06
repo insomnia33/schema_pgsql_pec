@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_ivcf - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_ivcf</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar os resultados do instrumento Índice de Vulnerabilidade Clínico-Funcional (IVCF-20)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_ivcf">co_seq_ivcf</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_ivcf.co_seq_ivcf&#39;s name implies that it&#39;s a child of tb_ivcf.co_seq_ivcf, but it doesn&#39;t reference that column."><a href='ta_ivcf.html'>ta_ivcf</a><span class='relatedKey'>.co_seq_ivcf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_ivcf_aplicacao.co_ivcf references tb_ivcf.co_seq_ivcf via fk_ivcf_ivcfaplicacao"><a href='tb_ivcf_aplicacao.html'>tb_ivcf_aplicacao</a><span class='relatedKey'>.co_ivcf</span></td>
+                                                <td class="constraint detail">fk_ivcf_ivcfaplicacao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_ivcf.co_prontuario references tb_prontuario.co_seq_prontuario via fk_prontuario_ivcf"><a href='tb_prontuario.html'>tb_prontuario</a><span class='relatedKey'>.co_seq_prontuario</span></td>
+                                                <td class="constraint detail">fk_prontuario_ivcf</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave estrangeira com origem na tabela TB_PRONTUARIO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_atend_prof">co_atend_prof</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_ivcf.co_atend_prof references tb_atend_prof.co_seq_atend_prof via fk_atendprof_ivcf"><a href='tb_atend_prof.html'>tb_atend_prof</a><span class='relatedKey'>.co_seq_atend_prof</span></td>
+                                                <td class="constraint detail">fk_atendprof_ivcf</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave estrangeira com origem na tabela TB_ATEND_PROF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_resultado">nu_resultado</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Valor do resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_idade">st_sg_idade</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Idade&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_percepcao_saude">st_sg_percepcao_saude</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Percepção de saude&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_avd_instrumental">st_sg_avd_instrumental</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;AVD Instrumental&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_avd_basica">st_sg_avd_basica</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;AVD Básica&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_cognicao">st_sg_cognicao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Cognição&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_humor">st_sg_humor</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Humor&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_alcance_preensao_pinca">st_sg_alcance_preensao_pinca</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Alcance, preensão e pinça&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_cap_aerobica_muscular">st_sg_cap_aerobica_muscular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Capacidade aeróbica e/ou muscular&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_marcha">st_sg_marcha</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Marcha&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_continencia">st_sg_continencia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Continência esfincteriana&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_visao">st_sg_visao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Visão&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_audicao">st_sg_audicao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Audição&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sg_comorbidade">st_sg_comorbidade</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Descreve se o subgrupo &lsquo;Comorbidade múltipla&rsquo; está presente como dimensão alterada no resultado do IVCF-20.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_resultado">dt_resultado</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data e horário da resultado do IVCF-20.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_ivcf</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_ivcf</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ivcf_atendprof</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_atend_prof</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ivcf_prontuario</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_prontuario</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="357,60,762,661">
+<area shape="rect" id="node2" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="5,205,313,915">
+<area shape="rect" id="node3" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="44,5,275,187">
+<area shape="rect" id="node4" href="tb_ivcf_aplicacao.html" target="_top" title="tb_ivcf_aplicacao" alt="" coords="806,33,1019,215">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_ivcf.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="2068,1099,2266,1193">
+<area shape="rect" id="node2" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1613,2468,1921,3178">
+<area shape="rect" id="node12" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="436,2419,590,2513">
+<area shape="rect" id="node17" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1048,2238,1189,2332">
+<area shape="rect" id="node18" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="713,2715,957,2809">
+<area shape="rect" id="node20" href="tb_assinatura_eletronica_atend.html" target="_top" title="tb_assinatura_eletronica_atend" alt="" coords="1247,3416,1561,3510">
+<area shape="rect" id="node21" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="1243,2310,1565,2404">
+<area shape="rect" id="node22" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1291,2898,1517,2992">
+<area shape="rect" id="node23" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1042,2968,1195,3062">
+<area shape="rect" id="node24" href="tb_marcador_consumo_alimentar.html" target="_top" title="tb_marcador_consumo_alimentar" alt="" coords="1239,3080,1569,3174">
+<area shape="rect" id="node25" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="1277,3304,1532,3398">
+<area shape="rect" id="node26" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,3228,152,3322">
+<area shape="rect" id="node27" href="tb_status_atend_prof.html" target="_top" title="tb_status_atend_prof" alt="" coords="1286,2604,1522,2698">
+<area shape="rect" id="node28" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="1315,2751,1493,2845">
+<area shape="rect" id="node29" href="tb_tipo_atend_prof.html" target="_top" title="tb_tipo_atend_prof" alt="" coords="1295,2492,1513,2586">
+<area shape="rect" id="node30" href="tb_tipo_participacao_atend.html" target="_top" title="tb_tipo_participacao_atend" alt="" coords="1263,3192,1545,3286">
+<area shape="rect" id="node3" href="rl_atend_prof_conduta.html" target="_top" title="rl_atend_prof_conduta" alt="" coords="2044,1211,2291,1305">
+<area shape="rect" id="node4" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="2064,1323,2271,1417">
+<area shape="rect" id="node5" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="672,4514,998,4608">
+<area shape="rect" id="node6" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="397,4236,628,4418">
+<area shape="rect" id="node38" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="196,3598,353,3692">
+<area shape="rect" id="node7" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="2009,1435,2326,1529">
+<area shape="rect" id="node8" href="rl_evolucao_plano_ciap.html" target="_top" title="rl_evolucao_plano_ciap" alt="" coords="2040,1547,2295,1641">
+<area shape="rect" id="node9" href="rl_evolucao_subjetivo_ciap.html" target="_top" title="rl_evolucao_subjetivo_ciap" alt="" coords="2026,1659,2308,1753">
+<area shape="rect" id="node10" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="742,4626,928,4720">
+<area shape="rect" id="node11" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="749,2274,921,2368">
+<area shape="rect" id="node13" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="2496,3944,2645,4038">
+<area shape="rect" id="node14" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="2054,3743,2281,3837">
+<area shape="rect" id="node15" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="739,4926,930,5020">
+<area shape="rect" id="node16" href="tb_antecedente_historico.html" target="_top" title="tb_antecedente_historico" alt="" coords="2034,1771,2301,1865">
+<area shape="rect" id="node19" href="tb_atend_obs.html" target="_top" title="tb_atend_obs" alt="" coords="2078,3071,2256,3165">
+<area shape="rect" id="node31" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="2064,1883,2271,1977">
+<area shape="rect" id="node32" href="tb_atend_prof_obs.html" target="_top" title="tb_atend_prof_obs" alt="" coords="2462,3034,2679,3128">
+<area shape="rect" id="node33" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="2046,4370,2289,4464">
+<area shape="rect" id="node34" href="tb_atend_prof_pre_natal.html" target="_top" title="tb_atend_prof_pre_natal" alt="" coords="2037,3407,2298,3501">
+<area shape="rect" id="node35" href="tb_atend_prof_puericultura.html" target="_top" title="tb_atend_prof_puericultura" alt="" coords="2026,3519,2308,3613">
+<area shape="rect" id="node36" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="2086,4594,2249,4688">
+<area shape="rect" id="node37" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="1637,3304,1897,3398">
+<area shape="rect" id="node39" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="2036,4706,2299,4800">
+<area shape="rect" id="node40" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="2028,91,2306,185">
+<area shape="rect" id="node41" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="2053,4818,2282,4912">
+<area shape="rect" id="node42" href="tb_evolucao_avaliacao.html" target="_top" title="tb_evolucao_avaliacao" alt="" coords="2044,3631,2291,3725">
+<area shape="rect" id="node43" href="tb_evolucao_objetivo.html" target="_top" title="tb_evolucao_objetivo" alt="" coords="2049,315,2286,409">
+<area shape="rect" id="node44" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="2456,4370,2685,4464">
+<area shape="rect" id="node45" href="tb_evolucao_plano.html" target="_top" title="tb_evolucao_plano" alt="" coords="2058,427,2276,521">
+<area shape="rect" id="node46" href="tb_evolucao_subjetivo.html" target="_top" title="tb_evolucao_subjetivo" alt="" coords="2044,539,2290,633">
+<area shape="rect" id="node47" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="2450,2103,2691,2197">
+<area shape="rect" id="node48" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="2049,2158,2286,2252">
+<area shape="rect" id="node49" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="2032,4930,2303,5024">
+<area shape="rect" id="node50" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="709,2970,961,3064">
+<area shape="rect" id="node51" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="1965,2305,2370,2907">
+<area shape="rect" id="node52" href="tb_ivcf_aplicacao.html" target="_top" title="tb_ivcf_aplicacao" alt="" coords="2464,2571,2677,2753">
+<area shape="rect" id="node53" href="tb_ivcf_perguntas.html" target="_top" title="tb_ivcf_perguntas" alt="" coords="2062,2924,2273,3018">
+<area shape="rect" id="node54" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="698,3082,972,3176">
+<area shape="rect" id="node55" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="2085,5042,2250,5136">
+<area shape="rect" id="node56" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="2414,3280,2727,3374">
+<area shape="rect" id="node57" href="tb_receita_medicamento.html" target="_top" title="tb_receita_medicamento" alt="" coords="2037,3183,2298,3277">
+<area shape="rect" id="node58" href="tb_medicao.html" target="_top" title="tb_medicao" alt="" coords="2086,651,2248,745">
+<area shape="rect" id="node59" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="2454,4158,2687,4252">
+<area shape="rect" id="node60" href="tb_neuro_alter_fenot_evolucao.html" target="_top" title="tb_neuro_alter_fenot_evolucao" alt="" coords="2012,3855,2323,3949">
+<area shape="rect" id="node61" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="2454,3660,2687,3754">
+<area shape="rect" id="node62" href="tb_neuro_fator_risco_evolucao.html" target="_top" title="tb_neuro_fator_risco_evolucao" alt="" coords="2012,3295,2323,3389">
+<area shape="rect" id="node63" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="2471,1966,2670,2060">
+<area shape="rect" id="node64" href="tb_neuro_marco_evolucao.html" target="_top" title="tb_neuro_marco_evolucao" alt="" coords="2029,1995,2306,2089">
+<area shape="rect" id="node65" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="2471,4564,2670,4658">
+<area shape="rect" id="node66" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="2078,203,2256,297">
+<area shape="rect" id="node67" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="2438,4774,2703,4868">
+<area shape="rect" id="node68" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="2427,5080,2714,5174">
+<area shape="rect" id="node69" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="2783,5320,2951,5414">
+<area shape="rect" id="node70" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="2486,5286,2655,5380">
+<area shape="rect" id="node71" href="tb_problema_evolucao.html" target="_top" title="tb_problema_evolucao" alt="" coords="2044,4482,2291,4576">
+<area shape="rect" id="node72" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="718,2456,952,2550">
+<area shape="rect" id="node73" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="681,5038,989,5132">
+<area shape="rect" id="node74" href="tb_qst_questionario_respondido.html" target="_top" title="tb_qst_questionario_respondido" alt="" coords="2006,763,2328,857">
+<area shape="rect" id="node75" href="tb_rascunho_atend_prof.html" target="_top" title="tb_rascunho_atend_prof" alt="" coords="2037,875,2298,969">
+<area shape="rect" id="node76" href="tb_res_envio.html" target="_top" title="tb_res_envio" alt="" coords="2081,987,2254,1081">
+<area shape="rect" id="node77" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="721,2568,949,2662">
+<area shape="rect" id="node78" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="2012,3967,2323,4061">
+<area shape="rect" id="node79" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="2771,4440,2962,4534">
+<area shape="rect" id="node80" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="2080,4079,2255,4173">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_ivcf.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="806,5,1095,187">
+<area shape="rect" id="node2" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="357,132,762,733">
+<area shape="rect" id="node3" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="5,277,313,987">
+<area shape="rect" id="node4" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="44,77,275,259">
+<area shape="rect" id="node5" href="tb_ivcf_aplicacao.html" target="_top" title="tb_ivcf_aplicacao" alt="" coords="844,205,1057,387">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_ivcf.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="2106,3112,2304,3206">
+<area shape="rect" id="node2" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1650,3501,1958,4211">
+<area shape="rect" id="node11" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="713,2192,957,2286">
+<area shape="rect" id="node12" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1329,3551,1554,3645">
+<area shape="rect" id="node13" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="1314,2668,1569,2762">
+<area shape="rect" id="node22" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="436,4305,590,4399">
+<area shape="rect" id="node26" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1067,3345,1207,3439">
+<area shape="rect" id="node28" href="tb_assinatura_eletronica_atend.html" target="_top" title="tb_assinatura_eletronica_atend" alt="" coords="1285,4288,1598,4382">
+<area shape="rect" id="node29" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="1281,3439,1602,3533">
+<area shape="rect" id="node30" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1060,4361,1214,4455">
+<area shape="rect" id="node31" href="tb_marcador_consumo_alimentar.html" target="_top" title="tb_marcador_consumo_alimentar" alt="" coords="1277,4064,1606,4158">
+<area shape="rect" id="node32" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,3923,152,4017">
+<area shape="rect" id="node33" href="tb_status_atend_prof.html" target="_top" title="tb_status_atend_prof" alt="" coords="1323,3809,1560,3903">
+<area shape="rect" id="node34" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="1353,2556,1530,2650">
+<area shape="rect" id="node35" href="tb_tipo_atend_prof.html" target="_top" title="tb_tipo_atend_prof" alt="" coords="1333,3697,1550,3791">
+<area shape="rect" id="node36" href="tb_tipo_participacao_atend.html" target="_top" title="tb_tipo_participacao_atend" alt="" coords="1301,4176,1582,4270">
+<area shape="rect" id="node3" href="rl_atend_prof_conduta.html" target="_top" title="rl_atend_prof_conduta" alt="" coords="2081,4344,2328,4438">
+<area shape="rect" id="node4" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="2101,4939,2308,5033">
+<area shape="rect" id="node5" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="672,1968,998,2062">
+<area shape="rect" id="node6" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="397,1671,628,1853">
+<area shape="rect" id="node44" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="196,2791,353,2885">
+<area shape="rect" id="node7" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="2046,5101,2363,5195">
+<area shape="rect" id="node8" href="rl_evolucao_plano_ciap.html" target="_top" title="rl_evolucao_plano_ciap" alt="" coords="2077,2552,2332,2646">
+<area shape="rect" id="node9" href="rl_evolucao_subjetivo_ciap.html" target="_top" title="rl_evolucao_subjetivo_ciap" alt="" coords="2064,2664,2346,2758">
+<area shape="rect" id="node10" href="ta_atend_prof.html" target="_top" title="ta_atend_prof" alt="" coords="2115,1992,2294,2086">
+<area shape="rect" id="node14" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="2463,360,2752,542">
+<area shape="rect" id="node15" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="1042,661,1233,755">
+<area shape="rect" id="node16" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="2002,117,2407,718">
+<area shape="rect" id="node17" href="ta_ivcf_aplicacao.html" target="_top" title="ta_ivcf_aplicacao" alt="" coords="2809,21,3014,115">
+<area shape="rect" id="node18" href="tb_ivcf_aplicacao.html" target="_top" title="tb_ivcf_aplicacao" alt="" coords="2501,19,2714,201">
+<area shape="rect" id="node57" href="tb_ivcf_perguntas.html" target="_top" title="tb_ivcf_perguntas" alt="" coords="2099,5,2310,99">
+<area shape="rect" id="node19" href="ta_prontuario.html" target="_top" title="ta_prontuario" alt="" coords="747,2080,923,2174">
+<area shape="rect" id="node20" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="742,2304,928,2398">
+<area shape="rect" id="node21" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="749,3552,921,3646">
+<area shape="rect" id="node23" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="2534,1244,2682,1338">
+<area shape="rect" id="node24" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="2091,2440,2318,2534">
+<area shape="rect" id="node25" href="tb_antecedente_historico.html" target="_top" title="tb_antecedente_historico" alt="" coords="2071,2888,2338,2982">
+<area shape="rect" id="node27" href="tb_atend_obs.html" target="_top" title="tb_atend_obs" alt="" coords="2116,4456,2294,4550">
+<area shape="rect" id="node37" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="2101,3000,2308,3094">
+<area shape="rect" id="node38" href="tb_atend_prof_obs.html" target="_top" title="tb_atend_prof_obs" alt="" coords="2499,4463,2717,4557">
+<area shape="rect" id="node39" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="2083,2776,2326,2870">
+<area shape="rect" id="node40" href="tb_atend_prof_pre_natal.html" target="_top" title="tb_atend_prof_pre_natal" alt="" coords="2074,3224,2335,3318">
+<area shape="rect" id="node41" href="tb_atend_prof_puericultura.html" target="_top" title="tb_atend_prof_puericultura" alt="" coords="2064,3336,2346,3430">
+<area shape="rect" id="node42" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="2123,1768,2286,1862">
+<area shape="rect" id="node43" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="1674,2556,1934,2650">
+<area shape="rect" id="node45" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="2073,1880,2336,1974">
+<area shape="rect" id="node46" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="2066,5356,2344,5450">
+<area shape="rect" id="node47" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="2090,1096,2319,1190">
+<area shape="rect" id="node48" href="tb_evolucao_avaliacao.html" target="_top" title="tb_evolucao_avaliacao" alt="" coords="2081,3448,2328,3542">
+<area shape="rect" id="node49" href="tb_evolucao_objetivo.html" target="_top" title="tb_evolucao_objetivo" alt="" coords="2086,3560,2323,3654">
+<area shape="rect" id="node50" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="2493,1431,2723,1525">
+<area shape="rect" id="node51" href="tb_evolucao_plano.html" target="_top" title="tb_evolucao_plano" alt="" coords="2096,3784,2314,3878">
+<area shape="rect" id="node52" href="tb_evolucao_subjetivo.html" target="_top" title="tb_evolucao_subjetivo" alt="" coords="2082,3896,2328,3990">
+<area shape="rect" id="node53" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="2487,5017,2729,5111">
+<area shape="rect" id="node54" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="2086,4827,2323,4921">
+<area shape="rect" id="node55" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="2069,1208,2340,1302">
+<area shape="rect" id="node56" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="709,2416,961,2510">
+<area shape="rect" id="node58" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="698,515,972,609">
+<area shape="rect" id="node59" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="2122,1320,2287,1414">
+<area shape="rect" id="node60" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="2451,964,2765,1058">
+<area shape="rect" id="node61" href="tb_receita_medicamento.html" target="_top" title="tb_receita_medicamento" alt="" coords="2074,2216,2335,2310">
+<area shape="rect" id="node62" href="tb_medicao.html" target="_top" title="tb_medicao" alt="" coords="2124,4008,2286,4102">
+<area shape="rect" id="node63" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="2492,4589,2724,4683">
+<area shape="rect" id="node64" href="tb_neuro_alter_fenot_evolucao.html" target="_top" title="tb_neuro_alter_fenot_evolucao" alt="" coords="2049,3672,2360,3766">
+<area shape="rect" id="node65" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="2491,4849,2725,4943">
+<area shape="rect" id="node66" href="tb_neuro_fator_risco_evolucao.html" target="_top" title="tb_neuro_fator_risco_evolucao" alt="" coords="2049,4603,2360,4697">
+<area shape="rect" id="node67" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="2508,1095,2707,1189">
+<area shape="rect" id="node68" href="tb_neuro_marco_evolucao.html" target="_top" title="tb_neuro_marco_evolucao" alt="" coords="2066,2328,2343,2422">
+<area shape="rect" id="node69" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="2508,1692,2707,1786">
+<area shape="rect" id="node70" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="2116,1432,2294,1526">
+<area shape="rect" id="node71" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="2476,2101,2740,2195">
+<area shape="rect" id="node72" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="2464,4729,2751,4823">
+<area shape="rect" id="node73" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="2827,769,2996,863">
+<area shape="rect" id="node74" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="2523,808,2693,902">
+<area shape="rect" id="node75" href="tb_problema_evolucao.html" target="_top" title="tb_problema_evolucao" alt="" coords="2081,2104,2328,2198">
+<area shape="rect" id="node76" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="718,4217,952,4311">
+<area shape="rect" id="node77" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="681,1785,989,1879">
+<area shape="rect" id="node78" href="tb_qst_questionario_respondido.html" target="_top" title="tb_qst_questionario_respondido" alt="" coords="2044,4120,2366,4214">
+<area shape="rect" id="node79" href="tb_rascunho_atend_prof.html" target="_top" title="tb_rascunho_atend_prof" alt="" coords="2074,4232,2335,4326">
+<area shape="rect" id="node80" href="tb_res_envio.html" target="_top" title="tb_res_envio" alt="" coords="2118,4715,2291,4809">
+<area shape="rect" id="node81" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="721,4105,949,4199">
+<area shape="rect" id="node82" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="2049,1544,2360,1638">
+<area shape="rect" id="node83" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="2816,1431,3007,1525">
+<area shape="rect" id="node84" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="2117,1656,2292,1750">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_ivcf.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

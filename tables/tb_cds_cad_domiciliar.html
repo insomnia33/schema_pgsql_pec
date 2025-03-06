@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_cds_cad_domiciliar - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_cds_cad_domiciliar</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar dados do Cadastro Domiciliar do sistema CDS.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_cds_cad_domiciliar">co_seq_cds_cad_domiciliar</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_domicilio_familia.co_cds_cad_domiciliar references tb_cds_cad_domiciliar.co_seq_cds_cad_domiciliar via fk_cdscaddom_cdsdomiciliofamil"><a href='tb_cds_domicilio_familia.html'>tb_cds_domicilio_familia</a><span class='relatedKey'>.co_cds_cad_domiciliar</span></td>
+                                                <td class="constraint detail">fk_cdscaddom_cdsdomiciliofamil</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_domicilio_resposta.co_cds_cad_domiciliar references tb_cds_cad_domiciliar.co_seq_cds_cad_domiciliar via fk_cdscaddom_cdsdomiciliorspst"><a href='tb_cds_domicilio_resposta.html'>tb_cds_domicilio_resposta</a><span class='relatedKey'>.co_cds_cad_domiciliar</span></td>
+                                                <td class="constraint detail">fk_cdscaddom_cdsdomiciliorspst</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tp_logradouro">tp_logradouro</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.tp_logradouro references tb_tipo_logradouro.co_tipo_logradouro via fk_tplogradouro_cdscaddom"><a href='tb_tipo_logradouro.html'>tb_tipo_logradouro</a><span class='relatedKey'>.co_tipo_logradouro</span></td>
+                                                <td class="constraint detail">fk_tplogradouro_cdscaddom</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do tipo de logradouro onde reside o cidadão. Chave estrangeira com origem na tabela TB_TIPO_LOGRADOURO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_logradouro">no_logradouro</span></td>
+                                    <td>varchar</td>
+                                    <td>256</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Logradouro de domicílio do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_domicilio">nu_domicilio</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Número do domicílio do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_complemento">ds_complemento</span></td>
+                                    <td>varchar</td>
+                                    <td>256</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Complemento do endereço do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_bairro">no_bairro</span></td>
+                                    <td>varchar</td>
+                                    <td>256</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa o bairro onde reside o cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_municipio">co_municipio</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_municipio references tb_localidade.co_localidade via fk_localidade_cdscaddomiciliar"><a href='tb_localidade.html'>tb_localidade</a><span class='relatedKey'>.co_localidade</span></td>
+                                                <td class="constraint detail">fk_localidade_cdscaddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do município onde reside o cidadão. Chave estrangeira com origem na tabela TB_LOCALIDADE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cep">nu_cep</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa o CEP do endereço do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_fone_residencia">nu_fone_residencia</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Telefone de residência.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_fone_referencia">nu_fone_referencia</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Telefone de referência em caso de necessidade de contato.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_rg_recusa_cad">ds_rg_recusa_cad</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa o RG do cidadão que recusou o cadastro.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="dt_cad_domiciliar">dt_cad_domiciliar</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data em que foi efetuado o cadastro domiciliar.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_ficha">st_ficha</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se os dados foram enviados (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="tp_cds_origem">tp_cds_origem</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do tipo de origem do sistema CDS. Chave estrangeira com origem na tabela TB_CDS_TIPO_ORIGEM.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_unico_ficha">co_unico_ficha</span></td>
+                                    <td>varchar</td>
+                                    <td>96</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador único da ficha gerado pelo sistema.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_recusa_cad">st_recusa_cad</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se houve recusa no cadastro domiciliar (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_localidade_origem">co_localidade_origem</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_localidade_origem references tb_localidade.co_localidade via fk_localidadeorigem_cdscaddom"><a href='tb_localidade.html'>tb_localidade</a><span class='relatedKey'>.co_localidade</span></td>
+                                                <td class="constraint detail">fk_localidadeorigem_cdscaddom</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Município de origem da ficha. Chave estrangeira com origem na tabela TB_LOCALIDADE</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_uf">co_uf</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_uf references tb_uf.co_uf via fk_uf_cdscaddomiciliar"><a href='tb_uf.html'>tb_uf</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_cdscaddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Codigo da IF do domicilio. Chave estrangeira com origem na tabela TB_UF</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_logradouro_filtro">no_logradouro_filtro</span></td>
+                                    <td>varchar</td>
+                                    <td>256</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Filtro do nome do logradouro no domicílio</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_atualizacao">st_atualizacao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se é uma atualização de cadastro domiciliar (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cds_prof_cadastrante">co_cds_prof_cadastrante</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_cds_prof_cadastrante references tb_cds_prof.co_seq_cds_prof via fk_cdsprof_cdscaddomiciliar"><a href='tb_cds_prof.html'>tb_cds_prof</a><span class='relatedKey'>.co_seq_cds_prof</span></td>
+                                                <td class="constraint detail">fk_cdsprof_cdscaddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do profissional. Chave estrangeira com origem na tabela TB_CDS_PROF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_unico_domicilio">co_unico_domicilio</span></td>
+                                    <td>varchar</td>
+                                    <td>96</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa o código único dp domicílio</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sem_numero">st_sem_numero</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_versao_atual">st_versao_atual</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_versao_ficha">ds_versao_ficha</span></td>
+                                    <td>varchar</td>
+                                    <td>30</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_ponto_referencia">ds_ponto_referencia</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_instituicao_permanencia">no_instituicao_permanencia</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_outros_prof_vinculados">st_outros_prof_vinculados</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_responsavel_tecnico">no_responsavel_tecnico</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cns_responsavel_tecnico">nu_cns_responsavel_tecnico</span></td>
+                                    <td>varchar</td>
+                                    <td>15</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_cargo_instituicao">no_cargo_instituicao</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_fone_responsavel_tecnico">nu_fone_responsavel_tecnico</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tp_cds_imovel">tp_cds_imovel</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.tp_cds_imovel references tb_cds_tipo_imovel.co_cds_tipo_imovel via fk_cdstipoimovel_cdscaddom"><a href='tb_cds_tipo_imovel.html'>tb_cds_tipo_imovel</a><span class='relatedKey'>.co_cds_tipo_imovel</span></td>
+                                                <td class="constraint detail">fk_cdstipoimovel_cdscaddom</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_micro_area">nu_micro_area</span></td>
+                                    <td>varchar</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_fora_area">st_fora_area</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_complemento_filtro">ds_complemento_filtro</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Campo utilizado pela aplicação para filtrar por complemento.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_gerado_automaticamente">st_gerado_automaticamente</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_latitude">nu_latitude</span></td>
+                                    <td>float8</td>
+                                    <td>17,17</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Valor de Latitude que vem do app e-sus território</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_longitude">nu_longitude</span></td>
+                                    <td>float8</td>
+                                    <td>17,17</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Valor de Longitude que vem do app e-sus território</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_tipo_endereco">co_tipo_endereco</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>3</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_tipo_endereco references tb_tipo_endereco.co_tipo_endereco via fk_tipoendereco_caddomiciliar"><a href='tb_tipo_endereco.html'>tb_tipo_endereco</a><span class='relatedKey'>.co_tipo_endereco</span></td>
+                                                <td class="constraint detail">fk_tipoendereco_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do tipo de endereco da residência. Chave estrangeira com origem na tabela TB_TIPO_ENDERECO</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dsei">co_dsei</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_dsei references tb_dsei.co_dsei via fk_dsei_caddomiciliar"><a href='tb_dsei.html'>tb_dsei</a><span class='relatedKey'>.co_dsei</span></td>
+                                                <td class="constraint detail">fk_dsei_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação da DSEI de residência. Chave estrangeira com origem na tabela TB_DSEI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_polo_base">co_polo_base</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_polo_base references tb_polo_base.co_polo_base via fk_polobase_caddomiciliar"><a href='tb_polo_base.html'>tb_polo_base</a><span class='relatedKey'>.co_polo_base</span></td>
+                                                <td class="constraint detail">fk_polobase_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do Polo Base de residência. Chave estrangeira com origem na tabela TB_POLO_BASE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_aldeia">co_aldeia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_aldeia references tb_aldeia.co_aldeia via fk_aldeia_caddomiciliar"><a href='tb_aldeia.html'>tb_aldeia</a><span class='relatedKey'>.co_aldeia</span></td>
+                                                <td class="constraint detail">fk_aldeia_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código da aldeia referente a aldeia de residência. Chave estrangeira com origem na tabela TB_ALDEIA.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_localidade_aldeia">co_localidade_aldeia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_localidade_aldeia references tb_localidade.co_localidade via fk_localddaldeia_caddomiciliar"><a href='tb_localidade.html'>tb_localidade</a><span class='relatedKey'>.co_localidade</span></td>
+                                                <td class="constraint detail">fk_localddaldeia_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código da localidade referente a aldeia de residência. Chave estrangeira com origem na tabela TB_LOCALIDADE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_uf_aldeia">co_uf_aldeia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_uf_aldeia references tb_uf.co_uf via fk_ufaldeia_caddomiciliar"><a href='tb_uf.html'>tb_uf</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_ufaldeia_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código do estado referente a aldeia de residência. Chave estrangeira com origem na tabela TB_UF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_residencia_indigena">nu_residencia_indigena</span></td>
+                                    <td>varchar</td>
+                                    <td>7</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do número residência na aldeia.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_microarea_polo_base">st_microarea_polo_base</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica que este registro, por pertencer a territorio indígena, deve utilizar o polo base indicado no enreço como microarea.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_cdscaddomiciliar</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_cds_cad_domiciliar</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_cocdsprofcadstrnt</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_cds_prof_cadastrante</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_colocalidadeorigm</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_localidade_origem</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_comunicilio</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_municipio</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_nudomicilio</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_domicilio</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_stversaoatual</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>st_versao_atual</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_stversatl_iduudom</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>dt_cad_domiciliar + st_versao_atual</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddom_tplogradouro</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>tp_logradouro</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddomiciliar_couf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_uf</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddomiciliar_counicofch</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_unico_ficha</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddomiciliar_iduudom</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_unico_domicilio</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddomiciliar_stenvio</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>st_ficha</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdscaddomiciliar_tpcdsorigm</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>tp_cds_origem</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="987,1332,1233,1602">
+<area shape="rect" id="node2" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="719,1296,941,1478">
+<area shape="rect" id="node5" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="495,1220,675,1373">
+<area shape="rect" id="node6" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="223,1249,451,1578">
+<area shape="rect" id="node3" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1279,146,1686,1598">
+<area shape="rect" id="node4" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="1012,761,1208,914">
+<area shape="rect" id="node7" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1006,1120,1214,1243">
+<area shape="rect" id="node8" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,1279,179,1431">
+<area shape="rect" id="node9" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="998,979,1222,1102">
+<area shape="rect" id="node10" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="985,179,1235,419">
+<area shape="rect" id="node11" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="1738,5,2016,217">
+<area shape="rect" id="node12" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="1730,235,2024,446">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_cds_cad_domiciliar.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="1868,1575,2094,1669">
+<area shape="rect" id="node2" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1543,1493,1701,1587">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="514,2139,688,2233">
+<area shape="rect" id="node14" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1217,2336,1394,2430">
+<area shape="rect" id="node15" href="tb_terra_indigena.html" target="_top" title="tb_terra_indigena" alt="" coords="1202,1436,1409,1530">
+<area shape="rect" id="node16" href="tb_tipo_area.html" target="_top" title="tb_tipo_area" alt="" coords="1221,1100,1390,1194">
+<area shape="rect" id="node17" href="tb_tipo_terra.html" target="_top" title="tb_tipo_terra" alt="" coords="1220,1212,1391,1306">
+<area shape="rect" id="node19" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="234,1301,381,1395">
+<area shape="rect" id="node57" href="tb_situacao_localidade.html" target="_top" title="tb_situacao_localidade" alt="" coords="183,2192,432,2286">
+<area shape="rect" id="node58" href="tb_tipo_localidade.html" target="_top" title="tb_tipo_localidade" alt="" coords="201,2080,414,2174">
+<area shape="rect" id="node4" href="rl_cds_ficha_atend_indivdl_prf.html" target="_top" title="rl_cds_ficha_atend_indivdl_prf" alt="" coords="1151,840,1460,934">
+<area shape="rect" id="node5" href="tb_cds_ficha_atend_individual.html" target="_top" title="tb_cds_ficha_atend_individual" alt="" coords="782,1093,1088,1187">
+<area shape="rect" id="node6" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="503,587,699,739">
+<area shape="rect" id="node7" href="rl_cds_ficha_atend_odonto_prof.html" target="_top" title="rl_cds_ficha_atend_odonto_prof" alt="" coords="1145,503,1466,597">
+<area shape="rect" id="node8" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="792,533,1078,627">
+<area shape="rect" id="node9" href="rl_cds_ficha_ativ_col_prof.html" target="_top" title="rl_cds_ficha_ativ_col_prof" alt="" coords="1168,687,1443,781">
+<area shape="rect" id="node10" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="816,757,1055,851">
+<area shape="rect" id="node11" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1201,1877,1410,1971">
+<area shape="rect" id="node12" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="866,1993,1004,2087">
+<area shape="rect" id="node24" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="476,1695,726,1935">
+<area shape="rect" id="node13" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="828,2904,1042,2998">
+<area shape="rect" id="node26" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="870,2336,1000,2430">
+<area shape="rect" id="node18" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="511,1393,691,1487">
+<area shape="rect" id="node23" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,5,139,99">
+<area shape="rect" id="node20" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="852,1881,1018,1975">
+<area shape="rect" id="node21" href="tb_cbo_atend.html" target="_top" title="tb_cbo_atend" alt="" coords="846,3051,1024,3145">
+<area shape="rect" id="node22" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="800,1464,1071,1558">
+<area shape="rect" id="node25" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1777,2102,2184,3554">
+<area shape="rect" id="node27" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1518,1729,1725,1853">
+<area shape="rect" id="node28" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="1510,1993,1733,2117">
+<area shape="rect" id="node29" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1183,1324,1428,1418">
+<area shape="rect" id="node30" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="828,1627,1042,1721">
+<area shape="rect" id="node31" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1879,1829,2083,1923">
+<area shape="rect" id="node32" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="2244,1867,2523,2078">
+<area shape="rect" id="node33" href="tb_renda_familiar.html" target="_top" title="tb_renda_familiar" alt="" coords="1877,1717,2084,1811">
+<area shape="rect" id="node34" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="2236,3692,2531,3903">
+<area shape="rect" id="node35" href="tb_pergunta.html" target="_top" title="tb_pergunta" alt="" coords="1539,3828,1705,3922">
+<area shape="rect" id="node36" href="tb_pergunta_detalhe.html" target="_top" title="tb_pergunta_detalhe" alt="" coords="1865,3828,2096,3922">
+<area shape="rect" id="node37" href="tb_cds_ficha_atend_domiciliar.html" target="_top" title="tb_cds_ficha_atend_domiciliar" alt="" coords="782,421,1089,515">
+<area shape="rect" id="node38" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="770,1240,1101,1334">
+<area shape="rect" id="node39" href="tb_cds_ficha_proced.html" target="_top" title="tb_cds_ficha_proced" alt="" coords="818,869,1052,963">
+<area shape="rect" id="node40" href="tb_cds_ficha_vacinacao.html" target="_top" title="tb_cds_ficha_vacinacao" alt="" coords="806,645,1064,739">
+<area shape="rect" id="node41" href="tb_cds_ficha_visita_domiciliar.html" target="_top" title="tb_cds_ficha_visita_domiciliar" alt="" coords="782,1352,1088,1446">
+<area shape="rect" id="node42" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="779,981,1091,1075">
+<area shape="rect" id="node43" href="tb_cds_visita_domiciliar.html" target="_top" title="tb_cds_visita_domiciliar" alt="" coords="1851,1991,2110,2085">
+<area shape="rect" id="node44" href="tb_cfg_agenda_municipal.html" target="_top" title="tb_cfg_agenda_municipal" alt="" coords="800,3163,1070,3257">
+<area shape="rect" id="node45" href="tb_cfg_certificado.html" target="_top" title="tb_cfg_certificado" alt="" coords="1200,2939,1411,3033">
+<area shape="rect" id="node46" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1902,1249,2060,1343">
+<area shape="rect" id="node47" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="2270,1249,2497,1343">
+<area shape="rect" id="node48" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="2228,563,2538,657">
+<area shape="rect" id="node49" href="tb_cnes.html" target="_top" title="tb_cnes" alt="" coords="868,3275,1002,3369">
+<area shape="rect" id="node50" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="786,3387,1085,3481">
+<area shape="rect" id="node51" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="491,81,711,175">
+<area shape="rect" id="node52" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="820,3499,1050,3593">
+<area shape="rect" id="node53" href="tb_grupo_exame.html" target="_top" title="tb_grupo_exame" alt="" coords="834,3645,1036,3739">
+<area shape="rect" id="node54" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1159,1989,1452,2083">
+<area shape="rect" id="node55" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1191,2101,1420,2195">
+<area shape="rect" id="node56" href="tb_inep.html" target="_top" title="tb_inep" alt="" coords="854,2645,1016,2739">
+<area shape="rect" id="node59" href="tb_logradouro.html" target="_top" title="tb_logradouro" alt="" coords="1215,1765,1396,1859">
+<area shape="rect" id="node60" href="tb_perfil.html" target="_top" title="tb_perfil" alt="" coords="862,2792,1008,2886">
+<area shape="rect" id="node61" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="840,2499,1031,2593">
+<area shape="rect" id="node62" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1183,1583,1428,1677">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_cds_cad_domiciliar.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="987,1332,1233,1602">
+<area shape="rect" id="node2" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="719,1296,941,1478">
+<area shape="rect" id="node5" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="495,1220,675,1373">
+<area shape="rect" id="node6" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="223,1249,451,1578">
+<area shape="rect" id="node3" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1279,146,1686,1598">
+<area shape="rect" id="node4" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="1012,761,1208,914">
+<area shape="rect" id="node7" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1006,1120,1214,1243">
+<area shape="rect" id="node8" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,1279,179,1431">
+<area shape="rect" id="node9" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="998,979,1222,1102">
+<area shape="rect" id="node10" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="985,179,1235,419">
+<area shape="rect" id="node11" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="1738,5,2016,217">
+<area shape="rect" id="node12" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="1730,235,2024,446">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_cds_cad_domiciliar.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="1906,5501,2131,5595">
+<area shape="rect" id="node2" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1570,2666,1728,2760">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="522,3598,697,3692">
+<area shape="rect" id="node19" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1234,3993,1410,4087">
+<area shape="rect" id="node49" href="tb_terra_indigena.html" target="_top" title="tb_terra_indigena" alt="" coords="1218,2860,1425,2954">
+<area shape="rect" id="node50" href="tb_tipo_area.html" target="_top" title="tb_tipo_area" alt="" coords="1238,2300,1406,2394">
+<area shape="rect" id="node51" href="tb_tipo_terra.html" target="_top" title="tb_tipo_terra" alt="" coords="1236,2636,1407,2730">
+<area shape="rect" id="node22" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="234,878,381,972">
+<area shape="rect" id="node80" href="tb_situacao_localidade.html" target="_top" title="tb_situacao_localidade" alt="" coords="183,3617,432,3711">
+<area shape="rect" id="node81" href="tb_tipo_localidade.html" target="_top" title="tb_tipo_localidade" alt="" coords="201,3505,414,3599">
+<area shape="rect" id="node4" href="rl_cds_ficha_atend_indivdl_prf.html" target="_top" title="rl_cds_ficha_atend_indivdl_prf" alt="" coords="1168,1696,1476,1790">
+<area shape="rect" id="node5" href="tb_cds_ficha_atend_individual.html" target="_top" title="tb_cds_ficha_atend_individual" alt="" coords="799,1772,1104,1866">
+<area shape="rect" id="node6" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="511,985,707,1138">
+<area shape="rect" id="node7" href="rl_cds_ficha_atend_odonto_prof.html" target="_top" title="rl_cds_ficha_atend_odonto_prof" alt="" coords="1161,1200,1483,1294">
+<area shape="rect" id="node8" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="809,1660,1094,1754">
+<area shape="rect" id="node9" href="rl_cds_ficha_ativ_col_prof.html" target="_top" title="rl_cds_ficha_ativ_col_prof" alt="" coords="1184,1074,1459,1168">
+<area shape="rect" id="node10" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="832,1212,1071,1306">
+<area shape="rect" id="node11" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1218,2137,1426,2231">
+<area shape="rect" id="node12" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="882,2173,1021,2267">
+<area shape="rect" id="node56" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="484,1425,734,1666">
+<area shape="rect" id="node13" href="ta_adm_municipal.html" target="_top" title="ta_adm_municipal" alt="" coords="845,6537,1058,6631">
+<area shape="rect" id="node14" href="ta_aldeia_localidade.html" target="_top" title="ta_aldeia_localidade" alt="" coords="2307,5501,2535,5595">
+<area shape="rect" id="node15" href="ta_cbo_atend.html" target="_top" title="ta_cbo_atend" alt="" coords="1234,3241,1410,3335">
+<area shape="rect" id="node16" href="tb_cbo_atend.html" target="_top" title="tb_cbo_atend" alt="" coords="863,3232,1040,3326">
+<area shape="rect" id="node17" href="ta_cds_domicilio.html" target="_top" title="ta_cds_domicilio" alt="" coords="2320,2565,2522,2659">
+<area shape="rect" id="node18" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="886,3966,1017,4060">
+<area shape="rect" id="node20" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1916,2437,2121,2531">
+<area shape="rect" id="node21" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1545,2006,1752,2130">
+<area shape="rect" id="node58" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="1537,2198,1760,2322">
+<area shape="rect" id="node55" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,446,139,540">
+<area shape="rect" id="node23" href="ta_cfg_agenda_municipal.html" target="_top" title="ta_cfg_agenda_municipal" alt="" coords="1188,3366,1456,3460">
+<area shape="rect" id="node24" href="tb_cfg_agenda_municipal.html" target="_top" title="tb_cfg_agenda_municipal" alt="" coords="817,3378,1086,3472">
+<area shape="rect" id="node25" href="ta_cfg_certificado.html" target="_top" title="ta_cfg_certificado" alt="" coords="1544,3597,1754,3691">
+<area shape="rect" id="node26" href="tb_cfg_certificado.html" target="_top" title="tb_cfg_certificado" alt="" coords="1216,3561,1427,3655">
+<area shape="rect" id="node48" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="845,3561,1058,3655">
+<area shape="rect" id="node27" href="ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="2343,2009,2499,2103">
+<area shape="rect" id="node28" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1940,1922,2097,2016">
+<area shape="rect" id="node29" href="ta_compartilhamento_prontuario.html" target="_top" title="ta_compartilhamento_prontuario" alt="" coords="789,3708,1114,3802">
+<area shape="rect" id="node30" href="ta_config_atencao_domiciliar.html" target="_top" title="ta_config_atencao_domiciliar" alt="" coords="1173,3738,1471,3832">
+<area shape="rect" id="node31" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="802,3854,1101,3948">
+<area shape="rect" id="node32" href="ta_envio_rnds.html" target="_top" title="ta_envio_rnds" alt="" coords="1231,4296,1413,4390">
+<area shape="rect" id="node33" href="tb_envio_rnds.html" target="_top" title="tb_envio_rnds" alt="" coords="860,4149,1043,4243">
+<area shape="rect" id="node34" href="ta_gestor_estadual.html" target="_top" title="ta_gestor_estadual" alt="" coords="500,1878,719,1972">
+<area shape="rect" id="node35" href="ta_gestor_municipal.html" target="_top" title="ta_gestor_municipal" alt="" coords="837,4261,1066,4355">
+<area shape="rect" id="node36" href="ta_grupo_exame.html" target="_top" title="ta_grupo_exame" alt="" coords="1222,4408,1422,4502">
+<area shape="rect" id="node37" href="tb_grupo_exame.html" target="_top" title="tb_grupo_exame" alt="" coords="851,4408,1052,4502">
+<area shape="rect" id="node38" href="ta_perfil.html" target="_top" title="ta_perfil" alt="" coords="1254,4678,1389,4772">
+<area shape="rect" id="node39" href="tb_perfil.html" target="_top" title="tb_perfil" alt="" coords="878,4737,1025,4831">
+<area shape="rect" id="node40" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="1258,1340,1385,1434">
+<area shape="rect" id="node41" href="ta_prof_municipio.html" target="_top" title="ta_prof_municipio" alt="" coords="845,4590,1058,4684">
+<area shape="rect" id="node42" href="ta_tipo_servico.html" target="_top" title="ta_tipo_servico" alt="" coords="1226,4901,1417,4995">
+<area shape="rect" id="node43" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="856,4996,1047,5090">
+<area shape="rect" id="node44" href="ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="1216,1508,1428,1602">
+<area shape="rect" id="node45" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="845,2320,1058,2414">
+<area shape="rect" id="node46" href="ta_vinculacao_servico.html" target="_top" title="ta_vinculacao_servico" alt="" coords="1527,3006,1771,3100">
+<area shape="rect" id="node47" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1200,3006,1444,3100">
+<area shape="rect" id="node52" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="519,1990,699,2084">
+<area shape="rect" id="node53" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="868,2889,1035,2983">
+<area shape="rect" id="node54" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="816,876,1087,970">
+<area shape="rect" id="node57" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1815,2805,2222,4257">
+<area shape="rect" id="node59" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1200,5858,1444,5952">
+<area shape="rect" id="node60" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="2282,3418,2560,3630">
+<area shape="rect" id="node61" href="tb_renda_familiar.html" target="_top" title="tb_renda_familiar" alt="" coords="1915,4346,2122,4440">
+<area shape="rect" id="node62" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="2274,6656,2568,6867">
+<area shape="rect" id="node63" href="tb_pergunta.html" target="_top" title="tb_pergunta" alt="" coords="1566,6774,1732,6868">
+<area shape="rect" id="node64" href="tb_pergunta_detalhe.html" target="_top" title="tb_pergunta_detalhe" alt="" coords="1903,6792,2134,6886">
+<area shape="rect" id="node65" href="tb_cds_ficha_atend_domiciliar.html" target="_top" title="tb_cds_ficha_atend_domiciliar" alt="" coords="798,988,1105,1082">
+<area shape="rect" id="node66" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="786,1324,1117,1418">
+<area shape="rect" id="node67" href="tb_cds_ficha_proced.html" target="_top" title="tb_cds_ficha_proced" alt="" coords="835,1436,1068,1530">
+<area shape="rect" id="node68" href="tb_cds_ficha_vacinacao.html" target="_top" title="tb_cds_ficha_vacinacao" alt="" coords="823,1548,1080,1642">
+<area shape="rect" id="node69" href="tb_cds_ficha_visita_domiciliar.html" target="_top" title="tb_cds_ficha_visita_domiciliar" alt="" coords="799,1918,1104,2012">
+<area shape="rect" id="node70" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="795,1100,1108,1194">
+<area shape="rect" id="node71" href="tb_cds_visita_domiciliar.html" target="_top" title="tb_cds_visita_domiciliar" alt="" coords="1889,2181,2148,2275">
+<area shape="rect" id="node72" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="2308,1897,2534,1991">
+<area shape="rect" id="node73" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="2266,1105,2576,1199">
+<area shape="rect" id="node74" href="tb_cnes.html" target="_top" title="tb_cnes" alt="" coords="885,4884,1018,4978">
+<area shape="rect" id="node75" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="499,92,719,186">
+<area shape="rect" id="node76" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="837,5108,1066,5202">
+<area shape="rect" id="node77" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1175,2524,1469,2618">
+<area shape="rect" id="node78" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1208,2748,1436,2842">
+<area shape="rect" id="node79" href="tb_inep.html" target="_top" title="tb_inep" alt="" coords="871,5220,1032,5314">
+<area shape="rect" id="node82" href="tb_logradouro.html" target="_top" title="tb_logradouro" alt="" coords="1231,2412,1413,2506">
+<area shape="rect" id="node83" href="tl_adm_municipal.html" target="_top" title="tl_adm_municipal" alt="" coords="847,5332,1056,5426">
+<area shape="rect" id="node84" href="tl_adm_municipal_centralizador.html" target="_top" title="tl_adm_municipal_centralizador" alt="" coords="793,5444,1110,5538">
+<area shape="rect" id="node85" href="tl_bairro.html" target="_top" title="tl_bairro" alt="" coords="883,5556,1020,5650">
+<area shape="rect" id="node86" href="tl_cbo_atend.html" target="_top" title="tl_cbo_atend" alt="" coords="865,5668,1038,5762">
+<area shape="rect" id="node87" href="tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="476,3710,742,3804">
+<area shape="rect" id="node88" href="tl_cds_cad_domiciliar.html" target="_top" title="tl_cds_cad_domiciliar" alt="" coords="1898,2549,2139,2643">
+<area shape="rect" id="node89" href="tl_cds_domicilio.html" target="_top" title="tl_cds_domicilio" alt="" coords="510,204,709,298">
+<area shape="rect" id="node90" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="875,2432,1028,2526">
+<area shape="rect" id="node91" href="tl_compartilhamento_prontuario.html" target="_top" title="tl_compartilhamento_prontuario" alt="" coords="792,5780,1111,5874">
+<area shape="rect" id="node92" href="tl_config_atencao_domiciliar.html" target="_top" title="tl_config_atencao_domiciliar" alt="" coords="805,5942,1098,6036">
+<area shape="rect" id="node93" href="tl_configuracao_horario.html" target="_top" title="tl_configuracao_horario" alt="" coords="823,6054,1080,6148">
+<area shape="rect" id="node94" href="tl_gestor_estadual.html" target="_top" title="tl_gestor_estadual" alt="" coords="502,350,717,444">
+<area shape="rect" id="node95" href="tl_gestor_municipal.html" target="_top" title="tl_gestor_municipal" alt="" coords="839,6201,1064,6295">
+<area shape="rect" id="node96" href="tl_opcao_rapida_exame.html" target="_top" title="tl_opcao_rapida_exame" alt="" coords="824,6313,1079,6407">
+<area shape="rect" id="node97" href="tl_papel.html" target="_top" title="tl_papel" alt="" coords="885,2544,1018,2638">
+<area shape="rect" id="node98" href="tl_perfil.html" target="_top" title="tl_perfil" alt="" coords="886,6425,1017,6519">
+<area shape="rect" id="node99" href="tl_prof.html" target="_top" title="tl_prof" alt="" coords="548,497,671,591">
+<area shape="rect" id="node100" href="tl_unidade_saude.html" target="_top" title="tl_unidade_saude" alt="" coords="847,2690,1056,2784">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_cds_cad_domiciliar.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

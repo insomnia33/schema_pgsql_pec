@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_alergia - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_alergia</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_alergia">co_seq_alergia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_alergia.co_seq_alergia&#39;s name implies that it&#39;s a child of tb_alergia.co_seq_alergia, but it doesn&#39;t reference that column."><a href='ta_alergia.html'>ta_alergia</a><span class='relatedKey'>.co_seq_alergia</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_categoria_agente_causador">co_categoria_agente_causador</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_alergia.co_categoria_agente_causador references tb_categoria_agente_causador.co_categoria_agente_causador via fk_categoriaagente_alergia"><a href='tb_categoria_agente_causador.html'>tb_categoria_agente_causador</a><span class='relatedKey'>.co_categoria_agente_causador</span></td>
+                                                <td class="constraint detail">fk_categoriaagente_alergia</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>campo legado, chave estrangeira com origem na tabela TB_CATEGORIA_AGENTE_CAUSADOR, é mantido pelos registros anteriores, não é salvo informações novas.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_substancia_especifica">no_substancia_especifica</span></td>
+                                    <td>varchar</td>
+                                    <td>300</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>campo legado, é mantido pelos registros anteriores, não é salvo informações novas.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_ultima_alergia_evolucao">co_ultima_alergia_evolucao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_alergia.co_ultima_alergia_evolucao references tb_alergia_evolucao.co_seq_alergia_evolucao via fk_alergiaevolucao_alergia"><a href='tb_alergia_evolucao.html'>tb_alergia_evolucao</a><span class='relatedKey'>.co_seq_alergia_evolucao</span></td>
+                                                <td class="constraint detail">fk_alergiaevolucao_alergia</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_alergia.co_prontuario references tb_prontuario.co_seq_prontuario via fk_alergia_problema"><a href='tb_prontuario.html'>tb_prontuario</a><span class='relatedKey'>.co_seq_prontuario</span></td>
+                                                <td class="constraint detail">fk_alergia_problema</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_unico_alergia">co_unico_alergia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_substancia_especifica">co_substancia_especifica</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_alergia.co_substancia_especifica references tb_substancia_espec_alergia.co_seq_substanc_espec_alergia via fk_alergia_substespecalergia"><a href='tb_substancia_espec_alergia.html'>tb_substancia_espec_alergia</a><span class='relatedKey'>.co_seq_substanc_espec_alergia</span></td>
+                                                <td class="constraint detail">fk_alergia_substespecalergia</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da substancia causadora da alergia. Chave estrangeira com origem na tabela TB_SUBSTANCIA_ALERGIA.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_alergia</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_alergia</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_alergia_categoriaagentecaus</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_categoria_agente_causador</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_alergia_coprontcounicoalerg</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_prontuario + co_unico_alergia</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_alergia_coultimaalergiaevol</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_ultima_alergia_evolucao</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="358,186,739,465">
+<area shape="rect" id="node2" href="tb_categoria_agente_causador.html" target="_top" title="tb_categoria_agente_causador" alt="" coords="5,5,314,129">
+<area shape="rect" id="node3" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="44,435,275,617">
+<area shape="rect" id="node4" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="11,634,308,849">
+<area shape="rect" id="node5" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="38,147,281,417">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_alergia.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="646,1565,972,1659">
+<area shape="rect" id="node2" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="356,1563,587,1745">
+<area shape="rect" id="node39" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="73,1623,230,1717">
+<area shape="rect" id="node3" href="rl_manifest_alergiaevolucao.html" target="_top" title="rl_manifest_alergiaevolucao" alt="" coords="1062,3839,1350,3933">
+<area shape="rect" id="node4" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="688,3716,930,3986">
+<area shape="rect" id="node10" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="382,3056,562,3150">
+<area shape="rect" id="node11" href="tb_criticidade_alergia.html" target="_top" title="tb_criticidade_alergia" alt="" coords="353,3708,591,3802">
+<area shape="rect" id="node12" href="tb_grau_certeza_alergia.html" target="_top" title="tb_grau_certeza_alergia" alt="" coords="344,3932,600,4026">
+<area shape="rect" id="node13" href="tb_tipo_reacao_alergia.html" target="_top" title="tb_tipo_reacao_alergia" alt="" coords="348,3820,595,3914">
+<area shape="rect" id="node5" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="716,1677,902,1771">
+<area shape="rect" id="node6" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="723,1789,895,1883">
+<area shape="rect" id="node7" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="1016,3542,1397,3821">
+<area shape="rect" id="node8" href="tb_categoria_agente_causador.html" target="_top" title="tb_categoria_agente_causador" alt="" coords="655,3575,963,3698">
+<area shape="rect" id="node9" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="660,4018,958,4233">
+<area shape="rect" id="node43" href="tb_substancia_cbara.html" target="_top" title="tb_substancia_cbara" alt="" coords="356,4079,588,4173">
+<area shape="rect" id="node44" href="tb_categ_substancia_alergia.html" target="_top" title="tb_categ_substancia_alergia" alt="" coords="5,4041,298,4135">
+<area shape="rect" id="node45" href="tb_imunobiologico.html" target="_top" title="tb_imunobiologico" alt="" coords="364,4191,580,4285">
+<area shape="rect" id="node46" href="tb_medicamento_catmat.html" target="_top" title="tb_medicamento_catmat" alt="" coords="342,4303,602,4397">
+<area shape="rect" id="node15" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1136,2645,1276,2739">
+<area shape="rect" id="node14" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="713,1936,904,2030">
+<area shape="rect" id="node16" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="727,2720,890,2814">
+<area shape="rect" id="node17" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="679,2048,939,2142">
+<area shape="rect" id="node18" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="677,2832,940,2926">
+<area shape="rect" id="node19" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="670,2944,948,3038">
+<area shape="rect" id="node20" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="695,3056,923,3150">
+<area shape="rect" id="node21" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="694,936,924,1030">
+<area shape="rect" id="node22" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="688,3392,930,3486">
+<area shape="rect" id="node23" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="673,3168,944,3262">
+<area shape="rect" id="node24" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="683,2160,935,2254">
+<area shape="rect" id="node25" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="744,3280,874,3374">
+<area shape="rect" id="node26" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="672,5,946,99">
+<area shape="rect" id="node27" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="727,2272,891,2366">
+<area shape="rect" id="node28" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="652,117,966,211">
+<area shape="rect" id="node29" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="693,229,925,323">
+<area shape="rect" id="node30" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="692,341,926,435">
+<area shape="rect" id="node31" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="709,453,908,547">
+<area shape="rect" id="node32" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="709,565,908,659">
+<area shape="rect" id="node33" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="720,2384,898,2478">
+<area shape="rect" id="node34" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="677,677,941,771">
+<area shape="rect" id="node35" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="665,789,952,883">
+<area shape="rect" id="node36" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="1122,1381,1290,1475">
+<area shape="rect" id="node37" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="724,1419,894,1513">
+<area shape="rect" id="node38" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="692,1048,926,1142">
+<area shape="rect" id="node40" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="655,1160,963,1254">
+<area shape="rect" id="node41" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="695,1272,923,1366">
+<area shape="rect" id="node42" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="653,2496,964,2590">
+<area shape="rect" id="node47" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="1111,899,1302,993">
+<area shape="rect" id="node48" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="721,2608,896,2702">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_alergia.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="783,5,1071,217">
+<area shape="rect" id="node2" href="tb_categoria_agente_causador.html" target="_top" title="tb_categoria_agente_causador" alt="" coords="5,7,314,130">
+<area shape="rect" id="node3" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="358,86,739,365">
+<area shape="rect" id="node4" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="44,436,275,618">
+<area shape="rect" id="node5" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="11,636,308,850">
+<area shape="rect" id="node6" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="38,148,281,418">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_alergia.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="482,5,807,99">
+<area shape="rect" id="node2" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="207,1176,438,1358">
+<area shape="rect" id="node45" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="5,1236,163,1330">
+<area shape="rect" id="node3" href="rl_manifest_alergiaevolucao.html" target="_top" title="rl_manifest_alergiaevolucao" alt="" coords="1894,2547,2182,2641">
+<area shape="rect" id="node4" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="1526,2544,1769,2814">
+<area shape="rect" id="node10" href="tb_criticidade_alergia.html" target="_top" title="tb_criticidade_alergia" alt="" coords="1199,2697,1437,2791">
+<area shape="rect" id="node18" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1228,819,1408,913">
+<area shape="rect" id="node19" href="tb_grau_certeza_alergia.html" target="_top" title="tb_grau_certeza_alergia" alt="" coords="1190,2921,1446,3015">
+<area shape="rect" id="node20" href="tb_tipo_reacao_alergia.html" target="_top" title="tb_tipo_reacao_alergia" alt="" coords="1194,2809,1441,2903">
+<area shape="rect" id="node5" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="2272,1325,2421,1419">
+<area shape="rect" id="node6" href="tb_categoria_agente_causador.html" target="_top" title="tb_categoria_agente_causador" alt="" coords="1493,32,1802,126">
+<area shape="rect" id="node7" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="1552,1491,1743,1585">
+<area shape="rect" id="node8" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="1847,1400,2228,1678">
+<area shape="rect" id="node15" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="1499,3008,1796,3222">
+<area shape="rect" id="node9" href="ta_alergia_evolucao.html" target="_top" title="ta_alergia_evolucao" alt="" coords="1925,2725,2150,2819">
+<area shape="rect" id="node11" href="ta_prontuario.html" target="_top" title="ta_prontuario" alt="" coords="556,188,733,282">
+<area shape="rect" id="node12" href="ta_substancia_espec_alergia.html" target="_top" title="ta_substancia_espec_alergia" alt="" coords="1890,3200,2185,3294">
+<area shape="rect" id="node13" href="tb_imunobiologico.html" target="_top" title="tb_imunobiologico" alt="" coords="1210,3180,1426,3274">
+<area shape="rect" id="node14" href="tb_medicamento_catmat.html" target="_top" title="tb_medicamento_catmat" alt="" coords="1188,3292,1448,3386">
+<area shape="rect" id="node49" href="tb_substancia_cbara.html" target="_top" title="tb_substancia_cbara" alt="" coords="1202,3068,1434,3162">
+<area shape="rect" id="node50" href="tb_categ_substancia_alergia.html" target="_top" title="tb_categ_substancia_alergia" alt="" coords="851,3031,1144,3125">
+<area shape="rect" id="node16" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="552,300,737,394">
+<area shape="rect" id="node17" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="558,884,731,978">
+<area shape="rect" id="node21" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="927,819,1068,913">
+<area shape="rect" id="node22" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="1566,232,1729,326">
+<area shape="rect" id="node23" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="514,519,775,613">
+<area shape="rect" id="node24" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="1516,371,1779,465">
+<area shape="rect" id="node25" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1509,483,1786,577">
+<area shape="rect" id="node26" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="1533,595,1762,689">
+<area shape="rect" id="node27" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="530,737,759,831">
+<area shape="rect" id="node28" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="1527,819,1768,913">
+<area shape="rect" id="node29" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="1512,707,1783,801">
+<area shape="rect" id="node30" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="518,996,771,1090">
+<area shape="rect" id="node31" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="1582,931,1713,1025">
+<area shape="rect" id="node32" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="508,1143,781,1237">
+<area shape="rect" id="node33" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1565,1043,1730,1137">
+<area shape="rect" id="node34" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="488,1289,801,1383">
+<area shape="rect" id="node35" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="528,1401,761,1495">
+<area shape="rect" id="node36" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="528,1513,761,1607">
+<area shape="rect" id="node37" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="545,1625,744,1719">
+<area shape="rect" id="node38" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="545,1737,744,1831">
+<area shape="rect" id="node39" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="1559,1155,1736,1249">
+<area shape="rect" id="node40" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="512,1884,777,1978">
+<area shape="rect" id="node41" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="501,1996,788,2090">
+<area shape="rect" id="node42" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="913,2328,1082,2422">
+<area shape="rect" id="node43" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="560,2143,729,2237">
+<area shape="rect" id="node44" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="528,2255,761,2349">
+<area shape="rect" id="node46" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="490,2367,799,2461">
+<area shape="rect" id="node47" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="530,2479,759,2573">
+<area shape="rect" id="node48" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="1492,1267,1803,1361">
+<area shape="rect" id="node51" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="902,704,1093,798">
+<area shape="rect" id="node52" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="1560,1379,1735,1473">
+<area shape="rect" id="node53" href="tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="1966,581,2109,675">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_alergia.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

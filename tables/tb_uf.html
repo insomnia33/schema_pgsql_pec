@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_uf - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_uf</h1><p><span id="recordNumber">27</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar informações de Unidades Federativas.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_uf">co_uf</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_cds_domicilio.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='ta_cds_domicilio.html'>ta_cds_domicilio</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_cidadao.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='ta_cidadao.html'>ta_cidadao</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_gestor_estadual.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='ta_gestor_estadual.html'>ta_gestor_estadual</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_prof.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='ta_prof.html'>ta_prof</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_unidade_saude.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='ta_unidade_saude.html'>ta_unidade_saude</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_atend_prof.co_uf_emissora_conselho_classe references tb_uf.co_uf via fk_uf_atendprof"><a href='tb_atend_prof.html'>tb_atend_prof</a><span class='relatedKey'>.co_uf_emissora_conselho_classe</span></td>
+                                                <td class="constraint detail">fk_uf_atendprof</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_aval_elegibilidade.co_uf references tb_uf.co_uf via fk_uf_cdsavalelegibilidade"><a href='tb_cds_aval_elegibilidade.html'>tb_cds_aval_elegibilidade</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_cdsavalelegibilidade</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_uf references tb_uf.co_uf via fk_uf_cdscaddomiciliar"><a href='tb_cds_cad_domiciliar.html'>tb_cds_cad_domiciliar</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_cdscaddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_cad_domiciliar.co_uf_aldeia references tb_uf.co_uf via fk_ufaldeia_caddomiciliar"><a href='tb_cds_cad_domiciliar.html'>tb_cds_cad_domiciliar</a><span class='relatedKey'>.co_uf_aldeia</span></td>
+                                                <td class="constraint detail">fk_ufaldeia_caddomiciliar</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_domicilio.co_uf references tb_uf.co_uf via fk_uf_cdsdomicilio"><a href='tb_cds_domicilio.html'>tb_cds_domicilio</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_cdsdomicilio</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_domicilio.co_uf_aldeia references tb_uf.co_uf via fk_ufaldeia_cdsdomicilio"><a href='tb_cds_domicilio.html'>tb_cds_domicilio</a><span class='relatedKey'>.co_uf_aldeia</span></td>
+                                                <td class="constraint detail">fk_ufaldeia_cdsdomicilio</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cidadao.co_uf references tb_uf.co_uf via fk_uf_cidadao"><a href='tb_cidadao.html'>tb_cidadao</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_cidadao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cidadao_aldeado.co_uf_nascimento references tb_uf.co_uf via fk_uf_nascimento_cidadao_si"><a href='tb_cidadao_aldeado.html'>tb_cidadao_aldeado</a><span class='relatedKey'>.co_uf_nascimento</span></td>
+                                                <td class="constraint detail">fk_uf_nascimento_cidadao_si</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_gestor_estadual.co_uf references tb_uf.co_uf via fk_uf_gestorestadual"><a href='tb_gestor_estadual.html'>tb_gestor_estadual</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_gestorestadual</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_localidade.co_uf references tb_uf.co_uf via fk_uf_localidade"><a href='tb_localidade.html'>tb_localidade</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_localidade</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_prof.co_uf references tb_uf.co_uf via fk_uf_profendereco"><a href='tb_prof.html'>tb_prof</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_profendereco</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_prof.co_uf_emissora_conselho_classe references tb_uf.co_uf via fk_uf_prof"><a href='tb_prof.html'>tb_prof</a><span class='relatedKey'>.co_uf_emissora_conselho_classe</span></td>
+                                                <td class="constraint detail">fk_uf_prof</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_unidade_saude.co_uf references tb_uf.co_uf via fk_uf_undiadesaude"><a href='tb_unidade_saude.html'>tb_unidade_saude</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_undiadesaude</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_cds_aval_elegibilidade.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_cds_aval_elegibilidade.html'>tl_cds_aval_elegibilidade</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_cds_cad_domiciliar.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_cds_cad_domiciliar.html'>tl_cds_cad_domiciliar</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_cds_domicilio.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_cds_domicilio.html'>tl_cds_domicilio</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_cidadao.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_cidadao.html'>tl_cidadao</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_gestor_estadual.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_gestor_estadual.html'>tl_gestor_estadual</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_papel.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_papel.html'>tl_papel</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_prof.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_prof.html'>tl_prof</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_unidade_saude.co_uf&#39;s name implies that it&#39;s a child of tb_uf.co_uf, but it doesn&#39;t reference that column."><a href='tl_unidade_saude.html'>tl_unidade_saude</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave primária da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_pais">co_pais</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_uf.co_pais references tb_pais.co_pais via fk_pais_uf"><a href='tb_pais.html'>tb_pais</a><span class='relatedKey'>.co_pais</span></td>
+                                                <td class="constraint detail">fk_pais_uf</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do país. Chave estrangeira com origem na tabela TB_PAIS.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sg_uf">sg_uf</span></td>
+                                    <td>varchar</td>
+                                    <td>2</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sigla da Unidade Federativa.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_dne">nu_dne</span></td>
+                                    <td>varchar</td>
+                                    <td>2</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código correspondente do Diretório Nacional de Endereços (DNE).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_uf">no_uf</span></td>
+                                    <td>varchar</td>
+                                    <td>72</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a Unidade Federativa.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_identificador">no_identificador</span></td>
+                                    <td>varchar</td>
+                                    <td>2</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nome do enumerador da sigla da UF.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_uf</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_uf</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_uf_copais</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_pais</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="593,1233,901,1943">
+<area shape="rect" id="node2" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="291,1749,549,1998">
+<area shape="rect" id="node5" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,1103,247,1285">
+<area shape="rect" id="node3" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="956,2395,1243,3222">
+<area shape="rect" id="node4" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="633,1996,861,2325">
+<area shape="rect" id="node6" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="960,1696,1239,2377">
+<area shape="rect" id="node7" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="948,3240,1251,4331">
+<area shape="rect" id="node8" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="949,5,1249,862">
+<area shape="rect" id="node9" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="1297,333,1540,603">
+<area shape="rect" id="node10" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="637,2486,858,2613">
+<area shape="rect" id="node11" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="945,915,1253,1331">
+<area shape="rect" id="node12" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="972,1349,1227,1678">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_uf.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="1792,3113,2018,3207">
+<area shape="rect" id="node2" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1461,3591,1620,3685">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="485,2721,660,2815">
+<area shape="rect" id="node28" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1113,3733,1289,3827">
+<area shape="rect" id="node44" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="183,4460,441,4709">
+<area shape="rect" id="node139" href="tb_situacao_localidade.html" target="_top" title="tb_situacao_localidade" alt="" coords="187,2775,437,2869">
+<area shape="rect" id="node140" href="tb_tipo_localidade.html" target="_top" title="tb_tipo_localidade" alt="" coords="205,2663,419,2757">
+<area shape="rect" id="node4" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="3633,3851,3830,3945">
+<area shape="rect" id="node5" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="3219,1736,3527,2446">
+<area shape="rect" id="node6" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1453,4148,1628,4242">
+<area shape="rect" id="node33" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="2568,1433,2708,1527">
+<area shape="rect" id="node34" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="2150,1359,2395,1453">
+<area shape="rect" id="node37" href="tb_assinatura_eletronica_atend.html" target="_top" title="tb_assinatura_eletronica_atend" alt="" coords="2853,2796,3167,2890">
+<area shape="rect" id="node38" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="2849,1620,3171,1714">
+<area shape="rect" id="node39" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1088,1097,1314,1191">
+<area shape="rect" id="node40" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="2561,1945,2715,2039">
+<area shape="rect" id="node41" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="2196,2233,2349,2327">
+<area shape="rect" id="node42" href="tb_marcador_consumo_alimentar.html" target="_top" title="tb_marcador_consumo_alimentar" alt="" coords="2845,2572,3175,2666">
+<area shape="rect" id="node43" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="2882,2103,3137,2197">
+<area shape="rect" id="node45" href="tb_status_atend_prof.html" target="_top" title="tb_status_atend_prof" alt="" coords="2892,1879,3128,1973">
+<area shape="rect" id="node46" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="2921,1991,3099,2085">
+<area shape="rect" id="node47" href="tb_tipo_atend_prof.html" target="_top" title="tb_tipo_atend_prof" alt="" coords="2901,1767,3119,1861">
+<area shape="rect" id="node48" href="tb_tipo_participacao_atend.html" target="_top" title="tb_tipo_participacao_atend" alt="" coords="2869,2684,3151,2778">
+<area shape="rect" id="node7" href="rl_atend_prof_conduta.html" target="_top" title="rl_atend_prof_conduta" alt="" coords="3608,2107,3855,2201">
+<area shape="rect" id="node8" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="3628,2219,3835,2313">
+<area shape="rect" id="node9" href="rl_beneficio_cidadao_aldeado.html" target="_top" title="rl_beneficio_cidadao_aldeado" alt="" coords="2487,4312,2789,4406">
+<area shape="rect" id="node10" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="2159,4296,2386,4390">
+<area shape="rect" id="node102" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1826,3225,1984,3319">
+<area shape="rect" id="node105" href="tb_funcao_social.html" target="_top" title="tb_funcao_social" alt="" coords="1803,4388,2007,4482">
+<area shape="rect" id="node106" href="tb_local_ocorrencia.html" target="_top" title="tb_local_ocorrencia" alt="" coords="1793,4276,2017,4370">
+<area shape="rect" id="node11" href="rl_cds_aval_eleg_ad_tipo_inelg.html" target="_top" title="rl_cds_aval_eleg_ad_tipo_inelg" alt="" coords="2116,4751,2429,4845">
+<area shape="rect" id="node12" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="1769,4639,2040,4733">
+<area shape="rect" id="node50" href="tb_ad_modalidade.html" target="_top" title="tb_ad_modalidade" alt="" coords="1434,5153,1647,5247">
+<area shape="rect" id="node51" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="1452,4783,1629,4877">
+<area shape="rect" id="node52" href="tb_ad_tipo_elegivel.html" target="_top" title="tb_ad_tipo_elegivel" alt="" coords="1430,4929,1651,5023">
+<area shape="rect" id="node53" href="tb_cds_tipo_cuidador.html" target="_top" title="tb_cds_tipo_cuidador" alt="" coords="1421,4372,1660,4466">
+<area shape="rect" id="node64" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="491,4136,655,4230">
+<area shape="rect" id="node65" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="485,4283,660,4377">
+<area shape="rect" id="node66" href="tb_etnia.html" target="_top" title="tb_etnia" alt="" coords="1473,3296,1608,3390">
+<area shape="rect" id="node67" href="tb_nacionalidade.html" target="_top" title="tb_nacionalidade" alt="" coords="1438,2839,1643,2933">
+<area shape="rect" id="node68" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,3013,139,3107">
+<area shape="rect" id="node69" href="tb_raca_cor.html" target="_top" title="tb_raca_cor" alt="" coords="1458,3408,1623,3502">
+<area shape="rect" id="node70" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="1474,4260,1607,4354">
+<area shape="rect" id="node71" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="1091,3551,1310,3645">
+<area shape="rect" id="node13" href="rl_cds_aval_eleg_cds_situc_prs.html" target="_top" title="rl_cds_aval_eleg_cds_situc_prs" alt="" coords="2114,4639,2431,4733">
+<area shape="rect" id="node14" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="2475,2801,2801,2895">
+<area shape="rect" id="node15" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="1434,2333,1647,2427">
+<area shape="rect" id="node16" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="2184,3619,2361,3713">
+<area shape="rect" id="node156" href="tb_subtipo_unidade_saude.html" target="_top" title="tb_subtipo_unidade_saude" alt="" coords="1061,2407,1341,2501">
+<area shape="rect" id="node157" href="tb_tipo_unidade_saude.html" target="_top" title="tb_tipo_unidade_saude" alt="" coords="734,2388,987,2482">
+<area shape="rect" id="node17" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="3573,4201,3890,4295">
+<area shape="rect" id="node18" href="rl_evolucao_plano_ciap.html" target="_top" title="rl_evolucao_plano_ciap" alt="" coords="3604,2331,3859,2425">
+<area shape="rect" id="node19" href="rl_evolucao_subjetivo_ciap.html" target="_top" title="rl_evolucao_subjetivo_ciap" alt="" coords="3591,2443,3872,2537">
+<area shape="rect" id="node20" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1801,484,2009,578">
+<area shape="rect" id="node21" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="1471,1233,1610,1327">
+<area shape="rect" id="node136" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="1123,2040,1278,2134">
+<area shape="rect" id="node22" href="rl_unidade_saude_complexidade.html" target="_top" title="rl_unidade_saude_complexidade" alt="" coords="1743,2087,2067,2181">
+<area shape="rect" id="node23" href="rl_unidade_saude_horus.html" target="_top" title="rl_unidade_saude_horus" alt="" coords="1773,2345,2036,2439">
+<area shape="rect" id="node24" href="rl_unidade_saude_tipo_servico.html" target="_top" title="rl_unidade_saude_tipo_servico" alt="" coords="1749,1568,2061,1662">
+<area shape="rect" id="node25" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="1445,1568,1636,1662">
+<area shape="rect" id="node26" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="2166,524,2379,618">
+<area shape="rect" id="node27" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1816,889,1994,983">
+<area shape="rect" id="node73" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="795,3095,926,3189">
+<area shape="rect" id="node29" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="3618,2555,3845,2649">
+<area shape="rect" id="node30" href="tb_animais_domicilio.html" target="_top" title="tb_animais_domicilio" alt="" coords="2154,5572,2391,5666">
+<area shape="rect" id="node31" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1803,5515,2007,5609">
+<area shape="rect" id="node74" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1437,3809,1644,3903">
+<area shape="rect" id="node75" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="1429,5041,1652,5135">
+<area shape="rect" id="node77" href="tb_tipo_abastecimento_agua.html" target="_top" title="tb_tipo_abastecimento_agua" alt="" coords="1394,6632,1687,6726">
+<area shape="rect" id="node78" href="tb_tipo_acesso_domicilio.html" target="_top" title="tb_tipo_acesso_domicilio" alt="" coords="1406,5512,1675,5606">
+<area shape="rect" id="node79" href="tb_tipo_destino_lixo.html" target="_top" title="tb_tipo_destino_lixo" alt="" coords="1426,5624,1655,5718">
+<area shape="rect" id="node80" href="tb_tipo_domicilio.html" target="_top" title="tb_tipo_domicilio" alt="" coords="1438,5736,1643,5830">
+<area shape="rect" id="node81" href="tb_tipo_escoamento_sanitar.html" target="_top" title="tb_tipo_escoamento_sanitar" alt="" coords="1396,5848,1685,5942">
+<area shape="rect" id="node82" href="tb_tipo_localizacao.html" target="_top" title="tb_tipo_localizacao" alt="" coords="1430,5960,1651,6054">
+<area shape="rect" id="node83" href="tb_tipo_material_parede.html" target="_top" title="tb_tipo_material_parede" alt="" coords="1412,6072,1669,6166">
+<area shape="rect" id="node84" href="tb_tipo_origem_energia_eletric.html" target="_top" title="tb_tipo_origem_energia_eletric" alt="" coords="1385,6184,1696,6278">
+<area shape="rect" id="node85" href="tb_tipo_posse_terra.html" target="_top" title="tb_tipo_posse_terra" alt="" coords="1428,6296,1653,6390">
+<area shape="rect" id="node86" href="tb_tipo_situacao_moradia.html" target="_top" title="tb_tipo_situacao_moradia" alt="" coords="1405,6408,1676,6502">
+<area shape="rect" id="node87" href="tb_tipo_tratamento_agua.html" target="_top" title="tb_tipo_tratamento_agua" alt="" coords="1408,6520,1673,6614">
+<area shape="rect" id="node32" href="tb_antecedente_historico.html" target="_top" title="tb_antecedente_historico" alt="" coords="3598,117,3865,211">
+<area shape="rect" id="node35" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="1831,2233,1979,2327">
+<area shape="rect" id="node36" href="tb_atend_obs.html" target="_top" title="tb_atend_obs" alt="" coords="3643,229,3820,323">
+<area shape="rect" id="node63" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="1464,2480,1617,2574">
+<area shape="rect" id="node49" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="3628,4500,3835,4594">
+<area shape="rect" id="node54" href="tb_atend_prof_obs.html" target="_top" title="tb_atend_prof_obs" alt="" coords="3993,265,4211,359">
+<area shape="rect" id="node55" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="3610,376,3853,470">
+<area shape="rect" id="node56" href="tb_atend_prof_pre_natal.html" target="_top" title="tb_atend_prof_pre_natal" alt="" coords="3601,488,3862,582">
+<area shape="rect" id="node57" href="tb_atend_prof_puericultura.html" target="_top" title="tb_atend_prof_puericultura" alt="" coords="3591,600,3872,694">
+<area shape="rect" id="node58" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="3650,3977,3813,4071">
+<area shape="rect" id="node59" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1791,1001,2019,1095">
+<area shape="rect" id="node60" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1740,1113,2070,1207">
+<area shape="rect" id="node61" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="777,1445,944,1539">
+<area shape="rect" id="node62" href="tb_cbo_atend.html" target="_top" title="tb_cbo_atend" alt="" coords="1816,2711,1994,2805">
+<area shape="rect" id="node72" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1782,3841,2028,3935">
+<area shape="rect" id="node76" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1783,3001,2027,3095">
+<area shape="rect" id="node88" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="2141,3765,2404,3859">
+<area shape="rect" id="node89" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="2133,3877,2412,3971">
+<area shape="rect" id="node90" href="tb_cds_ficha_atend_domiciliar.html" target="_top" title="tb_cds_ficha_atend_domiciliar" alt="" coords="707,4024,1014,4118">
+<area shape="rect" id="node91" href="tb_cds_ficha_atend_individual.html" target="_top" title="tb_cds_ficha_atend_individual" alt="" coords="708,3765,1013,3859">
+<area shape="rect" id="node92" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="718,3877,1003,3971">
+<area shape="rect" id="node93" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="741,4283,980,4377">
+<area shape="rect" id="node94" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="3936,4616,4267,4710">
+<area shape="rect" id="node95" href="tb_qst_questionario_respondido.html" target="_top" title="tb_qst_questionario_respondido" alt="" coords="3571,2667,3892,2761">
+<area shape="rect" id="node96" href="tb_cds_ficha_proced.html" target="_top" title="tb_cds_ficha_proced" alt="" coords="744,3429,977,3523">
+<area shape="rect" id="node97" href="tb_cds_ficha_vacinacao.html" target="_top" title="tb_cds_ficha_vacinacao" alt="" coords="732,3541,989,3635">
+<area shape="rect" id="node98" href="tb_cds_ficha_visita_domiciliar.html" target="_top" title="tb_cds_ficha_visita_domiciliar" alt="" coords="708,3653,1013,3747">
+<area shape="rect" id="node99" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="704,4136,1017,4230">
+<area shape="rect" id="node100" href="tb_cfg_agenda_municipal.html" target="_top" title="tb_cfg_agenda_municipal" alt="" coords="726,1557,995,1651">
+<area shape="rect" id="node101" href="tb_cfg_certificado.html" target="_top" title="tb_cfg_certificado" alt="" coords="2533,479,2744,573">
+<area shape="rect" id="node103" href="tb_escolaridade.html" target="_top" title="tb_escolaridade" alt="" coords="1443,2985,1638,3079">
+<area shape="rect" id="node104" href="tb_estado_civil.html" target="_top" title="tb_estado_civil" alt="" coords="1446,3097,1635,3191">
+<area shape="rect" id="node107" href="tb_cidadao_grupo.html" target="_top" title="tb_cidadao_grupo" alt="" coords="2166,2912,2379,3006">
+<area shape="rect" id="node108" href="tb_cidadao_nucleo_familiar.html" target="_top" title="tb_cidadao_nucleo_familiar" alt="" coords="2130,3507,2415,3601">
+<area shape="rect" id="node109" href="tb_cidadao_unificacao_base.html" target="_top" title="tb_cidadao_unificacao_base" alt="" coords="2127,3059,2418,3153">
+<area shape="rect" id="node110" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="2118,3171,2427,3265">
+<area shape="rect" id="node111" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="3600,3227,3863,3321">
+<area shape="rect" id="node112" href="tb_cnes.html" target="_top" title="tb_cnes" alt="" coords="794,1669,927,1763">
+<area shape="rect" id="node113" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="711,1781,1010,1875">
+<area shape="rect" id="node114" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="3593,3339,3870,3433">
+<area shape="rect" id="node115" href="tb_cuidado_compartilhado_evol.html" target="_top" title="tb_cuidado_compartilhado_evol" alt="" coords="2479,2456,2798,2550">
+<area shape="rect" id="node116" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="3617,4089,3846,4183">
+<area shape="rect" id="node117" href="tb_evolucao_avaliacao.html" target="_top" title="tb_evolucao_avaliacao" alt="" coords="3608,712,3855,806">
+<area shape="rect" id="node118" href="tb_evolucao_objetivo.html" target="_top" title="tb_evolucao_objetivo" alt="" coords="3613,824,3850,918">
+<area shape="rect" id="node119" href="tb_evolucao_plano.html" target="_top" title="tb_evolucao_plano" alt="" coords="3623,936,3840,1030">
+<area shape="rect" id="node120" href="tb_evolucao_subjetivo.html" target="_top" title="tb_evolucao_subjetivo" alt="" coords="3609,1048,3854,1142">
+<area shape="rect" id="node121" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="3981,2669,4223,2763">
+<area shape="rect" id="node122" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="3613,3709,3850,3803">
+<area shape="rect" id="node123" href="tb_familia.html" target="_top" title="tb_familia" alt="" coords="2198,5460,2347,5554">
+<area shape="rect" id="node124" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="2162,2768,2383,2894">
+<area shape="rect" id="node125" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="2158,412,2387,506">
+<area shape="rect" id="node126" href="tb_grupo_exame.html" target="_top" title="tb_grupo_exame" alt="" coords="760,1893,961,1987">
+<area shape="rect" id="node127" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="3596,3484,3867,3578">
+<area shape="rect" id="node128" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="2512,2655,2764,2749">
+<area shape="rect" id="node129" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1758,631,2052,725">
+<area shape="rect" id="node130" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1791,743,2019,837">
+<area shape="rect" id="node131" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="1778,2492,2032,2586">
+<area shape="rect" id="node132" href="tb_inep.html" target="_top" title="tb_inep" alt="" coords="780,2040,941,2134">
+<area shape="rect" id="node133" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="1789,1863,2020,1957">
+<area shape="rect" id="node134" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="3666,2779,3797,2873">
+<area shape="rect" id="node135" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="2487,2309,2789,2403">
+<area shape="rect" id="node137" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="3649,5,3814,99">
+<area shape="rect" id="node138" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="2915,2389,3105,2483">
+<area shape="rect" id="node141" href="tb_medicao.html" target="_top" title="tb_medicao" alt="" coords="3651,1160,3812,1254">
+<area shape="rect" id="node142" href="tb_neuro_alter_fenot_evolucao.html" target="_top" title="tb_neuro_alter_fenot_evolucao" alt="" coords="3576,1272,3887,1366">
+<area shape="rect" id="node143" href="tb_neuro_fator_risco_evolucao.html" target="_top" title="tb_neuro_fator_risco_evolucao" alt="" coords="3576,1384,3887,1478">
+<area shape="rect" id="node144" href="tb_neuro_marco_evolucao.html" target="_top" title="tb_neuro_marco_evolucao" alt="" coords="3593,1496,3870,1590">
+<area shape="rect" id="node145" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="3643,2891,3820,2985">
+<area shape="rect" id="node146" href="tb_perfil.html" target="_top" title="tb_perfil" alt="" coords="787,2152,934,2246">
+<area shape="rect" id="node147" href="tb_periodo_ausencia.html" target="_top" title="tb_periodo_ausencia" alt="" coords="2156,3283,2389,3377">
+<area shape="rect" id="node148" href="tb_pessoa_fisica_imagem.html" target="_top" title="tb_pessoa_fisica_imagem" alt="" coords="2137,3395,2408,3489">
+<area shape="rect" id="node149" href="tb_problema_evolucao.html" target="_top" title="tb_problema_evolucao" alt="" coords="3608,1608,3855,1702">
+<area shape="rect" id="node150" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1784,1225,2026,1319">
+<area shape="rect" id="node151" href="tb_prontuario_unidade_saude.html" target="_top" title="tb_prontuario_unidade_saude" alt="" coords="1753,1975,2056,2069">
+<area shape="rect" id="node152" href="tb_rascunho_atend_prof.html" target="_top" title="tb_rascunho_atend_prof" alt="" coords="3601,1771,3862,1865">
+<area shape="rect" id="node153" href="tb_receita_medicamento.html" target="_top" title="tb_receita_medicamento" alt="" coords="3601,1883,3862,1977">
+<area shape="rect" id="node154" href="tb_res_envio.html" target="_top" title="tb_res_envio" alt="" coords="3645,1995,3818,2089">
+<area shape="rect" id="node155" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="3576,3003,3887,3097">
+<area shape="rect" id="node158" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="3644,3115,3819,3209">
+<area shape="rect" id="node159" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1783,1680,2027,1774">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_uf.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_cds_domicilio.html" target="_top" title="ta_cds_domicilio" alt="" coords="1300,3453,1603,4075">
+<area shape="rect" id="node2" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="948,2292,1251,3383">
+<area shape="rect" id="node3" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="291,2515,549,2765">
+<area shape="rect" id="node5" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="633,2350,861,2679">
+<area shape="rect" id="node14" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,2548,247,2730">
+<area shape="rect" id="node4" href="ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="1301,44,1601,460">
+<area shape="rect" id="node6" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="949,73,1249,930">
+<area shape="rect" id="node7" href="ta_gestor_estadual.html" target="_top" title="ta_gestor_estadual" alt="" coords="627,3037,868,3190">
+<area shape="rect" id="node8" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="1297,5117,1605,5328">
+<area shape="rect" id="node9" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="945,4980,1253,5396">
+<area shape="rect" id="node10" href="ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="1324,1540,1579,1722">
+<area shape="rect" id="node11" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="972,1417,1227,1746">
+<area shape="rect" id="node12" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="593,3386,901,4096">
+<area shape="rect" id="node13" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="956,4100,1243,4927">
+<area shape="rect" id="node15" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="960,3401,1239,4082">
+<area shape="rect" id="node16" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="1330,618,1573,888">
+<area shape="rect" id="node17" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="637,4150,858,4277">
+<area shape="rect" id="node18" href="tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="604,4294,891,4682">
+<area shape="rect" id="node19" href="tl_cds_cad_domiciliar.html" target="_top" title="tl_cds_cad_domiciliar" alt="" coords="608,662,887,962">
+<area shape="rect" id="node20" href="tl_cds_domicilio.html" target="_top" title="tl_cds_domicilio" alt="" coords="596,980,899,1162">
+<area shape="rect" id="node21" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="949,982,1249,1399">
+<area shape="rect" id="node22" href="tl_gestor_estadual.html" target="_top" title="tl_gestor_estadual" alt="" coords="640,1250,855,1432">
+<area shape="rect" id="node23" href="tl_papel.html" target="_top" title="tl_papel" alt="" coords="996,1798,1203,2010">
+<area shape="rect" id="node24" href="tl_prof.html" target="_top" title="tl_prof" alt="" coords="593,1485,901,1726">
+<area shape="rect" id="node25" href="tl_unidade_saude.html" target="_top" title="tl_unidade_saude" alt="" coords="972,2028,1227,2239">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_uf.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="1959,6981,2185,7075">
+<area shape="rect" id="node2" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1628,7102,1786,7196">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="549,6242,724,6336">
+<area shape="rect" id="node37" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="1261,7026,1437,7120">
+<area shape="rect" id="node51" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="183,2922,441,3171">
+<area shape="rect" id="node163" href="tb_situacao_localidade.html" target="_top" title="tb_situacao_localidade" alt="" coords="187,6295,437,6389">
+<area shape="rect" id="node164" href="tb_tipo_localidade.html" target="_top" title="tb_tipo_localidade" alt="" coords="205,6183,419,6277">
+<area shape="rect" id="node4" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="3792,1538,3990,1632">
+<area shape="rect" id="node5" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="3378,2594,3686,3304">
+<area shape="rect" id="node6" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1620,3122,1794,3216">
+<area shape="rect" id="node29" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="2309,2910,2554,3004">
+<area shape="rect" id="node30" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="881,3525,1107,3619">
+<area shape="rect" id="node31" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="3042,3238,3297,3332">
+<area shape="rect" id="node88" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="2728,2430,2868,2524">
+<area shape="rect" id="node91" href="tb_assinatura_eletronica_atend.html" target="_top" title="tb_assinatura_eletronica_atend" alt="" coords="3013,3462,3326,3556">
+<area shape="rect" id="node92" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="3009,2466,3330,2560">
+<area shape="rect" id="node93" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="2355,3203,2508,3297">
+<area shape="rect" id="node94" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="1995,2038,2149,2132">
+<area shape="rect" id="node95" href="tb_marcador_consumo_alimentar.html" target="_top" title="tb_marcador_consumo_alimentar" alt="" coords="3005,3126,3334,3220">
+<area shape="rect" id="node96" href="tb_status_atend_prof.html" target="_top" title="tb_status_atend_prof" alt="" coords="3051,2725,3288,2819">
+<area shape="rect" id="node97" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="3081,2871,3258,2965">
+<area shape="rect" id="node98" href="tb_tipo_atend_prof.html" target="_top" title="tb_tipo_atend_prof" alt="" coords="3061,2613,3278,2707">
+<area shape="rect" id="node99" href="tb_tipo_participacao_atend.html" target="_top" title="tb_tipo_participacao_atend" alt="" coords="3029,3350,3310,3444">
+<area shape="rect" id="node7" href="rl_atend_prof_conduta.html" target="_top" title="rl_atend_prof_conduta" alt="" coords="3768,2261,4015,2355">
+<area shape="rect" id="node8" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="3788,2373,3995,2467">
+<area shape="rect" id="node9" href="rl_beneficio_cidadao_aldeado.html" target="_top" title="rl_beneficio_cidadao_aldeado" alt="" coords="2647,8519,2949,8613">
+<area shape="rect" id="node10" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="2318,8559,2545,8653">
+<area shape="rect" id="node62" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1993,2483,2151,2577">
+<area shape="rect" id="node64" href="tb_funcao_social.html" target="_top" title="tb_funcao_social" alt="" coords="1970,8633,2174,8727">
+<area shape="rect" id="node65" href="tb_local_ocorrencia.html" target="_top" title="tb_local_ocorrencia" alt="" coords="1960,8891,2184,8985">
+<area shape="rect" id="node11" href="rl_cds_aval_eleg_ad_tipo_inelg.html" target="_top" title="rl_cds_aval_eleg_ad_tipo_inelg" alt="" coords="2275,3498,2588,3592">
+<area shape="rect" id="node12" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="1936,2945,2207,3039">
+<area shape="rect" id="node59" href="tb_etnia.html" target="_top" title="tb_etnia" alt="" coords="1639,949,1774,1043">
+<area shape="rect" id="node60" href="tb_nacionalidade.html" target="_top" title="tb_nacionalidade" alt="" coords="1605,837,1809,931">
+<area shape="rect" id="node61" href="tb_raca_cor.html" target="_top" title="tb_raca_cor" alt="" coords="1625,1061,1789,1155">
+<area shape="rect" id="node101" href="tb_ad_modalidade.html" target="_top" title="tb_ad_modalidade" alt="" coords="1600,3970,1814,4064">
+<area shape="rect" id="node102" href="tb_ad_origem.html" target="_top" title="tb_ad_origem" alt="" coords="1618,2723,1796,2817">
+<area shape="rect" id="node103" href="tb_ad_tipo_elegivel.html" target="_top" title="tb_ad_tipo_elegivel" alt="" coords="1596,3823,1818,3917">
+<area shape="rect" id="node104" href="tb_cds_tipo_cuidador.html" target="_top" title="tb_cds_tipo_cuidador" alt="" coords="1587,2835,1826,2929">
+<area shape="rect" id="node113" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="1625,7393,1789,7487">
+<area shape="rect" id="node114" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="1619,6847,1794,6941">
+<area shape="rect" id="node115" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,2338,139,2432">
+<area shape="rect" id="node116" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="1640,1173,1774,1267">
+<area shape="rect" id="node117" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="885,3637,1104,3731">
+<area shape="rect" id="node13" href="rl_cds_aval_eleg_cds_situc_prs.html" target="_top" title="rl_cds_aval_eleg_cds_situc_prs" alt="" coords="2273,3386,2590,3480">
+<area shape="rect" id="node14" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="2635,1841,2961,1935">
+<area shape="rect" id="node15" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="1242,2041,1456,2135">
+<area shape="rect" id="node16" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="2343,1989,2520,2083">
+<area shape="rect" id="node179" href="tb_subtipo_unidade_saude.html" target="_top" title="tb_subtipo_unidade_saude" alt="" coords="854,2077,1134,2171">
+<area shape="rect" id="node180" href="tb_tipo_unidade_saude.html" target="_top" title="tb_tipo_unidade_saude" alt="" coords="510,2039,763,2133">
+<area shape="rect" id="node17" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="3733,1426,4049,1520">
+<area shape="rect" id="node18" href="rl_evolucao_plano_ciap.html" target="_top" title="rl_evolucao_plano_ciap" alt="" coords="3764,2485,4019,2579">
+<area shape="rect" id="node19" href="rl_evolucao_subjetivo_ciap.html" target="_top" title="rl_evolucao_subjetivo_ciap" alt="" coords="3750,2597,4032,2691">
+<area shape="rect" id="node20" href="rl_prof_municipio.html" target="_top" title="rl_prof_municipio" alt="" coords="1603,4489,1811,4583">
+<area shape="rect" id="node21" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="1280,3715,1418,3809">
+<area shape="rect" id="node160" href="tb_usuario.html" target="_top" title="tb_usuario" alt="" coords="917,3182,1072,3276">
+<area shape="rect" id="node22" href="rl_unidade_saude_complexidade.html" target="_top" title="rl_unidade_saude_complexidade" alt="" coords="1545,1926,1869,2020">
+<area shape="rect" id="node23" href="rl_unidade_saude_horus.html" target="_top" title="rl_unidade_saude_horus" alt="" coords="1575,1590,1838,1684">
+<area shape="rect" id="node24" href="rl_unidade_saude_tipo_servico.html" target="_top" title="rl_unidade_saude_tipo_servico" alt="" coords="1551,4377,1863,4471">
+<area shape="rect" id="node25" href="tb_tipo_servico.html" target="_top" title="tb_tipo_servico" alt="" coords="1254,4498,1445,4592">
+<area shape="rect" id="node26" href="ta_adm_municipal.html" target="_top" title="ta_adm_municipal" alt="" coords="888,5430,1100,5524">
+<area shape="rect" id="node27" href="ta_aldeia_localidade.html" target="_top" title="ta_aldeia_localidade" alt="" coords="2317,6981,2546,7075">
+<area shape="rect" id="node28" href="ta_atend_prof.html" target="_top" title="ta_atend_prof" alt="" coords="3802,4759,3981,4853">
+<area shape="rect" id="node32" href="ta_cbo_atend.html" target="_top" title="ta_cbo_atend" alt="" coords="2343,4431,2520,4525">
+<area shape="rect" id="node33" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="1630,1443,1784,1537">
+<area shape="rect" id="node34" href="tb_cbo_atend.html" target="_top" title="tb_cbo_atend" alt="" coords="1983,4431,2161,4525">
+<area shape="rect" id="node35" href="ta_cds_domicilio.html" target="_top" title="ta_cds_domicilio" alt="" coords="2330,5967,2533,6061">
+<area shape="rect" id="node36" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="929,6551,1059,6645">
+<area shape="rect" id="node38" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1970,6330,2174,6424">
+<area shape="rect" id="node39" href="tb_tipo_abastecimento_agua.html" target="_top" title="tb_tipo_abastecimento_agua" alt="" coords="1560,6077,1854,6171">
+<area shape="rect" id="node40" href="tb_tipo_acesso_domicilio.html" target="_top" title="tb_tipo_acesso_domicilio" alt="" coords="1573,6189,1841,6283">
+<area shape="rect" id="node41" href="tb_tipo_destino_lixo.html" target="_top" title="tb_tipo_destino_lixo" alt="" coords="1593,6301,1821,6395">
+<area shape="rect" id="node42" href="tb_tipo_domicilio.html" target="_top" title="tb_tipo_domicilio" alt="" coords="1604,6413,1810,6507">
+<area shape="rect" id="node43" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1603,5853,1810,5947">
+<area shape="rect" id="node44" href="tb_tipo_escoamento_sanitar.html" target="_top" title="tb_tipo_escoamento_sanitar" alt="" coords="1562,6735,1852,6829">
+<area shape="rect" id="node45" href="tb_tipo_localizacao.html" target="_top" title="tb_tipo_localizacao" alt="" coords="1597,5034,1817,5128">
+<area shape="rect" id="node46" href="tb_tipo_material_parede.html" target="_top" title="tb_tipo_material_parede" alt="" coords="1578,5405,1836,5499">
+<area shape="rect" id="node47" href="tb_tipo_origem_energia_eletric.html" target="_top" title="tb_tipo_origem_energia_eletric" alt="" coords="1551,5517,1862,5611">
+<area shape="rect" id="node48" href="tb_tipo_posse_terra.html" target="_top" title="tb_tipo_posse_terra" alt="" coords="1594,5629,1820,5723">
+<area shape="rect" id="node49" href="tb_tipo_situacao_moradia.html" target="_top" title="tb_tipo_situacao_moradia" alt="" coords="1571,5741,1842,5835">
+<area shape="rect" id="node50" href="tb_tipo_tratamento_agua.html" target="_top" title="tb_tipo_tratamento_agua" alt="" coords="1575,5965,1839,6059">
+<area shape="rect" id="node119" href="tb_cds_tipo_imovel.html" target="_top" title="tb_cds_tipo_imovel" alt="" coords="1595,7575,1818,7669">
+<area shape="rect" id="node52" href="ta_cfg_agenda_municipal.html" target="_top" title="ta_cfg_agenda_municipal" alt="" coords="1215,7755,1483,7849">
+<area shape="rect" id="node53" href="tb_cfg_agenda_municipal.html" target="_top" title="tb_cfg_agenda_municipal" alt="" coords="859,7683,1129,7777">
+<area shape="rect" id="node54" href="ta_cfg_certificado.html" target="_top" title="ta_cfg_certificado" alt="" coords="2693,8019,2903,8113">
+<area shape="rect" id="node55" href="tb_cfg_certificado.html" target="_top" title="tb_cfg_certificado" alt="" coords="2326,8125,2537,8219">
+<area shape="rect" id="node83" href="tb_adm_municipal.html" target="_top" title="tb_adm_municipal" alt="" coords="1965,8125,2179,8219">
+<area shape="rect" id="node56" href="ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="2353,858,2510,952">
+<area shape="rect" id="node57" href="tb_escolaridade.html" target="_top" title="tb_escolaridade" alt="" coords="1609,347,1804,441">
+<area shape="rect" id="node58" href="tb_estado_civil.html" target="_top" title="tb_estado_civil" alt="" coords="1613,235,1801,329">
+<area shape="rect" id="node63" href="ta_cidadao_aldeado.html" target="_top" title="ta_cidadao_aldeado" alt="" coords="2685,8631,2911,8725">
+<area shape="rect" id="node66" href="ta_compartilhamento_prontuario.html" target="_top" title="ta_compartilhamento_prontuario" alt="" coords="832,7862,1156,7956">
+<area shape="rect" id="node67" href="ta_config_atencao_domiciliar.html" target="_top" title="ta_config_atencao_domiciliar" alt="" coords="1200,7971,1498,8065">
+<area shape="rect" id="node68" href="tb_config_atencao_domiciliar.html" target="_top" title="tb_config_atencao_domiciliar" alt="" coords="845,8009,1144,8103">
+<area shape="rect" id="node69" href="ta_envio_rnds.html" target="_top" title="ta_envio_rnds" alt="" coords="1258,8303,1440,8397">
+<area shape="rect" id="node70" href="tb_envio_rnds.html" target="_top" title="tb_envio_rnds" alt="" coords="903,8267,1086,8361">
+<area shape="rect" id="node71" href="ta_gestor_estadual.html" target="_top" title="ta_gestor_estadual" alt="" coords="516,3002,757,3155">
+<area shape="rect" id="node72" href="ta_gestor_municipal.html" target="_top" title="ta_gestor_municipal" alt="" coords="880,8414,1108,8508">
+<area shape="rect" id="node73" href="ta_grupo_exame.html" target="_top" title="ta_grupo_exame" alt="" coords="1249,5578,1449,5672">
+<area shape="rect" id="node74" href="tb_grupo_exame.html" target="_top" title="tb_grupo_exame" alt="" coords="893,5542,1095,5636">
+<area shape="rect" id="node75" href="ta_perfil.html" target="_top" title="ta_perfil" alt="" coords="1282,6295,1417,6389">
+<area shape="rect" id="node76" href="tb_perfil.html" target="_top" title="tb_perfil" alt="" coords="921,6389,1067,6483">
+<area shape="rect" id="node77" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="1643,3341,1770,3435">
+<area shape="rect" id="node78" href="ta_prof_municipio.html" target="_top" title="ta_prof_municipio" alt="" coords="888,5078,1100,5172">
+<area shape="rect" id="node79" href="ta_tipo_servico.html" target="_top" title="ta_tipo_servico" alt="" coords="1611,4779,1802,4873">
+<area shape="rect" id="node80" href="ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="1601,2257,1813,2351">
+<area shape="rect" id="node81" href="ta_vinculacao_servico.html" target="_top" title="ta_vinculacao_servico" alt="" coords="1950,4907,2194,5001">
+<area shape="rect" id="node82" href="tb_vinculacao_servico.html" target="_top" title="tb_vinculacao_servico" alt="" coords="1585,4265,1829,4359">
+<area shape="rect" id="node84" href="tb_ator_papel.html" target="_top" title="tb_ator_papel" alt="" coords="1618,4082,1796,4176">
+<area shape="rect" id="node85" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="3778,2709,4005,2803">
+<area shape="rect" id="node86" href="tb_animais_domicilio.html" target="_top" title="tb_animais_domicilio" alt="" coords="2313,6271,2550,6365">
+<area shape="rect" id="node87" href="tb_antecedente_historico.html" target="_top" title="tb_antecedente_historico" alt="" coords="3758,2821,4025,2915">
+<area shape="rect" id="node89" href="tb_equipe.html" target="_top" title="tb_equipe" alt="" coords="1633,2038,1781,2132">
+<area shape="rect" id="node90" href="tb_atend_obs.html" target="_top" title="tb_atend_obs" alt="" coords="3802,3639,3980,3733">
+<area shape="rect" id="node100" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="3788,4871,3995,4965">
+<area shape="rect" id="node105" href="tb_atend_prof_obs.html" target="_top" title="tb_atend_prof_obs" alt="" coords="4153,3265,4370,3359">
+<area shape="rect" id="node106" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="3770,2967,4013,3061">
+<area shape="rect" id="node107" href="tb_atend_prof_pre_natal.html" target="_top" title="tb_atend_prof_pre_natal" alt="" coords="3761,3079,4021,3173">
+<area shape="rect" id="node108" href="tb_atend_prof_puericultura.html" target="_top" title="tb_atend_prof_puericultura" alt="" coords="3750,3191,4032,3285">
+<area shape="rect" id="node109" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="3810,4423,3973,4517">
+<area shape="rect" id="node110" href="tb_atestado_modelo.html" target="_top" title="tb_atestado_modelo" alt="" coords="1593,3487,1821,3581">
+<area shape="rect" id="node111" href="tb_ativacao_agendamento_online.html" target="_top" title="tb_ativacao_agendamento_online" alt="" coords="1542,3599,1872,3693">
+<area shape="rect" id="node112" href="tb_bairro.html" target="_top" title="tb_bairro" alt="" coords="911,5689,1077,5783">
+<area shape="rect" id="node118" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1949,7911,2195,8005">
+<area shape="rect" id="node120" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="1950,1229,2194,1323">
+<area shape="rect" id="node121" href="tb_cds_domicilio_familia.html" target="_top" title="tb_cds_domicilio_familia" alt="" coords="2300,7910,2563,8004">
+<area shape="rect" id="node122" href="tb_cds_domicilio_resposta.html" target="_top" title="tb_cds_domicilio_resposta" alt="" coords="2292,7798,2571,7892">
+<area shape="rect" id="node123" href="tb_cds_ficha_atend_domiciliar.html" target="_top" title="tb_cds_ficha_atend_domiciliar" alt="" coords="1918,7351,2225,7445">
+<area shape="rect" id="node124" href="tb_cds_ficha_atend_individual.html" target="_top" title="tb_cds_ficha_atend_individual" alt="" coords="1919,7687,2225,7781">
+<area shape="rect" id="node125" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="1929,7799,2215,7893">
+<area shape="rect" id="node126" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="1952,7463,2191,7557">
+<area shape="rect" id="node127" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="4096,4959,4427,5053">
+<area shape="rect" id="node128" href="tb_qst_questionario_respondido.html" target="_top" title="tb_qst_questionario_respondido" alt="" coords="3730,4311,4052,4405">
+<area shape="rect" id="node129" href="tb_cds_ficha_proced.html" target="_top" title="tb_cds_ficha_proced" alt="" coords="1955,8779,2189,8873">
+<area shape="rect" id="node130" href="tb_cds_ficha_vacinacao.html" target="_top" title="tb_cds_ficha_vacinacao" alt="" coords="1943,7239,2201,7333">
+<area shape="rect" id="node131" href="tb_cds_ficha_visita_domiciliar.html" target="_top" title="tb_cds_ficha_visita_domiciliar" alt="" coords="1919,7575,2225,7669">
+<area shape="rect" id="node132" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="1916,7127,2228,7221">
+<area shape="rect" id="node133" href="tb_cidadao_grupo.html" target="_top" title="tb_cidadao_grupo" alt="" coords="2325,3057,2538,3151">
+<area shape="rect" id="node134" href="tb_cidadao_nucleo_familiar.html" target="_top" title="tb_cidadao_nucleo_familiar" alt="" coords="2289,2691,2574,2785">
+<area shape="rect" id="node135" href="tb_cidadao_unificacao_base.html" target="_top" title="tb_cidadao_unificacao_base" alt="" coords="2286,2355,2577,2449">
+<area shape="rect" id="node136" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="2277,4182,2586,4276">
+<area shape="rect" id="node137" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="3760,1090,4023,1184">
+<area shape="rect" id="node138" href="tb_cnes.html" target="_top" title="tb_cnes" alt="" coords="927,5801,1061,5895">
+<area shape="rect" id="node139" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="3752,607,4030,701">
+<area shape="rect" id="node140" href="tb_cuidado_compartilhado_evol.html" target="_top" title="tb_cuidado_compartilhado_evol" alt="" coords="2272,1623,2591,1717">
+<area shape="rect" id="node141" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="3777,4535,4005,4629">
+<area shape="rect" id="node142" href="tb_evolucao_avaliacao.html" target="_top" title="tb_evolucao_avaliacao" alt="" coords="3768,3303,4015,3397">
+<area shape="rect" id="node143" href="tb_evolucao_objetivo.html" target="_top" title="tb_evolucao_objetivo" alt="" coords="3773,3415,4009,3509">
+<area shape="rect" id="node144" href="tb_evolucao_plano.html" target="_top" title="tb_evolucao_plano" alt="" coords="3782,3527,4000,3621">
+<area shape="rect" id="node145" href="tb_evolucao_subjetivo.html" target="_top" title="tb_evolucao_subjetivo" alt="" coords="3768,3751,4014,3845">
+<area shape="rect" id="node146" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="4141,1617,4382,1711">
+<area shape="rect" id="node147" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="3773,4199,4009,4293">
+<area shape="rect" id="node148" href="tb_familia.html" target="_top" title="tb_familia" alt="" coords="2357,6383,2506,6477">
+<area shape="rect" id="node149" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="1962,4076,2182,4203">
+<area shape="rect" id="node150" href="tb_gestor_municipal.html" target="_top" title="tb_gestor_municipal" alt="" coords="1957,4573,2187,4667">
+<area shape="rect" id="node151" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="3756,719,4027,813">
+<area shape="rect" id="node152" href="tb_historico_unificacao.html" target="_top" title="tb_historico_unificacao" alt="" coords="2672,3965,2924,4059">
+<area shape="rect" id="node153" href="tb_importacao_bolsa_familia.html" target="_top" title="tb_importacao_bolsa_familia" alt="" coords="1560,5146,1854,5240">
+<area shape="rect" id="node154" href="tb_importacao_cnes.html" target="_top" title="tb_importacao_cnes" alt="" coords="1593,5258,1821,5352">
+<area shape="rect" id="node155" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="1580,1702,1834,1796">
+<area shape="rect" id="node156" href="tb_inep.html" target="_top" title="tb_inep" alt="" coords="914,5947,1075,6041">
+<area shape="rect" id="node157" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="1591,674,1822,768">
+<area shape="rect" id="node158" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="3826,1202,3956,1296">
+<area shape="rect" id="node159" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="2281,2243,2582,2337">
+<area shape="rect" id="node161" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="3809,4647,3973,4741">
+<area shape="rect" id="node162" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="2703,1694,2893,1788">
+<area shape="rect" id="node165" href="tb_medicao.html" target="_top" title="tb_medicao" alt="" coords="3810,3863,3972,3957">
+<area shape="rect" id="node166" href="tb_neuro_alter_fenot_evolucao.html" target="_top" title="tb_neuro_alter_fenot_evolucao" alt="" coords="3736,3975,4047,4069">
+<area shape="rect" id="node167" href="tb_neuro_fator_risco_evolucao.html" target="_top" title="tb_neuro_fator_risco_evolucao" alt="" coords="3736,4087,4047,4181">
+<area shape="rect" id="node168" href="tb_neuro_marco_evolucao.html" target="_top" title="tb_neuro_marco_evolucao" alt="" coords="3753,1701,4029,1795">
+<area shape="rect" id="node169" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="3802,1314,3980,1408">
+<area shape="rect" id="node170" href="tb_periodo_ausencia.html" target="_top" title="tb_periodo_ausencia" alt="" coords="2315,2467,2548,2561">
+<area shape="rect" id="node171" href="tb_pessoa_fisica_imagem.html" target="_top" title="tb_pessoa_fisica_imagem" alt="" coords="2296,2579,2567,2673">
+<area shape="rect" id="node172" href="tb_problema_evolucao.html" target="_top" title="tb_problema_evolucao" alt="" coords="3768,1813,4015,1907">
+<area shape="rect" id="node173" href="tb_prof_historico_cns.html" target="_top" title="tb_prof_historico_cns" alt="" coords="1586,3711,1828,3805">
+<area shape="rect" id="node174" href="tb_prontuario_unidade_saude.html" target="_top" title="tb_prontuario_unidade_saude" alt="" coords="1555,1814,1858,1908">
+<area shape="rect" id="node175" href="tb_rascunho_atend_prof.html" target="_top" title="tb_rascunho_atend_prof" alt="" coords="3761,1925,4021,2019">
+<area shape="rect" id="node176" href="tb_receita_medicamento.html" target="_top" title="tb_receita_medicamento" alt="" coords="3761,2037,4021,2131">
+<area shape="rect" id="node177" href="tb_res_envio.html" target="_top" title="tb_res_envio" alt="" coords="3805,2149,3977,2243">
+<area shape="rect" id="node178" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="3736,866,4047,960">
+<area shape="rect" id="node181" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="3804,978,3979,1072">
+<area shape="rect" id="node182" href="tl_adm_municipal.html" target="_top" title="tl_adm_municipal" alt="" coords="890,6130,1098,6224">
+<area shape="rect" id="node183" href="tl_adm_municipal_centralizador.html" target="_top" title="tl_adm_municipal_centralizador" alt="" coords="836,6277,1152,6371">
+<area shape="rect" id="node184" href="tl_bairro.html" target="_top" title="tl_bairro" alt="" coords="925,6698,1063,6792">
+<area shape="rect" id="node185" href="tl_cbo_atend.html" target="_top" title="tl_cbo_atend" alt="" coords="1986,3965,2158,4059">
+<area shape="rect" id="node186" href="tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="1939,1061,2205,1155">
+<area shape="rect" id="node187" href="tl_cds_cad_domiciliar.html" target="_top" title="tl_cds_cad_domiciliar" alt="" coords="1932,6593,2211,6892">
+<area shape="rect" id="node188" href="tl_cds_cad_individual.html" target="_top" title="tl_cds_cad_individual" alt="" coords="1952,949,2191,1043">
+<area shape="rect" id="node189" href="tl_cds_domicilio.html" target="_top" title="tl_cds_domicilio" alt="" coords="485,3173,788,3355">
+<area shape="rect" id="node190" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="1996,415,2148,509">
+<area shape="rect" id="node191" href="tl_compartilhamento_prontuario.html" target="_top" title="tl_compartilhamento_prontuario" alt="" coords="835,7063,1154,7157">
+<area shape="rect" id="node192" href="tl_config_atencao_domiciliar.html" target="_top" title="tl_config_atencao_domiciliar" alt="" coords="847,7465,1141,7559">
+<area shape="rect" id="node193" href="tl_configuracao_horario.html" target="_top" title="tl_configuracao_horario" alt="" coords="866,8121,1122,8215">
+<area shape="rect" id="node194" href="tl_gestor_estadual.html" target="_top" title="tl_gestor_estadual" alt="" coords="529,3373,744,3555">
+<area shape="rect" id="node195" href="tl_gestor_municipal.html" target="_top" title="tl_gestor_municipal" alt="" coords="882,6917,1106,7011">
+<area shape="rect" id="node196" href="tl_opcao_rapida_exame.html" target="_top" title="tl_opcao_rapida_exame" alt="" coords="1944,3057,2199,3151">
+<area shape="rect" id="node197" href="tl_papel.html" target="_top" title="tl_papel" alt="" coords="927,2911,1061,3005">
+<area shape="rect" id="node198" href="tl_perfil.html" target="_top" title="tl_perfil" alt="" coords="929,7246,1060,7340">
+<area shape="rect" id="node199" href="tl_prof.html" target="_top" title="tl_prof" alt="" coords="1918,527,2226,768">
+<area shape="rect" id="node200" href="tl_unidade_saude.html" target="_top" title="tl_unidade_saude" alt="" coords="890,3294,1098,3388">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_uf.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

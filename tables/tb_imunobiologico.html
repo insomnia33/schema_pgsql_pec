@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_imunobiologico - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_imunobiologico</h1><p><span id="recordNumber">98</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_imunobiologico">co_imunobiologico</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="mv_busca_ativa_vacina_adolesc.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='mv_busca_ativa_vacina_adolesc.html'>mv_busca_ativa_vacina_adolesc</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mv_busca_ativa_vacina_adulto.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='mv_busca_ativa_vacina_adulto.html'>mv_busca_ativa_vacina_adulto</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mv_busca_ativa_vacina_crianca.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='mv_busca_ativa_vacina_crianca.html'>mv_busca_ativa_vacina_crianca</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mv_busca_ativa_vacina_gest_prp.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='mv_busca_ativa_vacina_gest_prp.html'>mv_busca_ativa_vacina_gest_prp</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mv_busca_ativa_vacina_idoso.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='mv_busca_ativa_vacina_idoso.html'>mv_busca_ativa_vacina_idoso</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_imunobiologico_lote.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='ta_imunobiologico_lote.html'>ta_imunobiologico_lote</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_registro_vacinacao.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='ta_registro_vacinacao.html'>ta_registro_vacinacao</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_substancia_espec_alergia.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='ta_substancia_espec_alergia.html'>ta_substancia_espec_alergia</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_calendario_vacinal.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imunobiologico_calendarvcnc"><a href='tb_calendario_vacinal.html'>tb_calendario_vacinal</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imunobiologico_calendarvcnc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_cds_vacina.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imunobiologico_cdsvacina"><a href='tb_cds_vacina.html'>tb_cds_vacina</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imunobiologico_cdsvacina</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_imunobiologico_lote.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imunobiologico"><a href='tb_imunobiologico_lote.html'>tb_imunobiologico_lote</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imunobiologico</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_registro_vacinacao.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imunobiologico_registr_vcnc"><a href='tb_registro_vacinacao.html'>tb_registro_vacinacao</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imunobiologico_registr_vcnc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_regra_vacinal_dose.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imunobiologico_regravacnlds"><a href='tb_regra_vacinal_dose.html'>tb_regra_vacinal_dose</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imunobiologico_regravacnlds</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_regra_vacinal_estrategia.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imunobiologico_rgrvcnlstrtg"><a href='tb_regra_vacinal_estrategia.html'>tb_regra_vacinal_estrategia</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imunobiologico_rgrvcnlstrtg</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_substancia_espec_alergia.co_imunobiologico references tb_imunobiologico.co_imunobiologico via fk_imuno_substanciaespec"><a href='tb_substancia_espec_alergia.html'>tb_substancia_espec_alergia</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_imuno_substanciaespec</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_cds_vacina.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='tl_cds_vacina.html'>tl_cds_vacina</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_imunobiologico_lote.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='tl_imunobiologico_lote.html'>tl_imunobiologico_lote</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tl_registro_vacinacao.co_imunobiologico&#39;s name implies that it&#39;s a child of tb_imunobiologico.co_imunobiologico, but it doesn&#39;t reference that column."><a href='tl_registro_vacinacao.html'>tl_registro_vacinacao</a><span class='relatedKey'>.co_imunobiologico</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sg_imunobiologico">sg_imunobiologico</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_imunobiologico">no_imunobiologico</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="no_filtro_imunobiologico">no_filtro_imunobiologico</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_classe_imunobiologico">co_classe_imunobiologico</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_imunobiologico.co_classe_imunobiologico references tb_classe_imunobiologico.co_classe_imunobiologico via fk_classeimunobiologico_mnblgc"><a href='tb_classe_imunobiologico.html'>tb_classe_imunobiologico</a><span class='relatedKey'>.co_classe_imunobiologico</span></td>
+                                                <td class="constraint detail">fk_classeimunobiologico_mnblgc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_ativo">st_ativo</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_covid">st_covid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_cdsestrategiavacinacao</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_imunobiologico</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_imuno_nofiltro</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>no_filtro_imunobiologico</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_calendario_vacinal.html" target="_top" title="tb_calendario_vacinal" alt="" coords="744,5,999,187">
+<area shape="rect" id="node2" href="tb_imunobiologico.html" target="_top" title="tb_imunobiologico" alt="" coords="323,613,679,892">
+<area shape="rect" id="node4" href="tb_classe_imunobiologico.html" target="_top" title="tb_classe_imunobiologico" alt="" coords="5,732,279,855">
+<area shape="rect" id="node3" href="tb_cds_vacina.html" target="_top" title="tb_cds_vacina" alt="" coords="751,205,992,534">
+<area shape="rect" id="node5" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="731,587,1012,827">
+<area shape="rect" id="node6" href="tb_registro_vacinacao.html" target="_top" title="tb_registro_vacinacao" alt="" coords="1064,401,1338,789">
+<area shape="rect" id="node7" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="738,845,1005,1057">
+<area shape="rect" id="node8" href="tb_regra_vacinal_estrategia.html" target="_top" title="tb_regra_vacinal_estrategia" alt="" coords="730,1075,1014,1345">
+<area shape="rect" id="node9" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="723,1362,1020,1577">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_imunobiologico.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_calendario_vacnl_grupo_alvo.html" target="_top" title="rl_calendario_vacnl_grupo_alvo" alt="" coords="1083,460,1401,554">
+<area shape="rect" id="node2" href="tb_calendario_vacinal.html" target="_top" title="tb_calendario_vacinal" alt="" coords="763,422,1018,604">
+<area shape="rect" id="node3" href="tb_faixa_etaria_vacinacao.html" target="_top" title="tb_faixa_etaria_vacinacao" alt="" coords="755,310,1026,404">
+<area shape="rect" id="node4" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="453,1064,587,1158">
+<area shape="rect" id="node7" href="tb_dose_imunobiologico.html" target="_top" title="tb_dose_imunobiologico" alt="" coords="388,832,651,926">
+<area shape="rect" id="node8" href="tb_imunobiologico.html" target="_top" title="tb_imunobiologico" alt="" coords="342,536,698,815">
+<area shape="rect" id="node5" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="1168,7,1316,101">
+<area shape="rect" id="node6" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="742,5,1039,220">
+<area shape="rect" id="node22" href="tb_substancia_cbara.html" target="_top" title="tb_substancia_cbara" alt="" coords="404,66,636,160">
+<area shape="rect" id="node23" href="tb_categ_substancia_alergia.html" target="_top" title="tb_categ_substancia_alergia" alt="" coords="5,28,298,122">
+<area shape="rect" id="node24" href="tb_medicamento_catmat.html" target="_top" title="tb_medicamento_catmat" alt="" coords="390,178,650,272">
+<area shape="rect" id="node12" href="tb_classe_imunobiologico.html" target="_top" title="tb_classe_imunobiologico" alt="" coords="15,655,288,778">
+<area shape="rect" id="node9" href="tb_cds_vacina.html" target="_top" title="tb_cds_vacina" alt="" coords="1121,652,1363,981">
+<area shape="rect" id="node10" href="tb_cds_vacinacao.html" target="_top" title="tb_cds_vacinacao" alt="" coords="785,1140,996,1234">
+<area shape="rect" id="node11" href="tb_estrategia_vacinacao.html" target="_top" title="tb_estrategia_vacinacao" alt="" coords="761,622,1020,716">
+<area shape="rect" id="node13" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="764,1252,1017,1346">
+<area shape="rect" id="node14" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="413,1250,627,1344">
+<area shape="rect" id="node15" href="tb_registro_vacinacao.html" target="_top" title="tb_registro_vacinacao" alt="" coords="1120,1310,1364,1404">
+<area shape="rect" id="node16" href="tb_local_apl_vacina.html" target="_top" title="tb_local_apl_vacina" alt="" coords="778,1476,1003,1570">
+<area shape="rect" id="node17" href="tb_tipo_registro_vacinacao.html" target="_top" title="tb_tipo_registro_vacinacao" alt="" coords="750,1588,1031,1682">
+<area shape="rect" id="node18" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="803,1700,978,1794">
+<area shape="rect" id="node19" href="tb_via_adm_vacina.html" target="_top" title="tb_via_adm_vacina" alt="" coords="780,1364,1001,1458">
+<area shape="rect" id="node20" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="757,840,1024,1052">
+<area shape="rect" id="node21" href="tb_regra_vacinal_estrategia.html" target="_top" title="tb_regra_vacinal_estrategia" alt="" coords="1100,172,1384,442">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_imunobiologico.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="mv_busca_ativa_vacina_adolesc.html" target="_top" title="mv_busca_ativa_vacina_adolesc" alt="" coords="727,5,1050,161">
+<area shape="rect" id="node2" href="tb_imunobiologico.html" target="_top" title="tb_imunobiologico" alt="" coords="323,1241,679,1520">
+<area shape="rect" id="node15" href="tb_classe_imunobiologico.html" target="_top" title="tb_classe_imunobiologico" alt="" coords="5,1360,279,1484">
+<area shape="rect" id="node3" href="mv_busca_ativa_vacina_adulto.html" target="_top" title="mv_busca_ativa_vacina_adulto" alt="" coords="733,179,1044,335">
+<area shape="rect" id="node4" href="mv_busca_ativa_vacina_crianca.html" target="_top" title="mv_busca_ativa_vacina_crianca" alt="" coords="729,352,1048,508">
+<area shape="rect" id="node5" href="mv_busca_ativa_vacina_gest_prp.html" target="_top" title="mv_busca_ativa_vacina_gest_prp" alt="" coords="723,525,1054,681">
+<area shape="rect" id="node6" href="mv_busca_ativa_vacina_idoso.html" target="_top" title="mv_busca_ativa_vacina_idoso" alt="" coords="736,699,1041,855">
+<area shape="rect" id="node7" href="ta_imunobiologico_lote.html" target="_top" title="ta_imunobiologico_lote" alt="" coords="1106,568,1388,780">
+<area shape="rect" id="node8" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="748,872,1029,1113">
+<area shape="rect" id="node9" href="ta_registro_vacinacao.html" target="_top" title="ta_registro_vacinacao" alt="" coords="1440,920,1714,1278">
+<area shape="rect" id="node10" href="tb_registro_vacinacao.html" target="_top" title="tb_registro_vacinacao" alt="" coords="1110,798,1384,1185">
+<area shape="rect" id="node11" href="ta_substancia_espec_alergia.html" target="_top" title="ta_substancia_espec_alergia" alt="" coords="1098,1304,1396,1516">
+<area shape="rect" id="node12" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="740,1239,1037,1453">
+<area shape="rect" id="node13" href="tb_calendario_vacinal.html" target="_top" title="tb_calendario_vacinal" alt="" coords="761,1507,1016,1689">
+<area shape="rect" id="node14" href="tb_cds_vacina.html" target="_top" title="tb_cds_vacina" alt="" coords="768,1707,1009,2036">
+<area shape="rect" id="node16" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="755,2054,1022,2265">
+<area shape="rect" id="node17" href="tb_regra_vacinal_estrategia.html" target="_top" title="tb_regra_vacinal_estrategia" alt="" coords="746,2283,1030,2553">
+<area shape="rect" id="node18" href="tl_cds_vacina.html" target="_top" title="tl_cds_vacina" alt="" coords="768,2571,1009,2841">
+<area shape="rect" id="node19" href="tl_imunobiologico_lote.html" target="_top" title="tl_imunobiologico_lote" alt="" coords="748,2859,1029,3070">
+<area shape="rect" id="node20" href="tl_registro_vacinacao.html" target="_top" title="tl_registro_vacinacao" alt="" coords="758,3088,1018,3446">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_imunobiologico.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="mv_busca_ativa_vacina_adolesc.html" target="_top" title="mv_busca_ativa_vacina_adolesc" alt="" coords="746,179,1068,335">
+<area shape="rect" id="node2" href="tb_dose_imunobiologico.html" target="_top" title="tb_dose_imunobiologico" alt="" coords="388,1015,651,1109">
+<area shape="rect" id="node3" href="tb_imunobiologico.html" target="_top" title="tb_imunobiologico" alt="" coords="342,1728,698,2007">
+<area shape="rect" id="node4" href="tb_acomp_cidadaos_vinculados.html" target="_top" title="tb_acomp_cidadaos_vinculados" alt="" coords="360,354,679,448">
+<area shape="rect" id="node29" href="tb_classe_imunobiologico.html" target="_top" title="tb_classe_imunobiologico" alt="" coords="15,1847,288,1970">
+<area shape="rect" id="node5" href="mv_busca_ativa_vacina_adulto.html" target="_top" title="mv_busca_ativa_vacina_adulto" alt="" coords="752,352,1062,508">
+<area shape="rect" id="node6" href="mv_busca_ativa_vacina_crianca.html" target="_top" title="mv_busca_ativa_vacina_crianca" alt="" coords="748,525,1066,681">
+<area shape="rect" id="node7" href="mv_busca_ativa_vacina_gest_prp.html" target="_top" title="mv_busca_ativa_vacina_gest_prp" alt="" coords="742,699,1072,855">
+<area shape="rect" id="node8" href="mv_busca_ativa_vacina_idoso.html" target="_top" title="mv_busca_ativa_vacina_idoso" alt="" coords="754,5,1060,161">
+<area shape="rect" id="node9" href="rl_calendario_vacnl_grupo_alvo.html" target="_top" title="rl_calendario_vacnl_grupo_alvo" alt="" coords="1116,1091,1434,1185">
+<area shape="rect" id="node10" href="tb_calendario_vacinal.html" target="_top" title="tb_calendario_vacinal" alt="" coords="780,1127,1034,1309">
+<area shape="rect" id="node11" href="tb_faixa_etaria_vacinacao.html" target="_top" title="tb_faixa_etaria_vacinacao" alt="" coords="772,944,1042,1038">
+<area shape="rect" id="node12" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="453,1616,587,1710">
+<area shape="rect" id="node13" href="ta_imunobiologico_lote.html" target="_top" title="ta_imunobiologico_lote" alt="" coords="1149,2656,1401,2750">
+<area shape="rect" id="node14" href="tb_imunobiologico_lote.html" target="_top" title="tb_imunobiologico_lote" alt="" coords="780,2656,1034,2750">
+<area shape="rect" id="node15" href="tb_integracao_horus.html" target="_top" title="tb_integracao_horus" alt="" coords="792,2839,1022,2933">
+<area shape="rect" id="node30" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="413,2839,627,2933">
+<area shape="rect" id="node16" href="ta_registro_vacinacao.html" target="_top" title="ta_registro_vacinacao" alt="" coords="1478,2263,1720,2357">
+<area shape="rect" id="node17" href="tb_estrategia_vacinacao.html" target="_top" title="tb_estrategia_vacinacao" alt="" coords="778,1398,1036,1492">
+<area shape="rect" id="node18" href="tb_grupo_atendimento.html" target="_top" title="tb_grupo_atendimento" alt="" coords="784,1920,1030,2014">
+<area shape="rect" id="node19" href="tb_local_apl_vacina.html" target="_top" title="tb_local_apl_vacina" alt="" coords="795,2215,1019,2309">
+<area shape="rect" id="node20" href="tb_registro_vacinacao.html" target="_top" title="tb_registro_vacinacao" alt="" coords="1154,2354,1396,2448">
+<area shape="rect" id="node21" href="tb_tipo_registro_vacinacao.html" target="_top" title="tb_tipo_registro_vacinacao" alt="" coords="766,2510,1048,2604">
+<area shape="rect" id="node22" href="tb_via_adm_vacina.html" target="_top" title="tb_via_adm_vacina" alt="" coords="797,2103,1017,2197">
+<area shape="rect" id="node31" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="820,2398,994,2492">
+<area shape="rect" id="node23" href="ta_substancia_espec_alergia.html" target="_top" title="ta_substancia_espec_alergia" alt="" coords="1128,2998,1422,3092">
+<area shape="rect" id="node24" href="tb_medicamento_catmat.html" target="_top" title="tb_medicamento_catmat" alt="" coords="390,2972,650,3066">
+<area shape="rect" id="node25" href="tb_substancia_espec_alergia.html" target="_top" title="tb_substancia_espec_alergia" alt="" coords="760,3074,1054,3168">
+<area shape="rect" id="node34" href="tb_substancia_cbara.html" target="_top" title="tb_substancia_cbara" alt="" coords="404,3084,636,3178">
+<area shape="rect" id="node35" href="tb_categ_substancia_alergia.html" target="_top" title="tb_categ_substancia_alergia" alt="" coords="5,3119,298,3213">
+<area shape="rect" id="node26" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="1201,3110,1349,3204">
+<area shape="rect" id="node27" href="tb_cds_vacina.html" target="_top" title="tb_cds_vacina" alt="" coords="1154,1526,1396,1854">
+<area shape="rect" id="node28" href="tb_cds_vacinacao.html" target="_top" title="tb_cds_vacinacao" alt="" coords="802,1808,1012,1902">
+<area shape="rect" id="node32" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="774,1544,1040,1756">
+<area shape="rect" id="node33" href="tb_regra_vacinal_estrategia.html" target="_top" title="tb_regra_vacinal_estrategia" alt="" coords="1133,768,1417,1038">
+<area shape="rect" id="node36" href="tl_cds_vacina.html" target="_top" title="tl_cds_vacina" alt="" coords="1154,1203,1396,1473">
+<area shape="rect" id="node37" href="tl_imunobiologico_lote.html" target="_top" title="tl_imunobiologico_lote" alt="" coords="1134,2768,1416,2980">
+<area shape="rect" id="node38" href="tl_registro_vacinacao.html" target="_top" title="tl_registro_vacinacao" alt="" coords="1145,1907,1405,2265">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_imunobiologico.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

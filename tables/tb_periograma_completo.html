@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_periograma_completo - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_periograma_completo</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável pelos registros de periograma completo.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_periograma_completo">co_seq_periograma_completo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_periograma_completo.co_seq_periograma_completo&#39;s name implies that it&#39;s a child of tb_periograma_completo.co_seq_periograma_completo, but it doesn&#39;t reference that column."><a href='ta_periograma_completo.html'>ta_periograma_completo</a><span class='relatedKey'>.co_seq_periograma_completo</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_atend_prof_odonto">co_atend_prof_odonto</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_periograma_completo.co_atend_prof_odonto references tb_atend_prof_odonto.co_atend_prof_odonto via fk_atendprof_periogramacmpleto"><a href='tb_atend_prof_odonto.html'>tb_atend_prof_odonto</a><span class='relatedKey'>.co_atend_prof_odonto</span></td>
+                                                <td class="constraint detail">fk_atendprof_periogramacmpleto</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código FK da TB_ATEND_PROF_ODONTO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_periograma_completo.co_prontuario references tb_prontuario.co_seq_prontuario via fk_prntuario_periogramacmpleto"><a href='tb_prontuario.html'>tb_prontuario</a><span class='relatedKey'>.co_seq_prontuario</span></td>
+                                                <td class="constraint detail">fk_prntuario_periogramacmpleto</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código FK da TB_PRONTUARIO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_parte_bucal">co_parte_bucal</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_periograma_completo.co_parte_bucal references tb_parte_bucal.co_parte_bucal via fk_periogramacmpleto_prtebucal"><a href='tb_parte_bucal.html'>tb_parte_bucal</a><span class='relatedKey'>.co_parte_bucal</span></td>
+                                                <td class="constraint detail">fk_periogramacmpleto_prtebucal</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código FK da TB_PARTE_BUCAL.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_excluido">st_excluido</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Identifica um dente excluido</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_profundidade_vestibular">ds_profundidade_vestibular</span></td>
+                                    <td>varchar</td>
+                                    <td>9</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da profundidade de sondagem da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_recessao_vestibular">ds_recessao_vestibular</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da recessão da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_placa_d_vestibular">st_placa_d_vestibular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da placa da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_placa_v_vestibular">st_placa_v_vestibular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da placa da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_placa_m_vestibular">st_placa_m_vestibular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da placa da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sangramento_d_vestibular">st_sangramento_d_vestibular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação de sangramento a sondagem da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sangramento_v_vestibular">st_sangramento_v_vestibular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação de sangramento a sondagem da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sangramento_m_vestibular">st_sangramento_m_vestibular</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação de sangramento a sondagem da face vestibular.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_profundidade_interna">ds_profundidade_interna</span></td>
+                                    <td>varchar</td>
+                                    <td>9</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da profundidade de sondagem da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_recessao_interna">ds_recessao_interna</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da recessão da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_placa_d_interna">st_placa_d_interna</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da placa da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_placa_v_interna">st_placa_v_interna</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da placa da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_placa_m_interna">st_placa_m_interna</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da placa da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sangramento_d_interna">st_sangramento_d_interna</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação de sangramento a sondagem da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sangramento_v_interna">st_sangramento_v_interna</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação de sangramento a sondagem da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_sangramento_m_interna">st_sangramento_m_interna</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação de sangramento a sondagem da face lingual/palatal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_mobilidade">ds_mobilidade</span></td>
+                                    <td>varchar</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da mobilidade do dente.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_lesao_furca">ds_lesao_furca</span></td>
+                                    <td>varchar</td>
+                                    <td>5</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Avaliação da lesão de furca.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_periogramacompleto</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_periograma_completo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_periogramacmpleto_atendprof</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_atend_prof_odonto</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_periogramacmpleto_prntuario</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_prontuario</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_periogramacmpleto_prtebucal</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_parte_bucal</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="292,114,699,862">
+<area shape="rect" id="node2" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="5,5,248,158">
+<area shape="rect" id="node3" href="tb_parte_bucal.html" target="_top" title="tb_parte_bucal" alt="" coords="22,376,232,529">
+<area shape="rect" id="node4" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="12,176,242,358">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_periograma_completo.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_atend_prof_odonto_tipo_encm.html" target="_top" title="rl_atend_prof_odonto_tipo_encm" alt="" coords="1767,371,2094,465">
+<area shape="rect" id="node2" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="1406,333,1649,486">
+<area shape="rect" id="node15" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1106,812,1286,906">
+<area shape="rect" id="node16" href="tb_tipo_consulta_odonto.html" target="_top" title="tb_tipo_consulta_odonto" alt="" coords="1064,364,1328,458">
+<area shape="rect" id="node3" href="rl_atend_prof_odonto_tipo_frnc.html" target="_top" title="rl_atend_prof_odonto_tipo_frnc" alt="" coords="1772,483,2088,577">
+<area shape="rect" id="node4" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="482,5,807,99">
+<area shape="rect" id="node5" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="207,1173,438,1355">
+<area shape="rect" id="node43" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="5,1233,163,1327">
+<area shape="rect" id="node6" href="rl_evolucao_odonto_parte_bucal.html" target="_top" title="rl_evolucao_odonto_parte_bucal" alt="" coords="2177,1693,2502,1787">
+<area shape="rect" id="node7" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="1815,1061,2045,1155">
+<area shape="rect" id="node8" href="tb_parte_bucal.html" target="_top" title="tb_parte_bucal" alt="" coords="1422,2433,1633,2586">
+<area shape="rect" id="node9" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="552,152,737,246">
+<area shape="rect" id="node10" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="558,812,731,906">
+<area shape="rect" id="node11" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="570,299,719,393">
+<area shape="rect" id="node12" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="549,411,740,505">
+<area shape="rect" id="node13" href="tb_arcada.html" target="_top" title="tb_arcada" alt="" coords="1856,2547,2004,2641">
+<area shape="rect" id="node14" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="865,812,1006,906">
+<area shape="rect" id="node17" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="1446,221,1609,315">
+<area shape="rect" id="node18" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="514,593,775,687">
+<area shape="rect" id="node19" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="1396,504,1659,598">
+<area shape="rect" id="node20" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1389,616,1666,710">
+<area shape="rect" id="node21" href="tb_dente.html" target="_top" title="tb_dente" alt="" coords="2546,2583,2686,2677">
+<area shape="rect" id="node22" href="tb_sextante.html" target="_top" title="tb_sextante" alt="" coords="2259,2547,2420,2641">
+<area shape="rect" id="node23" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="1413,728,1642,822">
+<area shape="rect" id="node24" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="1407,840,1648,934">
+<area shape="rect" id="node25" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="1392,952,1663,1046">
+<area shape="rect" id="node26" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="518,959,771,1053">
+<area shape="rect" id="node27" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="1462,1064,1593,1158">
+<area shape="rect" id="node28" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="508,1105,781,1199">
+<area shape="rect" id="node29" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1445,1176,1610,1270">
+<area shape="rect" id="node30" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="488,1252,801,1346">
+<area shape="rect" id="node31" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="528,1364,761,1458">
+<area shape="rect" id="node32" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="528,1476,761,1570">
+<area shape="rect" id="node33" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="545,1588,744,1682">
+<area shape="rect" id="node34" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="1831,664,2030,758">
+<area shape="rect" id="node35" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="1439,1311,1616,1405">
+<area shape="rect" id="node36" href="tb_parte_bucal_cid10.html" target="_top" title="tb_parte_bucal_cid10" alt="" coords="1812,2288,2048,2382">
+<area shape="rect" id="node37" href="tb_parte_bucal_proced.html" target="_top" title="tb_parte_bucal_proced" alt="" coords="1805,2400,2055,2494">
+<area shape="rect" id="node38" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="1727,1450,2133,2198">
+<area shape="rect" id="node39" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="1787,915,2074,1009">
+<area shape="rect" id="node40" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="851,1860,1020,1954">
+<area shape="rect" id="node41" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="560,1879,729,1973">
+<area shape="rect" id="node42" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="528,1991,761,2085">
+<area shape="rect" id="node44" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="490,2103,799,2197">
+<area shape="rect" id="node45" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="530,2215,759,2309">
+<area shape="rect" id="node46" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="1372,1468,1683,1562">
+<area shape="rect" id="node47" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="2244,679,2435,773">
+<area shape="rect" id="node48" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="1440,1672,1615,1766">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_periograma_completo.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="743,19,1028,230">
+<area shape="rect" id="node2" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="5,5,248,158">
+<area shape="rect" id="node3" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="292,100,699,848">
+<area shape="rect" id="node4" href="tb_parte_bucal.html" target="_top" title="tb_parte_bucal" alt="" coords="22,376,232,529">
+<area shape="rect" id="node5" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="12,176,242,358">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_periograma_completo.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_atend_prof_odonto_tipo_encm.html" target="_top" title="rl_atend_prof_odonto_tipo_encm" alt="" coords="1767,671,2094,765">
+<area shape="rect" id="node2" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="1406,645,1649,739">
+<area shape="rect" id="node26" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1106,1332,1286,1426">
+<area shape="rect" id="node27" href="tb_tipo_consulta_odonto.html" target="_top" title="tb_tipo_consulta_odonto" alt="" coords="1064,643,1328,737">
+<area shape="rect" id="node3" href="rl_atend_prof_odonto_tipo_frnc.html" target="_top" title="rl_atend_prof_odonto_tipo_frnc" alt="" coords="1772,783,2088,877">
+<area shape="rect" id="node4" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="482,405,807,499">
+<area shape="rect" id="node5" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="207,1461,438,1643">
+<area shape="rect" id="node52" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="5,1521,163,1615">
+<area shape="rect" id="node6" href="rl_evolucao_odonto_parte_bucal.html" target="_top" title="rl_evolucao_odonto_parte_bucal" alt="" coords="2177,2156,2502,2250">
+<area shape="rect" id="node7" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="1815,1916,2045,2010">
+<area shape="rect" id="node8" href="tb_parte_bucal.html" target="_top" title="tb_parte_bucal" alt="" coords="1422,2839,1633,2991">
+<area shape="rect" id="node9" href="ta_atend_prof_odonto.html" target="_top" title="ta_atend_prof_odonto" alt="" coords="1809,895,2051,989">
+<area shape="rect" id="node10" href="ta_atend_prof_odonto_tipo_encm.html" target="_top" title="ta_atend_prof_odonto_tipo_encm" alt="" coords="1765,412,2096,506">
+<area shape="rect" id="node11" href="ta_atend_prof_odonto_tipo_frnc.html" target="_top" title="ta_atend_prof_odonto_tipo_frnc" alt="" coords="1771,524,2090,618">
+<area shape="rect" id="node12" href="ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="2225,1153,2454,1247">
+<area shape="rect" id="node13" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="1835,300,2026,394">
+<area shape="rect" id="node14" href="ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="2240,188,2439,282">
+<area shape="rect" id="node15" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="1831,5,2030,99">
+<area shape="rect" id="node16" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="2208,1041,2471,1135">
+<area shape="rect" id="node17" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="1727,1150,2133,1898">
+<area shape="rect" id="node18" href="ta_prontuario.html" target="_top" title="ta_prontuario" alt="" coords="556,660,733,754">
+<area shape="rect" id="node19" href="ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="2546,965,2735,1059">
+<area shape="rect" id="node20" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="2244,1916,2435,2010">
+<area shape="rect" id="node21" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="552,807,737,901">
+<area shape="rect" id="node22" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="558,1319,731,1413">
+<area shape="rect" id="node23" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="570,953,719,1047">
+<area shape="rect" id="node24" href="tb_arcada.html" target="_top" title="tb_arcada" alt="" coords="1856,2917,2004,3011">
+<area shape="rect" id="node25" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="865,1332,1006,1426">
+<area shape="rect" id="node28" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="1446,880,1609,974">
+<area shape="rect" id="node29" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="514,1136,775,1230">
+<area shape="rect" id="node30" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="1396,996,1659,1090">
+<area shape="rect" id="node31" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1389,1108,1666,1202">
+<area shape="rect" id="node32" href="tb_dente.html" target="_top" title="tb_dente" alt="" coords="2570,2952,2711,3046">
+<area shape="rect" id="node33" href="tb_sextante.html" target="_top" title="tb_sextante" alt="" coords="2259,2917,2420,3011">
+<area shape="rect" id="node34" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="1413,1220,1642,1314">
+<area shape="rect" id="node35" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="1407,1332,1648,1426">
+<area shape="rect" id="node36" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="1392,1444,1663,1538">
+<area shape="rect" id="node37" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="518,1501,771,1595">
+<area shape="rect" id="node38" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="1462,1567,1593,1661">
+<area shape="rect" id="node39" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="508,1648,781,1742">
+<area shape="rect" id="node40" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="1445,1696,1610,1790">
+<area shape="rect" id="node41" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="488,1795,801,1889">
+<area shape="rect" id="node42" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="528,1907,761,2001">
+<area shape="rect" id="node43" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="528,2019,761,2113">
+<area shape="rect" id="node44" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="545,2131,744,2225">
+<area shape="rect" id="node45" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="1439,1887,1616,1981">
+<area shape="rect" id="node46" href="tb_parte_bucal_cid10.html" target="_top" title="tb_parte_bucal_cid10" alt="" coords="1812,2659,2048,2753">
+<area shape="rect" id="node47" href="tb_parte_bucal_proced.html" target="_top" title="tb_parte_bucal_proced" alt="" coords="1805,2771,2055,2865">
+<area shape="rect" id="node48" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="1787,117,2074,211">
+<area shape="rect" id="node49" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="851,2331,1020,2425">
+<area shape="rect" id="node50" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="560,2349,729,2443">
+<area shape="rect" id="node51" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="528,2461,761,2555">
+<area shape="rect" id="node53" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="490,2573,799,2667">
+<area shape="rect" id="node54" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="530,2685,759,2779">
+<area shape="rect" id="node55" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="1372,2155,1683,2249">
+<area shape="rect" id="node56" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="1440,2579,1615,2673">
+<area shape="rect" id="node57" href="tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="2227,300,2452,394">
+<area shape="rect" id="node58" href="tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="2243,557,2436,651">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_periograma_completo.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

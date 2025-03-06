@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_cidadao_aldeado - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_cidadao_aldeado</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Dados do cidadão aldeado relacionado a saúde indígena.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_cidadao_aldeado">co_seq_cidadao_aldeado</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="rl_beneficio_cidadao_aldeado.co_cidadao_aldeado references tb_cidadao_aldeado.co_seq_cidadao_aldeado via fk_rlbencid_cidadaoaldeado"><a href='rl_beneficio_cidadao_aldeado.html'>rl_beneficio_cidadao_aldeado</a><span class='relatedKey'>.co_cidadao_aldeado</span></td>
+                                                <td class="constraint detail">fk_rlbencid_cidadaoaldeado</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_cidadao_aldeado.co_seq_cidadao_aldeado&#39;s name implies that it&#39;s a child of tb_cidadao_aldeado.co_seq_cidadao_aldeado, but it doesn&#39;t reference that column."><a href='ta_cidadao_aldeado.html'>ta_cidadao_aldeado</a><span class='relatedKey'>.co_seq_cidadao_aldeado</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave primária da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cidadao">co_cidadao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cidadao_aldeado.co_cidadao references tb_cidadao.co_seq_cidadao via fk_cidadao_cidadao_si"><a href='tb_cidadao.html'>tb_cidadao</a><span class='relatedKey'>.co_seq_cidadao</span></td>
+                                                <td class="constraint detail">fk_cidadao_cidadao_si</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se ao cidadão. Chave estrangeira com origem na tabela TB_CIDADAO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_aldeia_nascimento">co_aldeia_nascimento</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cidadao_aldeado.co_aldeia_nascimento references tb_aldeia.co_aldeia via fk_aldeianascimento_cidadao_si"><a href='tb_aldeia.html'>tb_aldeia</a><span class='relatedKey'>.co_aldeia</span></td>
+                                                <td class="constraint detail">fk_aldeianascimento_cidadao_si</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a aldeia de nascimento. Chave estrangeira com origem na tabela TB_ALDEIA.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_funcao_social">co_funcao_social</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cidadao_aldeado.co_funcao_social references tb_funcao_social.co_funcao_social via fk_funcaosocial_cidadao_si"><a href='tb_funcao_social.html'>tb_funcao_social</a><span class='relatedKey'>.co_funcao_social</span></td>
+                                                <td class="constraint detail">fk_funcaosocial_cidadao_si</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a função social. Chave estrangeira com origem na tabela TB_FUNCAO_SOCIAL.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_local_ocorrencia">co_local_ocorrencia</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cidadao_aldeado.co_local_ocorrencia references tb_local_ocorrencia.co_local_ocorrencia via fk_localocorrencia_cidadao_si"><a href='tb_local_ocorrencia.html'>tb_local_ocorrencia</a><span class='relatedKey'>.co_local_ocorrencia</span></td>
+                                                <td class="constraint detail">fk_localocorrencia_cidadao_si</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se ao local de ocorrência. Chave estrangeira com origem na tabela TB_LOCAL_OCORRENCIA.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_tradicional">no_tradicional</span></td>
+                                    <td>varchar</td>
+                                    <td>70</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do nome tradicional.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_responsavel_legal">no_responsavel_legal</span></td>
+                                    <td>varchar</td>
+                                    <td>70</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do nome do responsável legal.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_chefe_familia">st_chefe_familia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação se é um chefe de família.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_uf_nascimento">co_uf_nascimento</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cidadao_aldeado.co_uf_nascimento references tb_uf.co_uf via fk_uf_nascimento_cidadao_si"><a href='tb_uf.html'>tb_uf</a><span class='relatedKey'>.co_uf</span></td>
+                                                <td class="constraint detail">fk_uf_nascimento_cidadao_si</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Chave estrangeira com origem na tabela TB_UF. Refere-se a informação do estado de nascimento no documento RANI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_unidade_funai">no_unidade_funai</span></td>
+                                    <td>varchar</td>
+                                    <td>40</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do nome da unidade da FUNAI do documento RANI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_livro">nu_livro</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do número do livro do documento RANI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_folha">nu_folha</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do número da folha do documento RANI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cadastro_unico">nu_cadastro_unico</span></td>
+                                    <td>varchar</td>
+                                    <td>20</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação do cadastro único do documento RANI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_emissao">dt_emissao</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação da data de emissão do documento RANI.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_reconhecimento">dt_reconhecimento</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação da data de reconhecimento.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ausencia">dt_ausencia</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação da data da ausência.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_retorno">dt_retorno</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Refere-se a informação da data do retorno.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_CIDADAO_ALDEADO.</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_cidadao_aldeado</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uk_cid_aldeado_co_cidadao</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_cidadao</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_beneficio_cidadao_aldeado.html" target="_top" title="rl_beneficio_cidadao_aldeado" alt="" coords="1035,768,1336,924">
+<area shape="rect" id="node2" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="640,824,991,1396">
+<area shape="rect" id="node3" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="296,5,596,862">
+<area shape="rect" id="node4" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="5,785,252,1055">
+<area shape="rect" id="node5" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="42,589,215,742">
+<area shape="rect" id="node6" href="tb_funcao_social.html" target="_top" title="tb_funcao_social" alt="" coords="344,915,548,1038">
+<area shape="rect" id="node7" href="tb_local_ocorrencia.html" target="_top" title="tb_local_ocorrencia" alt="" coords="334,1056,558,1179">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_cidadao_aldeado.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="1483,771,1709,865">
+<area shape="rect" id="node2" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1246,922,1405,1016">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="405,837,580,931">
+<area shape="rect" id="node7" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="986,786,1163,880">
+<area shape="rect" id="node8" href="tb_terra_indigena.html" target="_top" title="tb_terra_indigena" alt="" coords="971,1010,1178,1104">
+<area shape="rect" id="node9" href="tb_tipo_area.html" target="_top" title="tb_tipo_area" alt="" coords="990,1122,1159,1216">
+<area shape="rect" id="node10" href="tb_tipo_terra.html" target="_top" title="tb_tipo_terra" alt="" coords="989,898,1160,992">
+<area shape="rect" id="node12" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="183,1281,329,1375">
+<area shape="rect" id="node4" href="rl_beneficio_cidadao_aldeado.html" target="_top" title="rl_beneficio_cidadao_aldeado" alt="" coords="2158,719,2459,875">
+<area shape="rect" id="node5" href="tb_beneficio.html" target="_top" title="tb_beneficio" alt="" coords="1855,185,2022,279">
+<area shape="rect" id="node6" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="1763,1339,2114,1911">
+<area shape="rect" id="node24" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1517,523,1675,617">
+<area shape="rect" id="node28" href="tb_funcao_social.html" target="_top" title="tb_funcao_social" alt="" coords="1494,1463,1698,1587">
+<area shape="rect" id="node29" href="tb_local_ocorrencia.html" target="_top" title="tb_local_ocorrencia" alt="" coords="1484,1605,1708,1728">
+<area shape="rect" id="node21" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="726,862,857,956">
+<area shape="rect" id="node11" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="402,578,583,672">
+<area shape="rect" id="node16" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,165,139,259">
+<area shape="rect" id="node13" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="656,390,927,484">
+<area shape="rect" id="node14" href="tb_etnia.html" target="_top" title="tb_etnia" alt="" coords="425,59,560,153">
+<area shape="rect" id="node15" href="tb_nacionalidade.html" target="_top" title="tb_nacionalidade" alt="" coords="390,171,595,265">
+<area shape="rect" id="node17" href="tb_raca_cor.html" target="_top" title="tb_raca_cor" alt="" coords="410,283,575,377">
+<area shape="rect" id="node18" href="tb_cds_tipo_cuidador.html" target="_top" title="tb_cds_tipo_cuidador" alt="" coords="373,466,612,560">
+<area shape="rect" id="node19" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="383,1146,602,1240">
+<area shape="rect" id="node20" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1473,1317,1719,1411">
+<area shape="rect" id="node22" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1222,1070,1429,1164">
+<area shape="rect" id="node23" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1494,995,1698,1089">
+<area shape="rect" id="node25" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="1249,391,1402,485">
+<area shape="rect" id="node26" href="tb_escolaridade.html" target="_top" title="tb_escolaridade" alt="" coords="1228,167,1423,261">
+<area shape="rect" id="node27" href="tb_estado_civil.html" target="_top" title="tb_estado_civil" alt="" coords="1231,279,1420,373">
+<area shape="rect" id="node30" href="tb_cidadao_grupo.html" target="_top" title="tb_cidadao_grupo" alt="" coords="1832,409,2044,503">
+<area shape="rect" id="node31" href="tb_cidadao_nucleo_familiar.html" target="_top" title="tb_cidadao_nucleo_familiar" alt="" coords="1796,521,2080,615">
+<area shape="rect" id="node32" href="tb_cidadao_unificacao_base.html" target="_top" title="tb_cidadao_unificacao_base" alt="" coords="1793,633,2084,727">
+<area shape="rect" id="node33" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="1783,745,2093,839">
+<area shape="rect" id="node34" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="382,725,603,819">
+<area shape="rect" id="node35" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="1787,857,2089,951">
+<area shape="rect" id="node36" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="1843,1205,2033,1299">
+<area shape="rect" id="node37" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="685,1239,898,1333">
+<area shape="rect" id="node38" href="tb_periodo_ausencia.html" target="_top" title="tb_periodo_ausencia" alt="" coords="1821,969,2055,1063">
+<area shape="rect" id="node39" href="tb_pessoa_fisica_imagem.html" target="_top" title="tb_pessoa_fisica_imagem" alt="" coords="1803,1081,2074,1175">
+<area shape="rect" id="node40" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="722,1351,861,1445">
+<area shape="rect" id="node41" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="1850,297,2026,391">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_cidadao_aldeado.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_beneficio_cidadao_aldeado.html" target="_top" title="rl_beneficio_cidadao_aldeado" alt="" coords="1035,720,1336,876">
+<area shape="rect" id="node2" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="640,776,991,1348">
+<area shape="rect" id="node4" href="tb_funcao_social.html" target="_top" title="tb_funcao_social" alt="" coords="344,915,548,1038">
+<area shape="rect" id="node5" href="tb_local_ocorrencia.html" target="_top" title="tb_local_ocorrencia" alt="" coords="334,1056,558,1179">
+<area shape="rect" id="node6" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="296,5,596,862">
+<area shape="rect" id="node7" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="5,785,252,1055">
+<area shape="rect" id="node8" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="42,589,215,742">
+<area shape="rect" id="node3" href="ta_cidadao_aldeado.html" target="_top" title="ta_cidadao_aldeado" alt="" coords="1062,1265,1310,1477">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_cidadao_aldeado.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_aldeia_localidade.html" target="_top" title="rl_aldeia_localidade" alt="" coords="1457,1093,1683,1187">
+<area shape="rect" id="node2" href="tb_aldeia.html" target="_top" title="tb_aldeia" alt="" coords="1192,726,1350,820">
+<area shape="rect" id="node3" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="396,1428,571,1522">
+<area shape="rect" id="node11" href="tb_polo_base.html" target="_top" title="tb_polo_base" alt="" coords="913,576,1089,670">
+<area shape="rect" id="node31" href="tb_terra_indigena.html" target="_top" title="tb_terra_indigena" alt="" coords="898,946,1105,1040">
+<area shape="rect" id="node32" href="tb_tipo_area.html" target="_top" title="tb_tipo_area" alt="" coords="917,722,1085,816">
+<area shape="rect" id="node33" href="tb_tipo_terra.html" target="_top" title="tb_tipo_terra" alt="" coords="916,834,1087,928">
+<area shape="rect" id="node14" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="183,1665,329,1759">
+<area shape="rect" id="node4" href="rl_beneficio_cidadao_aldeado.html" target="_top" title="rl_beneficio_cidadao_aldeado" alt="" coords="2144,2265,2446,2421">
+<area shape="rect" id="node5" href="tb_beneficio.html" target="_top" title="tb_beneficio" alt="" coords="1841,2398,2008,2492">
+<area shape="rect" id="node6" href="tb_cidadao_aldeado.html" target="_top" title="tb_cidadao_aldeado" alt="" coords="1749,1661,2100,2233">
+<area shape="rect" id="node22" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="1491,1357,1649,1451">
+<area shape="rect" id="node24" href="tb_funcao_social.html" target="_top" title="tb_funcao_social" alt="" coords="1468,1572,1672,1666">
+<area shape="rect" id="node25" href="tb_local_ocorrencia.html" target="_top" title="tb_local_ocorrencia" alt="" coords="1458,1684,1682,1778">
+<area shape="rect" id="node7" href="ta_aldeia_localidade.html" target="_top" title="ta_aldeia_localidade" alt="" coords="1811,505,2039,599">
+<area shape="rect" id="node8" href="ta_beneficio_cidadao_aldeado.html" target="_top" title="ta_beneficio_cidadao_aldeado" alt="" coords="2490,2333,2796,2427">
+<area shape="rect" id="node9" href="ta_cds_domicilio.html" target="_top" title="ta_cds_domicilio" alt="" coords="1823,393,2026,487">
+<area shape="rect" id="node10" href="tb_dsei.html" target="_top" title="tb_dsei" alt="" coords="679,576,809,670">
+<area shape="rect" id="node12" href="tb_cds_domicilio.html" target="_top" title="tb_cds_domicilio" alt="" coords="1468,382,1672,476">
+<area shape="rect" id="node13" href="tb_tipo_endereco.html" target="_top" title="tb_tipo_endereco" alt="" coords="1167,838,1374,932">
+<area shape="rect" id="node38" href="tb_tipo_logradouro.html" target="_top" title="tb_tipo_logradouro" alt="" coords="374,1053,593,1147">
+<area shape="rect" id="node36" href="tb_pais.html" target="_top" title="tb_pais" alt="" coords="5,2477,139,2571">
+<area shape="rect" id="node15" href="ta_cidadao.html" target="_top" title="ta_cidadao" alt="" coords="1847,2286,2003,2380">
+<area shape="rect" id="node16" href="tb_cbo.html" target="_top" title="tb_cbo" alt="" coords="1194,1756,1348,1850">
+<area shape="rect" id="node17" href="tb_escolaridade.html" target="_top" title="tb_escolaridade" alt="" coords="1173,1497,1368,1591">
+<area shape="rect" id="node18" href="tb_estado_civil.html" target="_top" title="tb_estado_civil" alt="" coords="1177,1609,1365,1703">
+<area shape="rect" id="node19" href="tb_etnia.html" target="_top" title="tb_etnia" alt="" coords="1203,2162,1338,2256">
+<area shape="rect" id="node20" href="tb_nacionalidade.html" target="_top" title="tb_nacionalidade" alt="" coords="1169,2050,1373,2144">
+<area shape="rect" id="node21" href="tb_raca_cor.html" target="_top" title="tb_raca_cor" alt="" coords="1189,2274,1353,2368">
+<area shape="rect" id="node37" href="tb_cds_tipo_cuidador.html" target="_top" title="tb_cds_tipo_cuidador" alt="" coords="1151,1868,1390,1962">
+<area shape="rect" id="node23" href="ta_cidadao_aldeado.html" target="_top" title="ta_cidadao_aldeado" alt="" coords="2182,1668,2408,1762">
+<area shape="rect" id="node26" href="ta_gestor_estadual.html" target="_top" title="ta_gestor_estadual" alt="" coords="374,1810,593,1904">
+<area shape="rect" id="node27" href="ta_prof.html" target="_top" title="ta_prof" alt="" coords="938,269,1065,363">
+<area shape="rect" id="node28" href="tb_prof.html" target="_top" title="tb_prof" alt="" coords="675,305,813,399">
+<area shape="rect" id="node29" href="ta_unidade_saude.html" target="_top" title="ta_unidade_saude" alt="" coords="895,1201,1107,1295">
+<area shape="rect" id="node30" href="tb_unidade_saude.html" target="_top" title="tb_unidade_saude" alt="" coords="637,1165,851,1259">
+<area shape="rect" id="node34" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="393,1957,573,2051">
+<area shape="rect" id="node35" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="1434,2302,1705,2396">
+<area shape="rect" id="node39" href="tb_cds_cad_domiciliar.html" target="_top" title="tb_cds_cad_domiciliar" alt="" coords="1447,981,1693,1075">
+<area shape="rect" id="node40" href="tb_cidadao_grupo.html" target="_top" title="tb_cidadao_grupo" alt="" coords="1819,953,2031,1047">
+<area shape="rect" id="node41" href="tb_cidadao_nucleo_familiar.html" target="_top" title="tb_cidadao_nucleo_familiar" alt="" coords="1783,1065,2067,1159">
+<area shape="rect" id="node42" href="tb_cidadao_unificacao_base.html" target="_top" title="tb_cidadao_unificacao_base" alt="" coords="1779,1177,2070,1271">
+<area shape="rect" id="node43" href="tb_cidadao_vinculacao_equipe.html" target="_top" title="tb_cidadao_vinculacao_equipe" alt="" coords="1770,1289,2080,1383">
+<area shape="rect" id="node44" href="tb_gestor_estadual.html" target="_top" title="tb_gestor_estadual" alt="" coords="373,2069,593,2163">
+<area shape="rect" id="node45" href="tb_justificativa_status_ciddao.html" target="_top" title="tb_justificativa_status_ciddao" alt="" coords="1774,1401,2076,1495">
+<area shape="rect" id="node46" href="tb_lista_espera.html" target="_top" title="tb_lista_espera" alt="" coords="1830,617,2020,711">
+<area shape="rect" id="node47" href="tb_periodo_ausencia.html" target="_top" title="tb_periodo_ausencia" alt="" coords="1808,1513,2042,1607">
+<area shape="rect" id="node48" href="tb_pessoa_fisica_imagem.html" target="_top" title="tb_pessoa_fisica_imagem" alt="" coords="1789,729,2060,823">
+<area shape="rect" id="node49" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="1837,841,2013,935">
+<area shape="rect" id="node50" href="tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="1437,2414,1703,2508">
+<area shape="rect" id="node51" href="tl_cds_cad_domiciliar.html" target="_top" title="tl_cds_cad_domiciliar" alt="" coords="1450,581,1690,675">
+<area shape="rect" id="node52" href="tl_cds_domicilio.html" target="_top" title="tl_cds_domicilio" alt="" coords="384,2252,583,2346">
+<area shape="rect" id="node53" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="1494,1974,1646,2068">
+<area shape="rect" id="node54" href="tl_gestor_estadual.html" target="_top" title="tl_gestor_estadual" alt="" coords="376,2398,591,2492">
+<area shape="rect" id="node55" href="tl_papel.html" target="_top" title="tl_papel" alt="" coords="677,1904,811,1998">
+<area shape="rect" id="node56" href="tl_prof.html" target="_top" title="tl_prof" alt="" coords="422,70,545,164">
+<area shape="rect" id="node57" href="tl_unidade_saude.html" target="_top" title="tl_unidade_saude" alt="" coords="640,2062,848,2156">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_cidadao_aldeado.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

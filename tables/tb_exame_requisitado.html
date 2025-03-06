@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_exame_requisitado - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_exame_requisitado</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar informações de exames requisitados em uma requisição de exames.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_exame_requisitado">co_seq_exame_requisitado</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ta_exame_requisitado.co_seq_exame_requisitado&#39;s name implies that it&#39;s a child of tb_exame_requisitado.co_seq_exame_requisitado, but it doesn&#39;t reference that column."><a href='ta_exame_requisitado.html'>ta_exame_requisitado</a><span class='relatedKey'>.co_seq_exame_requisitado</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_clearance_creatina.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_exclearcreat"><a href='tb_exame_clearance_creatina.html'>tb_exame_clearance_creatina</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_exclearcreat</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_colesterol_hdl.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_exclstrlhdl"><a href='tb_exame_colesterol_hdl.html'>tb_exame_colesterol_hdl</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_exclstrlhdl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_colesterol_ldl.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_exclstrlldl"><a href='tb_exame_colesterol_ldl.html'>tb_exame_colesterol_ldl</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_exclstrlldl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_colesterol_total.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_exclstrlttl"><a href='tb_exame_colesterol_total.html'>tb_exame_colesterol_total</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_exclstrlttl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_creatina_serica.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_excreatserc"><a href='tb_exame_creatina_serica.html'>tb_exame_creatina_serica</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_excreatserc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_detalhe_resultado.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitado_examdtlrsl"><a href='tb_exame_detalhe_resultado.html'>tb_exame_detalhe_resultado</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitado_examdtlrsl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_hemoglobina_glicada.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_exmhmglbnglc"><a href='tb_exame_hemoglobina_glicada.html'>tb_exame_hemoglobina_glicada</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_exmhmglbnglc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_prenatal.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitado_examprentl"><a href='tb_exame_prenatal.html'>tb_exame_prenatal</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitado_examprentl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_puericultura.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_exmpuercltr_atndprfprcltr"><a href='tb_exame_puericultura.html'>tb_exame_puericultura</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_exmpuercltr_atndprfprcltr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_exame_triglicerideos.co_exame_requisitado references tb_exame_requisitado.co_seq_exame_requisitado via fk_examerequisitd_extriglicer"><a href='tb_exame_triglicerideos.html'>tb_exame_triglicerideos</a><span class='relatedKey'>.co_exame_requisitado</span></td>
+                                                <td class="constraint detail">fk_examerequisitd_extriglicer</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_conferido">st_conferido</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Situação de conferência do exame (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_resultado">dt_resultado</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data em que foi dado o resultado.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_atend_prof">co_atend_prof</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_exame_requisitado.co_atend_prof references tb_atend_prof.co_seq_atend_prof via fk_atendprof_examerequistd_atd"><a href='tb_atend_prof.html'>tb_atend_prof</a><span class='relatedKey'>.co_seq_atend_prof</span></td>
+                                                <td class="constraint detail">fk_atendprof_examerequistd_atd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do atendimento profissional. Chave estrangeira com origem na tabela TB_ATEND_PROF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_proced">co_proced</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_exame_requisitado.co_proced references tb_proced.co_seq_proced via fk_proced_examerequisitado"><a href='tb_proced.html'>tb_proced</a><span class='relatedKey'>.co_seq_proced</span></td>
+                                                <td class="constraint detail">fk_proced_examerequisitado</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do procedimento. Chave estrangeira com origem na tabela TB_PROCED.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_requisicao_exame">co_requisicao_exame</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_exame_requisitado.co_requisicao_exame references tb_requisicao_exame.co_seq_requisicao_exame via fk_requisicaoexame_examereqstd"><a href='tb_requisicao_exame.html'>tb_requisicao_exame</a><span class='relatedKey'>.co_seq_requisicao_exame</span></td>
+                                                <td class="constraint detail">fk_requisicaoexame_examereqstd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da requisição de exame. Chave estrangeira com origem na tabela TB_REQUISICAO_EXAME.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_atend_prof_resultado">co_atend_prof_resultado</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_exame_requisitado.co_atend_prof_resultado references tb_atend_prof.co_seq_atend_prof via fk_atendprof_examerequistd_rsl"><a href='tb_atend_prof.html'>tb_atend_prof</a><span class='relatedKey'>.co_seq_atend_prof</span></td>
+                                                <td class="constraint detail">fk_atendprof_examerequistd_rsl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do atendimento profissional que avaliou o resultado do exame. Chave estrangeira com origem na tabela TB_ATEND_PROF.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_exame_requisitado.co_prontuario references tb_prontuario.co_seq_prontuario via fk_prontuario_examerequisitado"><a href='tb_prontuario.html'>tb_prontuario</a><span class='relatedKey'>.co_seq_prontuario</span></td>
+                                                <td class="constraint detail">fk_prontuario_examerequisitado</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do prontuário do cidadão. Chave estrangeira com origem na tabela TB_PRONTUARIO</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_realizacao">dt_realizacao</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data em que foi realizado o exame.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_solicitacao">dt_solicitacao</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Data em que foi solicitado o exame.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_proced_exame_especifico">co_proced_exame_especifico</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_exame_requisitado.co_proced_exame_especifico references tb_proced_exame_especifico.co_proced_exame_especifico via fk_procedexameespecific_exmreq"><a href='tb_proced_exame_especifico.html'>tb_proced_exame_especifico</a><span class='relatedKey'>.co_proced_exame_especifico</span></td>
+                                                <td class="constraint detail">fk_procedexameespecific_exmreq</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_resultado">ds_resultado</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ds_observacao">ds_observacao</span></td>
+                                    <td>varchar</td>
+                                    <td>300</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_examerequisitado</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_exame_requisitado</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_examerequisitad_coatdprfrsl</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_atend_prof_resultado</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_examerequisitado_coatendprf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_atend_prof</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_examerequisitado_coproced</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_proced</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_examerequisitado_coprontuar</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_prontuario</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_examerequisitado_coreqscexm</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_requisicao_exame</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_exame_clearance_creatina.html" target="_top" title="tb_exame_clearance_creatina" alt="" coords="1168,5,1471,158">
+<area shape="rect" id="node2" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="705,800,1116,1254">
+<area shape="rect" id="node11" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="5,913,313,1623">
+<area shape="rect" id="node12" href="tb_proced.html" target="_top" title="tb_proced" alt="" coords="357,420,661,837">
+<area shape="rect" id="node13" href="tb_proced_exame_especifico.html" target="_top" title="tb_proced_exame_especifico" alt="" coords="361,1348,658,1471">
+<area shape="rect" id="node14" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="394,1148,625,1330">
+<area shape="rect" id="node15" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="370,855,649,1095">
+<area shape="rect" id="node3" href="tb_exame_colesterol_hdl.html" target="_top" title="tb_exame_colesterol_hdl" alt="" coords="1180,176,1460,329">
+<area shape="rect" id="node4" href="tb_exame_colesterol_ldl.html" target="_top" title="tb_exame_colesterol_ldl" alt="" coords="1182,347,1457,499">
+<area shape="rect" id="node5" href="tb_exame_colesterol_total.html" target="_top" title="tb_exame_colesterol_total" alt="" coords="1175,517,1464,670">
+<area shape="rect" id="node6" href="tb_exame_creatina_serica.html" target="_top" title="tb_exame_creatina_serica" alt="" coords="1174,688,1466,841">
+<area shape="rect" id="node7" href="tb_exame_detalhe_resultado.html" target="_top" title="tb_exame_detalhe_resultado" alt="" coords="1166,859,1474,1070">
+<area shape="rect" id="node8" href="tb_exame_hemoglobina_glicada.html" target="_top" title="tb_exame_hemoglobina_glicada" alt="" coords="1160,1088,1479,1241">
+<area shape="rect" id="node9" href="tb_exame_prenatal.html" target="_top" title="tb_exame_prenatal" alt="" coords="1187,1259,1452,1411">
+<area shape="rect" id="node10" href="tb_exame_puericultura.html" target="_top" title="tb_exame_puericultura" alt="" coords="1196,1429,1444,1585">
+<area shape="rect" id="node16" href="tb_exame_triglicerideos.html" target="_top" title="tb_exame_triglicerideos" alt="" coords="1184,1603,1456,1755">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_exame_requisitado.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="2023,2272,2221,2366">
+<area shape="rect" id="node2" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1675,4284,1855,4378">
+<area shape="rect" id="node3" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1678,2328,1852,2422">
+<area shape="rect" id="node4" href="tb_proced.html" target="_top" title="tb_proced" alt="" coords="1613,943,1917,1359">
+<area shape="rect" id="node27" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="436,4485,590,4579">
+<area shape="rect" id="node32" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1048,4019,1189,4113">
+<area shape="rect" id="node33" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="713,3673,957,3767">
+<area shape="rect" id="node35" href="tb_assinatura_eletronica_atend.html" target="_top" title="tb_assinatura_eletronica_atend" alt="" coords="1247,4168,1561,4262">
+<area shape="rect" id="node36" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="1243,4392,1565,4486">
+<area shape="rect" id="node37" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1291,4280,1517,4374">
+<area shape="rect" id="node38" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1042,4715,1195,4809">
+<area shape="rect" id="node39" href="tb_marcador_consumo_alimentar.html" target="_top" title="tb_marcador_consumo_alimentar" alt="" coords="1239,3685,1569,3779">
+<area shape="rect" id="node40" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="1277,2781,1532,2875">
+<area shape="rect" id="node41" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,4751,152,4845">
+<area shape="rect" id="node42" href="tb_status_atend_prof.html" target="_top" title="tb_status_atend_prof" alt="" coords="1286,3797,1522,3891">
+<area shape="rect" id="node43" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="1315,3289,1493,3383">
+<area shape="rect" id="node44" href="tb_tipo_atend_prof.html" target="_top" title="tb_tipo_atend_prof" alt="" coords="1295,3909,1513,4003">
+<area shape="rect" id="node45" href="tb_tipo_participacao_atend.html" target="_top" title="tb_tipo_participacao_atend" alt="" coords="1263,4021,1545,4115">
+<area shape="rect" id="node5" href="rl_atend_prof_conduta.html" target="_top" title="rl_atend_prof_conduta" alt="" coords="1998,5177,2245,5271">
+<area shape="rect" id="node6" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="2018,5289,2225,5383">
+<area shape="rect" id="node7" href="rl_cds_atend_dom_proced.html" target="_top" title="rl_cds_atend_dom_proced" alt="" coords="1984,1057,2260,1151">
+<area shape="rect" id="node8" href="rl_cds_atend_individual_exame.html" target="_top" title="rl_cds_atend_individual_exame" alt="" coords="2375,327,2689,421">
+<area shape="rect" id="node9" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="1992,1867,2252,1961">
+<area shape="rect" id="node12" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="397,2597,628,2779">
+<area shape="rect" id="node10" href="rl_cds_atend_odonto_proced.html" target="_top" title="rl_cds_atend_odonto_proced" alt="" coords="1973,1169,2271,1263">
+<area shape="rect" id="node11" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="672,1297,998,1391">
+<area shape="rect" id="node53" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="196,3697,353,3791">
+<area shape="rect" id="node13" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="1964,2608,2280,2702">
+<area shape="rect" id="node14" href="rl_evolucao_odonto_proced.html" target="_top" title="rl_evolucao_odonto_proced" alt="" coords="2798,1519,3085,1613">
+<area shape="rect" id="node15" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="2417,1916,2647,2010">
+<area shape="rect" id="node48" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="2000,4729,2243,4823">
+<area shape="rect" id="node16" href="rl_evolucao_plano_ciap.html" target="_top" title="rl_evolucao_plano_ciap" alt="" coords="1994,2125,2249,2219">
+<area shape="rect" id="node17" href="rl_evolucao_subjetivo_ciap.html" target="_top" title="rl_evolucao_subjetivo_ciap" alt="" coords="1981,5401,2263,5495">
+<area shape="rect" id="node18" href="rl_proced_atributo_complem.html" target="_top" title="rl_proced_atributo_complem" alt="" coords="1975,273,2269,367">
+<area shape="rect" id="node19" href="rl_proced_cbo.html" target="_top" title="rl_proced_cbo" alt="" coords="2030,385,2213,479">
+<area shape="rect" id="node20" href="rl_proced_cds_proced.html" target="_top" title="rl_proced_cds_proced" alt="" coords="2000,497,2244,591">
+<area shape="rect" id="node21" href="rl_proced_cid10.html" target="_top" title="rl_proced_cid10" alt="" coords="2024,1755,2220,1849">
+<area shape="rect" id="node22" href="rl_proced_exame_detalhe.html" target="_top" title="rl_proced_exame_detalhe" alt="" coords="2397,36,2667,130">
+<area shape="rect" id="node23" href="rl_proced_grupo_exame.html" target="_top" title="rl_proced_grupo_exame" alt="" coords="1992,609,2251,703">
+<area shape="rect" id="node24" href="rl_proced_tipo_registro.html" target="_top" title="rl_proced_tipo_registro" alt="" coords="1996,721,2248,815">
+<area shape="rect" id="node25" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="2029,1979,2215,2073">
+<area shape="rect" id="node26" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="749,4392,921,4486">
+<area shape="rect" id="node28" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="2458,1599,2606,1693">
+<area shape="rect" id="node29" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="2008,4281,2235,4375">
+<area shape="rect" id="node30" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="739,2068,930,2162">
+<area shape="rect" id="node31" href="tb_antecedente_historico.html" target="_top" title="tb_antecedente_historico" alt="" coords="1988,5513,2255,5607">
+<area shape="rect" id="node34" href="tb_atend_obs.html" target="_top" title="tb_atend_obs" alt="" coords="2033,5625,2211,5719">
+<area shape="rect" id="node46" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="2018,2384,2225,2478">
+<area shape="rect" id="node47" href="tb_atend_prof_obs.html" target="_top" title="tb_atend_prof_obs" alt="" coords="2423,5660,2641,5754">
+<area shape="rect" id="node49" href="tb_atend_prof_pre_natal.html" target="_top" title="tb_atend_prof_pre_natal" alt="" coords="1992,5884,2252,5978">
+<area shape="rect" id="node50" href="tb_atend_prof_puericultura.html" target="_top" title="tb_atend_prof_puericultura" alt="" coords="1981,5996,2263,6090">
+<area shape="rect" id="node51" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="2040,2496,2203,2590">
+<area shape="rect" id="node52" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="2002,833,2241,927">
+<area shape="rect" id="node54" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="1990,3721,2253,3815">
+<area shape="rect" id="node55" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1983,3273,2261,3367">
+<area shape="rect" id="node56" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="2008,2720,2236,2814">
+<area shape="rect" id="node57" href="tb_evolucao_avaliacao.html" target="_top" title="tb_evolucao_avaliacao" alt="" coords="1998,6143,2245,6237">
+<area shape="rect" id="node58" href="tb_evolucao_objetivo.html" target="_top" title="tb_evolucao_objetivo" alt="" coords="2004,6255,2240,6349">
+<area shape="rect" id="node59" href="tb_evolucao_plano.html" target="_top" title="tb_evolucao_plano" alt="" coords="2013,6401,2231,6495">
+<area shape="rect" id="node60" href="tb_evolucao_subjetivo.html" target="_top" title="tb_evolucao_subjetivo" alt="" coords="1999,4617,2245,4711">
+<area shape="rect" id="node61" href="tb_exame_clearance_creatina.html" target="_top" title="tb_exame_clearance_creatina" alt="" coords="2790,5436,3092,5589">
+<area shape="rect" id="node62" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="2327,5974,2738,6429">
+<area shape="rect" id="node73" href="tb_proced_exame_especifico.html" target="_top" title="tb_proced_exame_especifico" alt="" coords="1974,6548,2270,6671">
+<area shape="rect" id="node74" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="2004,3161,2240,3255">
+<area shape="rect" id="node63" href="tb_exame_colesterol_hdl.html" target="_top" title="tb_exame_colesterol_hdl" alt="" coords="2801,5607,3081,5759">
+<area shape="rect" id="node64" href="tb_exame_colesterol_ldl.html" target="_top" title="tb_exame_colesterol_ldl" alt="" coords="2804,5777,3078,5930">
+<area shape="rect" id="node65" href="tb_exame_colesterol_total.html" target="_top" title="tb_exame_colesterol_total" alt="" coords="2796,5948,3086,6101">
+<area shape="rect" id="node66" href="tb_exame_creatina_serica.html" target="_top" title="tb_exame_creatina_serica" alt="" coords="2795,6119,3087,6271">
+<area shape="rect" id="node67" href="tb_exame_detalhe_resultado.html" target="_top" title="tb_exame_detalhe_resultado" alt="" coords="2787,81,3095,293">
+<area shape="rect" id="node68" href="tb_tipo_opcao.html" target="_top" title="tb_tipo_opcao" alt="" coords="2441,171,2624,265">
+<area shape="rect" id="node69" href="tb_exame_hemoglobina_glicada.html" target="_top" title="tb_exame_hemoglobina_glicada" alt="" coords="2782,6289,3101,6442">
+<area shape="rect" id="node70" href="tb_exame_prenatal.html" target="_top" title="tb_exame_prenatal" alt="" coords="2808,6460,3074,6613">
+<area shape="rect" id="node71" href="tb_exame_puericultura.html" target="_top" title="tb_exame_puericultura" alt="" coords="2817,6630,3065,6786">
+<area shape="rect" id="node72" href="tb_ficha_zika_tipo_exame.html" target="_top" title="tb_ficha_zika_tipo_exame" alt="" coords="2397,6691,2668,6785">
+<area shape="rect" id="node75" href="tb_exame_triglicerideos.html" target="_top" title="tb_exame_triglicerideos" alt="" coords="2805,5265,3077,5418">
+<area shape="rect" id="node76" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="1986,2832,2257,2926">
+<area shape="rect" id="node77" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="709,2180,961,2274">
+<area shape="rect" id="node78" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="2057,3833,2187,3927">
+<area shape="rect" id="node79" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="698,2292,972,2386">
+<area shape="rect" id="node80" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="2040,2979,2204,3073">
+<area shape="rect" id="node81" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="2375,527,2689,621">
+<area shape="rect" id="node82" href="tb_receita_medicamento.html" target="_top" title="tb_receita_medicamento" alt="" coords="1992,3945,2252,4039">
+<area shape="rect" id="node83" href="tb_medicao.html" target="_top" title="tb_medicao" alt="" coords="2041,4841,2203,4935">
+<area shape="rect" id="node84" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="2416,1471,2648,1565">
+<area shape="rect" id="node85" href="tb_neuro_alter_fenot_evolucao.html" target="_top" title="tb_neuro_alter_fenot_evolucao" alt="" coords="1966,4169,2277,4263">
+<area shape="rect" id="node86" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="2415,816,2649,910">
+<area shape="rect" id="node87" href="tb_neuro_fator_risco_evolucao.html" target="_top" title="tb_neuro_fator_risco_evolucao" alt="" coords="1966,4057,2277,4151">
+<area shape="rect" id="node88" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="2433,1741,2632,1835">
+<area shape="rect" id="node89" href="tb_neuro_marco_evolucao.html" target="_top" title="tb_neuro_marco_evolucao" alt="" coords="1984,4393,2260,4487">
+<area shape="rect" id="node90" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="2433,3509,2632,3603">
+<area shape="rect" id="node91" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="2033,3385,2211,3479">
+<area shape="rect" id="node92" href="tb_parte_bucal_proced.html" target="_top" title="tb_parte_bucal_proced" alt="" coords="1997,945,2247,1039">
+<area shape="rect" id="node93" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="2400,6452,2664,6546">
+<area shape="rect" id="node94" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="2389,6573,2676,6667">
+<area shape="rect" id="node95" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="2857,2995,3025,3089">
+<area shape="rect" id="node96" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="2447,2940,2617,3034">
+<area shape="rect" id="node97" href="tb_problema_evolucao.html" target="_top" title="tb_problema_evolucao" alt="" coords="1998,4505,2245,4599">
+<area shape="rect" id="node98" href="tb_proced_filtro.html" target="_top" title="tb_proced_filtro" alt="" coords="2024,1316,2219,1410">
+<area shape="rect" id="node99" href="tb_proced_nome_popular.html" target="_top" title="tb_proced_nome_popular" alt="" coords="1987,161,2257,255">
+<area shape="rect" id="node100" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="2005,1643,2239,1737">
+<area shape="rect" id="node101" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="681,2475,989,2569">
+<area shape="rect" id="node102" href="tb_qst_questionario_respondido.html" target="_top" title="tb_qst_questionario_respondido" alt="" coords="1961,4953,2283,5047">
+<area shape="rect" id="node103" href="tb_rascunho_atend_prof.html" target="_top" title="tb_rascunho_atend_prof" alt="" coords="1992,5065,2252,5159">
+<area shape="rect" id="node104" href="tb_res_envio.html" target="_top" title="tb_res_envio" alt="" coords="2036,5772,2208,5866">
+<area shape="rect" id="node105" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="721,4229,949,4323">
+<area shape="rect" id="node106" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="1966,3497,2277,3591">
+<area shape="rect" id="node107" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="2846,1924,3037,2018">
+<area shape="rect" id="node108" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="2034,3609,2209,3703">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_exame_requisitado.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="1182,5,1458,246">
+<area shape="rect" id="node2" href="tb_proced_exame_especifico.html" target="_top" title="tb_proced_exame_especifico" alt="" coords="361,897,658,1021">
+<area shape="rect" id="node3" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="705,890,1116,1345">
+<area shape="rect" id="node13" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="5,1097,313,1807">
+<area shape="rect" id="node14" href="tb_proced.html" target="_top" title="tb_proced" alt="" coords="357,463,661,879">
+<area shape="rect" id="node15" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="394,1332,625,1514">
+<area shape="rect" id="node16" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="370,1039,649,1279">
+<area shape="rect" id="node4" href="tb_exame_clearance_creatina.html" target="_top" title="tb_exame_clearance_creatina" alt="" coords="1168,779,1471,931">
+<area shape="rect" id="node5" href="tb_exame_colesterol_hdl.html" target="_top" title="tb_exame_colesterol_hdl" alt="" coords="1180,949,1460,1102">
+<area shape="rect" id="node6" href="tb_exame_colesterol_ldl.html" target="_top" title="tb_exame_colesterol_ldl" alt="" coords="1182,1120,1457,1273">
+<area shape="rect" id="node7" href="tb_exame_colesterol_total.html" target="_top" title="tb_exame_colesterol_total" alt="" coords="1175,1291,1464,1443">
+<area shape="rect" id="node8" href="tb_exame_creatina_serica.html" target="_top" title="tb_exame_creatina_serica" alt="" coords="1174,1461,1466,1614">
+<area shape="rect" id="node9" href="tb_exame_detalhe_resultado.html" target="_top" title="tb_exame_detalhe_resultado" alt="" coords="1166,1632,1474,1843">
+<area shape="rect" id="node10" href="tb_exame_hemoglobina_glicada.html" target="_top" title="tb_exame_hemoglobina_glicada" alt="" coords="1160,1861,1479,2014">
+<area shape="rect" id="node11" href="tb_exame_prenatal.html" target="_top" title="tb_exame_prenatal" alt="" coords="1187,264,1452,417">
+<area shape="rect" id="node12" href="tb_exame_puericultura.html" target="_top" title="tb_exame_puericultura" alt="" coords="1196,434,1444,590">
+<area shape="rect" id="node17" href="tb_exame_triglicerideos.html" target="_top" title="tb_exame_triglicerideos" alt="" coords="1184,608,1456,761">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_exame_requisitado.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="2103,2520,2301,2614">
+<area shape="rect" id="node2" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1755,4532,1935,4626">
+<area shape="rect" id="node3" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="1758,2632,1932,2726">
+<area shape="rect" id="node4" href="tb_proced.html" target="_top" title="tb_proced" alt="" coords="1693,1075,1997,1491">
+<area shape="rect" id="node26" href="tb_classificacao_risco.html" target="_top" title="tb_classificacao_risco" alt="" coords="713,4113,957,4207">
+<area shape="rect" id="node27" href="tb_conselho_classe.html" target="_top" title="tb_conselho_classe" alt="" coords="1371,3955,1597,4049">
+<area shape="rect" id="node28" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="1357,3772,1612,3866">
+<area shape="rect" id="node57" href="tb_lotacao.html" target="_top" title="tb_lotacao" alt="" coords="436,5096,590,5190">
+<area shape="rect" id="node61" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="1088,4189,1229,4283">
+<area shape="rect" id="node63" href="tb_assinatura_eletronica_atend.html" target="_top" title="tb_assinatura_eletronica_atend" alt="" coords="1327,4709,1641,4803">
+<area shape="rect" id="node64" href="tb_atend_prof_tipo_encam_intrn.html" target="_top" title="tb_atend_prof_tipo_encam_intrn" alt="" coords="1323,4964,1645,5058">
+<area shape="rect" id="node65" href="tb_estagio.html" target="_top" title="tb_estagio" alt="" coords="1082,5127,1235,5221">
+<area shape="rect" id="node66" href="tb_marcador_consumo_alimentar.html" target="_top" title="tb_marcador_consumo_alimentar" alt="" coords="1319,4261,1649,4355">
+<area shape="rect" id="node67" href="tb_uf.html" target="_top" title="tb_uf" alt="" coords="5,5215,152,5309">
+<area shape="rect" id="node68" href="tb_status_atend_prof.html" target="_top" title="tb_status_atend_prof" alt="" coords="1366,4373,1602,4467">
+<area shape="rect" id="node69" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="1395,3339,1573,3433">
+<area shape="rect" id="node70" href="tb_tipo_atend_prof.html" target="_top" title="tb_tipo_atend_prof" alt="" coords="1375,4485,1593,4579">
+<area shape="rect" id="node71" href="tb_tipo_participacao_atend.html" target="_top" title="tb_tipo_participacao_atend" alt="" coords="1343,4597,1625,4691">
+<area shape="rect" id="node112" href="tb_complexidade.html" target="_top" title="tb_complexidade" alt="" coords="1382,1165,1586,1259">
+<area shape="rect" id="node113" href="tb_proced_forma_organizacional.html" target="_top" title="tb_proced_forma_organizacional" alt="" coords="1322,1357,1646,1451">
+<area shape="rect" id="node114" href="tb_proced_grupo.html" target="_top" title="tb_proced_grupo" alt="" coords="733,1307,937,1401">
+<area shape="rect" id="node115" href="tb_proced_subgrupo.html" target="_top" title="tb_proced_subgrupo" alt="" coords="1042,1312,1275,1406">
+<area shape="rect" id="node5" href="rl_atend_prof_conduta.html" target="_top" title="rl_atend_prof_conduta" alt="" coords="2078,6209,2325,6303">
+<area shape="rect" id="node6" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="2098,6433,2305,6527">
+<area shape="rect" id="node7" href="rl_cds_atend_dom_proced.html" target="_top" title="rl_cds_atend_dom_proced" alt="" coords="2064,1419,2340,1513">
+<area shape="rect" id="node8" href="rl_cds_atend_individual_exame.html" target="_top" title="rl_cds_atend_individual_exame" alt="" coords="2455,1103,2769,1197">
+<area shape="rect" id="node9" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="2072,2077,2332,2171">
+<area shape="rect" id="node12" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="397,3260,628,3442">
+<area shape="rect" id="node10" href="rl_cds_atend_odonto_proced.html" target="_top" title="rl_cds_atend_odonto_proced" alt="" coords="2053,341,2351,435">
+<area shape="rect" id="node11" href="rl_cds_prontuario_unidade_saud.html" target="_top" title="rl_cds_prontuario_unidade_saud" alt="" coords="672,3593,998,3687">
+<area shape="rect" id="node79" href="tb_cidadao.html" target="_top" title="tb_cidadao" alt="" coords="196,4257,353,4351">
+<area shape="rect" id="node13" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="2044,2744,2360,2838">
+<area shape="rect" id="node14" href="rl_evolucao_odonto_proced.html" target="_top" title="rl_evolucao_odonto_proced" alt="" coords="2878,1479,3165,1573">
+<area shape="rect" id="node15" href="tb_evolucao_odonto.html" target="_top" title="tb_evolucao_odonto" alt="" coords="2497,2724,2727,2818">
+<area shape="rect" id="node74" href="tb_atend_prof_odonto.html" target="_top" title="tb_atend_prof_odonto" alt="" coords="2080,4865,2323,4959">
+<area shape="rect" id="node16" href="rl_evolucao_plano_ciap.html" target="_top" title="rl_evolucao_plano_ciap" alt="" coords="2074,2301,2329,2395">
+<area shape="rect" id="node17" href="rl_evolucao_subjetivo_ciap.html" target="_top" title="rl_evolucao_subjetivo_ciap" alt="" coords="2061,6580,2343,6674">
+<area shape="rect" id="node18" href="rl_proced_atributo_complem.html" target="_top" title="rl_proced_atributo_complem" alt="" coords="2055,824,2349,918">
+<area shape="rect" id="node19" href="rl_proced_cbo.html" target="_top" title="rl_proced_cbo" alt="" coords="2110,971,2293,1065">
+<area shape="rect" id="node20" href="rl_proced_cds_proced.html" target="_top" title="rl_proced_cds_proced" alt="" coords="2080,1083,2324,1177">
+<area shape="rect" id="node21" href="rl_proced_cid10.html" target="_top" title="rl_proced_cid10" alt="" coords="2104,1965,2300,2059">
+<area shape="rect" id="node22" href="rl_proced_exame_detalhe.html" target="_top" title="rl_proced_exame_detalhe" alt="" coords="2477,748,2747,842">
+<area shape="rect" id="node23" href="rl_proced_grupo_exame.html" target="_top" title="rl_proced_grupo_exame" alt="" coords="2072,1195,2331,1289">
+<area shape="rect" id="node24" href="rl_proced_tipo_registro.html" target="_top" title="rl_proced_tipo_registro" alt="" coords="2076,1307,2328,1401">
+<area shape="rect" id="node25" href="ta_atend_prof.html" target="_top" title="ta_atend_prof" alt="" coords="2112,3787,2291,3881">
+<area shape="rect" id="node29" href="ta_exame_clearance_creatina.html" target="_top" title="ta_exame_clearance_creatina" alt="" coords="3235,1713,3534,1807">
+<area shape="rect" id="node30" href="tb_exame_clearance_creatina.html" target="_top" title="tb_exame_clearance_creatina" alt="" coords="2870,1764,3172,1917">
+<area shape="rect" id="node49" href="tb_exame_requisitado.html" target="_top" title="tb_exame_requisitado" alt="" coords="2407,1916,2818,2370">
+<area shape="rect" id="node31" href="ta_exame_colesterol_hdl.html" target="_top" title="ta_exame_colesterol_hdl" alt="" coords="3253,1937,3516,2031">
+<area shape="rect" id="node32" href="tb_exame_colesterol_hdl.html" target="_top" title="tb_exame_colesterol_hdl" alt="" coords="2881,1935,3161,2087">
+<area shape="rect" id="node33" href="ta_exame_colesterol_ldl.html" target="_top" title="ta_exame_colesterol_ldl" alt="" coords="3255,2161,3513,2255">
+<area shape="rect" id="node34" href="tb_exame_colesterol_ldl.html" target="_top" title="tb_exame_colesterol_ldl" alt="" coords="2884,2105,3158,2258">
+<area shape="rect" id="node35" href="ta_exame_colesterol_total.html" target="_top" title="ta_exame_colesterol_total" alt="" coords="3247,2385,3521,2479">
+<area shape="rect" id="node36" href="tb_exame_colesterol_total.html" target="_top" title="tb_exame_colesterol_total" alt="" coords="2876,2276,3166,2429">
+<area shape="rect" id="node37" href="ta_exame_creatina_serica.html" target="_top" title="ta_exame_creatina_serica" alt="" coords="3249,2609,3520,2703">
+<area shape="rect" id="node38" href="tb_exame_creatina_serica.html" target="_top" title="tb_exame_creatina_serica" alt="" coords="2875,2468,3167,2621">
+<area shape="rect" id="node39" href="ta_exame_hemoglobina_glicada.html" target="_top" title="ta_exame_hemoglobina_glicada" alt="" coords="3225,2721,3544,2815">
+<area shape="rect" id="node40" href="tb_exame_hemoglobina_glicada.html" target="_top" title="tb_exame_hemoglobina_glicada" alt="" coords="2862,2639,3181,2791">
+<area shape="rect" id="node41" href="ta_exame_prenatal.html" target="_top" title="ta_exame_prenatal" alt="" coords="3275,2833,3493,2927">
+<area shape="rect" id="node42" href="tb_exame_prenatal.html" target="_top" title="tb_exame_prenatal" alt="" coords="2888,2809,3154,2962">
+<area shape="rect" id="node43" href="ta_exame_puericultura.html" target="_top" title="ta_exame_puericultura" alt="" coords="3261,1489,3508,1583">
+<area shape="rect" id="node44" href="tb_exame_puericultura.html" target="_top" title="tb_exame_puericultura" alt="" coords="2897,1590,3145,1746">
+<area shape="rect" id="node89" href="tb_ficha_zika_tipo_exame.html" target="_top" title="tb_ficha_zika_tipo_exame" alt="" coords="2477,1713,2748,1807">
+<area shape="rect" id="node45" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="2900,156,3142,250">
+<area shape="rect" id="node46" href="tb_proced_filtro.html" target="_top" title="tb_proced_filtro" alt="" coords="2104,117,2299,211">
+<area shape="rect" id="node47" href="tb_proced_exame_especifico.html" target="_top" title="tb_proced_exame_especifico" alt="" coords="2054,229,2350,323">
+<area shape="rect" id="node48" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="2106,5,2297,99">
+<area shape="rect" id="node54" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="2084,3080,2320,3174">
+<area shape="rect" id="node50" href="ta_exame_triglicerideos.html" target="_top" title="ta_exame_triglicerideos" alt="" coords="3257,2953,3512,3047">
+<area shape="rect" id="node51" href="tb_exame_triglicerideos.html" target="_top" title="tb_exame_triglicerideos" alt="" coords="2885,2980,3157,3133">
+<area shape="rect" id="node52" href="ta_prontuario.html" target="_top" title="ta_prontuario" alt="" coords="747,3740,923,3834">
+<area shape="rect" id="node53" href="ta_requisicao_exame.html" target="_top" title="ta_requisicao_exame" alt="" coords="2495,2975,2730,3069">
+<area shape="rect" id="node55" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="2109,2189,2295,2283">
+<area shape="rect" id="node56" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="749,5003,921,5097">
+<area shape="rect" id="node58" href="tb_alergia.html" target="_top" title="tb_alergia" alt="" coords="2538,2388,2686,2482">
+<area shape="rect" id="node59" href="tb_alergia_evolucao.html" target="_top" title="tb_alergia_evolucao" alt="" coords="2088,4305,2315,4399">
+<area shape="rect" id="node60" href="tb_antecedente_historico.html" target="_top" title="tb_antecedente_historico" alt="" coords="2068,4641,2335,4735">
+<area shape="rect" id="node62" href="tb_atend_obs.html" target="_top" title="tb_atend_obs" alt="" coords="2113,6321,2291,6415">
+<area shape="rect" id="node72" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="2098,2632,2305,2726">
+<area shape="rect" id="node73" href="tb_atend_prof_obs.html" target="_top" title="tb_atend_prof_obs" alt="" coords="2503,6324,2721,6418">
+<area shape="rect" id="node75" href="tb_atend_prof_pre_natal.html" target="_top" title="tb_atend_prof_pre_natal" alt="" coords="2072,5089,2332,5183">
+<area shape="rect" id="node76" href="tb_atend_prof_puericultura.html" target="_top" title="tb_atend_prof_puericultura" alt="" coords="2061,5201,2343,5295">
+<area shape="rect" id="node77" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="2120,2856,2283,2950">
+<area shape="rect" id="node78" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="2082,453,2321,547">
+<area shape="rect" id="node80" href="tb_cirurgias_internacoes.html" target="_top" title="tb_cirurgias_internacoes" alt="" coords="2070,3899,2333,3993">
+<area shape="rect" id="node81" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="2063,3339,2341,3433">
+<area shape="rect" id="node82" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="2088,2968,2316,3062">
+<area shape="rect" id="node83" href="tb_evolucao_avaliacao.html" target="_top" title="tb_evolucao_avaliacao" alt="" coords="2078,5313,2325,5407">
+<area shape="rect" id="node84" href="tb_evolucao_objetivo.html" target="_top" title="tb_evolucao_objetivo" alt="" coords="2084,5425,2320,5519">
+<area shape="rect" id="node85" href="tb_evolucao_plano.html" target="_top" title="tb_evolucao_plano" alt="" coords="2093,5537,2311,5631">
+<area shape="rect" id="node86" href="tb_evolucao_subjetivo.html" target="_top" title="tb_evolucao_subjetivo" alt="" coords="2079,5649,2325,5743">
+<area shape="rect" id="node87" href="tb_exame_detalhe_resultado.html" target="_top" title="tb_exame_detalhe_resultado" alt="" coords="2867,884,3175,1095">
+<area shape="rect" id="node88" href="tb_tipo_opcao.html" target="_top" title="tb_tipo_opcao" alt="" coords="2521,973,2704,1067">
+<area shape="rect" id="node90" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="2066,3192,2337,3286">
+<area shape="rect" id="node91" href="tb_historico_cabecalho.html" target="_top" title="tb_historico_cabecalho" alt="" coords="709,1419,961,1513">
+<area shape="rect" id="node92" href="tb_ivcf.html" target="_top" title="tb_ivcf" alt="" coords="2137,4011,2267,4105">
+<area shape="rect" id="node93" href="tb_justificativa_prontuario.html" target="_top" title="tb_justificativa_prontuario" alt="" coords="698,2247,972,2341">
+<area shape="rect" id="node94" href="tb_lembrete.html" target="_top" title="tb_lembrete" alt="" coords="2120,6692,2284,6786">
+<area shape="rect" id="node95" href="tb_medicamento_uso_continuo.html" target="_top" title="tb_medicamento_uso_continuo" alt="" coords="2455,2500,2769,2594">
+<area shape="rect" id="node96" href="tb_receita_medicamento.html" target="_top" title="tb_receita_medicamento" alt="" coords="2072,4417,2332,4511">
+<area shape="rect" id="node97" href="tb_medicao.html" target="_top" title="tb_medicao" alt="" coords="2121,5761,2283,5855">
+<area shape="rect" id="node98" href="tb_neuro_alter_fenot.html" target="_top" title="tb_neuro_alter_fenot" alt="" coords="2496,3645,2728,3739">
+<area shape="rect" id="node99" href="tb_neuro_alter_fenot_evolucao.html" target="_top" title="tb_neuro_alter_fenot_evolucao" alt="" coords="2046,4529,2357,4623">
+<area shape="rect" id="node100" href="tb_neuro_fator_risco.html" target="_top" title="tb_neuro_fator_risco" alt="" coords="2495,6675,2729,6769">
+<area shape="rect" id="node101" href="tb_neuro_fator_risco_evolucao.html" target="_top" title="tb_neuro_fator_risco_evolucao" alt="" coords="2046,4977,2357,5071">
+<area shape="rect" id="node102" href="tb_neuro_marco.html" target="_top" title="tb_neuro_marco" alt="" coords="2513,6803,2712,6897">
+<area shape="rect" id="node103" href="tb_neuro_marco_evolucao.html" target="_top" title="tb_neuro_marco_evolucao" alt="" coords="2064,6097,2340,6191">
+<area shape="rect" id="node104" href="tb_odontograma.html" target="_top" title="tb_odontograma" alt="" coords="2513,6439,2712,6533">
+<area shape="rect" id="node105" href="tb_orientacao.html" target="_top" title="tb_orientacao" alt="" coords="2113,3451,2291,3545">
+<area shape="rect" id="node106" href="tb_parte_bucal_proced.html" target="_top" title="tb_parte_bucal_proced" alt="" coords="2077,565,2327,659">
+<area shape="rect" id="node107" href="tb_periograma_completo.html" target="_top" title="tb_periograma_completo" alt="" coords="2480,6555,2744,6649">
+<area shape="rect" id="node108" href="tb_periograma_simplificado.html" target="_top" title="tb_periograma_simplificado" alt="" coords="2469,2612,2756,2706">
+<area shape="rect" id="node109" href="tb_pre_natal.html" target="_top" title="tb_pre_natal" alt="" coords="2937,1367,3105,1461">
+<area shape="rect" id="node110" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="2527,1601,2697,1695">
+<area shape="rect" id="node111" href="tb_problema_evolucao.html" target="_top" title="tb_problema_evolucao" alt="" coords="2078,4123,2325,4217">
+<area shape="rect" id="node116" href="tb_proced_nome_popular.html" target="_top" title="tb_proced_nome_popular" alt="" coords="2067,712,2337,806">
+<area shape="rect" id="node117" href="tb_proced_solicitado.html" target="_top" title="tb_proced_solicitado" alt="" coords="2085,1853,2319,1947">
+<area shape="rect" id="node118" href="tb_prontuario_grupo_historico.html" target="_top" title="tb_prontuario_grupo_historico" alt="" coords="681,3156,989,3250">
+<area shape="rect" id="node119" href="tb_qst_questionario_respondido.html" target="_top" title="tb_qst_questionario_respondido" alt="" coords="2041,5873,2363,5967">
+<area shape="rect" id="node120" href="tb_rascunho_atend_prof.html" target="_top" title="tb_rascunho_atend_prof" alt="" coords="2072,5985,2332,6079">
+<area shape="rect" id="node121" href="tb_res_envio.html" target="_top" title="tb_res_envio" alt="" coords="2116,4753,2288,4847">
+<area shape="rect" id="node122" href="tb_retificacao_atend.html" target="_top" title="tb_retificacao_atend" alt="" coords="721,4840,949,4934">
+<area shape="rect" id="node123" href="tb_sinan_notificacao_evolucao.html" target="_top" title="tb_sinan_notificacao_evolucao" alt="" coords="2046,3563,2357,3657">
+<area shape="rect" id="node124" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="2926,4312,3117,4406">
+<area shape="rect" id="node125" href="tb_vacinacao.html" target="_top" title="tb_vacinacao" alt="" coords="2114,3675,2289,3769">
+<area shape="rect" id="node126" href="tl_exame_clearance_creatina.html" target="_top" title="tl_exame_clearance_creatina" alt="" coords="3237,1601,3532,1695">
+<area shape="rect" id="node127" href="tl_exame_colesterol_hdl.html" target="_top" title="tl_exame_colesterol_hdl" alt="" coords="3255,1825,3514,1919">
+<area shape="rect" id="node128" href="tl_exame_colesterol_ldl.html" target="_top" title="tl_exame_colesterol_ldl" alt="" coords="3257,2049,3511,2143">
+<area shape="rect" id="node129" href="tl_exame_colesterol_total.html" target="_top" title="tl_exame_colesterol_total" alt="" coords="3250,2273,3518,2367">
+<area shape="rect" id="node130" href="tl_exame_creatina_serica.html" target="_top" title="tl_exame_creatina_serica" alt="" coords="3251,2497,3518,2591">
+<area shape="rect" id="node131" href="tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="2494,156,2730,250">
+<area shape="rect" id="node132" href="tl_exame_triglicerideos.html" target="_top" title="tl_exame_triglicerideos" alt="" coords="3259,3065,3510,3159">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_exame_requisitado.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

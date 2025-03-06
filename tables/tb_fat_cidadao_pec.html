@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_fat_cidadao_pec - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_fat_cidadao_pec</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_fat_cidadao_pec">co_seq_fat_cidadao_pec</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_dim_cidadao_pec_grupo.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_dmcddgrp"><a href='tb_dim_cidadao_pec_grupo.html'>tb_dim_cidadao_pec_grupo</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_dmcddgrp</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_encaminhamentos.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindes"><a href='tb_fat_atd_ind_encaminhamentos.html'>tb_fat_atd_ind_encaminhamentos</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindes</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_exames.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindex"><a href='tb_fat_atd_ind_exames.html'>tb_fat_atd_ind_exames</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindex</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_medicamentos.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindmd"><a href='tb_fat_atd_ind_medicamentos.html'>tb_fat_atd_ind_medicamentos</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindmd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_problemas.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindpr"><a href='tb_fat_atd_ind_problemas.html'>tb_fat_atd_ind_problemas</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindpr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atd_ind_procedimentos.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdindprced"><a href='tb_fat_atd_ind_procedimentos.html'>tb_fat_atd_ind_procedimentos</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdindprced</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atend_odonto_encaminham.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdodoes"><a href='tb_fat_atend_odonto_encaminham.html'>tb_fat_atend_odonto_encaminham</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdodoes</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atend_odonto_exames.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdodoex"><a href='tb_fat_atend_odonto_exames.html'>tb_fat_atend_odonto_exames</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdodoex</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atend_odonto_medicament.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdodomd"><a href='tb_fat_atend_odonto_medicament.html'>tb_fat_atend_odonto_medicament</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdodomd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atend_odonto_problemas.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftatnodntprb"><a href='tb_fat_atend_odonto_problemas.html'>tb_fat_atend_odonto_problemas</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftatnodntprb</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atend_odonto_proced.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatateodp"><a href='tb_fat_atend_odonto_proced.html'>tb_fat_atend_odonto_proced</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatateodp</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atendimento_domiciliar.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatddom"><a href='tb_fat_atendimento_domiciliar.html'>tb_fat_atendimento_domiciliar</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatddom</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atendimento_individual.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatdind"><a href='tb_fat_atendimento_individual.html'>tb_fat_atendimento_individual</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatdind</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atendimento_odonto.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatendodnt"><a href='tb_fat_atendimento_odonto.html'>tb_fat_atendimento_odonto</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatendodnt</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_atvdd_coletiva_part.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatatvdcltvpart"><a href='tb_fat_atvdd_coletiva_part.html'>tb_fat_atvdd_coletiva_part</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatatvdcltvpart</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_avaliacao_elegibilidade.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatavlelg"><a href='tb_fat_avaliacao_elegibilidade.html'>tb_fat_avaliacao_elegibilidade</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatavlelg</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_avaliacao_elegibilidade.co_fat_cidadao_pec_cuidador references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatavlelgcddr"><a href='tb_fat_avaliacao_elegibilidade.html'>tb_fat_avaliacao_elegibilidade</a><span class='relatedKey'>.co_fat_cidadao_pec_cuidador</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatavlelgcddr</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_cad_dom_familia.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatcaddomfml"><a href='tb_fat_cad_dom_familia.html'>tb_fat_cad_dom_familia</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatcaddomfml</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatcadindvd"><a href='tb_fat_cad_individual.html'>tb_fat_cad_individual</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatcadindvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_cad_individual.co_fat_cidadao_pec_responsvl references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddpec_ftcdindvdrsponsvl"><a href='tb_fat_cad_individual.html'>tb_fat_cad_individual</a><span class='relatedKey'>.co_fat_cidadao_pec_responsvl</span></td>
+                                                <td class="constraint detail">fk_ftciddpec_ftcdindvdrsponsvl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_cidadao_territorio.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftciddotrtro"><a href='tb_fat_cidadao_territorio.html'>tb_fat_cidadao_territorio</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftciddotrtro</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_cnslddo_ciddo_fai_cid.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftcoscidfaicd10"><a href='tb_fat_cnslddo_ciddo_fai_cid.html'>tb_fat_cnslddo_ciddo_fai_cid</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftcoscidfaicd10</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_complementar.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatcmpl"><a href='tb_fat_complementar.html'>tb_fat_complementar</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatcmpl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_complementar.co_fat_cidadao_pec_responsvl references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftcidapec_fatcmplresponsvl"><a href='tb_fat_complementar.html'>tb_fat_complementar</a><span class='relatedKey'>.co_fat_cidadao_pec_responsvl</span></td>
+                                                <td class="constraint detail">fk_ftcidapec_fatcmplresponsvl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_consolidado_cidadao_fai.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftcoscidfai"><a href='tb_fat_consolidado_cidadao_fai.html'>tb_fat_consolidado_cidadao_fai</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftcoscidfai</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_consolidado_cidadao_fao.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftcoscidfao"><a href='tb_fat_consolidado_cidadao_fao.html'>tb_fat_consolidado_cidadao_fao</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftcoscidfao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_consolidado_cidadao_fci.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftcoscidfci"><a href='tb_fat_consolidado_cidadao_fci.html'>tb_fat_consolidado_cidadao_fci</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftcoscidfci</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_consolidado_cidadao_fp.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftcoscidfp"><a href='tb_fat_consolidado_cidadao_fp.html'>tb_fat_consolidado_cidadao_fp</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftcoscidfp</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_consolidado_cidadao_fvd.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftcoscidfvd"><a href='tb_fat_consolidado_cidadao_fvd.html'>tb_fat_consolidado_cidadao_fvd</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftcoscidfvd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_cuidado_compartilhado.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_fatcidadaopec_fatcddcmprtl"><a href='tb_fat_cuidado_compartilhado.html'>tb_fat_cuidado_compartilhado</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_fatcidadaopec_fatcddcmprtl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_familia_territorio.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftfamlatrtro"><a href='tb_fat_familia_territorio.html'>tb_fat_familia_territorio</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftfamlatrtro</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_marca_consumo_alimnt.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatmrcconalm"><a href='tb_fat_marca_consumo_alimnt.html'>tb_fat_marca_consumo_alimnt</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatmrcconalm</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_op_acompanhamento_idosa.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_cidadao_acompanhamentoidoso"><a href='tb_fat_op_acompanhamento_idosa.html'>tb_fat_op_acompanhamento_idosa</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_cidadao_acompanhamentoidoso</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_proced_atend.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftprocedatend"><a href='tb_fat_proced_atend.html'>tb_fat_proced_atend</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftprocedatend</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_proced_atend_proced.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftprcdatndprcd"><a href='tb_fat_proced_atend_proced.html'>tb_fat_proced_atend_proced</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftprcdatndprcd</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_rel_op_crianca.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftrlopcrnca"><a href='tb_fat_rel_op_crianca.html'>tb_fat_rel_op_crianca</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftrlopcrnca</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_rel_op_gestante.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftrlopgstte"><a href='tb_fat_rel_op_gestante.html'>tb_fat_rel_op_gestante</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftrlopgstte</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_rel_op_risco_cardio.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_ftrloprccdo"><a href='tb_fat_rel_op_risco_cardio.html'>tb_fat_rel_op_risco_cardio</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_ftrloprccdo</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_vacinacao.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatvacinacao"><a href='tb_fat_vacinacao.html'>tb_fat_vacinacao</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatvacinacao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="tb_fat_visita_domiciliar.co_fat_cidadao_pec references tb_fat_cidadao_pec.co_seq_fat_cidadao_pec via fk_ftciddaopec_fatvstdmcl"><a href='tb_fat_visita_domiciliar.html'>tb_fat_visita_domiciliar</a><span class='relatedKey'>.co_fat_cidadao_pec</span></td>
+                                                <td class="constraint detail">fk_ftciddaopec_fatvstdmcl</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="co_cidadao">co_cidadao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cns">nu_cns</span></td>
+                                    <td>varchar</td>
+                                    <td>15</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_cidadao">no_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="no_social_cidadao">no_social_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_dim_tempo_nascimento">co_dim_tempo_nascimento</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_sexo">co_dim_sexo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cidadao_pec.co_dim_sexo references tb_dim_sexo.co_seq_dim_sexo via fk_dimsexo_ftrlociddao"><a href='tb_dim_sexo.html'>tb_dim_sexo</a><span class='relatedKey'>.co_seq_dim_sexo</span></td>
+                                                <td class="constraint detail">fk_dimsexo_ftrlociddao</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_identidade_genero">co_dim_identidade_genero</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cidadao_pec.co_dim_identidade_genero references tb_dim_identidade_genero.co_seq_dim_identidade_genero via fk_dimidgenero_fatcidadaopec"><a href='tb_dim_identidade_genero.html'>tb_dim_identidade_genero</a><span class='relatedKey'>.co_seq_dim_identidade_genero</span></td>
+                                                <td class="constraint detail">fk_dimidgenero_fatcidadaopec</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_telefone_celular">nu_telefone_celular</span></td>
+                                    <td>varchar</td>
+                                    <td>100</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_faleceu">st_faleceu</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="st_lookup_etl">st_lookup_etl</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_deletar">st_deletar</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cpf_cidadao">nu_cpf_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_unidade_saude_vinc">co_dim_unidade_saude_vinc</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cidadao_pec.co_dim_unidade_saude_vinc references tb_dim_unidade_saude.co_seq_dim_unidade_saude via fk_dimundsaudevinc_fatcidpec"><a href='tb_dim_unidade_saude.html'>tb_dim_unidade_saude</a><span class='relatedKey'>.co_seq_dim_unidade_saude</span></td>
+                                                <td class="constraint detail">fk_dimundsaudevinc_fatcidpec</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_dim_equipe_vinc">co_dim_equipe_vinc</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_fat_cidadao_pec.co_dim_equipe_vinc references tb_dim_equipe.co_seq_dim_equipe via fk_dimequipvinc_fatcidpec"><a href='tb_dim_equipe.html'>tb_dim_equipe</a><span class='relatedKey'>.co_seq_dim_equipe</span></td>
+                                                <td class="constraint detail">fk_dimequipvinc_fatcidpec</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_ftciddaopec</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fat_cidadaopec_lookup</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>st_lookup_etl + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidadaopec_cocidadao</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidadapec_cnesine</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_dim_unidade_saude_vinc + co_dim_equipe_vinc</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_cocidcofatcidpec</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_cidadao + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_nucns</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_nucns_coseqfatcidpec_cnsisnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_nucns_coseqfatcidpec_cnsnotnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_nucns_coseqfatcidpec_cpfisnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_nucns_coseqfatcidpec_cpfnotnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_fatcidpec_nucpf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_cpf_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftciddaopec_cidadaocns</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_cidadao + nu_cns</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftciddaopec_cidadaocpf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_cidadao + nu_cpf_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftcidpec_cnscosqcpfisnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftcidpec_cnscosqcpfnotnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftcidpec_cpfcosqcnsisnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cpf_cidadao + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftcidpec_cpfcosqcnsnotnull</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>nu_cpf_cidadao + co_seq_fat_cidadao_pec</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftcidpec_nucns</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_cns</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_ftcidpec_nucpf</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_cpf_cidadao</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_dim_cidadao_pec_grupo.html" target="_top" title="tb_dim_cidadao_pec_grupo" alt="" coords="786,15583,1088,15824">
+<area shape="rect" id="node2" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="341,14132,722,14645">
+<area shape="rect" id="node4" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="51,8392,252,8545">
+<area shape="rect" id="node5" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="18,8222,285,8374">
+<area shape="rect" id="node16" href="tb_dim_sexo.html" target="_top" title="tb_dim_sexo" alt="" coords="58,16446,245,16569">
+<area shape="rect" id="node23" href="tb_dim_identidade_genero.html" target="_top" title="tb_dim_identidade_genero" alt="" coords="5,18612,297,18736">
+<area shape="rect" id="node3" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="771,4068,1103,4808">
+<area shape="rect" id="node6" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="782,4826,1092,5536">
+<area shape="rect" id="node7" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="782,5554,1092,6381">
+<area shape="rect" id="node8" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="782,6399,1092,7226">
+<area shape="rect" id="node9" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="782,7244,1092,7984">
+<area shape="rect" id="node10" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="768,10103,1106,10842">
+<area shape="rect" id="node11" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="782,10860,1092,11570">
+<area shape="rect" id="node12" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="770,135,1104,962">
+<area shape="rect" id="node13" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="776,980,1098,1749">
+<area shape="rect" id="node14" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="782,3370,1092,4050">
+<area shape="rect" id="node15" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="780,8002,1094,8829">
+<area shape="rect" id="node17" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="782,8847,1092,10085">
+<area shape="rect" id="node18" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="776,11588,1098,12474">
+<area shape="rect" id="node19" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="782,21044,1092,21608">
+<area shape="rect" id="node20" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="778,12492,1096,13584">
+<area shape="rect" id="node21" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="782,1767,1092,2389">
+<area shape="rect" id="node22" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="782,19847,1092,21026">
+<area shape="rect" id="node24" href="tb_fat_cidadao_territorio.html" target="_top" title="tb_fat_cidadao_territorio" alt="" coords="784,16823,1090,17152">
+<area shape="rect" id="node25" href="tb_fat_cnslddo_ciddo_fai_cid.html" target="_top" title="tb_fat_cnslddo_ciddo_fai_cid" alt="" coords="788,15842,1086,15994">
+<area shape="rect" id="node26" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="782,13602,1092,14106">
+<area shape="rect" id="node27" href="tb_fat_consolidado_cidadao_fai.html" target="_top" title="tb_fat_consolidado_cidadao_fai" alt="" coords="779,16012,1095,16165">
+<area shape="rect" id="node28" href="tb_fat_consolidado_cidadao_fao.html" target="_top" title="tb_fat_consolidado_cidadao_fao" alt="" coords="776,14159,1098,14312">
+<area shape="rect" id="node29" href="tb_fat_consolidado_cidadao_fci.html" target="_top" title="tb_fat_consolidado_cidadao_fci" alt="" coords="778,14330,1096,14482">
+<area shape="rect" id="node30" href="tb_fat_consolidado_cidadao_fp.html" target="_top" title="tb_fat_consolidado_cidadao_fp" alt="" coords="780,14500,1094,14653">
+<area shape="rect" id="node31" href="tb_fat_consolidado_cidadao_fvd.html" target="_top" title="tb_fat_consolidado_cidadao_fvd" alt="" coords="776,14671,1098,14824">
+<area shape="rect" id="node32" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="780,2407,1094,3352">
+<area shape="rect" id="node33" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="1152,6952,1432,7340">
+<area shape="rect" id="node34" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="782,17986,1092,18490">
+<area shape="rect" id="node35" href="tb_fat_op_acompanhamento_idosa.html" target="_top" title="tb_fat_op_acompanhamento_idosa" alt="" coords="766,14842,1108,14994">
+<area shape="rect" id="node36" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="782,19148,1092,19829">
+<area shape="rect" id="node37" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="782,16183,1092,16805">
+<area shape="rect" id="node38" href="tb_fat_rel_op_crianca.html" target="_top" title="tb_fat_rel_op_crianca" alt="" coords="800,15012,1074,15165">
+<area shape="rect" id="node39" href="tb_fat_rel_op_gestante.html" target="_top" title="tb_fat_rel_op_gestante" alt="" coords="805,15183,1069,15365">
+<area shape="rect" id="node40" href="tb_fat_rel_op_risco_cardio.html" target="_top" title="tb_fat_rel_op_risco_cardio" alt="" coords="790,15383,1084,15565">
+<area shape="rect" id="node41" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="782,18508,1092,19130">
+<area shape="rect" id="node42" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="778,17170,1096,17968">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_fat_cidadao_pec.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="tb_dim_cidadao_pec_grupo.html" target="_top" title="tb_dim_cidadao_pec_grupo" alt="" coords="771,6316,1072,6557">
+<area shape="rect" id="node2" href="tb_fat_cidadao_pec.html" target="_top" title="tb_fat_cidadao_pec" alt="" coords="326,6142,706,6656">
+<area shape="rect" id="node4" href="tb_dim_equipe.html" target="_top" title="tb_dim_equipe" alt="" coords="51,3428,236,3522">
+<area shape="rect" id="node15" href="tb_dim_unidade_saude.html" target="_top" title="tb_dim_unidade_saude" alt="" coords="18,3627,269,3721">
+<area shape="rect" id="node42" href="tb_dim_sexo.html" target="_top" title="tb_dim_sexo" alt="" coords="58,6325,229,6419">
+<area shape="rect" id="node72" href="tb_dim_identidade_genero.html" target="_top" title="tb_dim_identidade_genero" alt="" coords="5,8316,282,8410">
+<area shape="rect" id="node3" href="tb_dim_vinculacao_equipes.html" target="_top" title="tb_dim_vinculacao_equipes" alt="" coords="373,3509,660,3603">
+<area shape="rect" id="node5" href="tb_fat_atd_ind_encaminhamentos.html" target="_top" title="tb_fat_atd_ind_encaminhamentos" alt="" coords="755,2097,1088,2191">
+<area shape="rect" id="node6" href="tb_dim_cbo.html" target="_top" title="tb_dim_cbo" alt="" coords="435,2685,598,2779">
+<area shape="rect" id="node7" href="tb_dim_tipo_origem.html" target="_top" title="tb_dim_tipo_origem" alt="" coords="403,3123,629,3217">
+<area shape="rect" id="node8" href="tb_dim_classificacao_risc_enc.html" target="_top" title="tb_dim_classificacao_risc_enc" alt="" coords="362,1169,670,1263">
+<area shape="rect" id="node9" href="tb_dim_especialidade.html" target="_top" title="tb_dim_especialidade" alt="" coords="397,1057,636,1151">
+<area shape="rect" id="node10" href="tb_dim_municipio.html" target="_top" title="tb_dim_municipio" alt="" coords="411,4181,621,4275">
+<area shape="rect" id="node11" href="tb_dim_profissional.html" target="_top" title="tb_dim_profissional" alt="" coords="403,2573,629,2667">
+<area shape="rect" id="node12" href="tb_dim_tempo.html" target="_top" title="tb_dim_tempo" alt="" coords="425,4035,608,4129">
+<area shape="rect" id="node13" href="tb_dim_tipo_ficha.html" target="_top" title="tb_dim_tipo_ficha" alt="" coords="411,2960,621,3054">
+<area shape="rect" id="node14" href="tb_dim_tipo_origem_dado_transp.html" target="_top" title="tb_dim_tipo_origem_dado_transp" alt="" coords="351,3235,682,3329">
+<area shape="rect" id="node16" href="tb_fat_atd_ind_exames.html" target="_top" title="tb_fat_atd_ind_exames" alt="" coords="796,2433,1046,2527">
+<area shape="rect" id="node17" href="tb_dim_procedimento.html" target="_top" title="tb_dim_procedimento" alt="" coords="396,1644,636,1738">
+<area shape="rect" id="node18" href="tb_fat_atd_ind_medicamentos.html" target="_top" title="tb_fat_atd_ind_medicamentos" alt="" coords="770,1649,1073,1743">
+<area shape="rect" id="node19" href="tb_dim_catmat.html" target="_top" title="tb_dim_catmat" alt="" coords="423,523,609,617">
+<area shape="rect" id="node20" href="tb_dim_dose_frequencia.html" target="_top" title="tb_dim_dose_frequencia" alt="" coords="385,635,647,729">
+<area shape="rect" id="node21" href="tb_dim_dose_frequencia_medida.html" target="_top" title="tb_dim_dose_frequencia_medida" alt="" coords="353,187,680,281">
+<area shape="rect" id="node22" href="tb_dim_duracao_tratamento_med.html" target="_top" title="tb_dim_duracao_tratamento_med" alt="" coords="351,299,681,393">
+<area shape="rect" id="node23" href="tb_dim_via_administracao.html" target="_top" title="tb_dim_via_administracao" alt="" coords="379,411,653,505">
+<area shape="rect" id="node24" href="tb_fat_atd_ind_problemas.html" target="_top" title="tb_fat_atd_ind_problemas" alt="" coords="785,3441,1058,3535">
+<area shape="rect" id="node25" href="tb_dim_ciap.html" target="_top" title="tb_dim_ciap" alt="" coords="433,3347,600,3441">
+<area shape="rect" id="node26" href="tb_dim_cid.html" target="_top" title="tb_dim_cid" alt="" coords="437,4943,595,5037">
+<area shape="rect" id="node27" href="tb_dim_situacao_problema.html" target="_top" title="tb_dim_situacao_problema" alt="" coords="376,2848,656,2942">
+<area shape="rect" id="node28" href="tb_fat_atd_ind_procedimentos.html" target="_top" title="tb_fat_atd_ind_procedimentos" alt="" coords="768,1873,1074,1967">
+<area shape="rect" id="node29" href="tb_fat_atend_dom_prob_cond.html" target="_top" title="tb_fat_atend_dom_prob_cond" alt="" coords="770,3329,1073,3423">
+<area shape="rect" id="node30" href="tb_dim_turno.html" target="_top" title="tb_dim_turno" alt="" coords="429,4508,604,4602">
+<area shape="rect" id="node31" href="tb_fat_atend_dom_proced.html" target="_top" title="tb_fat_atend_dom_proced" alt="" coords="784,2209,1058,2303">
+<area shape="rect" id="node32" href="tb_fat_atend_odonto_encaminham.html" target="_top" title="tb_fat_atend_odonto_encaminham" alt="" coords="752,1985,1090,2079">
+<area shape="rect" id="node33" href="tb_fat_atend_odonto_exames.html" target="_top" title="tb_fat_atend_odonto_exames" alt="" coords="772,2545,1071,2639">
+<area shape="rect" id="node34" href="tb_fat_atend_odonto_medicament.html" target="_top" title="tb_fat_atend_odonto_medicament" alt="" coords="754,1761,1088,1855">
+<area shape="rect" id="node35" href="tb_fat_atend_odonto_problemas.html" target="_top" title="tb_fat_atend_odonto_problemas" alt="" coords="760,3553,1082,3647">
+<area shape="rect" id="node36" href="tb_fat_atend_odonto_proced.html" target="_top" title="tb_fat_atend_odonto_proced" alt="" coords="774,2321,1068,2415">
+<area shape="rect" id="node37" href="tb_fat_atendimento_domiciliar.html" target="_top" title="tb_fat_atendimento_domiciliar" alt="" coords="768,5151,1074,5245">
+<area shape="rect" id="node38" href="tb_dim_conduta_ad.html" target="_top" title="tb_dim_conduta_ad" alt="" coords="404,6031,628,6125">
+<area shape="rect" id="node39" href="tb_dim_faixa_etaria.html" target="_top" title="tb_dim_faixa_etaria" alt="" coords="405,6709,628,6803">
+<area shape="rect" id="node40" href="tb_dim_local_atendimento.html" target="_top" title="tb_dim_local_atendimento" alt="" coords="379,5816,654,5910">
+<area shape="rect" id="node41" href="tb_dim_modalidade_ad.html" target="_top" title="tb_dim_modalidade_ad" alt="" coords="391,7689,642,7783">
+<area shape="rect" id="node43" href="tb_dim_tipo_atendimento.html" target="_top" title="tb_dim_tipo_atendimento" alt="" coords="382,7201,650,7295">
+<area shape="rect" id="node44" href="tb_fat_atendimento_individual.html" target="_top" title="tb_fat_atendimento_individual" alt="" coords="769,5487,1074,5581">
+<area shape="rect" id="node45" href="tb_dim_aleitamento.html" target="_top" title="tb_dim_aleitamento" alt="" coords="405,7868,628,7962">
+<area shape="rect" id="node46" href="tb_dim_racionalidade_saude.html" target="_top" title="tb_dim_racionalidade_saude" alt="" coords="370,7980,662,8074">
+<area shape="rect" id="node47" href="tb_dim_tipo_glicemia.html" target="_top" title="tb_dim_tipo_glicemia" alt="" coords="398,7039,634,7133">
+<area shape="rect" id="node48" href="tb_dim_tipo_participacao_atend.html" target="_top" title="tb_dim_tipo_participacao_atend" alt="" coords="357,7511,676,7605">
+<area shape="rect" id="node49" href="tb_fat_atendimento_odonto.html" target="_top" title="tb_fat_atendimento_odonto" alt="" coords="780,5375,1063,5469">
+<area shape="rect" id="node50" href="tb_dim_tipo_consulta_odonto.html" target="_top" title="tb_dim_tipo_consulta_odonto" alt="" coords="365,7364,667,7458">
+<area shape="rect" id="node51" href="tb_fat_atividade_coletiva.html" target="_top" title="tb_fat_atividade_coletiva" alt="" coords="790,2657,1053,2751">
+<area shape="rect" id="node52" href="tb_dim_tipo_atividade.html" target="_top" title="tb_dim_tipo_atividade" alt="" coords="395,2071,637,2165">
+<area shape="rect" id="node53" href="tb_fat_atvdd_coletiva_ext.html" target="_top" title="tb_fat_atvdd_coletiva_ext" alt="" coords="787,2769,1056,2863">
+<area shape="rect" id="node54" href="tb_fat_atvdd_coletiva_int.html" target="_top" title="tb_fat_atvdd_coletiva_int" alt="" coords="788,2881,1054,2975">
+<area shape="rect" id="node55" href="tb_fat_atvdd_coletiva_part.html" target="_top" title="tb_fat_atvdd_coletiva_part" alt="" coords="783,3665,1060,3759">
+<area shape="rect" id="node56" href="tb_fat_atvdd_coletiva_propart.html" target="_top" title="tb_fat_atvdd_coletiva_propart" alt="" coords="770,3105,1072,3199">
+<area shape="rect" id="node57" href="tb_fat_avaliacao_elegibilidade.html" target="_top" title="tb_fat_avaliacao_elegibilidade" alt="" coords="770,5599,1073,5693">
+<area shape="rect" id="node58" href="tb_dim_cuidador.html" target="_top" title="tb_dim_cuidador" alt="" coords="415,8377,617,8471">
+<area shape="rect" id="node59" href="tb_dim_etnia.html" target="_top" title="tb_dim_etnia" alt="" coords="430,8896,602,8990">
+<area shape="rect" id="node60" href="tb_dim_nacionalidade.html" target="_top" title="tb_dim_nacionalidade" alt="" coords="395,8672,637,8766">
+<area shape="rect" id="node61" href="tb_dim_pais.html" target="_top" title="tb_dim_pais" alt="" coords="433,8784,600,8878">
+<area shape="rect" id="node62" href="tb_dim_procedencia_origem.html" target="_top" title="tb_dim_procedencia_origem" alt="" coords="371,8489,662,8583">
+<area shape="rect" id="node63" href="tb_dim_raca_cor.html" target="_top" title="tb_dim_raca_cor" alt="" coords="415,9008,617,9102">
+<area shape="rect" id="node64" href="tb_dim_tipo_elegibilidade.html" target="_top" title="tb_dim_tipo_elegibilidade" alt="" coords="381,8231,651,8325">
+<area shape="rect" id="node65" href="tb_dim_tipo_logradouro.html" target="_top" title="tb_dim_tipo_logradouro" alt="" coords="387,5561,645,5655">
+<area shape="rect" id="node66" href="tb_fat_cad_dom_familia.html" target="_top" title="tb_fat_cad_dom_familia" alt="" coords="794,3889,1049,3983">
+<area shape="rect" id="node67" href="tb_dim_tipo_renda_familiar.html" target="_top" title="tb_dim_tipo_renda_familiar" alt="" coords="375,3888,657,3982">
+<area shape="rect" id="node68" href="tb_fat_cad_domiciliar.html" target="_top" title="tb_fat_cad_domiciliar" alt="" coords="802,4036,1040,4130">
+<area shape="rect" id="node69" href="tb_dim_tipo_imovel.html" target="_top" title="tb_dim_tipo_imovel" alt="" coords="405,5449,628,5543">
+<area shape="rect" id="node70" href="tb_fat_cad_individual.html" target="_top" title="tb_fat_cad_individual" alt="" coords="803,8787,1040,8881">
+<area shape="rect" id="node71" href="tb_dim_frequencia_alimentacao.html" target="_top" title="tb_dim_frequencia_alimentacao" alt="" coords="358,9787,674,9881">
+<area shape="rect" id="node73" href="tb_dim_povo_comunidad_trad.html" target="_top" title="tb_dim_povo_comunidad_trad" alt="" coords="363,9675,669,9769">
+<area shape="rect" id="node74" href="tb_dim_situacao_trabalho.html" target="_top" title="tb_dim_situacao_trabalho" alt="" coords="381,9899,652,9993">
+<area shape="rect" id="node75" href="tb_dim_tempo_morador_rua.html" target="_top" title="tb_dim_tempo_morador_rua" alt="" coords="371,10011,661,10105">
+<area shape="rect" id="node76" href="tb_dim_tipo_condicao_peso.html" target="_top" title="tb_dim_tipo_condicao_peso" alt="" coords="371,10123,661,10217">
+<area shape="rect" id="node77" href="tb_dim_tipo_escolaridade.html" target="_top" title="tb_dim_tipo_escolaridade" alt="" coords="381,9227,652,9321">
+<area shape="rect" id="node78" href="tb_dim_tipo_orientacao_sexual.html" target="_top" title="tb_dim_tipo_orientacao_sexual" alt="" coords="360,9339,672,9433">
+<area shape="rect" id="node79" href="tb_dim_tipo_parentesco.html" target="_top" title="tb_dim_tipo_parentesco" alt="" coords="387,9451,645,9545">
+<area shape="rect" id="node80" href="tb_dim_tipo_saida_cadastro.html" target="_top" title="tb_dim_tipo_saida_cadastro" alt="" coords="371,9563,661,9657">
+<area shape="rect" id="node81" href="tb_fat_cidadao.html" target="_top" title="tb_fat_cidadao" alt="" coords="828,4372,1014,4466">
+<area shape="rect" id="node82" href="tb_fat_cidadao_territorio.html" target="_top" title="tb_fat_cidadao_territorio" alt="" coords="790,7769,1052,7863">
+<area shape="rect" id="node83" href="tb_fat_cnslddo_ciddo_fai_cid.html" target="_top" title="tb_fat_cnslddo_ciddo_fai_cid" alt="" coords="772,6575,1070,6727">
+<area shape="rect" id="node84" href="tb_fat_complementar.html" target="_top" title="tb_fat_complementar" alt="" coords="804,4260,1039,4354">
+<area shape="rect" id="node85" href="tb_fat_consolidado_cidadao_fai.html" target="_top" title="tb_fat_consolidado_cidadao_fai" alt="" coords="763,6745,1080,6898">
+<area shape="rect" id="node86" href="tb_fat_consolidado_cidadao_fao.html" target="_top" title="tb_fat_consolidado_cidadao_fao" alt="" coords="760,6916,1082,7069">
+<area shape="rect" id="node87" href="tb_fat_consolidado_cidadao_fci.html" target="_top" title="tb_fat_consolidado_cidadao_fci" alt="" coords="762,7087,1081,7239">
+<area shape="rect" id="node88" href="tb_fat_consolidado_cidadao_fp.html" target="_top" title="tb_fat_consolidado_cidadao_fp" alt="" coords="764,7257,1078,7410">
+<area shape="rect" id="node89" href="tb_fat_consolidado_cidadao_fvd.html" target="_top" title="tb_fat_consolidado_cidadao_fvd" alt="" coords="760,7428,1082,7581">
+<area shape="rect" id="node90" href="tb_fat_cuidado_compartilhado.html" target="_top" title="tb_fat_cuidado_compartilhado" alt="" coords="768,4631,1074,4725">
+<area shape="rect" id="node91" href="tb_dim_conduta_cuidado.html" target="_top" title="tb_dim_conduta_cuidado" alt="" coords="383,4831,650,4925">
+<area shape="rect" id="node92" href="tb_dim_prioridade_cuidado.html" target="_top" title="tb_dim_prioridade_cuidado" alt="" coords="375,5055,658,5149">
+<area shape="rect" id="node93" href="tb_fat_familia.html" target="_top" title="tb_fat_familia" alt="" coords="833,4484,1010,4578">
+<area shape="rect" id="node94" href="tb_fat_familia_territorio.html" target="_top" title="tb_fat_familia_territorio" alt="" coords="1136,5384,1388,5478">
+<area shape="rect" id="node95" href="tb_fat_fichas.html" target="_top" title="tb_fat_fichas" alt="" coords="835,3777,1008,3871">
+<area shape="rect" id="node96" href="tb_fat_marca_consumo_alimnt.html" target="_top" title="tb_fat_marca_consumo_alimnt" alt="" coords="767,4743,1076,4837">
+<area shape="rect" id="node97" href="tb_fat_op_acompanhamento_idosa.html" target="_top" title="tb_fat_op_acompanhamento_idosa" alt="" coords="750,7599,1092,7751">
+<area shape="rect" id="node98" href="tb_fat_proced_atend.html" target="_top" title="tb_fat_proced_atend" alt="" coords="806,4967,1037,5061">
+<area shape="rect" id="node99" href="tb_fat_proced_atend_proced.html" target="_top" title="tb_fat_proced_atend_proced" alt="" coords="775,4148,1068,4242">
+<area shape="rect" id="node100" href="tb_fat_procedimento.html" target="_top" title="tb_fat_procedimento" alt="" coords="806,2993,1037,3087">
+<area shape="rect" id="node101" href="tb_fat_rel_op_crianca.html" target="_top" title="tb_fat_rel_op_crianca" alt="" coords="784,5711,1059,5863">
+<area shape="rect" id="node102" href="tb_fat_rel_op_gestante.html" target="_top" title="tb_fat_rel_op_gestante" alt="" coords="789,5881,1053,6063">
+<area shape="rect" id="node103" href="tb_fat_rel_op_risco_cardio.html" target="_top" title="tb_fat_rel_op_risco_cardio" alt="" coords="775,6081,1068,6263">
+<area shape="rect" id="node104" href="tb_fat_vacinacao.html" target="_top" title="tb_fat_vacinacao" alt="" coords="820,4855,1023,4949">
+<area shape="rect" id="node105" href="tb_fat_vacinacao_vacina.html" target="_top" title="tb_fat_vacinacao_vacina" alt="" coords="790,3217,1052,3311">
+<area shape="rect" id="node106" href="tb_fat_visita_domiciliar.html" target="_top" title="tb_fat_visita_domiciliar" alt="" coords="796,5263,1047,5357">
+<area shape="rect" id="node107" href="tb_dim_desfecho_visita.html" target="_top" title="tb_dim_desfecho_visita" alt="" coords="389,6892,644,6986">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_fat_cidadao_pec.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

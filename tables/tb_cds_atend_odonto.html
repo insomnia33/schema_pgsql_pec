@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tb_cds_atend_odonto - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tb_cds_atend_odonto</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Responsável por armazenar informações de atendimentos odontológicos do sistema CDS.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_cds_atend_odonto">co_seq_cds_atend_odonto</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="rl_cds_atend_odont_tip_vig_buc.co_cds_atend_odonto references tb_cds_atend_odonto.co_seq_cds_atend_odonto via fk_cdsatdodt_cdsatdodttpvigbuc"><a href='rl_cds_atend_odont_tip_vig_buc.html'>rl_cds_atend_odont_tip_vig_buc</a><span class='relatedKey'>.co_cds_atend_odonto</span></td>
+                                                <td class="constraint detail">fk_cdsatdodt_cdsatdodttpvigbuc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="rl_cds_atend_odonto_proced.co_cds_atend_odonto references tb_cds_atend_odonto.co_seq_cds_atend_odonto via fk_cdsatendodonto_cdsatdodtprc"><a href='rl_cds_atend_odonto_proced.html'>rl_cds_atend_odonto_proced</a><span class='relatedKey'>.co_cds_atend_odonto</span></td>
+                                                <td class="constraint detail">fk_cdsatendodonto_cdsatdodtprc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="rl_cds_atend_odonto_tipo_cnslt.co_cds_atend_odonto references tb_cds_atend_odonto.co_seq_cds_atend_odonto via fk_cdsatendodt_cdsatdodttipcst"><a href='rl_cds_atend_odonto_tipo_cnslt.html'>rl_cds_atend_odonto_tipo_cnslt</a><span class='relatedKey'>.co_cds_atend_odonto</span></td>
+                                                <td class="constraint detail">fk_cdsatendodt_cdsatdodttipcst</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="rl_cds_atend_odonto_tipo_encam.co_cds_atend_odonto references tb_cds_atend_odonto.co_seq_cds_atend_odonto via fk_cdsatendodt_cdsatdodttipenc"><a href='rl_cds_atend_odonto_tipo_encam.html'>rl_cds_atend_odonto_tipo_encam</a><span class='relatedKey'>.co_cds_atend_odonto</span></td>
+                                                <td class="constraint detail">fk_cdsatendodt_cdsatdodttipenc</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="rl_cds_atend_odonto_tipo_fornc.co_cds_atend_odonto references tb_cds_atend_odonto.co_seq_cds_atend_odonto via fk_cdsatendodt_cdsatdodttipfrn"><a href='rl_cds_atend_odonto_tipo_fornc.html'>rl_cds_atend_odonto_tipo_fornc</a><span class='relatedKey'>.co_cds_atend_odonto</span></td>
+                                                <td class="constraint detail">fk_cdsatendodt_cdsatdodttipfrn</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cds_ficha_atend_odonto">co_cds_ficha_atend_odonto</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_atend_odonto.co_cds_ficha_atend_odonto references tb_cds_ficha_atend_odonto.co_seq_cds_ficha_atend_odonto via fk_cdsfichaatendodnt_cdsatdodt"><a href='tb_cds_ficha_atend_odonto.html'>tb_cds_ficha_atend_odonto</a><span class='relatedKey'>.co_seq_cds_ficha_atend_odonto</span></td>
+                                                <td class="constraint detail">fk_cdsfichaatendodnt_cdsatdodt</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da ficha de atendimento odontológico. Chave estrangeira com origem na tabela TB_CDS_FICHA_ATEND_ODONTO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cartao_sus">nu_cartao_sus</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Armazena o número do cartão do SUS do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_prontuario">nu_prontuario</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Armazena o número do prontuário do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_nascimento">dt_nascimento</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a data de nascimento do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_local_atend">co_local_atend</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_atend_odonto.co_local_atend references tb_local_atend.co_local_atend via fk_localatend_cdsatendodonto"><a href='tb_local_atend.html'>tb_local_atend</a><span class='relatedKey'>.co_local_atend</span></td>
+                                                <td class="constraint detail">fk_localatend_cdsatendodonto</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do local de atendimento. Chave estrangeira com origem na tabela TB_LOCAL_ATEND.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_gestante">st_gestante</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o cidadão é gestante (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_necessidade_especial">st_necessidade_especial</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o cidadão é portador de necessidades especiais (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_sexo">co_sexo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_atend_odonto.co_sexo references tb_sexo.co_sexo via fk_sexo_cdsatendodonto"><a href='tb_sexo.html'>tb_sexo</a><span class='relatedKey'>.co_sexo</span></td>
+                                                <td class="constraint detail">fk_sexo_cdsatendodonto</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do sexo. Chave estrangeira com origem na tabela TB_SEXO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tp_atend">tp_atend</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_atend_odonto.tp_atend references tb_tipo_atend.co_tipo_atend via fk_tipoatend_cdsatendodonto"><a href='tb_tipo_atend.html'>tb_tipo_atend</a><span class='relatedKey'>.co_tipo_atend</span></td>
+                                                <td class="constraint detail">fk_tipoatend_cdsatendodonto</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do tipo de atendimento. Chave estrangeira com origem na tabela TB_TIPO_ATEND.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cds_turno">co_cds_turno</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tb_cds_atend_odonto.co_cds_turno references tb_cds_turno.co_cds_turno via fk_cdsturno_cdsatendodonto"><a href='tb_cds_turno.html'>tb_cds_turno</a><span class='relatedKey'>.co_cds_turno</span></td>
+                                                <td class="constraint detail">fk_cdsturno_cdsatendodonto</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código do turno no qual o atendimento odontológico foi realizado. Chave estrangeira com origem na tabela TB_CDS_TURNO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="nu_cpf_cidadao">nu_cpf_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_nasf">st_nasf</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o tipo de atendimento foi preenchido em uma versão que continha a antiga estrutura Núcleo de Apoio a Saúde da Família (NASF).</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_cdsatendodonto</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_cds_atend_odonto</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_cdsatdodo_nucpfcidadao</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>nu_cpf_cidadao</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdsatendodnt_cocdsfchatdodt</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_cds_ficha_atend_odonto</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdsatendodonto_cocdsturno</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_cds_turno</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdsatendodonto_colocalatend</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_local_atend</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdsatendodonto_cosexo</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>co_sexo</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>in_cdsatendodonto_tpcdsatend</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>tp_atend</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_cds_atend_odont_tip_vig_buc.html" target="_top" title="rl_cds_atend_odont_tip_vig_buc" alt="" coords="794,5,1117,132">
+<area shape="rect" id="node2" href="tb_cds_atend_odonto.html" target="_top" title="tb_cds_atend_odonto" alt="" coords="351,317,745,772">
+<area shape="rect" id="node7" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="5,95,307,365">
+<area shape="rect" id="node8" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="68,836,244,960">
+<area shape="rect" id="node9" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="37,383,275,536">
+<area shape="rect" id="node10" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="67,554,245,677">
+<area shape="rect" id="node11" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="67,695,245,818">
+<area shape="rect" id="node3" href="rl_cds_atend_odonto_proced.html" target="_top" title="rl_cds_atend_odonto_proced" alt="" coords="806,150,1104,302">
+<area shape="rect" id="node4" href="rl_cds_atend_odonto_tipo_cnslt.html" target="_top" title="rl_cds_atend_odonto_tipo_cnslt" alt="" coords="796,320,1115,447">
+<area shape="rect" id="node5" href="rl_cds_atend_odonto_tipo_encam.html" target="_top" title="rl_cds_atend_odonto_tipo_encam" alt="" coords="789,464,1122,591">
+<area shape="rect" id="node6" href="rl_cds_atend_odonto_tipo_fornc.html" target="_top" title="rl_cds_atend_odonto_tipo_fornc" alt="" coords="794,608,1116,735">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tb_cds_atend_odonto.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="rl_calendario_vacnl_grupo_alvo.html" target="_top" title="rl_calendario_vacnl_grupo_alvo" alt="" coords="293,868,611,962">
+<area shape="rect" id="node2" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="35,977,213,1100">
+<area shape="rect" id="node3" href="rl_cds_atend_odont_tip_vig_buc.html" target="_top" title="rl_cds_atend_odont_tip_vig_buc" alt="" coords="1105,955,1428,1082">
+<area shape="rect" id="node4" href="tb_cds_atend_odonto.html" target="_top" title="tb_cds_atend_odonto" alt="" coords="662,1025,1056,1479">
+<area shape="rect" id="node5" href="tb_cds_tipo_vig_saude_bucal.html" target="_top" title="tb_cds_tipo_vig_saude_bucal" alt="" coords="709,913,1009,1007">
+<area shape="rect" id="node15" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="302,1980,603,2250">
+<area shape="rect" id="node18" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="35,318,213,442">
+<area shape="rect" id="node20" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="5,482,243,635">
+<area shape="rect" id="node24" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="36,1236,212,1359">
+<area shape="rect" id="node6" href="rl_cds_atend_odonto_proced.html" target="_top" title="rl_cds_atend_odonto_proced" alt="" coords="1118,1140,1415,1292">
+<area shape="rect" id="node7" href="tb_proced.html" target="_top" title="tb_proced" alt="" coords="47,1514,201,1608">
+<area shape="rect" id="node8" href="rl_cds_atend_odonto_tipo_cnslt.html" target="_top" title="rl_cds_atend_odonto_tipo_cnslt" alt="" coords="1107,1390,1426,1517">
+<area shape="rect" id="node9" href="tb_tipo_consulta_odonto.html" target="_top" title="tb_tipo_consulta_odonto" alt="" coords="727,1756,991,1850">
+<area shape="rect" id="node10" href="rl_cds_atend_odonto_tipo_encam.html" target="_top" title="rl_cds_atend_odonto_tipo_encam" alt="" coords="1100,1693,1432,1819">
+<area shape="rect" id="node11" href="tb_tipo_encam_odonto.html" target="_top" title="tb_tipo_encam_odonto" alt="" coords="734,1868,984,1962">
+<area shape="rect" id="node12" href="rl_cds_atend_odonto_tipo_fornc.html" target="_top" title="rl_cds_atend_odonto_tipo_fornc" alt="" coords="1106,1893,1427,2019">
+<area shape="rect" id="node13" href="tb_tipo_fornec_odonto.html" target="_top" title="tb_tipo_fornec_odonto" alt="" coords="735,1980,982,2074">
+<area shape="rect" id="node14" href="rl_cds_ficha_atend_odonto_prof.html" target="_top" title="rl_cds_ficha_atend_odonto_prof" alt="" coords="698,1644,1020,1738">
+<area shape="rect" id="node16" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="42,1756,206,1850">
+<area shape="rect" id="node29" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="36,1644,212,1738">
+<area shape="rect" id="node17" href="rl_tipo_atend_proced_automatic.html" target="_top" title="rl_tipo_atend_proced_automatic" alt="" coords="292,56,612,150">
+<area shape="rect" id="node19" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="366,202,538,296">
+<area shape="rect" id="node21" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="789,126,929,220">
+<area shape="rect" id="node22" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1176,126,1356,220">
+<area shape="rect" id="node23" href="tb_cds_atend_domiciliar.html" target="_top" title="tb_cds_atend_domiciliar" alt="" coords="322,385,582,479">
+<area shape="rect" id="node25" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="322,497,582,591">
+<area shape="rect" id="node26" href="tb_cds_ativ_col_participante.html" target="_top" title="tb_cds_ativ_col_participante" alt="" coords="713,1497,1005,1591">
+<area shape="rect" id="node27" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="333,1497,572,1591">
+<area shape="rect" id="node28" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="317,1756,588,1850">
+<area shape="rect" id="node30" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="330,1644,574,1738">
+<area shape="rect" id="node31" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="287,1350,618,1444">
+<area shape="rect" id="node32" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="296,1868,608,1962">
+<area shape="rect" id="node33" href="tb_cds_proced.html" target="_top" title="tb_cds_proced" alt="" coords="359,1126,546,1220">
+<area shape="rect" id="node34" href="tb_cds_vacinacao.html" target="_top" title="tb_cds_vacinacao" alt="" coords="347,644,558,738">
+<area shape="rect" id="node35" href="tb_cds_visita_domiciliar.html" target="_top" title="tb_cds_visita_domiciliar" alt="" coords="323,1238,582,1332">
+<area shape="rect" id="node36" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="329,756,576,850">
+<area shape="rect" id="node37" href="tb_tipo_exame.html" target="_top" title="tb_tipo_exame" alt="" coords="359,980,545,1074">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tb_cds_atend_odonto.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_cds_atend_odont_tip_vig_buc.html" target="_top" title="rl_cds_atend_odont_tip_vig_buc" alt="" coords="794,5,1117,132">
+<area shape="rect" id="node2" href="tb_cds_atend_odonto.html" target="_top" title="tb_cds_atend_odonto" alt="" coords="351,317,745,772">
+<area shape="rect" id="node7" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="5,95,307,365">
+<area shape="rect" id="node8" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="68,836,244,960">
+<area shape="rect" id="node9" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="37,383,275,536">
+<area shape="rect" id="node10" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="67,554,245,677">
+<area shape="rect" id="node11" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="67,695,245,818">
+<area shape="rect" id="node3" href="rl_cds_atend_odonto_proced.html" target="_top" title="rl_cds_atend_odonto_proced" alt="" coords="806,150,1104,302">
+<area shape="rect" id="node4" href="rl_cds_atend_odonto_tipo_cnslt.html" target="_top" title="rl_cds_atend_odonto_tipo_cnslt" alt="" coords="796,320,1115,447">
+<area shape="rect" id="node5" href="rl_cds_atend_odonto_tipo_encam.html" target="_top" title="rl_cds_atend_odonto_tipo_encam" alt="" coords="789,464,1122,591">
+<area shape="rect" id="node6" href="rl_cds_atend_odonto_tipo_fornc.html" target="_top" title="rl_cds_atend_odonto_tipo_fornc" alt="" coords="794,608,1116,735">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tb_cds_atend_odonto.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_calendario_vacnl_grupo_alvo.html" target="_top" title="rl_calendario_vacnl_grupo_alvo" alt="" coords="293,1456,611,1550">
+<area shape="rect" id="node2" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="35,1972,213,2095">
+<area shape="rect" id="node3" href="rl_cds_atend_odont_tip_vig_buc.html" target="_top" title="rl_cds_atend_odont_tip_vig_buc" alt="" coords="1105,2326,1428,2453">
+<area shape="rect" id="node4" href="tb_cds_atend_odonto.html" target="_top" title="tb_cds_atend_odonto" alt="" coords="662,2395,1056,2850">
+<area shape="rect" id="node5" href="tb_cds_tipo_vig_saude_bucal.html" target="_top" title="tb_cds_tipo_vig_saude_bucal" alt="" coords="709,2284,1009,2378">
+<area shape="rect" id="node15" href="tb_cds_ficha_atend_odonto.html" target="_top" title="tb_cds_ficha_atend_odonto" alt="" coords="302,237,603,507">
+<area shape="rect" id="node18" href="tb_tipo_atend.html" target="_top" title="tb_tipo_atend" alt="" coords="35,3850,213,3974">
+<area shape="rect" id="node20" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="5,3353,243,3506">
+<area shape="rect" id="node25" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="36,2776,212,2899">
+<area shape="rect" id="node6" href="rl_cds_atend_odonto_proced.html" target="_top" title="rl_cds_atend_odonto_proced" alt="" coords="1118,1364,1415,1516">
+<area shape="rect" id="node7" href="tb_proced.html" target="_top" title="tb_proced" alt="" coords="47,69,201,163">
+<area shape="rect" id="node8" href="rl_cds_atend_odonto_tipo_cnslt.html" target="_top" title="rl_cds_atend_odonto_tipo_cnslt" alt="" coords="1107,2527,1426,2654">
+<area shape="rect" id="node9" href="tb_tipo_consulta_odonto.html" target="_top" title="tb_tipo_consulta_odonto" alt="" coords="727,2868,991,2962">
+<area shape="rect" id="node10" href="rl_cds_atend_odonto_tipo_encam.html" target="_top" title="rl_cds_atend_odonto_tipo_encam" alt="" coords="1100,2786,1432,2913">
+<area shape="rect" id="node11" href="tb_tipo_encam_odonto.html" target="_top" title="tb_tipo_encam_odonto" alt="" coords="734,2980,984,3074">
+<area shape="rect" id="node12" href="rl_cds_atend_odonto_tipo_fornc.html" target="_top" title="rl_cds_atend_odonto_tipo_fornc" alt="" coords="1106,2995,1427,3122">
+<area shape="rect" id="node13" href="tb_tipo_fornec_odonto.html" target="_top" title="tb_tipo_fornec_odonto" alt="" coords="735,3092,982,3186">
+<area shape="rect" id="node14" href="rl_cds_ficha_atend_odonto_prof.html" target="_top" title="rl_cds_ficha_atend_odonto_prof" alt="" coords="698,165,1020,259">
+<area shape="rect" id="node16" href="tb_cds_prof.html" target="_top" title="tb_cds_prof" alt="" coords="42,525,206,619">
+<area shape="rect" id="node30" href="tb_localidade.html" target="_top" title="tb_localidade" alt="" coords="36,637,212,731">
+<area shape="rect" id="node17" href="rl_tipo_atend_proced_automatic.html" target="_top" title="rl_tipo_atend_proced_automatic" alt="" coords="292,4165,612,4259">
+<area shape="rect" id="node19" href="ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="773,3888,945,3982">
+<area shape="rect" id="node21" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="366,3982,538,4076">
+<area shape="rect" id="node22" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="789,4018,929,4112">
+<area shape="rect" id="node23" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="1176,4018,1356,4112">
+<area shape="rect" id="node24" href="tb_cds_atend_domiciliar.html" target="_top" title="tb_cds_atend_domiciliar" alt="" coords="322,3800,582,3894">
+<area shape="rect" id="node26" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="322,3541,582,3635">
+<area shape="rect" id="node27" href="tb_cds_ativ_col_participante.html" target="_top" title="tb_cds_ativ_col_participante" alt="" coords="713,717,1005,811">
+<area shape="rect" id="node28" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="333,125,572,219">
+<area shape="rect" id="node29" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="317,637,588,731">
+<area shape="rect" id="node31" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="330,525,574,619">
+<area shape="rect" id="node32" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="287,973,618,1067">
+<area shape="rect" id="node33" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="296,749,608,843">
+<area shape="rect" id="node34" href="tb_cds_proced.html" target="_top" title="tb_cds_proced" alt="" coords="359,2946,546,3040">
+<area shape="rect" id="node35" href="tb_cds_vacinacao.html" target="_top" title="tb_cds_vacinacao" alt="" coords="347,3058,558,3152">
+<area shape="rect" id="node36" href="tb_cds_visita_domiciliar.html" target="_top" title="tb_cds_visita_domiciliar" alt="" coords="323,2274,582,2368">
+<area shape="rect" id="node37" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="329,1792,576,1886">
+<area shape="rect" id="node38" href="tb_tipo_exame.html" target="_top" title="tb_tipo_exame" alt="" coords="359,1904,545,1998">
+<area shape="rect" id="node39" href="tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="369,3688,536,3782">
+<area shape="rect" id="node40" href="tl_cds_atend_domiciliar.html" target="_top" title="tl_cds_atend_domiciliar" alt="" coords="325,3282,580,3376">
+<area shape="rect" id="node41" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="325,3429,580,3523">
+<area shape="rect" id="node42" href="tl_cds_atend_odonto.html" target="_top" title="tl_cds_atend_odonto" alt="" coords="335,2386,569,2480">
+<area shape="rect" id="node43" href="tl_cds_ativ_col_participante.html" target="_top" title="tl_cds_ativ_col_participante" alt="" coords="309,1232,596,1326">
+<area shape="rect" id="node44" href="tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="319,2050,585,2144">
+<area shape="rect" id="node45" href="tl_cds_cad_individual.html" target="_top" title="tl_cds_cad_individual" alt="" coords="333,1344,572,1438">
+<area shape="rect" id="node46" href="tl_cds_ficha_ativ_col.html" target="_top" title="tl_cds_ficha_ativ_col" alt="" coords="335,2610,569,2704">
+<area shape="rect" id="node47" href="tl_cds_ficha_consumo_alimentar.html" target="_top" title="tl_cds_ficha_consumo_alimentar" alt="" coords="289,2498,615,2592">
+<area shape="rect" id="node48" href="tl_cds_ficha_zika_microcefalia.html" target="_top" title="tl_cds_ficha_zika_microcefalia" alt="" coords="299,3170,606,3264">
+<area shape="rect" id="node49" href="tl_cds_proced.html" target="_top" title="tl_cds_proced" alt="" coords="361,2722,543,2816">
+<area shape="rect" id="node50" href="tl_cds_vacinacao.html" target="_top" title="tl_cds_vacinacao" alt="" coords="349,2834,555,2928">
+<area shape="rect" id="node51" href="tl_cds_visita_domiciliar.html" target="_top" title="tl_cds_visita_domiciliar" alt="" coords="325,2162,579,2256">
+<area shape="rect" id="node52" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="376,861,528,955">
+<area shape="rect" id="node53" href="tl_opcao_rapida_exame.html" target="_top" title="tl_opcao_rapida_exame" alt="" coords="325,1085,580,1179">
+<area shape="rect" id="node54" href="tl_prof.html" target="_top" title="tl_prof" alt="" coords="391,1568,514,1662">
+<area shape="rect" id="node55" href="tl_tipo_exame.html" target="_top" title="tl_tipo_exame" alt="" coords="362,1680,542,1774">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tb_cds_atend_odonto.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

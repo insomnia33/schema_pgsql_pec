@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tl_cds_atend_individual - esus.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>esus</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>tl_cds_atend_individual</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Tabela de Log referente a tabela TB_CDS_ATEND_INDIVIDUAL</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_seq_cds_atend_individual">co_seq_cds_atend_individual</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código sequencial da tabela.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_cds_ficha_atend_individual">co_cds_ficha_atend_individual</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da ficha de atendimento individual. Chave estrangeira com origem na tabela TB_CDS_FICHA_ATEND.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_prontuario">co_prontuario</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_prontuario&#39;s name implies that it&#39;s a child of tb_antecedente.co_prontuario, but it doesn&#39;t reference that column."><a href='tb_antecedente.html'>tb_antecedente</a><span class='relatedKey'>.co_prontuario</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do prontuário do cidadão. Chave estrangeira com origem na tabela TB_PRONTUARIO</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cartao_sus">nu_cartao_sus</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Armazena o número do cartão do SUS do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_prontuario">nu_prontuario</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Armazena o número do prontuário do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_nascimento">dt_nascimento</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a data de nascimento do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_local_atend">co_local_atend</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_local_atend&#39;s name implies that it&#39;s a child of tb_local_atend.co_local_atend, but it doesn&#39;t reference that column."><a href='tb_local_atend.html'>tb_local_atend</a><span class='relatedKey'>.co_local_atend</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do local de atendimento. Chave estrangeira com origem na tabela TB_LOCAL_ATEND.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cds_aleitamento_materno">co_cds_aleitamento_materno</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_cds_aleitamento_materno&#39;s name implies that it&#39;s a child of tb_cds_aleitamento_materno.co_cds_aleitamento_materno, but it doesn&#39;t reference that column."><a href='tb_cds_aleitamento_materno.html'>tb_cds_aleitamento_materno</a><span class='relatedKey'>.co_cds_aleitamento_materno</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da forma de aleitamento materno. Chave estrangeira com origem na tabela TB_CDS_ALEITAMENTO_MATERNO</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dt_ultima_menstruacao">dt_ultima_menstruacao</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a data da última menstruação.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cds_pic">co_cds_pic</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_cds_pic&#39;s name implies that it&#39;s a child of tb_cds_pic.co_cds_pic, but it doesn&#39;t reference that column."><a href='tb_cds_pic.html'>tb_cds_pic</a><span class='relatedKey'>.co_cds_pic</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da Prática Integrativa Complementar (PIC). Chave estrangeira com origem na tabela TB_CDS_PIC.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cid10">co_cid10</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_cid10&#39;s name implies that it&#39;s a child of tb_cid10.co_cid10, but it doesn&#39;t reference that column."><a href='tb_cid10.html'>tb_cid10</a><span class='relatedKey'>.co_cid10</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do CID10. Chave estrangeira com origem na tabela TB_CID10.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_ficou_observacao">st_ficou_observacao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o cidadão necessitou ficar em observação (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_vacina_em_dia">st_vacina_em_dia</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se as vacinas estão em dia (0 - Não; 1 - Sim).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_idade_gestacional">nu_idade_gestacional</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica o número de semanas de gravidês.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_ad_modalidade">co_ad_modalidade</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador da modalidade de Atenção Domiciliar. Chave estrangeira com origem na tabela TB_AD_MODALIDADE.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_peso">nu_peso</span></td>
+                                    <td>float8</td>
+                                    <td>17,17</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Armazena o peso do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_altura">nu_altura</span></td>
+                                    <td>float8</td>
+                                    <td>17,17</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Informa a altura do cidadão.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_revisao">co_revisao</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código de revisão. Chave estrangeira com origem na tabela TB_REVISAO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_tipo_revisao">co_tipo_revisao</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Identificador de operação feita sobre a tabela TB_CDS_ATEND_INDIVIDUAL (0 - adição; 1 - modificação; 2 deleção)</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_sexo">co_sexo</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_sexo&#39;s name implies that it&#39;s a child of tb_sexo.co_sexo, but it doesn&#39;t reference that column."><a href='tb_sexo.html'>tb_sexo</a><span class='relatedKey'>.co_sexo</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do sexo. Chave estrangeira com origem na tabela TB_SEXO.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="tp_atend">tp_atend</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Código identificador do tipo de atendimento. Chave estrangeira com origem na tabela TB_TIPO_ATEND.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_cds_turno">co_cds_turno</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_cds_turno&#39;s name implies that it&#39;s a child of tb_cds_turno.co_cds_turno, but it doesn&#39;t reference that column."><a href='tb_cds_turno.html'>tb_cds_turno</a><span class='relatedKey'>.co_cds_turno</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Código do turno no qual o atendimento individual foi realizado.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_gravidez_planejada">st_gravidez_planejada</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se é uma gravidez planejada.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_gestacao_previa">qt_gestacao_previa</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica o número de gestas prévias.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="qt_parto">qt_parto</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica o numero de partos.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="co_racionalidade_saude">co_racionalidade_saude</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tl_cds_atend_individual.co_racionalidade_saude&#39;s name implies that it&#39;s a child of tb_racionalidade_saude.co_racionalidade_saude, but it doesn&#39;t reference that column."><a href='tb_racionalidade_saude.html'>tb_racionalidade_saude</a><span class='relatedKey'>.co_racionalidade_saude</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_perimetro_cefalico">nu_perimetro_cefalico</span></td>
+                                    <td>float8</td>
+                                    <td>17,17</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="co_cid10_2">co_cid10_2</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nu_cpf_cidadao">nu_cpf_cidadao</span></td>
+                                    <td>varchar</td>
+                                    <td>11</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="st_nasf">st_nasf</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indica se o tipo de atendimento foi preenchido em uma versão que continha a antiga estrutura Núcleo de Apoio a Saúde da Família (NASF).</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_tlcdsatendindividual</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>co_seq_cds_atend_individual + co_revisao</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="5,5,428,959">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tl_cds_atend_individual.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="356,246,778,1200">
+<area shape="rect" id="node2" href="tb_cds_aleitamento_materno.html" target="_top" title="tb_cds_aleitamento_materno" alt="" coords="11,317,306,441">
+<area shape="rect" id="node3" href="tb_cds_pic.html" target="_top" title="tb_cds_pic" alt="" coords="68,459,249,611">
+<area shape="rect" id="node4" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="71,1000,246,1123">
+<area shape="rect" id="node5" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="72,629,246,841">
+<area shape="rect" id="node6" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="40,147,277,299">
+<area shape="rect" id="node7" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="5,5,312,129">
+<area shape="rect" id="node8" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="31,1141,286,1265">
+<area shape="rect" id="node9" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="70,859,247,982">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/tl_cds_atend_individual.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="rl_antecedente_ciap.html" target="_top" title="rl_antecedente_ciap" alt="" coords="967,11483,1194,11577">
+<area shape="rect" id="node2" href="tb_antecedente.html" target="_top" title="tb_antecedente" alt="" coords="519,8835,826,8958">
+<area shape="rect" id="node58" href="tb_prontuario.html" target="_top" title="tb_prontuario" alt="" coords="36,4767,212,4861">
+<area shape="rect" id="node3" href="rl_atend_proced.html" target="_top" title="rl_atend_proced" alt="" coords="1396,5176,1593,5270">
+<area shape="rect" id="node4" href="tb_atend_prof.html" target="_top" title="tb_atend_prof" alt="" coords="991,4624,1171,4718">
+<area shape="rect" id="node5" href="tb_cid10.html" target="_top" title="tb_cid10" alt="" coords="585,5724,760,5935">
+<area shape="rect" id="node23" href="tb_atend.html" target="_top" title="tb_atend" alt="" coords="602,4624,742,4718">
+<area shape="rect" id="node25" href="tb_racionalidade_saude.html" target="_top" title="tb_racionalidade_saude" alt="" coords="545,4157,800,4281">
+<area shape="rect" id="node74" href="tb_tipo_agravo.html" target="_top" title="tb_tipo_agravo" alt="" coords="287,5784,475,5878">
+<area shape="rect" id="node6" href="rl_atend_prof_pic.html" target="_top" title="rl_atend_prof_pic" alt="" coords="1391,3599,1598,3693">
+<area shape="rect" id="node7" href="tb_cds_pic.html" target="_top" title="tb_cds_pic" alt="" coords="582,3367,763,3519">
+<area shape="rect" id="node8" href="rl_calendario_vacnl_grupo_alvo.html" target="_top" title="rl_calendario_vacnl_grupo_alvo" alt="" coords="922,264,1240,358">
+<area shape="rect" id="node9" href="tb_sexo.html" target="_top" title="tb_sexo" alt="" coords="584,1381,761,1505">
+<area shape="rect" id="node10" href="rl_ciap_cid10.html" target="_top" title="rl_ciap_cid10" alt="" coords="993,5101,1168,5195">
+<area shape="rect" id="node11" href="rl_evolucao_avaliacao_ciap_cid.html" target="_top" title="rl_evolucao_avaliacao_ciap_cid" alt="" coords="1336,4695,1652,4789">
+<area shape="rect" id="node12" href="rl_grupo_condicao_ciap_cid.html" target="_top" title="rl_grupo_condicao_ciap_cid" alt="" coords="936,5213,1226,5307">
+<area shape="rect" id="node13" href="rl_proced_cid10.html" target="_top" title="rl_proced_cid10" alt="" coords="983,5437,1179,5531">
+<area shape="rect" id="node14" href="ta_ad_cidadao.html" target="_top" title="ta_ad_cidadao" alt="" coords="1402,9152,1586,9246">
+<area shape="rect" id="node15" href="tb_ad_cidadao.html" target="_top" title="tb_ad_cidadao" alt="" coords="988,6309,1174,6403">
+<area shape="rect" id="node16" href="ta_agendado.html" target="_top" title="ta_agendado" alt="" coords="995,4441,1167,4535">
+<area shape="rect" id="node17" href="tb_local_atend.html" target="_top" title="tb_local_atend" alt="" coords="5,2417,243,2570">
+<area shape="rect" id="node18" href="tb_agendado.html" target="_top" title="tb_agendado" alt="" coords="295,4441,467,4535">
+<area shape="rect" id="node19" href="ta_alergia.html" target="_top" title="ta_alergia" alt="" coords="1007,10139,1155,10233">
+<area shape="rect" id="node20" href="ta_antecedente.html" target="_top" title="ta_antecedente" alt="" coords="986,10251,1176,10345">
+<area shape="rect" id="node21" href="ta_antecedente_ciap.html" target="_top" title="ta_antecedente_ciap" alt="" coords="965,10363,1196,10457">
+<area shape="rect" id="node22" href="ta_atend.html" target="_top" title="ta_atend" alt="" coords="1011,5325,1150,5419">
+<area shape="rect" id="node24" href="ta_atend_prof.html" target="_top" title="ta_atend_prof" alt="" coords="1405,4288,1584,4382">
+<area shape="rect" id="node26" href="ta_atestado.html" target="_top" title="ta_atestado" alt="" coords="1775,6049,1937,6143">
+<area shape="rect" id="node27" href="tb_atestado.html" target="_top" title="tb_atestado" alt="" coords="1413,5979,1576,6073">
+<area shape="rect" id="node28" href="ta_cirurgias_internacoes.html" target="_top" title="ta_cirurgias_internacoes" alt="" coords="949,10475,1212,10569">
+<area shape="rect" id="node29" href="ta_cuidado_compartilhado.html" target="_top" title="ta_cuidado_compartilhado" alt="" coords="1718,5875,1994,5969">
+<area shape="rect" id="node30" href="tb_cuidado_compartilhado.html" target="_top" title="tb_cuidado_compartilhado" alt="" coords="1356,5692,1633,5786">
+<area shape="rect" id="node31" href="ta_encaminhamento.html" target="_top" title="ta_encaminhamento" alt="" coords="967,6680,1195,6774">
+<area shape="rect" id="node32" href="ta_evolucao_avaliacao_ciap_cid.html" target="_top" title="ta_evolucao_avaliacao_ciap_cid" alt="" coords="1696,5443,2016,5537">
+<area shape="rect" id="node33" href="ta_evolucao_odonto.html" target="_top" title="ta_evolucao_odonto" alt="" coords="967,10587,1195,10681">
+<area shape="rect" id="node34" href="ta_exame_requisitado.html" target="_top" title="ta_exame_requisitado" alt="" coords="960,10699,1202,10793">
+<area shape="rect" id="node35" href="ta_guia_encaminhamento.html" target="_top" title="ta_guia_encaminhamento" alt="" coords="946,6792,1216,6886">
+<area shape="rect" id="node36" href="ta_ivcf.html" target="_top" title="ta_ivcf" alt="" coords="1019,10811,1143,10905">
+<area shape="rect" id="node37" href="ta_lembrete.html" target="_top" title="ta_lembrete" alt="" coords="999,10923,1162,11017">
+<area shape="rect" id="node38" href="ta_medicamento_uso_continuo.html" target="_top" title="ta_medicamento_uso_continuo" alt="" coords="924,11035,1238,11129">
+<area shape="rect" id="node39" href="ta_neuro_alter_fenot.html" target="_top" title="ta_neuro_alter_fenot" alt="" coords="965,11147,1196,11241">
+<area shape="rect" id="node40" href="ta_neuro_fator_risco.html" target="_top" title="ta_neuro_fator_risco" alt="" coords="965,11259,1197,11353">
+<area shape="rect" id="node41" href="ta_neuro_marco.html" target="_top" title="ta_neuro_marco" alt="" coords="982,11371,1180,11465">
+<area shape="rect" id="node42" href="ta_odontograma.html" target="_top" title="ta_odontograma" alt="" coords="981,11629,1180,11723">
+<area shape="rect" id="node43" href="ta_orientacao.html" target="_top" title="ta_orientacao" alt="" coords="992,7235,1170,7329">
+<area shape="rect" id="node44" href="ta_periograma_completo.html" target="_top" title="ta_periograma_completo" alt="" coords="949,7347,1212,7441">
+<area shape="rect" id="node45" href="ta_periograma_simplificado.html" target="_top" title="ta_periograma_simplificado" alt="" coords="938,7493,1224,7587">
+<area shape="rect" id="node46" href="ta_pre_natal.html" target="_top" title="ta_pre_natal" alt="" coords="997,7605,1164,7699">
+<area shape="rect" id="node47" href="ta_problema.html" target="_top" title="ta_problema" alt="" coords="1410,6456,1578,6550">
+<area shape="rect" id="node48" href="tb_problema.html" target="_top" title="tb_problema" alt="" coords="996,6456,1166,6550">
+<area shape="rect" id="node49" href="ta_prontuario_grupo_historico.html" target="_top" title="ta_prontuario_grupo_historico" alt="" coords="927,7717,1234,7811">
+<area shape="rect" id="node50" href="ta_requisicao_exame.html" target="_top" title="ta_requisicao_exame" alt="" coords="1738,5572,1974,5666">
+<area shape="rect" id="node51" href="tb_requisicao_exame.html" target="_top" title="tb_requisicao_exame" alt="" coords="1376,5545,1612,5639">
+<area shape="rect" id="node52" href="ta_retificacao_atend.html" target="_top" title="ta_retificacao_atend" alt="" coords="967,7829,1195,7923">
+<area shape="rect" id="node53" href="ta_sinan_notificacao_evolucao.html" target="_top" title="ta_sinan_notificacao_evolucao" alt="" coords="1340,6884,1649,6978">
+<area shape="rect" id="node54" href="tb_sinan_notificacao.html" target="_top" title="tb_sinan_notificacao" alt="" coords="965,6197,1197,6291">
+<area shape="rect" id="node55" href="ta_tecido_mole.html" target="_top" title="ta_tecido_mole" alt="" coords="1400,6568,1589,6662">
+<area shape="rect" id="node56" href="tb_tecido_mole.html" target="_top" title="tb_tecido_mole" alt="" coords="985,6568,1176,6662">
+<area shape="rect" id="node57" href="ta_vacinacao.html" target="_top" title="ta_vacinacao" alt="" coords="994,7941,1168,8035">
+<area shape="rect" id="node59" href="tb_atend_prof_ad.html" target="_top" title="tb_atend_prof_ad" alt="" coords="1391,5804,1598,5898">
+<area shape="rect" id="node60" href="tb_cds_atend_domiciliar.html" target="_top" title="tb_cds_atend_domiciliar" alt="" coords="951,2840,1211,2934">
+<area shape="rect" id="node61" href="tb_cds_turno.html" target="_top" title="tb_cds_turno" alt="" coords="585,2373,760,2497">
+<area shape="rect" id="node62" href="tb_cds_atend_individual.html" target="_top" title="tb_cds_atend_individual" alt="" coords="951,4071,1211,4165">
+<area shape="rect" id="node63" href="tb_cds_aleitamento_materno.html" target="_top" title="tb_cds_aleitamento_materno" alt="" coords="525,3640,820,3763">
+<area shape="rect" id="node64" href="tb_cds_atend_odonto.html" target="_top" title="tb_cds_atend_odonto" alt="" coords="961,2168,1200,2262">
+<area shape="rect" id="node65" href="tb_cds_ativ_col_participante.html" target="_top" title="tb_cds_ativ_col_participante" alt="" coords="1348,1347,1640,1441">
+<area shape="rect" id="node66" href="tb_cds_ficha_ativ_col.html" target="_top" title="tb_cds_ficha_ativ_col" alt="" coords="961,2504,1200,2598">
+<area shape="rect" id="node67" href="tb_cds_aval_elegibilidade.html" target="_top" title="tb_cds_aval_elegibilidade" alt="" coords="945,4329,1216,4423">
+<area shape="rect" id="node68" href="tb_cds_cad_individual.html" target="_top" title="tb_cds_cad_individual" alt="" coords="959,376,1203,470">
+<area shape="rect" id="node69" href="tb_cds_ficha_consumo_alimentar.html" target="_top" title="tb_cds_ficha_consumo_alimentar" alt="" coords="915,5,1246,99">
+<area shape="rect" id="node70" href="tb_cds_ficha_zika_microcefalia.html" target="_top" title="tb_cds_ficha_zika_microcefalia" alt="" coords="925,2616,1237,2710">
+<area shape="rect" id="node71" href="tb_cds_proced.html" target="_top" title="tb_cds_proced" alt="" coords="987,1160,1174,1254">
+<area shape="rect" id="node72" href="tb_cds_vacinacao.html" target="_top" title="tb_cds_vacinacao" alt="" coords="975,1496,1186,1590">
+<area shape="rect" id="node73" href="tb_cds_visita_domiciliar.html" target="_top" title="tb_cds_visita_domiciliar" alt="" coords="951,1832,1210,1926">
+<area shape="rect" id="node75" href="tb_encaminhamento.html" target="_top" title="tb_encaminhamento" alt="" coords="1380,4548,1608,4642">
+<area shape="rect" id="node76" href="tb_guia_encaminhamento.html" target="_top" title="tb_guia_encaminhamento" alt="" coords="1359,4807,1630,4901">
+<area shape="rect" id="node77" href="tb_parte_bucal_cid10.html" target="_top" title="tb_parte_bucal_cid10" alt="" coords="963,5692,1199,5786">
+<area shape="rect" id="node78" href="tb_regra_vacinal_dose.html" target="_top" title="tb_regra_vacinal_dose" alt="" coords="957,488,1204,582">
+<area shape="rect" id="node79" href="tb_tipo_exame.html" target="_top" title="tb_tipo_exame" alt="" coords="988,600,1174,694">
+<area shape="rect" id="node80" href="tl_ad_cidadao.html" target="_top" title="tl_ad_cidadao" alt="" coords="991,8053,1171,8147">
+<area shape="rect" id="node81" href="tl_agendado.html" target="_top" title="tl_agendado" alt="" coords="997,4843,1164,4937">
+<area shape="rect" id="node82" href="tl_alergia.html" target="_top" title="tl_alergia" alt="" coords="1009,8165,1152,8259">
+<area shape="rect" id="node83" href="tl_atend.html" target="_top" title="tl_atend" alt="" coords="1013,8277,1148,8371">
+<area shape="rect" id="node84" href="tl_atend_prof.html" target="_top" title="tl_atend_prof" alt="" coords="993,4217,1168,4311">
+<area shape="rect" id="node85" href="tl_atestado.html" target="_top" title="tl_atestado" alt="" coords="1002,8389,1160,8483">
+<area shape="rect" id="node86" href="tl_cds_atend_domiciliar.html" target="_top" title="tl_cds_atend_domiciliar" alt="" coords="953,2952,1208,3046">
+<area shape="rect" id="node87" href="tl_cds_atend_individual.html" target="_top" title="tl_cds_atend_individual" alt="" coords="870,3100,1292,4053">
+<area shape="rect" id="node88" href="tl_cds_atend_odonto.html" target="_top" title="tl_cds_atend_odonto" alt="" coords="964,1608,1198,1702">
+<area shape="rect" id="node89" href="tl_cds_ativ_col_participante.html" target="_top" title="tl_cds_ativ_col_participante" alt="" coords="937,712,1224,806">
+<area shape="rect" id="node90" href="tl_cds_aval_elegibilidade.html" target="_top" title="tl_cds_aval_elegibilidade" alt="" coords="948,1944,1214,2038">
+<area shape="rect" id="node91" href="tl_cds_cad_individual.html" target="_top" title="tl_cds_cad_individual" alt="" coords="961,824,1200,918">
+<area shape="rect" id="node92" href="tl_cds_ficha_ativ_col.html" target="_top" title="tl_cds_ficha_ativ_col" alt="" coords="964,2728,1198,2822">
+<area shape="rect" id="node93" href="tl_cds_ficha_consumo_alimentar.html" target="_top" title="tl_cds_ficha_consumo_alimentar" alt="" coords="918,117,1244,211">
+<area shape="rect" id="node94" href="tl_cds_ficha_zika_microcefalia.html" target="_top" title="tl_cds_ficha_zika_microcefalia" alt="" coords="927,2392,1234,2486">
+<area shape="rect" id="node95" href="tl_cds_proced.html" target="_top" title="tl_cds_proced" alt="" coords="990,2056,1172,2150">
+<area shape="rect" id="node96" href="tl_cds_vacinacao.html" target="_top" title="tl_cds_vacinacao" alt="" coords="978,2280,1184,2374">
+<area shape="rect" id="node97" href="tl_cds_visita_domiciliar.html" target="_top" title="tl_cds_visita_domiciliar" alt="" coords="954,1720,1208,1814">
+<area shape="rect" id="node98" href="tl_cidadao.html" target="_top" title="tl_cidadao" alt="" coords="1005,936,1157,1030">
+<area shape="rect" id="node99" href="tl_encaminhamento.html" target="_top" title="tl_encaminhamento" alt="" coords="969,7016,1192,7110">
+<area shape="rect" id="node100" href="tl_evolucao_avaliacao_ciap_cid.html" target="_top" title="tl_evolucao_avaliacao_ciap_cid" alt="" coords="923,5943,1238,6037">
+<area shape="rect" id="node101" href="tl_evolucao_odonto.html" target="_top" title="tl_evolucao_odonto" alt="" coords="969,8501,1193,8595">
+<area shape="rect" id="node102" href="tl_exame_requisitado.html" target="_top" title="tl_exame_requisitado" alt="" coords="963,8613,1199,8707">
+<area shape="rect" id="node103" href="tl_justificativa_prontuario.html" target="_top" title="tl_justificativa_prontuario" alt="" coords="947,8725,1215,8819">
+<area shape="rect" id="node104" href="tl_lembrete.html" target="_top" title="tl_lembrete" alt="" coords="1001,8837,1160,8931">
+<area shape="rect" id="node105" href="tl_medicamento_uso_continuo.html" target="_top" title="tl_medicamento_uso_continuo" alt="" coords="927,8949,1235,9043">
+<area shape="rect" id="node106" href="tl_neuro_alter_fenot.html" target="_top" title="tl_neuro_alter_fenot" alt="" coords="967,9096,1194,9190">
+<area shape="rect" id="node107" href="tl_neuro_fator_risco.html" target="_top" title="tl_neuro_fator_risco" alt="" coords="967,9208,1195,9302">
+<area shape="rect" id="node108" href="tl_neuro_marco.html" target="_top" title="tl_neuro_marco" alt="" coords="984,9320,1178,9414">
+<area shape="rect" id="node109" href="tl_odontograma.html" target="_top" title="tl_odontograma" alt="" coords="984,9432,1178,9526">
+<area shape="rect" id="node110" href="tl_opcao_rapida_exame.html" target="_top" title="tl_opcao_rapida_exame" alt="" coords="953,1048,1208,1142">
+<area shape="rect" id="node111" href="tl_orientacao.html" target="_top" title="tl_orientacao" alt="" coords="995,9544,1167,9638">
+<area shape="rect" id="node112" href="tl_pre_natal.html" target="_top" title="tl_pre_natal" alt="" coords="999,9656,1162,9750">
+<area shape="rect" id="node113" href="tl_problema.html" target="_top" title="tl_problema" alt="" coords="999,6904,1163,6998">
+<area shape="rect" id="node114" href="tl_proced_solicitado.html" target="_top" title="tl_proced_solicitado" alt="" coords="967,9768,1195,9862">
+<area shape="rect" id="node115" href="tl_prof.html" target="_top" title="tl_prof" alt="" coords="1019,1272,1142,1366">
+<area shape="rect" id="node116" href="tl_prontuario_grupo_historico.html" target="_top" title="tl_prontuario_grupo_historico" alt="" coords="929,9880,1232,9974">
+<area shape="rect" id="node117" href="tl_requisicao_exame.html" target="_top" title="tl_requisicao_exame" alt="" coords="965,4955,1196,5049">
+<area shape="rect" id="node118" href="tl_sinan_notificacao_evolucao.html" target="_top" title="tl_sinan_notificacao_evolucao" alt="" coords="1342,8128,1647,8222">
+<area shape="rect" id="node119" href="tl_tipo_exame.html" target="_top" title="tl_tipo_exame" alt="" coords="991,1384,1171,1478">
+<area shape="rect" id="node120" href="tl_vacinacao.html" target="_top" title="tl_vacinacao" alt="" coords="996,9992,1166,10086">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/tl_cds_atend_individual.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
